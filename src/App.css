@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web&family=Poppins:wght@500;600;700;800&family=Titillium+Web:wght@300;400;600;700;900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --main-color-general-background: #FFFFFF;  
+    --main-color-dark-background: #093046;
+    --main-color-light-background: #f9b513;
+
+    --main-color-dark-title: #093046;
+    --main-color-light-title: #f9b513;
+
+    --main-color-video-link: #093046;
+    --main-color-navbar-link: #000814;
+    --main-color-light-security-link: #fd9e02;
+
+    --main-color-dark-text: #000814;
+    --main-color-light-text: #f9b513;
+    --main-color-lighter-text: #FFFFFF;
+    --sec-color-dark-text: #093046;
+
+    --main-color-dark-button: #093046;
+    --main-color-light-button: #f9b513;
+
+    --title-font: 'Poppins', sans-serif;
+    --text-font: 'Titillium Web', sans-serif;
+
+    --third-color-darkest: #126782;
+    --third-color-medium: #219ebc;
+    --third-color-lightest: #8ecae6;
+};
+
+body {
+    font-family: var(--text-front);
+}
