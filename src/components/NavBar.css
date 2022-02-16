@@ -1,0 +1,71 @@
+.NavBar {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--main-color-light-background);
+}
+
+.logo-container {
+    height: 90%; 
+    margin-left: 31px;
+}
+
+.Header-logo {
+    height: 100%;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+}
+
+.navigation-link {
+    height: 100%;
+    width: 12%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--main-color-navbar-link);
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+}
+
+.selected {
+    position : relative;
+    text-decoration: none;
+    color: var(--main-color-navbar-link);
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+}
+
+.selected::after {
+    position : absolute; 
+    content: '';
+    background-color: var(--main-color-dark-background);
+    text-decoration: none;
+    color: var(--main-color-navbar-link);
+    height: 10px;
+    width: 100%;
+    bottom: -13px;
+    left: 0px;
+}
+
+.login-button {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: var(--main-color-dark-background);
+    text-decoration: none;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+    color: var(--main-color-lighter-text);
+}
