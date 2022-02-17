@@ -23,6 +23,7 @@
        font-weight: 600;
         font-size: 30px;
         color : var(--main-color-light-title);
+        padding-top: 15px;
     }
 
     .createUserInput{
@@ -105,5 +106,9 @@
         margin-bottom: 25px;
         background-color: var(--main-color-light-button);
         padding:7px  15px;
+    }
+
+    .wrongPass{
+        background-color: rgba(255, 0, 0, 0.4);
     }
 }
