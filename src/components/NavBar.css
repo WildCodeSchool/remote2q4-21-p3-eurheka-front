@@ -1,5 +1,5 @@
 .NavBar {
-    height: 50px;
+    height: 106px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -9,13 +9,12 @@
 }
 
 .logo-container {
-    height: 90%; 
+    height: 71%; 
     margin-left: 31px;
 }
 
 .Header-logo {
     height: 100%;
-    padding-left: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,34 +23,39 @@
 
 .navigation-link {
     height: 100%;
-    width: 12%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
     color: var(--main-color-navbar-link);
     font-family: 'Titillium Web', sans-serif;
+    font-size: 25px;
     font-weight: 400;
 }
 
 .selected {
     position : relative;
     text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
     color: var(--main-color-navbar-link);
     font-family: 'Titillium Web', sans-serif;
+    font-size: 25px;
     font-weight: 400;
 }
 
 .selected::after {
-    position : absolute; 
+    position: absolute; 
     content: '';
     background-color: var(--main-color-dark-background);
     text-decoration: none;
     color: var(--main-color-navbar-link);
-    height: 10px;
+    height: 20px;
     width: 100%;
-    bottom: -13px;
+    bottom: -34px;
     left: 0px;
 }
 
@@ -61,11 +65,12 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
     background-color: var(--main-color-dark-background);
     text-decoration: none;
     font-family: 'Titillium Web', sans-serif;
+    font-size: 25px;
     font-weight: 400;
     color: var(--main-color-lighter-text);
 }
