@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       Welcome Heureka!
       <Routes>
-        <Route path='/' element={<Home />}/>
+        {/* <Route path='/' element={<Home />}/> */}
       </ Routes>
     </div>
   );
