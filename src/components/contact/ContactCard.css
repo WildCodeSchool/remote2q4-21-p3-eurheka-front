@@ -47,6 +47,7 @@
     opacity: 40%;
     height: 58px;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
 
 .contact-input-description{
@@ -54,9 +55,11 @@
     opacity: 40%;
     height: 192px;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 15px;
 }
 
-.contact-button{
+.contact-button {
     background-color: var(--main-color-light-button);
     color: var(--main-color-lighter-text);
     font-weight: 400;

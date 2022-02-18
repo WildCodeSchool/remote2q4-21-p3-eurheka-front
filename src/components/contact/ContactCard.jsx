@@ -28,7 +28,7 @@ const ContactCard = () => {
                     placeholder="Je vais passer une entretien pour un post de chargé de communication le 12 février. Ce rendez-vous
                     me premettrait de gagner en confiance avant ce rdv et d’avoir des réponses à mes questions. "
                     onFocus={(e) => e.target.placeholder = ""}  
-                    onBlur={(e) => e.target.placeholder = "Je vais passer une entretien pour un post de chargé de communication le 12 février. Ce rendez-vous me premettrait de gagner en confiance avant ce rdv et d’avoir des réponses à mes questions. ezae zaezae azeeaz"}
+                    onBlur={(e) => e.target.placeholder = "Je vais passer une entretien pour un post de chargé de communication le 12 février. Ce rendez-vous me premettrait de gagner en confiance avant ce rendez-vous et d’avoir des réponses à mes questions."}
                 />
                 <button className='contact-button'>Envoyer</button>
             </div>    
