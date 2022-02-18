@@ -6,6 +6,8 @@ import home from '../assets/logos/Logo_Eurheka_Entier_Logo_Bleu.png';
 
 const NavBar = () => {
 
+    
+
     return (
         <div className='NavBar'>
             
