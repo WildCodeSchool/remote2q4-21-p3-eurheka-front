@@ -1,16 +1,12 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-
 import './NavBar.css';
 import home from '../assets/logos/Logo_Eurheka_Entier_Logo_Bleu.png';
 
 const NavBar = () => {
 
-    
-
     return (
         <div className='NavBar'>
-            
             <div className="logo-container">
                 <Link to='/'><img className='Header-logo' src={home} alt="logo" /></Link>
             </div>
