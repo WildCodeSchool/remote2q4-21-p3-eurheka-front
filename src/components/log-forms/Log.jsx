@@ -19,9 +19,9 @@ const Log = () => {
     return (
         <div className='connection-form'>
             <div className='form-container'>
-                <ul>
-                    <div onClick={handleModals} id="register" className="log-button">S'inscrire</div>
-                    <div onClick={handleModals} id="login" className="log-button">Se connecter</div>
+                <ul className='btn-container'>
+                    <div onClick={handleModals} id="register" className={signUpModal ? "active-btn" : "off-btn"}>S'inscrire</div>
+                    <div onClick={handleModals} id="login" className={signInModal ? "active-btn" : "off-btn"}>Se connecter</div>
                 </ul>
                 {signUpModal && <SignUpForm />}
                 {signInModal && <SignInForm />}
