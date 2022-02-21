@@ -1,0 +1,32 @@
+.AdviceCard {
+    display: flex;
+    flex-direction: row;
+    width: 445px;
+    height: 343px;
+    font-family: 'Poppins';
+    font-style: normal;
+}
+
+.h3-title {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 45px;
+    margin: 30px 40px 30px 40px ;
+}
+
+.taskList {
+    list-style-type: '_';
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 40px;
+    margin-left: 55px;
+}
+
+.dots-paragraph {
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+
+
+
