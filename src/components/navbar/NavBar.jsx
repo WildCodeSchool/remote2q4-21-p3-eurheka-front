@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import './navbar/NavBar.css';
-import home from '../assets/logos/Logo_Eurheka_Entier_Logo_Bleu.png';
+import './NavBar.css';
+import home from '../../assets/logos/Logo_Eurheka_Entier_Logo_Bleu.png';
 
 const NavBar = () => {
 
