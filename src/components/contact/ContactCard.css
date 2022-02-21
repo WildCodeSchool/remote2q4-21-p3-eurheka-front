@@ -13,7 +13,6 @@
     width: 80%;
     background-color: var(--main-color-dark-background);
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
     height: 722px;
 }
@@ -67,5 +66,85 @@
     margin-bottom: 55px;
     width: 117px;
     height: 47px;
+}
 
+@media screen and (max-width:390px) {
+    .contact-container {
+        height: auto;
+    }
+
+    .contact-container {
+        width: 90%;
+    }
+
+    .contact-title{
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+
+    .contact-subtitle{
+        margin-bottom: 50px;
+    }
+
+    .contact-form-subtitle{
+        margin-top: 25px;
+    }
+
+    .contact-button {
+        margin-top: 55px;
+    }
+}
+
+@media screen and (min-width: 391px) and (max-width:768px) {
+    .contact-container {
+        height: auto;
+    }
+
+    .contact-container {
+        width: 90%;
+    }
+
+    .contact-title{
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+
+    .contact-subtitle{
+        margin-bottom: 50px;
+    }
+
+    .contact-form-subtitle{
+        margin-top: 25px;
+    }
+
+    .contact-button {
+        margin-top: 55px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .contact-container {
+        height: auto;
+    }
+
+    .contact-container {
+        width: 90%;
+    }
+
+    .contact-title{
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+
+    .contact-subtitle{
+        margin-bottom: 50px;
+    }
+
+    .contact-form-subtitle{
+        margin-top: 25px;
+    }
+
+    .contact-button {
+        margin-top: 55px;
+    }
 }
