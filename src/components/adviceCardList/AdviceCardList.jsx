@@ -1,6 +1,6 @@
 import React from 'react';
-import AdviceCard from '../components/AdviceCard';
-import adviceCards from '../assets/data/adviceCards';
+import AdviceCard from '../adviceCard/AdviceCard';
+import adviceCards from '../../assets/data/adviceCards';
 import './AdviceCardList.css';
 
 const AdviceCardList = () => {
