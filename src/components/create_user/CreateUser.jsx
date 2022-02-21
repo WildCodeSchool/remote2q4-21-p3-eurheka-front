@@ -64,24 +64,24 @@ const CreateUser = () => {
                 <div className="globalContainer">
                     <div className="leftFields">
                         <div className="innerLeftFields">
-                            <p><label htmlFor="name">Nom<br />
-                                <input className='createUserInput' type="text" id="name" value={lastname} onChange={(e)=>{setLastname(e.target.value)}}/></label></p>
-                            <p><label htmlFor="firstname">Prénom<br />
-                                <input className='createUserInput' type="text" id="firstname" value={firstname} onChange={(e)=>{setFirstname(e.target.value)}}/></label></p>
+                           <label htmlFor="name" className='labelLeft'>Nom<br />
+                                <input className='createUserInput' type="text" id="name" value={lastname} onChange={(e)=>{setLastname(e.target.value)}}/></label>
+                            <label htmlFor="firstname" className='labelLeft'>Prénom<br />
+                                <input className='createUserInput' type="text" id="firstname" value={firstname} onChange={(e)=>{setFirstname(e.target.value)}}/></label>
                         </div>
                         <div className="innerRightFields">
-                            <p><label htmlFor="email">Mail<br />
-                                <input className='createUserInput' type="email" id="email" value={email} onChange={(e)=>{setEmail(e.target.value)}}/></label></p>
-                            <p><label htmlFor="password1">Mot de passe<br />
-                                <input className='createUserInput' type="password" id="password1" value={password1} onChange={(e)=>{setPassword1(e.target.value)}}/></label></p>
-                            <p><label htmlFor="password2">Vérifier le mot de passe<br />
-                                <input className='createUserInput' type="password" id="password2"  value={password2} onChange={(e)=>{checkPassord(e.target.value)}}/></label></p>
+                           <label htmlFor="email" className='labelLeft'>Mail<br />
+                                <input className='createUserInput' type="email" id="email" value={email} onChange={(e)=>{setEmail(e.target.value)}}/></label>
+                            <label htmlFor="password1" className='labelLeft'>Mot de passe<br />
+                                <input className='createUserInput' type="password" id="password1" value={password1} onChange={(e)=>{setPassword1(e.target.value)}}/></label>
+                            <label htmlFor="password2" className='labelLeft'>Vérifier le mot de passe<br />
+                                <input className='createUserInput' type="password" id="password2"  value={password2} onChange={(e)=>{checkPassord(e.target.value)}}/></label>
                         </div>
                     </div>
                     <div className="rightFields">
-                        <p><label htmlFor="stage" className='container'><input type="checkbox" className='createUserInput' id="stage" checked={stage} onChange={(e)=>{setStage(e.target.checked)}}/><span className="checkmark"></span> En recherche d'emploi/stage</label></p>
-                        <p><label htmlFor="accompanied" className='container'><input type="checkbox" className='createUserInput' id="accompanied"  checked={accompanied} onChange={(e)=>{setAccompanied(e.target.checked)}} /><span className="checkmark"></span>Être accompagné</label></p>
-                        <p><label htmlFor="focus" className='container'><input type="checkbox" className='createUserInput' id="focus" checked={focus} onChange={(e)=>{setFocus(e.target.checked)}} /><span className="checkmark"></span>Faire le point</label></p>
+                        <label htmlFor="stage" className='container'><input type="checkbox" className='createUserInput' id="stage" checked={stage} onChange={(e)=>{setStage(e.target.checked)}}/><span className="checkmark"></span> En recherche d'emploi/stage</label>
+                        <label htmlFor="accompanied" className='container'><input type="checkbox" className='createUserInput' id="accompanied"  checked={accompanied} onChange={(e)=>{setAccompanied(e.target.checked)}} /><span className="checkmark"></span>Être accompagné</label>
+                        <label htmlFor="focus" className='container'><input type="checkbox" className='createUserInput' id="focus" checked={focus} onChange={(e)=>{setFocus(e.target.checked)}} /><span className="checkmark"></span>Faire le point</label>
                     </div>
                 </div>
                 <div className="btnContainer">
