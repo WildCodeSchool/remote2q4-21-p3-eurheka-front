@@ -19,7 +19,7 @@ function App() {
         <Route exact path='/' element={<Home />}/>
         <Route path='/prestations' element={<Services />}/>
         <Route path='/bibliotheque' element={<Library />}/>
-        <Route path='/contact' element={<Contact />}/>
+        <Route path='/contact-avis' element={<Contact />}/>
         <Route path='/login' element={<Login />}/>
       </ Routes>
       <Footer footerStyle={footerStyle} setFooterStyle={setFooterStyle} />

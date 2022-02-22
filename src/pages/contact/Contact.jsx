@@ -1,9 +1,10 @@
 import React from 'react';
+import ContactCard from '../../components/contact/ContactCard'
 import './Contact.css';
 
 const Contact = () => {
     return (
-        <div>Contact</div>
+        <ContactCard />
     )
 }
 
