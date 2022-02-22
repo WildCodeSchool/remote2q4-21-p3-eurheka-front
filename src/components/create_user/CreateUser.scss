@@ -1,0 +1,152 @@
+.CreateUser{
+    width : 70%;
+    margin : 10vh auto;
+    color :var(--main-color-lighter-text);
+    font-family: var(--title-font);
+    font-size: 12px;
+    background-color: var(--main-color-dark-background);
+    padding-left: 25px;
+
+    .globalContainer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .leftFields
+    {
+        display: flex;
+        flex-direction: column;
+        flex : 3;
+    }
+
+    h2{
+       font-weight: 600;
+        font-size: 30px;
+        color : var(--main-color-light-title);
+        padding-top: 15px;
+    }
+
+    .createUserInput{
+        background-color:rgba(255, 255, 255, 0.4);
+    }
+
+    .innerLeftFields{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .labelLeft{
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .innerRightFields{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .innerRightFields p,.innerLeftFields p{
+        margin : 10px 0px;
+    }
+
+    .rightFields{
+        padding-left: 20px;
+        flex :1;
+        justify-content: center;
+        padding-top: 30px;
+    }
+
+    .container{
+        position : relative;
+        padding-left: 30px;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .container input{
+        position: absolute;
+        opacity: 0;
+        cursor : pointer;
+    }
+
+    .checkmark{
+        position : absolute;
+        top :0;
+        left : 0;
+        height: 15px;
+        width: 15px;
+        background-color: rgba(255, 255, 255, 0.4);;
+    }
+
+    .checkmark:after{
+        content :"";
+        position : absolute;
+        display : none;
+    }
+
+    .container input:checked ~ .checkmark:after{
+        display : block;
+    }
+
+    .container .checkmark:after{
+        left : 5px;
+        top:-1px;
+        width: 5px;
+        height: 10px;
+        border : solid var(--main-color-light-title);
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+    }
+
+    .btnContainer{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .btnCreate{
+        color : var(--main-color-lighter-text);
+        margin-right: 25px;
+        margin-bottom: 25px;
+        background-color: var(--main-color-light-button);
+        padding:7px  15px;
+    }
+
+    .wrongPass{
+        background-color: rgba(255, 0, 0, 0.4);
+    }
+    
+    @media only screen and (min-width: 391px) and (max-width: 768px) {
+        .leftFields{
+            flex-direction: column;
+        }
+        .globalContainer{
+            flex-direction: column;
+        }
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+        .leftFields{
+            flex-direction: row;
+        }
+        .globalContainer{
+            flex-direction: column;
+        }
+    }
+
+    @media screen and (min-width: 1025px)  {
+        .leftFields{
+            flex-direction: row;
+            padding-left: 30px;
+            margin-bottom: 10px;
+        }
+        .globalContainer{
+            flex-direction: row;
+        }
+        .container{
+            padding-left: 30px;
+            margin-bottom: 30px;
+        }
+    }
+}
