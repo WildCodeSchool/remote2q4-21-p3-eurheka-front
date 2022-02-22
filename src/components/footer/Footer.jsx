@@ -20,15 +20,15 @@ const Footer = (props) => {
                         <NavLink to="/">
                             <li className='navigation-list'>Accueil</li>
                         </ NavLink>
-                        <NavLink to="/">
+                        <NavLink to="/prestations">
                             <li className='navigation-list'>Prestations</li>
                         </NavLink>
-                        <NavLink to="/">
+                        <NavLink to="/bibliotheque">
                             <li className='navigation-list'>Bibliothèques</li>
                         </NavLink>
                     </ul>
                     <ul className='navigation-block'>
-                        <NavLink to="/">
+                        <NavLink to="/contact-avis">
                             <li className='navigation-list'>Contact / Avis</li>
                         </NavLink>
                         <NavLink to="/">
