@@ -9,10 +9,6 @@
     justify-content: space-around;
 }
 
-/* .title-container {
-    height: 10%;
-} */
-
 .title-container h3 {
     color: var(--main-color-light-text);
     font-family: 'Poppins';
