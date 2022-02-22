@@ -1,0 +1,88 @@
+.OpinionDiv{
+    width: 100%;
+    height: 450px;
+    text-align: center;
+    background : linear-gradient(0deg, rgba(249, 181, 19, 0.85), rgba(249, 181, 19, 0.85)), url('../../assets/pictures/markus-spiske-CWcjRu6ANAE-unsplash.jpg');
+    font-family: var(--title-font);
+    margin-bottom: 50px;
+
+    .OpinionTitle{
+        color: var(--sec-color-dark-text);
+        font-weight: 600;
+        font-size: 30px;
+    }
+
+    .rec-carousel-wrapper{
+        width: 60%;
+        margin: 20px auto;
+    }
+
+    .rec-arrow{
+        visibility: hidden;
+    }
+
+    .rec.rec-arrow:disabled {
+        visibility: hidden;
+    }
+
+    .OpinionCont{
+        text-align: left;
+        font-style: italic;
+        color: var(--main-color-dark-text);
+        font-size: 10px;
+        font-weight: 100;
+    }
+
+    .OpinionAutor{
+        margin-top: 20px;
+        color: var(--main-color-dark-text);
+        font-size: 10px;
+        font-weight: 100;
+    }
+
+    @media only screen and (min-width: 391px) and (max-width: 768px) {
+        .rec-carousel-wrapper{
+            height: 400px;
+        }
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+        .OpinionCont{
+            text-align: left;
+            font-style: italic;
+            color: var(--main-color-dark-text);
+            font-size: 15px;
+            font-weight: 300;
+        }
+        
+        .OpinionAutor{
+            margin-top: 20px;
+            color: var(--main-color-dark-text);
+            font-size: 15px;
+            font-weight: 300;
+        }
+    }
+
+    @media screen and (min-width: 1025px)  {
+        margin-bottom: 200px;
+
+        .OpinionCont{
+            text-align: left;
+            font-style: italic;
+            color: var(--main-color-dark-text);
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        .OpinionAutor{
+            margin-top: 20px;
+            color: var(--main-color-dark-text);
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        .OpinionDiv{
+            height: 600px;
+        }
+    }
+}
