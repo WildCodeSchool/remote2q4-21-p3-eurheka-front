@@ -7,9 +7,9 @@ import './Home.css';
 const Home = () => {
   return (
     <div className="Home">
+      <CreateUser />
       <AdviceCardList />
       <Partners />
-      <CreateUser />
     </div>
   );
 };
