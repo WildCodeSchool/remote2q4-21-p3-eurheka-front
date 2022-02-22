@@ -8,7 +8,7 @@ const OpinionDiv = (props) => {
             <Carousel itemsToShow={1}>
                 <div>
                     <div className='OpinionCont'>
-                        “ EURHEKA! m’as aide à me recentrer, à m’orienter et à préparer ma reconvertion. J’ai regardé les différentes vidéos explicatives sur les domaines d’activités, j’ai choisi le secteur dans lequel je voulais exercer et j’ai, par la suite, suivi les différents Web Atelier pour préparer mes entretiens. Je recommande fortement cette entreprise ! “
+                        “ EURHEKA! m’a aidé à me recentrer, à m’orienter et à préparer ma reconversion. J’ai regardé les différentes vidéos explicatives sur les domaines d’activité, j’ai choisi le secteur dans lequel je voulais exercer et j’ai, par la suite, suivi les différents Web Atelier pour préparer mes entretiens. Je recommande fortement cette entreprise ! “
                     </div>
                     <div className='OpinionAutor'>
                         Auteur anonyme
