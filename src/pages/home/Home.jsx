@@ -8,11 +8,10 @@ import './Home.css';
 const Home = () => {
   return (
     <div className="Home">
-      <AdviceCardList />
-      <Partners />
       <CreateUser />
       <OpinionDiv />
       <AdviceCardList />
+      <Partners />
     </div>
   );
 };

@@ -39,6 +39,7 @@
         font-size: 10px;
         font-weight: 100;
     }
+
     @media only screen and (min-width: 391px) and (max-width: 768px) {
         .rec-carousel-wrapper{
             height: 400px;
@@ -46,7 +47,20 @@
     }
 
     @media screen and (min-width: 769px) and (max-width: 1024px) {
-
+        .OpinionCont{
+            text-align: left;
+            font-style: italic;
+            color: var(--main-color-dark-text);
+            font-size: 15px;
+            font-weight: 300;
+        }
+        
+        .OpinionAutor{
+            margin-top: 20px;
+            color: var(--main-color-dark-text);
+            font-size: 15px;
+            font-weight: 300;
+        }
     }
 
     @media screen and (min-width: 1025px)  {
@@ -66,6 +80,7 @@
             font-size: 20px;
             font-weight: 300;
         }
+
         .OpinionDiv{
             height: 600px;
         }
