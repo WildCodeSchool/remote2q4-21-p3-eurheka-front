@@ -8,6 +8,9 @@ import './Home.css';
 const Home = () => {
   return (
     <div className="Home">
+      <div className="Home-header">
+        <h2>Espace Candidat</h2>
+      </div>
       <CreateUser />
       <AdviceCardList />
       <Partners />

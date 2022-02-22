@@ -1,9 +1,17 @@
-/* .home {
-    position: absolute;
-width: 1923px;
-height: 469px;
-left: -3px;
-top: 106px;
+.Home-header {
+    height: 500px;
+    width: 100%;
+    background-size:cover;
+    background-position:center;
+    background-image: linear-gradient(0deg, rgba(9, 48, 70, 0.6), rgba(9, 48, 70, 0.6)), url(../../assets/pictures/redd-PTRzqc_h1r4-unsplash.jpg);
+}
 
-background: linear-gradient(0deg, rgba(9, 48, 70, 0.5), rgba(9, 48, 70, 0.5)), url(redd-PTRzqc_h1r4-unsplash.jpg);
-} */
+.Home-header h2 {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 45px;
+    color: var(--main-color-lighter-text);
+    padding-top: 40px;
+    padding-left: 40px;
+}
