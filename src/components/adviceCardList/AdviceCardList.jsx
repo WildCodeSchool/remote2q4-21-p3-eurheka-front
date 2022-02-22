@@ -8,7 +8,7 @@ const AdviceCardList = () => {
         <div>
             <div className="AdviceCardList-container">
                 {adviceCards.map((data) => (
-                    <AdviceCard className={(data.id % 2 ===0) ? 'background-yellow' : 'background-blue'}
+                    <AdviceCard className={(data.id % 2 ===0) ? 'background-even-container' : 'background-odd-container'}
                         key={data.id}
                         title={data.title}
                         task1={data.task1}

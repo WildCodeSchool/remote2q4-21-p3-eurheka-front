@@ -6,8 +6,6 @@ import Library from './pages/library/Library';
 import Contact from './pages/contact/Contact';
 import NavBar from './components/navbar/NavBar';
 import Footer from './components/footer/Footer';
-import AdviceCardList from './components/adviceCardList/AdviceCardList';
-import Partners from './components/partners/Partners';
 import './App.css';
 
 function App() {
@@ -22,8 +20,6 @@ function App() {
         <Route path='/bibliotheque' element={<Library />}/>
         <Route path='/contact' element={<Contact />}/>
       </ Routes>
-      <AdviceCardList />
-      <Partners />
       <Footer footerStyle={footerStyle} setFooterStyle={setFooterStyle} />
     </div>
   );
