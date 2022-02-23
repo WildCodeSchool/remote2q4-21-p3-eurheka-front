@@ -13,8 +13,6 @@ const Home = () => {
         <h2>Espace Candidat</h2>
       </div>
       <CreateUser />
-      <AdviceCardList />
-      <CreateUser />
       <OpinionDiv />
       <AdviceCardList />
       <Partners />
