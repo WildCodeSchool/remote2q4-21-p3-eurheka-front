@@ -40,7 +40,7 @@
     margin-bottom: 10px;
 }
 
-@media screen and (min-width: 391px) and (max-width: 767px) {
+@media screen and (min-width: 390px) and (max-width: 767px) {
     .Security-container {
         width: 100%;
         height: auto;
@@ -106,7 +106,7 @@
         border: 6px solid var(--main-color-light-background);
         margin: 40px;
     }
-    
+
     .Security-img {
         max-width: 155px;
         max-height: 55px;

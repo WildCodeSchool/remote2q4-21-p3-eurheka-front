@@ -10,12 +10,13 @@
 .btn-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    margin-top: 20px;
 }
 
 .active-btn {
-    background-color: rgba(255, 255, 255, 0.4);
-    color: var(--main-color-light-title);
+    background-color: var(--main-color-light-button);
+    color: var(--main-color-lighter-text);
     width: 130px;
     height: 40px;
     display: flex;
@@ -27,9 +28,9 @@
 }
 
 .off-btn {
-    background-color: var(--main-color-dark-background);
+    background-color: rgba(255, 255, 255, 0.2);
     color: var(--main-color-light-title);
-    width: 160px;
+    width: 130px;
     height: 40px;
     display: flex;
     flex-direction: column;
