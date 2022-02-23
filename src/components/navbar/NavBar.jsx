@@ -10,7 +10,7 @@ const NavBar = () => {
             <div className="logo-container">
                 <Link to='/'><img className='Header-logo' src={home} alt="logo" /></Link>
             </div>
-            <NavLink to="/accueil" className={({ isActive }) =>
+            <NavLink to="/" className={({ isActive }) =>
               isActive ? "selected" : "navigation-link"
             }>
                 Accueil
