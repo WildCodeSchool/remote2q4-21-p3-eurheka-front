@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Inscription from "../../components/inscription/Inscription";
 import './Services.css';
 
 const Services = () => {
@@ -7,6 +8,7 @@ const Services = () => {
       <div className="Services-header">
         <h2>Espace Candidat</h2>
       </div>
+      <Inscriptions />
     </div>
   );
 };
