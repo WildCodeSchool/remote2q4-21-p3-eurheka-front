@@ -4,7 +4,12 @@ import './Contact.css';
 
 const Contact = () => {
     return (
-        <ContactCard />
+        <div className="Contact">
+            <div className="Contact-header">
+                <h2>Espace Candidat</h2>
+            </div>
+            <ContactCard />
+        </div>
     )
 }
 
