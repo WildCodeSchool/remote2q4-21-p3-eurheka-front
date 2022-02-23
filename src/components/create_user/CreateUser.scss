@@ -1,6 +1,6 @@
 .CreateUser{
     width : 70%;
-    margin : 10vh auto;
+    margin : 50px auto;
     color :var(--main-color-lighter-text);
     font-family: var(--title-font);
     font-size: 12px;
@@ -133,6 +133,7 @@
         .globalContainer{
             flex-direction: column;
         }
+
     }
 
     @media screen and (min-width: 1025px)  {
@@ -148,5 +149,6 @@
             padding-left: 30px;
             margin-bottom: 30px;
         }
+        margin : 200px auto;
     }
 }
