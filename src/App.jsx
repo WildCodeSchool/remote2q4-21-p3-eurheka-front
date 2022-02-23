@@ -4,6 +4,7 @@ import Home from './pages/home/Home';
 import Services from './pages/services/Services';
 import Library from './pages/library/Library';
 import Contact from './pages/contact/Contact';
+import Login from './pages/login/Login';
 import NavBar from './components/navbar/NavBar';
 import Footer from './components/footer/Footer';
 import './App.css';
@@ -19,6 +20,7 @@ function App() {
         <Route path='/prestations' element={<Services />}/>
         <Route path='/bibliotheque' element={<Library />}/>
         <Route path='/contact-avis' element={<Contact />}/>
+        <Route path='/login' element={<Login />}/>
       </ Routes>
       <Footer footerStyle={footerStyle} setFooterStyle={setFooterStyle} />
     </div>
