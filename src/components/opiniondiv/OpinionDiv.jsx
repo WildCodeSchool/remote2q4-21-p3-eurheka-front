@@ -4,7 +4,7 @@ import axios from 'axios';
 import './OpinionDiv.scss';
 const OpinionDiv = (props) => {
     const [opinions, setOpinions] = useState([]);
-    const url = 'http://localhost:8000/api/'
+    const url=`${process.env.REACT_APP_API_URL}`;
     useEffect(() => {
         axios
             .get(url + 'opinion/eurheka/')
