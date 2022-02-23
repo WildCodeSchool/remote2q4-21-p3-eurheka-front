@@ -42,3 +42,30 @@
 .background-odd-container .dots-paragraph  {
     color: var(--main-color-lighter-text);
 }
+
+@media screen and (max-width: 390px) {
+    .AdviceCardList-container {
+        flex-wrap: wrap;
+        margin-top: 0;
+        margin-bottom: 10px ;
+    }
+}
+
+@media screen and (min-width: 391px) and (max-width: 767px) {
+    .AdviceCardList-container {
+        flex-wrap: wrap;
+        margin-top: 80px;
+        margin-bottom: 70px ;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .AdviceCardList-container {
+        margin-top: 80px;
+        margin-bottom: 80px ;
+    }
+}
+
+
+
+
