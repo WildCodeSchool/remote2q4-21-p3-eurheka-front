@@ -1,0 +1,35 @@
+.UserActionsEventCard{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background-color: var(--main-color-general-background);
+    height: 320px;
+    align-items: center;
+    text-align: center;
+    border: 10px solid var(--main-color-light-background);
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    .card-title{
+        margin-top: 20px;
+        font-weight: 600;
+    }
+
+    .event-container{
+        border: 2px solid var(--sec-color-dark-text);
+        padding: 15px;
+    }
+
+    .event-title{
+        font-weight: 500;
+    }
+
+    .event-type{
+        font-weight: 300;
+        font-style: italic;
+    }
+
+    .place{
+        margin-bottom: 20px;
+    }
+}
