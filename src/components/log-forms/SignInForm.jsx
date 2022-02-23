@@ -4,9 +4,11 @@ import "./SignInForm.css";
 
 const SignInForm = () => {
     const [email, setEmail]= useState("");
-    const [password, setpassword]= useState("");
+    const [password, setPassword]= useState("");
 
     const handleLogin = (e) => {
+        e.preventDefault();
+        
 
     }
     return (
@@ -18,10 +20,18 @@ const SignInForm = () => {
                 name="email" 
                 id="email" 
                 onChange={(e) => setEmail(e.target.value)} 
-                value="email" />
-                <input type="submit" value="se connecter" />
+                value={email} />
+                <div className="email-error">{}</div>
+                <label htmlFor="email">Password</label>
+                <input 
+                type="password" 
+                name="password" 
+                id="password" 
+                onChange={(e) => setPassword(e.target.value)} 
+                value={password} />
+                <div className="password-error">{}</div>
+                <input type="submit" value="Se connecter" />
             </form>
-            <p>Se connecter</p>
         </div>
     )
 }
