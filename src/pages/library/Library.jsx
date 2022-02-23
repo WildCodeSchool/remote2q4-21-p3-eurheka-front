@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import './Library.css';
 
 const Library = () => {
@@ -7,7 +7,6 @@ const Library = () => {
       <div className="Library-header">
         <h2>Espace Candidat</h2>
       </div>
-
     </div>
   );
 };
