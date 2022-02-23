@@ -15,3 +15,42 @@
         padding-top: 40px;
         padding-left: 40px;
     }
+
+@media screen and (max-width: 390px) {
+    .Services-header{
+        height: 20vh ;
+        width: 390px;
+    }
+
+    .Services-header h2 {
+        font-size: 15px;
+        padding-top: 0.5vh;
+        padding-left: 5vw;
+        }
+}
+
+@media screen and (min-width: 391px) and (max-width: 767px) {
+    .Services-header{
+        height: 25vh ;
+        width: 100%;
+    }
+
+    .Services-header h2 {
+        font-size: 15px;
+        padding-top: 1vh;
+        padding-left: 4vw;
+        }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .Services-header{
+        height: 35vh ;
+        width: 100%;
+    }
+
+    .Services-header h2 {
+        font-size: 20px;
+        padding-top: 1.5vh;
+        padding-left: 4vw;
+        }
+}

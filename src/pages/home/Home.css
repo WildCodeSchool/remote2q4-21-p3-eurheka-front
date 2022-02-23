@@ -1,5 +1,5 @@
 .Home-header {
-    height: 500px;
+    height: 50vh;
     width: 100%;
     background-size:cover;
     background-position:center;
@@ -12,6 +12,46 @@
     font-size: 30px;
     line-height: 45px;
     color: var(--main-color-lighter-text);
-    padding-top: 40px;
-    padding-left: 40px;
+    padding-top: 4vh;
+    padding-left: 4vw;
 }
+
+@media screen and (max-width: 390px) {
+    .Home-header{
+        height: 20vh ;
+        width: 390px;
+    }
+
+    .Home-header h2 {
+        font-size: 15px;
+        padding-top: 0.5vh;
+        padding-left: 5vw;
+        }
+}
+
+@media screen and (min-width: 391px) and (max-width: 767px) {
+    .Home-header{
+        height: 25vh ;
+        width: 100%;
+    }
+
+    .Home-header h2 {
+        font-size: 15px;
+        padding-top: 1vh;
+        padding-left: 4vw;
+        }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .Home-header{
+        height: 35vh ;
+        width: 100%;
+    }
+
+    .Home-header h2 {
+        font-size: 20px;
+        padding-top: 1.5vh;
+        padding-left: 4vw;
+        }
+}
+
