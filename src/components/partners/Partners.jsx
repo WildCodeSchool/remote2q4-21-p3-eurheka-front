@@ -10,7 +10,7 @@ const Partners = () => {
             </div>
             <div className="odd-logo-container">
                 {logoPartners
-                .filter((data) => data.id % 2 != 0)
+                .filter((data) => data.id % 2 !== 0)
                 .map((data) => (
                     <img src={data.logo} alt={data.name} />
                 ))

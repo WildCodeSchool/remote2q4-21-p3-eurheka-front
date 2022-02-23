@@ -1,0 +1,126 @@
+.Security-container {
+    width: 100%;
+    height: 270px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+    margin-bottom: 200px;
+}
+
+.Security-box {
+    width: 270px;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 12px solid var(--main-color-light-background);
+    box-sizing: border-box;
+    margin: 20px;
+}
+
+.Security-img {
+    max-width: 260px;
+    margin-top: 0px;
+}
+
+.Security-title {
+    font-family: var(--title-font);
+    font-weight: 500;
+    font-size: 24px;
+    color: var(--main-color-light-security-link);
+    margin-bottom: 10px;
+}
+
+.Security-text {
+    font-family: var(--title-font);
+    font-weight: 300;
+    font-size: 20px;
+    color: var(--sec-color-dark-text);
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 391px) and (max-width: 767px) {
+    .Security-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Box-inline {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .Security-box {
+        width: 150px;
+        height: 150px;
+        margin: 15px;
+        border: 2px solid var(--main-color-light-background);
+    }
+
+    .Img-box {
+        width: 100%;
+        height: 50%;
+        object-fit: contain;
+    }
+
+    .Security-img {
+        width: 100%;
+        height: 100%;
+        object-fit: inherit;
+        margin-top: 0px;
+    }
+
+    .Security-title {
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
+
+    .Security-text {
+        font-size: 8px;
+        margin-bottom: 5px;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .Security-container {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+        margin-bottom: 80px;
+    }
+    
+    .Security-box {
+        width: 270px;
+        height: 270px;
+        border: 6px solid var(--main-color-light-background);
+        margin: 40px;
+    }
+    
+    .Security-img {
+        max-width: 155px;
+        max-height: 55px;
+    }
+    
+    .Security-title {
+        font-size: 18px;
+        color: var(--main-color-light-security-link);
+        margin-bottom: 5px;
+    }
+    .Security-text {
+        font-size: 14px;
+        color: var(--sec-color-dark-text);
+        margin-bottom: 5px;
+    }
+
+}
