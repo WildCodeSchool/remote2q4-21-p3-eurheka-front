@@ -39,3 +39,44 @@
         height: 47px;
     }
 }
+
+@media screen and (max-width: 390px) {
+    .UserActionsButtonCard{
+        width: 250px;
+        height: 250px;
+        border: 5px solid var(--main-color-light-background);
+        box-sizing: border-box;
+
+        .card-title{
+            font-weight: 600;
+            font-size: 20px;
+            margin: 10px;
+        }
+
+        .logo-block{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    
+        .card-result{
+            font-size: 13px;
+            font-weight: 500;
+            margin-top: 15px;
+        }
+    
+        .card-description{
+            font-weight: 300;  
+            margin: 10px;
+            font-size: 15px;
+        }
+    
+        .card-button{
+            background-color: var(--main-color-dark-button);
+            color: var(--main-color-lighter-text);
+            font-weight: 400;
+            margin-top: 0;
+            width: 70px;
+            height: 25px;
+        }
+    }
+}

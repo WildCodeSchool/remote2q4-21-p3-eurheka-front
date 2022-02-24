@@ -33,3 +33,50 @@
         margin-bottom: 20px;
     }
 }
+
+@media screen and (max-width: 390px) {
+    .UserActionsEventCard{
+        width: 250px;
+        height: 250px;
+        border: 5px solid var(--main-color-light-background);
+        box-sizing: border-box;
+
+        .card-title{
+            font-weight: 600;
+            font-size: 20px;
+            margin: 10px;
+        }
+
+        .event-container {
+            border: 2px solid var(--sec-color-dark-text);
+            padding: 10px;
+        }
+
+        .event-title{
+            font-weight: 500;
+            font-size:15px;
+        }
+
+        .event-type{
+            font-size: 15px;       
+        }
+
+        .logo-block{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    
+        .card-result{
+            font-size: 13px;
+            font-weight: 500;
+            margin-top: 15px;
+        }
+    
+        .card-description{
+            font-weight: 300;  
+            margin: 10px;
+            font-size: 15px;
+        }
+    
+    }
+}
