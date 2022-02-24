@@ -1,0 +1,20 @@
+.ServicesList{
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .columnList{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        height: 100%;
+        justify-content: space-between;
+    }
+
+    
+}
+

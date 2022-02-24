@@ -1,0 +1,21 @@
+.ServiceCard{
+    height: 60%;
+    background-color: var(--main-color-light-background);
+    color: var(--main-color-dark-title);
+
+
+
+    .serviceDescriptionListOff{
+        display: none;
+    }
+
+    .serviceDescriptionListOn{
+
+    }
+}
+
+.serviceCardOff{
+    height: 30%;
+    background-color: var(--main-color-light-background);
+    color: var(--main-color-dark-title);
+}
