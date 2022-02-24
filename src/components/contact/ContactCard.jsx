@@ -2,6 +2,8 @@ import React, { useRef } from 'react'
 import "./ContactCard.css"
 
 const ContactCard = () => {
+    const firstNameRef = useRef(null)
+    const lastNameRef = useRef(null)
     const emailRef = useRef(null)
     const objectRef = useRef(null)
     const descriptionRef = useRef(null)
@@ -9,6 +11,8 @@ const ContactCard = () => {
     const handleSubmit = (event) => {
         event.preventDefault()
         const data = {
+                firstName: firstNameRef.current.value,
+                lastName: lastNameRef.current.value,
                 email: emailRef.current.value,
                 object: objectRef.current.value,
                 description: descriptionRef.current.value
@@ -22,6 +26,28 @@ const ContactCard = () => {
             <h3 className='contact-subtitle'>Une question, une demande ? C'est ici !</h3>
             <form onSubmit={handleSubmit} className='contact-container'>
                 <h2 className='contact-form-title'>Votre demande</h2>
+                <label for="firstname" className='contact-form-subtitle'>Prénom</label>
+                <input 
+                    type="text" 
+                    id="firstname" 
+                    name="firstname" 
+                    className='contact-input-object' 
+                    placeholder="edouard"
+                    onFocus={(e) => e.target.placeholder = ""}  
+                    onBlur={(e) => e.target.placeholder = "edouard"}
+                    ref={firstNameRef}
+                />
+                <label for="lastname" className='contact-form-subtitle'>Nom</label>
+                <input 
+                    type="text" 
+                    id="lastname" 
+                    name="lastname" 
+                    className='contact-input-object' 
+                    placeholder="doe"
+                    onFocus={(e) => e.target.placeholder = ""}  
+                    onBlur={(e) => e.target.placeholder = "doe"}
+                    ref={lastNameRef}
+                />
                 <label for="email" className='contact-form-subtitle'>Email</label>
                 <input 
                     type="text" 
