@@ -2,12 +2,14 @@ import React, { useRef } from 'react'
 import "./ContactCard.css"
 
 const ContactCard = () => {
+    const emailRef = useRef(null)
     const objectRef = useRef(null)
     const descriptionRef = useRef(null)
 
     const handleSubmit = (event) => {
         event.preventDefault()
         const data = {
+                email: emailRef.current.value,
                 object: objectRef.current.value,
                 description: descriptionRef.current.value
                 }
@@ -20,6 +22,17 @@ const ContactCard = () => {
             <h3 className='contact-subtitle'>Une question, une demande ? C'est ici !</h3>
             <form onSubmit={handleSubmit} className='contact-container'>
                 <h2 className='contact-form-title'>Votre demande</h2>
+                <label for="email" className='contact-form-subtitle'>Email</label>
+                <input 
+                    type="text" 
+                    id="email" 
+                    name="email" 
+                    className='contact-input-object' 
+                    placeholder="edouard.doe@gmail.com"
+                    onFocus={(e) => e.target.placeholder = ""}  
+                    onBlur={(e) => e.target.placeholder = "edouard.doe@gmail.com"}
+                    ref={emailRef}
+                />
                 <label for="object" className='contact-form-subtitle'>Objet</label>
                 <input 
                     type="text" 
