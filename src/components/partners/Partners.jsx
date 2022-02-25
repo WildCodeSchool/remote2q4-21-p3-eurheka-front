@@ -11,16 +11,16 @@ const Partners = () => {
             <div className="odd-logo-container">
                 {logoPartners
                 .filter((data) => data.id % 2 !== 0)
-                .map((data) => (
-                    <img src={data.logo} alt={data.name} />
+                .map((data,index) => (
+                    <img  key={index} src={data.logo} alt={data.name} />
                 ))
                 }
             </div>
             <div className="even-logo-container">
                 {logoPartners
                 .filter((data) => data.id % 2 === 0)
-                .map((data) => (
-                    <img src={data.logo} alt={data.name} />
+                .map((data,index) => (
+                    <img key={index} src={data.logo} alt={data.name} />
                 ))
                 }
             </div>
