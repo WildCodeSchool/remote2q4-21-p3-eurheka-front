@@ -47,7 +47,27 @@
     .AdviceCardList-container {
         flex-wrap: wrap;
         margin-top: 0;
-        margin-bottom: 10px ;
+        margin-bottom: 30px ;
+    }
+
+    .background-even-container h3 {
+        font-size:28px;
+        margin-top: 20px;
+    }
+
+    .background-odd-container h3 {
+        font-size:28px;
+        margin-top: 20px;
+    }
+
+    .background-even-container li {
+        font-size:20px;
+        margin-top: 20px;
+    }
+
+    .background-odd-container li, p {
+        font-size:20px;
+        margin-top: 15px;
     }
 }
 

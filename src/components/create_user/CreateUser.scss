@@ -1,11 +1,12 @@
 .CreateUser{
-    width : 70%;
-    margin : 50px auto;
+    width : 100%;
+    margin : auto;
     color :var(--main-color-lighter-text);
     font-family: var(--title-font);
     font-size: 12px;
     background-color: var(--main-color-dark-background);
-    padding-left: 25px;
+    margin-bottom: 70px;
+    text-align: center;
 
     .globalContainer{
         display: flex;
@@ -20,14 +21,19 @@
     }
 
     h2{
-       font-weight: 600;
+        font-weight: 600;
         font-size: 30px;
         color : var(--main-color-light-title);
         padding-top: 15px;
+        margin-bottom: 30px;
     }
 
     .createUserInput{
         background-color:rgba(255, 255, 255, 0.4);
+    }
+
+    p {
+        margin-bottom: 15px;
     }
 
     .innerLeftFields{
@@ -103,6 +109,7 @@
     .btnContainer{
         display: flex;
         justify-content: flex-end;
+        margin: 10px ;;
     }
 
     .btnCreate{

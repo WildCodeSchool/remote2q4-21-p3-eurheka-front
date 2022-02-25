@@ -28,8 +28,8 @@
 
 @media screen and (max-width: 390px) {
     .AdviceCard{
-        width : 75vw;
-        height: 25vh;
+        width : 80vw;
+        height: 30vh;
         margin-bottom: 40px ;
         }
     .h3-title {
