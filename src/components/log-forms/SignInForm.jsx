@@ -38,23 +38,29 @@ const SignInForm = () => {
     }
     return (
         <div>
-            <form action="" onSubmit={handleLogin} id="sign-up-form">
-                <label htmlFor="email">Email</label>
-                <input 
-                type="text" 
-                name="email" 
-                id="email" 
-                onChange={(e) => setEmail(e.target.value)} 
-                value={email} />
-                <div className="email-error">{}</div>
-                <label htmlFor="email">Password</label>
-                <input 
-                type="password" 
-                name="password" 
-                id="password" 
-                onChange={(e) => setPassword(e.target.value)} 
-                value={password} />
-                <div className="password-error">{}</div>
+            <form action="" onSubmit={handleLogin} id="sign-in-form" className="sign-in-form">
+                <div className="sign-in-email">
+                    <label htmlFor="email" className="label">Email</label>
+                    <input 
+                    type="text" 
+                    name="email" 
+                    id="email" 
+                    className="input-bigger"
+                    onChange={(e) => setEmail(e.target.value)} 
+                    value={email} />
+                    <div className="email-error">{}</div>
+                </div>
+                <div className="sign-in-password">
+                    <label htmlFor="password" className="label">Mot de passe</label>
+                    <input 
+                    type="password" 
+                    name="password" 
+                    id="password" 
+                    className="input-bigger"
+                    onChange={(e) => setPassword(e.target.value)} 
+                    value={password} />
+                    <div className="password-error">{}</div>
+                </div>
                 <input type="submit" value="Se connecter" />
             </form>
         </div>
