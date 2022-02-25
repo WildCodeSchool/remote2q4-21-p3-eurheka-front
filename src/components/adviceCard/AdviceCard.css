@@ -1,0 +1,100 @@
+.AdviceCard {
+    display: flex;
+    flex-direction: row;
+    width: 25vw;
+    height: 35vh;
+    font-family: 'Poppins';
+}
+
+.h3-title {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 45px;
+    margin: 30px 40px 30px 40px ;
+}
+
+.taskList {
+    list-style-type: '_';
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 40px;
+    margin-left: 55px;
+}
+
+.dots-paragraph {
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 390px) {
+    .AdviceCard{
+        width : 75vw;
+        height: 25vh;
+        margin-bottom: 40px ;
+        }
+    .h3-title {
+        font-weight: 600;
+        font-size: 18px;
+        margin: 10px 15px 0 20px;
+    }
+
+    .taskList {
+        font-size: 15px;
+        line-height: 30px;
+    }
+    .dots-paragraph {
+        margin-top: 0;
+        margin-left: 45px;
+    }
+}
+
+@media screen and (min-width: 391px) and (max-width: 767px) {
+    .AdviceCard{
+        width : 80vw;
+        height: 30vh;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-bottom: 50px ;
+    }
+
+    .h3-title {
+        font-weight: 600;
+        font-size: 25px;
+        margin: 15px 20px 0 20px;
+    }
+
+    .taskList {
+        font-size: 15px;
+        line-height: 35px;
+    }
+    .dots-paragraph {
+        margin-top: 0;
+        margin-left: 45px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .AdviceCard{
+        width : 30vw;
+        height: 25vh;
+    }
+    
+    .h3-title {
+        font-weight: 600;
+        font-size: 18px;
+        margin: 15px 0 0 20px;
+        line-height: 30px;
+    }
+
+    .taskList {
+        font-size: 15px;
+        line-height: 30px;
+    }
+    .dots-paragraph {
+        margin-top: 0;
+        margin-left: 45px;
+    }
+}
+
+
+

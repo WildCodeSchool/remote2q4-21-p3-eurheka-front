@@ -1,0 +1,150 @@
+.ContactCard{
+    display: flex;
+    max-width: 1920px;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-container {
+    display: flex;
+    width: 80%;
+    background-color: var(--main-color-dark-background);
+    flex-direction: column;
+    align-items: center;
+    height: 722px;
+}
+
+.contact-title{
+    font-weight: 700;
+    margin-top: 80px;
+    margin-bottom: 18px;
+}
+
+.contact-subtitle{
+    font-weight: 300;
+    margin-bottom: 97px;
+}
+
+.contact-form-title{
+    color: var(--main-color-light-title);
+    font-weight: 600;
+    margin-top: 45px;
+}
+
+.contact-form-subtitle{
+    color: var(--main-color-lighter-text);
+    font-weight: 500;
+    margin-top: 55px;
+    margin-bottom: 25px;
+}
+
+.contact-input-object{
+    width: 75%;
+    opacity: 40%;
+    height: 58px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-input-description{
+    width: 75%;
+    opacity: 40%;
+    height: 192px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 15px;
+}
+
+.contact-button {
+    background-color: var(--main-color-light-button);
+    color: var(--main-color-lighter-text);
+    font-weight: 400;
+    margin-top: 62px;
+    margin-bottom: 55px;
+    width: 117px;
+    height: 47px;
+}
+
+@media screen and (max-width:390px) {
+    .contact-container {
+        height: auto;
+    }
+
+    .contact-container {
+        width: 90%;
+    }
+
+    .contact-title{
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+
+    .contact-subtitle{
+        margin-bottom: 50px;
+    }
+
+    .contact-form-subtitle{
+        margin-top: 25px;
+    }
+
+    .contact-button {
+        margin-top: 55px;
+    }
+}
+
+@media screen and (min-width: 391px) and (max-width:768px) {
+    .contact-container {
+        height: auto;
+    }
+
+    .contact-container {
+        width: 90%;
+    }
+
+    .contact-title{
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+
+    .contact-subtitle{
+        margin-bottom: 50px;
+    }
+
+    .contact-form-subtitle{
+        margin-top: 25px;
+    }
+
+    .contact-button {
+        margin-top: 55px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .contact-container {
+        height: auto;
+    }
+
+    .contact-container {
+        width: 90%;
+    }
+
+    .contact-title{
+        margin-top: 40px;
+        margin-bottom: 10px;
+    }
+
+    .contact-subtitle{
+        margin-bottom: 50px;
+    }
+
+    .contact-form-subtitle{
+        margin-top: 25px;
+    }
+
+    .contact-button {
+        margin-top: 55px;
+    }
+}
