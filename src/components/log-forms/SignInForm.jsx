@@ -8,16 +8,32 @@ const SignInForm = () => {
 
     const handleLogin = (e) => {
         e.preventDefault();
+
+        const emailError = document.querySelector('.email.error');
+        const passwordError = document.querySelector('.password.error');
+
         axios({
             method: "post",
-            url= '${process.env.REACT_APP_API_URL}api/user/login',
+            url: '${process.env.REACT_APP_API_URL}api/users/login',
             withCredentials: true,
             data: {
                 email,
                 password
             },
         })
-            .then
+            .then((res) => {
+                console.log(res)
+                if (res.data.errors) {
+                    emailError.innerHTML = res.data.errors.email;
+                    passwordError.innerHTML = res.data.errors.password;
+                } else {
+                    window.location = '/';
+                }
+            })
+
+            .catch((err) => {
+                console.log(err);
+            });
 
     }
     return (
