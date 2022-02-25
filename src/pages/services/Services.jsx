@@ -8,7 +8,7 @@ const Services = () => {
       <div className="Services-header">
         <h2>Espace Candidat</h2>
       </div>
-      <Inscriptions />
+      <Inscription />
     </div>
   );
 };
