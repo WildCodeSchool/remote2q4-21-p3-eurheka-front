@@ -17,8 +17,8 @@ const OpinionDiv = (props) => {
             <Carousel itemsToShow={1}>
                 {opinions && opinions.map((opinion,index) => {
                     return (
-                        <div>
-                            <div className='OpinionCont' key={index}>
+                        <div key={index}>
+                            <div className='OpinionCont'>
                                 "{opinion.opinion}"
                             </div>
                             <div className='OpinionAutor'>
