@@ -1,5 +1,7 @@
 import React from 'react'
 import {useState} from 'react';
+import axios from 'axios';
+
 import './CreateUser.scss';
 
 const CreateUser = () => {
@@ -37,6 +39,31 @@ const CreateUser = () => {
                 accompanied:accompanied
             }
             //Send user to back
+            const url=`${process.env.REACT_APP_API_URL}users/`;
+                axios.post(url, newUser)
+              .then(function (response) {
+                console.log(response);
+                if(response.status===201)
+                {
+                    console.log('signup OK');
+                }
+              })
+              .catch(function (error) {
+                const HTTPError=error.response.status;
+                switch(HTTPError)
+                {
+                    case 409 :
+                            console.log('User already exist');
+                            console.log(error.response.data);
+                            break;
+                    case 422:
+                            console.log('Erreur de validation');
+                            console.log(error.response.data);
+                            break;
+                    default : console.log('Unknown error');
+
+                }
+              });
             //Go to connexion page ?
         }
         else
