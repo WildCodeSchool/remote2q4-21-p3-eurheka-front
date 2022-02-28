@@ -78,6 +78,21 @@ const SignUpForm = () => {
                 </div>
             </div>
             <div className="password.error"></div>
+            <div className="checkbox-duo">
+                <input type="checkbox" id="stage" name="stage" value="stage"
+                className="checkbox-box"></input>
+                <label for="stage" className="check-text">En recherche d'emploi/stage</label>
+            </div>
+            <div className="checkbox-duo">
+                <input type="checkbox" id="accompanied" name="accompanied" value="accompanied"
+                className="checkbox-box"></input>
+                <label for="accompanied" className="check-text">Etre accompagné</label>
+            </div>
+            <div className="checkbox-duo">
+                <input type="checkbox" id="focus" name="focus" value="focus"
+                className="checkbox-box"></input>
+                <label for="focus" className="check-text">Faire le point</label>
+            </div>
             <div onClick="submit" type="submit " value="Valider" className="signUp-btn">Valider mes informations</div>
         </form>
     )

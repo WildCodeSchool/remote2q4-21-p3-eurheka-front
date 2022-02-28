@@ -1,10 +1,20 @@
 import React, { useState } from 'react';
 import axios from "axios";
+import RetreivePassword from ".//retreivePassword/RetreivePassword";
 import "./SignInForm.css";
 
 const SignInForm = () => {
     const [email, setEmail]= useState("");
     const [password, setPassword]= useState("");
+    const [forgotPassword, setForgotPassword] = useState(false);
+    
+    const handleModals = (e) => {
+        if (e.target.id === 'forgotPassword') {
+            setForgotPassword(true);
+        } else {
+            setForgotPassword(false);
+        }
+    }
 
     const handleLogin = (e) => {
         e.preventDefault();
@@ -61,7 +71,9 @@ const SignInForm = () => {
                     value={password} />
                     <div className="password-error">{}</div>
                 </div>
-                <input type="submit" value="Se connecter" />
+                <div type="submit" value="Se connecter" className="signIn-btn">Se connecter</div>
+                <div onClick={handleModals} id="forgotPassword" className={forgotPassword ? "retreive-password" : ""}>J'ai oublié mon mot de passe</div>
+                {forgotPassword && <RetreivePassword />}
             </form>
         </div>
     )
