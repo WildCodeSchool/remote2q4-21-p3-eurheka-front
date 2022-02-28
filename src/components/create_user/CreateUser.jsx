@@ -19,9 +19,9 @@ const CreateUser = () => {
         e.preventDefault();
         //Reset all error panels
         const errorDivs = document.getElementsByClassName('error');
-        for(let i=0;i<errorDivs.length;i++){
+        for (let i = 0; i < errorDivs.length; i++) {
             errorDivs[i].classList.remove('ErrorDisplay');
-            errorDivs[i].innerHTML='';
+            errorDivs[i].innerHTML = '';
         }
         if (firstname && lastname && password1 && password2 && email) {
             if (password1 !== password2) {
@@ -46,7 +46,7 @@ const CreateUser = () => {
             axios.post(url, newUser)
                 .then(function (response) {
                     if (response.status === 201) {
-                        const userId=response.data.userId;
+                        const userId = response.data.userId;
                     }
                 })
                 .catch(function (error) {
