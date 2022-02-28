@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import axios from "axios";
 import "./SignUpForm.css";
 
@@ -12,7 +13,7 @@ const SignUpForm = () => {
 
     const handleRegister = async (e) => {
     }
-    
+
     return (
         <form action="" onSubmit={handleRegister} id="sign-up-form" className="sign-up-form">
             <div className="sign-up-name">
@@ -96,7 +97,7 @@ const SignUpForm = () => {
             <div className="checkbox-duo">
                 <input type="checkbox" id="conditions" name="conditions" value="conditions"
                 className="checkbox-box"></input>
-                <label for="conditions" className="check-text">J'accepte les conditions d'utilisation</label>
+                <label for="conditions" className="check-text">J'accepte les <NavLink to="/conditions-generales" className="general-conditions">conditions générales</NavLink></label>
             </div>
             <div onClick="submit" type="submit " value="Valider" className="signUp-btn">Valider mes informations</div>
         </form>

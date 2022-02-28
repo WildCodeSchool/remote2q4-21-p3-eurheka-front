@@ -24,6 +24,13 @@
     margin-bottom: 20px;
 }
 
+.credential-error-error {
+    color: var(#F64E4E);
+    font-size: 14px;
+    font-weight: 300;
+    display: none;
+}
+
 .label {
     color: var(--main-color-light-text);
     font-family: var(--title-font);
@@ -56,7 +63,7 @@
     margin-bottom: 20px;
 }
 
-.forgot-link {
+.forgotLink {
     color: var(--main-color-light-text);
     font-family: var(--title-font);
     font-size: 14px;

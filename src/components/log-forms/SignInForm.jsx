@@ -16,47 +16,69 @@ const SignInForm = () => {
         }
     }
 
+    function validateEmail(eVal){
+        var val=/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+        if (val.test(eVal)){
+            return true;
+        } else {
+            return false;
+        }
+    }  
+
     const handleLogin = (e) => {
         e.preventDefault();
         const emailError = document.querySelector('.email.error');
         const passwordError = document.querySelector('.password.error');
-        axios({
-            method: "post",
-            url: '${process.env.REACT_APP_API_URL}api/users/login',
-            withCredentials: true,
-            data: {
-                email,
-                password
-            },
-        })
-            .then((res) => {
-                console.log(res)
-                if (res.data.errors) {
-                    emailError.innerHTML = res.data.errors.email;
-                    passwordError.innerHTML = res.data.errors.password;
-                } else {
-                    window.location = '/';
-                }
+        
+        if (validateEmail(email) && password !== ""){
+            axios({
+                method: "post",
+                url: '${process.env.REACT_APP_API_URL}api/users/login',
+                withCredentials: true,
+                data: {
+                   email,
+                   password
+                },
             })
-            .catch((err) => {
-                console.log(err);
-            });
-
+                .then((res) => {
+                    console.log(res)
+                    if (res.data.errors) {
+                        emailError.innerHTML = res.data.errors.email;
+                        passwordError.innerHTML = res.data.errors.password;
+                    } else {
+                        window.location = '/';
+                    }
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
+            } else {
+                if (password === ""){
+                    const passwordError = document.getElementById('password-error');
+                    passwordError.style.display = "block";
+                    passwordError.innerHTML = "Veuillez rentrer votre mot de passe";
+                } 
+                if (!validateEmail(email)){
+                    const emailError = document.getElementById('email-error');
+                    emailError.style.display = "block";
+                    emailError.innerHTML = "Email invalide";
+                }
+            }
     }
 
     return (
         <div>
-            <form action="" onSubmit={handleLogin} id="sign-in-form" className="sign-in-form">
+            <form action=""  id="sign-in-form" className="sign-in-form">
                 <div className="sign-in-email">
                     <label htmlFor="email" className="label">Email</label>
                     <input 
-                    type="text" 
+                    type="email" 
                     name="email" 
                     id="email" 
                     className="input-bigger"
                     onChange={(e) => setEmail(e.target.value)} 
                     value={email} />
-                    <div className="email-error">{}</div>
+                    <div id="email-error" className="credential-error">{}</div>
                 </div>
                 <div className="sign-in-password">
                     <label htmlFor="password" className="label">Mot de passe</label>
@@ -67,10 +89,10 @@ const SignInForm = () => {
                     className="input-bigger"
                     onChange={(e) => setPassword(e.target.value)} 
                     value={password} />
-                    <div className="password-error">{}</div>
+                    <div id="password-error" className="credential-error">{}</div>
                 </div>
-                <div type="submit" value="Se connecter" className="signIn-btn">Se connecter</div>
-                <div onClick={handleModals} id="forgotPassword" className={forgotPassword ? "retreive-password" : ""}>J'ai oublié mon mot de passe</div>
+                <div onClick={handleLogin} value="Se connecter" className="signIn-btn">Se connecter</div>
+                <div onClick={handleModals} id="forgotPassword" className={forgotPassword ? "retreive-password forgotLink" : "forgotLink"}>J'ai oublié mon mot de passe</div>
                 {forgotPassword && <RetreivePassword />}
             </form>
         </div>
