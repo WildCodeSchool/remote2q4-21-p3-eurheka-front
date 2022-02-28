@@ -36,7 +36,6 @@
     font-family: var(--title-font);
     font-size: 14px;
     font-weight: 300;
-    margin-left: 10px;
 }
 
 .input-bigger-in {
@@ -135,5 +134,36 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .sign-in-email {
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
 
+    .input-bigger-in {
+        width: 420px;
+        height: 30px;
+        margin: 10px;
+    }
+
+    .label {
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    .signIn-btn {
+        width: 125px;
+        height: 30px;
+        margin: 10px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .forgotLink {
+        font-size: 14px;
+        font-weight: 300;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        padding-top: 35px;
+        border-top: 2px solid var(--main-color-light-text);
+    }
 }
