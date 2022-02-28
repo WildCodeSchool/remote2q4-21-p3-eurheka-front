@@ -25,3 +25,11 @@
         margin: 20px;
     }
 }
+
+@media screen and (min-width: 391px) and (max-width: 767px) {
+    .login-box {
+        width: 90%;
+        flex-direction: column;
+        margin: 20px;
+    }
+}
