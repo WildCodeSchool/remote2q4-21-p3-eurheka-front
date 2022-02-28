@@ -93,6 +93,11 @@ const SignUpForm = () => {
                 className="checkbox-box"></input>
                 <label for="focus" className="check-text">Faire le point</label>
             </div>
+            <div className="checkbox-duo">
+                <input type="checkbox" id="conditions" name="conditions" value="conditions"
+                className="checkbox-box"></input>
+                <label for="conditions" className="check-text">J'accepte les conditions d'utilisation</label>
+            </div>
             <div onClick="submit" type="submit " value="Valider" className="signUp-btn">Valider mes informations</div>
         </form>
     )
