@@ -1,21 +1,34 @@
 .ServiceCard{
-    height: 60%;
-    background-color: var(--main-color-light-background);
-    color: var(--main-color-dark-title);
+    width: 30%;
+    // background-color: var(--main-color-light-background);
+    // color: var(--main-color-dark-title);
+    margin: 5px;
 
-
-
-    .serviceDescriptionListOff{
-        display: none;
-    }
+    font-family: "Poppins";
 
     .serviceDescriptionListOn{
+        list-style-type: '_ ';
+    }
 
+    .lightContainer{
+        background-color: var(--main-color-dark-background);
+        color: var(--main-color-light-text);
+        padding-left: 25px;
+    }
+    
+    .darkContainer{
+        background-color: var(--main-color-light-background);
+        color: var(--main-color-dark-title);
+        padding-left: 25px;
     }
 }
 
-.serviceCardOff{
-    height: 30%;
-    background-color: var(--main-color-light-background);
-    color: var(--main-color-dark-title);
-}
+// .serviceCardOff{
+//     height: 30%;
+//     background-color: var(--main-color-light-background);
+//     color: var(--main-color-dark-title);
+
+//     .serviceDescriptionListOff{
+//         display: none;
+//     }
+// }
