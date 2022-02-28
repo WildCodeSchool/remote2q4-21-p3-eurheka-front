@@ -5,6 +5,7 @@
     justify-content: center;
     width: 90%;
     height: 90%;
+    margin: 20px;
 }
 
 .sign-up-name {
@@ -12,66 +13,68 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    margin-bottom: 20px;
 }
 
 .sign-up-email {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
+    justify-content: left;
+    margin-bottom: 20px;
 }
 
 .firstname {
     display: flex;
     flex-direction: column;
     align-items: left;
-    justify-content: space-around;
+    justify-content: left;
+    margin-bottom: 20px;
 }
 
 .lastname {
     display: flex;
     flex-direction: column;
     align-items: left;
-    justify-content: space-around;
-}
-
-.sign-up-email {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: left;
+    margin-bottom: 20px;
 }
 
 .passwords {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: left;
     justify-content: left;
+    margin-bottom: 20px;
 }
 
 .first-password {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: left;
+    margin-bottom: 20px;
 }
 
 .second-password {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: left;
+    margin-bottom: 20px;
 }
+
 .label {
     color: var(--main-color-light-text);
     font-family: var(--title-font);
     font-size: 14px;
     font-weight: 300;
     margin-left: 10px;
+    margin-bottom: 10px;
 }
 
 .input-classic {
-    width: 150px;
+    width: 190px;
     height: 20px;
     background-color: rgba(255, 255, 255, 0.2);
     border: none;
@@ -79,22 +82,23 @@
 }
 
 .input-bigger {
-    width: 320px;
+    width: 400px;
     height: 20px;
     background-color: rgba(255, 255, 255, 0.2);
     border: none;
     margin: 10px;
+    margin-bottom: 20px;
 }
 
 .signUp-btn {
-    background-color: var(--main-color-light-button);
-    color: var(--main-color-lighter-text);
-    width: 100px;
-    height: 20px;
+    background-color: var(--main-color-light-background);
+    color: var(--main-color-dark-button);
+    width: 200px;
+    height: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border-radius: 2%;
-    margin-top: 10px;
+    margin: 10px;
 }

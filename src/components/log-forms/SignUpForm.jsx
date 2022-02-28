@@ -78,7 +78,7 @@ const SignUpForm = () => {
                 </div>
             </div>
             <div className="password.error"></div>
-            <div onClick="submit" type="submit " value="Valider" className="signUp-btn" />
+            <div onClick="submit" type="submit " value="Valider" className="signUp-btn">Valider mes informations</div>
         </form>
     )
 }
