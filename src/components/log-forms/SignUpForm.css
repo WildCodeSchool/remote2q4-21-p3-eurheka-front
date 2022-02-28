@@ -15,23 +15,21 @@
     margin-bottom: 20px;
 }
 
-.sign-up-email {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: left;
-    margin-bottom: 20px;
-}
-
 .firstname {
     display: flex;
     flex-direction: column;
     align-items: left;
     justify-content: left;
-    margin-bottom: 20px;
 }
 
 .lastname {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+}
+
+.sign-up-email {
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -161,4 +159,83 @@
         justify-content: center;
     }
 
+}
+
+@media screen and (min-width: 391px) and (max-width: 767px) {
+    .input-bigger-up {
+        width: 250px;
+        height: 25px;
+        margin: 10px;
+    }
+
+    .sign-up-name {
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .label {
+        color: var(--main-color-light-text);
+        font-family: var(--title-font);
+        font-size: 12px;
+        font-weight: 300;
+        margin-left: 10px;
+        margin-bottom: 5px;
+    }
+
+    .input-bigger-up {
+        width: 260px;
+        height: 20px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border: none;
+        margin: 10px;
+        margin-bottom: 10px;
+    }
+
+    .input-classic {
+        width: 260px;
+        height: 20px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border: none;
+        margin: 10px;
+    }
+
+    .passwords {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .signUp-btn {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .sign-up-name {
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .sign-up-email {
+        margin-bottom: 10px;
+    }
+
+    .passwords {
+        margin-bottom: 10px;
+    }
+
+    .first-password {
+        margin-bottom: 10px;
+    }
+    
+    .second-password {
+        margin-bottom: 10px;
+    }
+    
+    .signUp-btn {
+        margin-bottom: 20px;
+    }
 }
