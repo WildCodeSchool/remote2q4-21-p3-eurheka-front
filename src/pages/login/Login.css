@@ -38,7 +38,7 @@
     }
 
     .login-box {
-        width: 90%;
+        width: 95%;
         flex-direction: column;
         align-items: center;
         justify-items: center;
@@ -51,7 +51,7 @@
         width: 100%;
         height: auto;  
     }
-    
+
     .login-box {
         width: 90%;
         flex-direction: column;
