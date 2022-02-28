@@ -11,8 +11,8 @@ const SignUpForm = () => {
     const [ controlPassword, setControlPassword] = useState('');
 
     const handleRegister = async (e) => {
-
     }
+    
     return (
         <form action="" onSubmit={handleRegister} id="sign-up-form" className="sign-up-form">
             <div className="sign-up-name">
