@@ -75,7 +75,7 @@ const SignInForm = () => {
                     type="email" 
                     name="email" 
                     id="email" 
-                    className="input-bigger"
+                    className="input-bigger-in"
                     onChange={(e) => setEmail(e.target.value)} 
                     value={email} />
                     <div id="email-error" className="credential-error">{}</div>
@@ -86,12 +86,12 @@ const SignInForm = () => {
                     type="password" 
                     name="password" 
                     id="password" 
-                    className="input-bigger"
+                    className="input-bigger-in"
                     onChange={(e) => setPassword(e.target.value)} 
                     value={password} />
                     <div id="password-error" className="credential-error">{}</div>
                 </div>
-                <div onClick={handleLogin} value="Se connecter" className="signIn-btn">Se connecter</div>
+                <div onClick={handleLogin} value="Se connecter" className="signIn-btn">Valider</div>
                 <div onClick={handleModals} id="forgotPassword" className={forgotPassword ? "retreive-password forgotLink" : "forgotLink"}>J'ai oublié mon mot de passe</div>
                 {forgotPassword && <RetreivePassword />}
             </form>

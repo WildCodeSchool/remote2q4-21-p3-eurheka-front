@@ -48,7 +48,7 @@ const SignUpForm = () => {
                 type="text" 
                 name="email" 
                 id="email" 
-                className="input-bigger"
+                className="input-bigger-up"
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
                 />

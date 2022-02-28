@@ -17,3 +17,11 @@
     margin: 20px;
     background-color: var(--main-color-dark-background);
 }
+
+@media screen and (max-width: 390px) {
+    .login-box {
+        width: 80%;
+        flex-direction: column;
+        margin: 20px;
+    }
+}
