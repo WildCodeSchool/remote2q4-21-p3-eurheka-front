@@ -7,9 +7,10 @@
     margin-left: auto;
     margin-right: auto;
     font-family: "Poppins", sans-serif;
+    top: 200px;
 }
 
-@media screen and (max-width: 390px) {
+/* @media screen and (max-width: 390px) {
     .UserActionsList{
         flex-direction: column;
         padding-top: 80px ;
@@ -28,5 +29,6 @@
     .UserActionsList{
         flex-wrap: wrap;
         justify-content: center;
+        
     }
-}
+} */
