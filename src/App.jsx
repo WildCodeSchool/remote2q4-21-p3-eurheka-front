@@ -10,7 +10,6 @@ import Login from './pages/login/Login';
 import NavBar from './components/navbar/NavBar';
 import Footer from './components/footer/Footer';
 import './App.css';
-/*import { get } from 'http';*/
 
 function App() {
   const [footerStyle, setFooterStyle] = useState(true)

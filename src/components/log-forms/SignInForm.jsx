@@ -18,10 +18,8 @@ const SignInForm = () => {
 
     const handleLogin = (e) => {
         e.preventDefault();
-
         const emailError = document.querySelector('.email.error');
         const passwordError = document.querySelector('.password.error');
-
         axios({
             method: "post",
             url: '${process.env.REACT_APP_API_URL}api/users/login',
@@ -40,12 +38,12 @@ const SignInForm = () => {
                     window.location = '/';
                 }
             })
-
             .catch((err) => {
                 console.log(err);
             });
 
     }
+
     return (
         <div>
             <form action="" onSubmit={handleLogin} id="sign-in-form" className="sign-in-form">

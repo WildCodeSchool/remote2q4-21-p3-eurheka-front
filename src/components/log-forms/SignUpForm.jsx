@@ -59,7 +59,7 @@ const SignUpForm = () => {
                     <input 
                     type="password" 
                     name="password" 
-                    id="password" 
+                    id="password1" 
                     className="input-classic"
                     onChange={(e) => setPassword(e.target.value)}
                     value={password}
@@ -70,7 +70,7 @@ const SignUpForm = () => {
                     <input 
                     type="password" 
                     name="password" 
-                    id="password" 
+                    id="password2" 
                     className="input-classic"
                     onChange={(e) => setPassword(e.target.value)}
                     value={password}
