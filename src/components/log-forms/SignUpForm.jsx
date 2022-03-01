@@ -91,7 +91,6 @@ const SignUpForm = () => {
                         default: console.log('Unknown error');
                     }
                 });
-
     }
 
     const passwordControl = (e) => {
@@ -101,7 +100,6 @@ const SignUpForm = () => {
             passwordError.innerHTML = "Les mots de passe doivent être identiques";
         }
     }
-
 
     return (
         <form action="" onSubmit={handleRegister} id="sign-up-form" className="sign-up-form">
