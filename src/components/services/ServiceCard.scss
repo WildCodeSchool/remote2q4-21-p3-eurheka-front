@@ -1,26 +1,84 @@
-.ServiceCard{
-    // width: 30%;
-    // background-color: var(--main-color-light-background);
-    // color: var(--main-color-dark-title);
-    // margin: 5px;
+// .ServiceCard{
+//     // width: 30%;
+//     // background-color: var(--main-color-light-background);
+//     // color: var(--main-color-dark-title);
+//     // margin: 5px;
+//     font-family: "Poppins";
+//     grid-row-start: 1;
+//     grid-row-end: span 2;
 
-    font-family: "Poppins";
 
-    .serviceDescriptionListOn{
-        list-style-type: '_ ';
-    }
-
-    .lightContainer{
-        background-color: var(--main-color-dark-background);
-        color: var(--main-color-light-text);
-        padding-left: 25px;
-    }
     
-    .darkContainer{
-        background-color: var(--main-color-light-background);
-        color: var(--main-color-dark-title);
-        padding-left: 25px;
-    }
+
+// }
+
+.test1{
+    font-family: "Poppins";
+    grid-row-start: 1;
+    grid-row-end: span 2;
+    background-color: var(--main-color-dark-background);
+}
+
+.test1bis{
+    font-family: "Poppins";
+    grid-row-start: 1;
+    background-color: var(--main-color-dark-background);
+}
+
+.test2{
+    font-family: "Poppins";
+    grid-row-start: 3;
+    background-color: var(--main-color-light-background);
+}
+
+.test2bis{
+    font-family: "Poppins";
+    grid-row-start: 2;
+    grid-row-end: 4;
+    background-color: var(--main-color-light-background);
+}
+
+.test3{
+    font-family: "Poppins";
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+.test4{
+    font-family: "Poppins";
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end:4;
+    background-color: var(--main-color-dark-background);
+}
+.test5{
+    font-family: "Poppins";
+    grid-column-start: 3;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+    background-color: var(--main-color-dark-background);
+}
+.test6{
+    font-family: "Poppins";
+    grid-column-start: 3;
+    grid-row-start: 3;
+}
+
+.serviceDescriptionListOn{
+    list-style-type: '_ ';
+}
+
+.lightContainer{
+    background-color: var(--main-color-dark-background);
+    color: var(--main-color-light-text);
+    padding-left: 25px;
+
+}
+
+.darkContainer{
+    background-color: var(--main-color-light-background);
+    color: var(--main-color-dark-title);
+    padding-left: 25px;
+    
 }
 
 // .serviceCardOff{

@@ -6,10 +6,16 @@ import './ServicesList.scss';
 
 const ServicesList = () => {
     // const [containerFormat, setContainerFormat] = useState(false)
+    const [changeSize, setChangeSize] = useState(true)
+
+    function changeButton() {
+        setChangeSize(!changeSize);
+    }
+    console.log(changeSize)
 
     return (
         <div className='ServicesList'>
-            {themeServices.map((data) => (
+            {/* {themeServices.map((data) => (
                 <ServiceCard containerClass={(data.id === 1 || data.id === 4 || data.id === 5) ? 'lightContainer' : 'darkContainer'}
                     key={data.id}
                     title={data.title}
@@ -23,9 +29,104 @@ const ServicesList = () => {
                     task7={data.task7}
                     task8={data.task8}
                 />
-            ))
+            )) */}
+{/* } */}
 
-            }
+            <ServiceCard 
+                gridContainer={changeSize ? `test${themeServices[0].id}` : `test${themeServices[0].id}bis`}
+                containerClass={(themeServices[0].id === 1 || themeServices[0].id === 4 || themeServices[0].id === 5) ? 'lightContainer' : 'darkContainer'}
+                    key={themeServices[0].id}
+                    title={themeServices[0].title}
+                    subTitle={themeServices[0].subTitle}
+                    task1={themeServices[0].task1}
+                    task2={themeServices[0].task2}
+                    task3={themeServices[0].task3}
+                    task4={themeServices[0].task4}
+                    task5={themeServices[0].task5}
+                    task6={themeServices[0].task6}
+                    task7={themeServices[0].task7}
+                    task8={themeServices[0].task8}
+                    changeSize={changeSize}
+                    setChangeSize={setChangeSize}
+                />
+            
+            <ServiceCard 
+                gridContainer={changeSize ? 'test2' : 'test2bis'}
+                containerClass={(themeServices[1].id === 1 || themeServices[1].id === 4 || themeServices[1].id === 5) ? 'lightContainer' : 'darkContainer'}
+                    key={themeServices[1].id}
+                    title={themeServices[1].title}
+                    subTitle={themeServices[1].subTitle}
+                    task1={themeServices[1].task1}
+                    task2={themeServices[1].task2}
+                    task3={themeServices[1].task3}
+                    task4={themeServices[1].task4}
+                    task5={themeServices[1].task5}
+                    task6={themeServices[1].task6}
+                    task7={themeServices[1].task7}
+                    task8={themeServices[1].task8}
+                />
+            <ServiceCard 
+                gridContainer={'test3'}
+                containerClass={(themeServices[2].id === 1 || themeServices[2].id === 4 || themeServices[2].id === 5) ? 'lightContainer' : 'darkContainer'}
+                    key={themeServices[2].id}
+                    title={themeServices[2].title}
+                    subTitle={themeServices[2].subTitle}
+                    task1={themeServices[2].task1}
+                    task2={themeServices[2].task2}
+                    task3={themeServices[2].task3}
+                    task4={themeServices[2].task4}
+                    task5={themeServices[2].task5}
+                    task6={themeServices[2].task6}
+                    task7={themeServices[2].task7}
+                    task8={themeServices[2].task8}
+                />
+            <ServiceCard 
+                gridContainer={'test4'}
+                containerClass={(themeServices[3].id === 1 || themeServices[3].id === 4 || themeServices[3].id === 5) ? 'lightContainer' : 'darkContainer'}
+                    key={themeServices[3].id}
+                    title={themeServices[3].title}
+                    subTitle={themeServices[3].subTitle}
+                    task1={themeServices[3].task1}
+                    task2={themeServices[3].task2}
+                    task3={themeServices[3].task3}
+                    task4={themeServices[3].task4}
+                    task5={themeServices[3].task5}
+                    task6={themeServices[3].task6}
+                    task7={themeServices[3].task7}
+                    task8={themeServices[3].task8}
+                />
+            <ServiceCard 
+                gridContainer={'test5'}
+                containerClass={(themeServices[4].id === 1 || themeServices[4].id === 4 || themeServices[4].id === 5) ? 'lightContainer' : 'darkContainer'}
+                    key={themeServices[4].id}
+                    title={themeServices[4].title}
+                    subTitle={themeServices[4].subTitle}
+                    task1={themeServices[4].task1}
+                    task2={themeServices[4].task2}
+                    task3={themeServices[4].task3}
+                    task4={themeServices[4].task4}
+                    task5={themeServices[4].task5}
+                    task6={themeServices[4].task6}
+                    task7={themeServices[4].task7}
+                    task8={themeServices[4].task8}
+                />
+            <ServiceCard 
+                gridContainer={'test6'}
+                containerClass={(themeServices[5].id === 1 || themeServices[5].id === 4 || themeServices[5].id === 5) ? 'lightContainer' : 'darkContainer'}
+                    key={themeServices[5].id}
+                    title={themeServices[5].title}
+                    subTitle={themeServices[5].subTitle}
+                    task1={themeServices[5].task1}
+                    task2={themeServices[5].task2}
+                    task3={themeServices[5].task3}
+                    task4={themeServices[5].task4}
+                    task5={themeServices[5].task5}
+                    task6={themeServices[5].task6}
+                    task7={themeServices[5].task7}
+                    task8={themeServices[5].task8}
+                />
+            <button className='serviceDescriptionListOn' onClick={changeButton}>bouton</button>
+
             {/* <div className='columnList'>
                 <ServiceCard containerFormat={containerFormat} setContainerFormat={setContainerFormat}/>
                 <ServiceCardRedux />

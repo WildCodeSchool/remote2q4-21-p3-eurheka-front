@@ -1,16 +1,18 @@
 .ServicesList{
     // width: 80%;
-    // height: 80vh;
+    height: 900px;
     // display: flex;
     // justify-content: space-between;
     // margin-top: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
     // flex-wrap: wrap;
     width: 80%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 200px 1fr;
     column-gap: 20px;
     row-gap: 20px;
     grid-auto-flow: column;

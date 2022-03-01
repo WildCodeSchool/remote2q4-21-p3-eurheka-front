@@ -4,8 +4,12 @@ import './ServiceCard.scss'
 export const ServiceCard = (props) => {
     // const {containerFormat, setContainerFormat} = props
 
+
+
+    
     return (
-        <div className='ServiceCard'>
+        // <div className='ServiceCard'>
+        <div className={props.gridContainer}>
             <div className={props.containerClass}>
                 <h2 className='serviceCardTitle'>{props.title}</h2>
                 <h3 className='serviceCardSubTitle'>{props.subTitle}</h3>
@@ -19,7 +23,7 @@ export const ServiceCard = (props) => {
                     {props.task7 ? <li>{props.task7}</li> : null }
                     {props.task8 ? <li>{props.task8}</li> : null }
                 </ul>
-                <button className='serviceDescriptionListOn'>bouton</button>
+                {/* <button className='serviceDescriptionListOn' onClick={changeButton}>bouton</button> */}
             </div>
         </div>
     )
