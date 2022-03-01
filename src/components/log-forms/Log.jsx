@@ -4,8 +4,8 @@ import SignUpForm from "./SignUpForm";
 import "./Log.css";
 
 const Log = () => {
-    const [signUpModal, setSignUpModal] = useState(true);
-    const [signInModal, setSignInModal] = useState(true);
+    const [signUpModal, setSignUpModal] = useState(false);
+    const [signInModal, setSignInModal] = useState(false);
 
     const handleModals = (e) => {
         if (e.target.id === 'register') {

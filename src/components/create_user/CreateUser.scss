@@ -20,7 +20,7 @@
     }
 
     h2{
-       font-weight: 600;
+        font-weight: 600;
         font-size: 30px;
         color : var(--main-color-light-title);
         padding-top: 15px;
@@ -115,6 +115,12 @@
 
     .wrongPass{
         background-color: rgba(255, 0, 0, 0.4);
+    }
+    
+    .ErrorDisplay{
+        margin-top: 5px;
+        padding-left: 10px;
+        color : red;
     }
     
     @media only screen and (min-width: 391px) and (max-width: 768px) {

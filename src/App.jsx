@@ -1,5 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { UserIdContext } from  "./context/AppContext.js";
+import axios from "axios";
 import Home from './pages/home/Home';
 import Services from './pages/services/Services';
 import Library from './pages/library/Library';
@@ -11,8 +13,23 @@ import './App.css';
 
 function App() {
   const [footerStyle, setFooterStyle] = useState(true)
+  const [uId, setUId] = useState(null);
+
+  useEffect(() => {
+    const fetchToken = async() => {
+      await axios({
+        method: "get",
+        url: '${process.env.REACT_APP_API_URL}jwtid',
+        withCredentials: true,
+      })
+         .then((res) => setUId(res.data))
+         .catch((err) => console.log("No token"));
+    }    
+    fetchToken();
+  });
 
   return (
+    <UserIdContext.Provider value={uId} >
     <div className="App">
       <NavBar />    
       <Routes>
@@ -24,6 +41,7 @@ function App() {
       </ Routes>
       <Footer footerStyle={footerStyle} setFooterStyle={setFooterStyle} />
     </div>
+    </UserIdContext.Provider>
   );
 }
 
