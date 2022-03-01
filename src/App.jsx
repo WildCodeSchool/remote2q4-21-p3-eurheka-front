@@ -10,6 +10,8 @@ import Login from './pages/login/Login';
 import NavBar from './components/navbar/NavBar';
 import Footer from './components/footer/Footer';
 import './App.css';
+//Don't forget to remove
+import Test from './pages/Test.jsx';
 
 function App() {
   const [footerStyle, setFooterStyle] = useState(true)
@@ -38,6 +40,9 @@ function App() {
         <Route path='/bibliotheque' element={<Library />}/>
         <Route path='/contact-avis' element={<Contact />}/>
         <Route path='/login' element={<Login />}/>
+        {/*Temp route*/}
+        <Route path='/admin/resource' element={<Test />}/>
+        {/*End Temp Route */}
       </ Routes>
       <Footer footerStyle={footerStyle} setFooterStyle={setFooterStyle} />
     </div>

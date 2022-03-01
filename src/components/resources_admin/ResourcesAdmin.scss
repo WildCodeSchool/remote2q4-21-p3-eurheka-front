@@ -1,0 +1,35 @@
+.ResourceAdmin{  
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    width: 80%;
+    margin: 25px auto;
+
+    h2{
+        color: var(--main-color-light-text);
+        font-family: var(--title-font);
+        padding-left: 10px;
+        padding-top: 10px;
+        font-size: 16px;
+    }
+    
+    .navBarResourceList{
+        display: flex;
+        margin-top: 10px;
+        flex-direction: row;
+        list-style-type: none;
+        justify-content: space-around;
+    }
+
+    @media only screen and (min-width: 391px) and (max-width: 768px) {
+
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    }
+
+    @media screen and (min-width: 1025px) {
+
+    }
+}
