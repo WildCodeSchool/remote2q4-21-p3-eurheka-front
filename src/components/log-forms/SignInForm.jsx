@@ -29,17 +29,13 @@ const SignInForm = () => {
         e.preventDefault();
         const emailError = document.querySelector('.email.error');
         const passwordError = document.querySelector('.password.error');
-        
+        const url = `${process.env.REACT_APP_API_URL}users/login`;
         if (validateEmail(email) && password !== ""){
-            axios({
-                method: "post",
-                url: '${process.env.REACT_APP_API_URL}api/users/login',
-                withCredentials: true,
-                data: {
-                   email,
-                   password
-                },
-            })
+            const login={
+                email,
+                password
+            };
+            axios.post(url,login,{ withCredentials: true })//{ withCredentials: true }
                 .then((res) => {
                     console.log(res)
                     if (res.data.errors) {

@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import axios from 'axios';
+import {NavLink} from 'react-router-dom';
 
 import './CreateUser.scss';
 
@@ -14,7 +15,7 @@ const CreateUser = () => {
     const [stage, setStage] = useState(true);
     const [accompanied, setAccompanied] = useState(false);
     const [focus, setFocus] = useState(false);
-
+    const [checkCG,setCheckCG] = useState(false);
     const submitClick = (e) => {
         e.preventDefault();
         //Reset all error panels
@@ -47,6 +48,16 @@ const CreateUser = () => {
                 .then(function (response) {
                     if (response.status === 201) {
                         const userId = response.data.userId;
+                        alert('Votre compte a été créé, veuillez vous connecter');
+                        setAccompanied(false);
+                        setFocus(false);
+                        setStage(false);
+                        setCheckCG(false);
+                        setEmail('');
+                        setFirstname('');
+                        setLastname('');
+                        setPassword1('');
+                        setPassword2('');
                     }
                 })
                 .catch(function (error) {
@@ -151,7 +162,9 @@ const CreateUser = () => {
                     </div>
                 </div>
                 <div className="btnContainer">
-                    <button type="submit" className='btnCreate' onClick={(e) => submitClick(e)}>s'inscrire</button>
+                <label htmlFor="conditions" className="check-text">J'accepte les <NavLink to="/conditions-generales" className="general-conditions">
+                conditions générales </NavLink><input type="checkbox" name="conditions" onChange={(e)=>setCheckCG(e.target.checked)}></input></label><br />
+                    <button disabled={!checkCG} type="submit" className='btnCreate' onClick={(e) => submitClick(e)}>s'inscrire</button>
                 </div>
             </form>
         </div>
