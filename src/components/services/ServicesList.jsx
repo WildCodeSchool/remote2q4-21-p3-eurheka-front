@@ -10,7 +10,7 @@ const ServicesList = () => {
     return (
         <div className='ServicesList'>
             {themeServices.map((data) => (
-                <ServiceCard containerClass={(data.id % 2 ===0) ? 'lightContainer' : 'darkContainer'}
+                <ServiceCard containerClass={(data.id === 1 || data.id === 4 || data.id === 5) ? 'lightContainer' : 'darkContainer'}
                     key={data.id}
                     title={data.title}
                     subTitle={data.subTitle}
