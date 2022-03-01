@@ -16,7 +16,6 @@ const SignUpForm = () => {
     const [ accompanied, setAccompanied] = useState(false);
 
     const handleRegister = async (e) => {
-
         e.preventDefault();
         let errorMessage = document.getElementsByClassName("Error");
         for (let i=0; i<errorMessage.length; i++){
@@ -46,8 +45,7 @@ const SignUpForm = () => {
                         setStage(false);
                         setFocus(false);
                         setAccompanied(false);
-                    }
-                    
+                    }                    
                 })
                 .catch(function (error) {
                     const HTTPError = error.response.status;
