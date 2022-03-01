@@ -14,7 +14,7 @@
         font-weight: 600;
     }
 
-    .logo-block{
+    .uploadCard-logo-block{
         display: flex;
         margin-top: 30px;
         margin-bottom: 30px;
@@ -34,6 +34,7 @@
 
 @media screen and (max-width: 390px) {
     .UserActionsUploadCard{
+        justify-content: space-evenly;
         width: 250px;
         height: 250px;
         border: 10px solid var(--main-color-light-background);
@@ -45,8 +46,51 @@
             margin: 10px;
         }
 
-        .logo-block{
+        .uploadCard-logo-block{
+            min-height: 60px;
+            max-width: 60px;
+            font-size: 20px;
             margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    
+        .card-result{
+            font-size: 13px;
+            margin-top: 15px;
+        }
+    
+        .card-description{
+            margin: 10px;
+            font-size: 15px;
+        }
+
+        p {
+            font-size: 15px;
+            font-weight: bolder;
+    }
+    }
+}
+
+@media screen and (min-width: 391px) and (max-width: 768px) {
+    .UserActionsUploadCard{
+        min-width: 250px;
+        max-width: 320px;
+        height: max-content;
+        min-height: 290px;
+        border: 10px solid var(--main-color-light-background);
+        box-sizing: border-box;
+
+        .card-title{
+            font-weight: bolder;
+            font-size: 20px;
+            margin: 25px;
+        }
+
+        .uploadCard-logo-block{
+            min-height: 60px;
+            max-width: 60px;
+            font-size: 20px;
+            margin-top: 5px;
             margin-bottom: 10px;
         }
     

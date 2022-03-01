@@ -7,7 +7,7 @@ const UserActionsButtonCard = () => {
             <div className="test">
 
             <h2 className='card-title'>Les offres d'emploi</h2>
-            <div className='logo-block'>
+            <div className='buttonCard-logo-block'>
                 <i className="fa-solid fa-spinner fa-2xl"></i>
             </div>
             <p className='card-result'>13 offres d’emploi disponibles...</p>

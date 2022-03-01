@@ -14,7 +14,7 @@
         font-weight: 600;
     }
 
-    .logo-block{
+    .buttonCard-logo-block{
         margin-top: 30px;
         margin-bottom: 30px;
     }
@@ -42,6 +42,8 @@
 
 @media screen and (max-width: 390px) {
     .UserActionsButtonCard{
+        justify-content: space-evenly;
+
         width: 250px;
         height: 250px;
         border: 10px solid var(--main-color-light-background);
@@ -53,7 +55,7 @@
             margin: 10px;
         }
 
-        .logo-block{
+        .buttonCard-logo-block{
             margin-top: 10px;
             margin-bottom: 10px;
         }
@@ -67,6 +69,50 @@
         .card-description{
             font-weight: bolder;
             margin: 10px;
+            font-size: 12px;
+        }
+    
+        .card-button{
+            background-color: var(--main-color-dark-button);
+            color: var(--main-color-lighter-text);
+            font-weight: bolder;
+            margin-top: 0;
+            width: 70px;
+            height: 25px;
+        }
+    }
+}
+
+@media screen and (min-width: 391px) and (max-width: 768px) {
+    .UserActionsButtonCard{
+        justify-content: space-evenly;
+        min-width: 250px;
+        max-width: 320px;
+        height: max-content;
+        min-height: 290px;
+        border: 10px solid var(--main-color-light-background);
+        box-sizing: border-box;
+
+        .card-title{
+            font-weight: bolder;
+            font-size: 20px;
+            margin: 25px;
+        }
+
+        .buttonCard-logo-block{
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+    
+        .card-result{
+            font-size: 15px;
+            font-weight: bolder;
+            margin-top: 20px;
+        }
+    
+        .card-description{
+            font-weight: bolder;
+            margin: 15px;
             font-size: 12px;
         }
     

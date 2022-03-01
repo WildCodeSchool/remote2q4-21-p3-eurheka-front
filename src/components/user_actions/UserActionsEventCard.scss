@@ -46,41 +46,25 @@
             font-size: 20px;
             margin: 10px;
         }
+}
+}
 
-        .event-container {
-            border: 2px solid var(--sec-color-dark-text);
-            padding: 10px;
-        }
+@media screen and (min-width: 391px) and (max-width: 768px) {
+    .UserActionEventCard{
+        min-width: 250px;
+        max-width: 320px;
+        height: max-content;
+        min-height: 250px;
+        border: 10px solid var(--main-color-light-background);
+        box-sizing: border-box;
 
-        .event-title{
+        .card-title{
             font-weight: bolder;
-            font-size:15px;
+            font-size: 20px;
+            margin: 25px;
         }
 
-        .event-type{
-            font-weight: bolder;
-            font-size: 15px;       
-        }
 
-        .logo-block{
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-    
-        .card-result{
-            font-size: 13px;
-            margin-top: 15px;
-        }
-    
-        .card-description{
-            margin: 10px;
-            font-size: 15px;
-        }
 
-        p {
-            font-size: 15px;
-            font-weight: bolder;
-
-    }
 }
 }
