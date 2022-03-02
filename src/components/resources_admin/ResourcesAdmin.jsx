@@ -22,6 +22,7 @@ const ResourcesAdmin = (props) => {
         <div className='ResourceAdmin'>
             <div className="navBarResource">
                 <h2>Gérer les ressources</h2>
+                <i className='CloseFolding'>X</i>
                <ul className="navBarResourceList">
                    <li className="navBarResourceListItem" onClick={()=>displayModal(1)}>Vidéo</li>
                    <li className="navBarResourceListItem" onClick={()=>displayModal(2)}>Documents</li>

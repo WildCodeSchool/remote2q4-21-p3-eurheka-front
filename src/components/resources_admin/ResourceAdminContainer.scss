@@ -1,0 +1,48 @@
+.ResourceAdminContainer{ 
+    border: solid 1px black;
+
+    .NewResourceDivContainer{
+        display: flex;
+        flex-direction: column;
+        border: solid 1px black;
+        padding : 10px;
+    }
+
+    .SubmitBtn{
+        width: 130px;
+        margin-top: 10px;
+    }
+
+    label{
+        margin-top: 10px;
+    }
+
+    .ListResourceDiv{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+    }
+    .ResourceCard{
+        width: 120px;
+        height: 40px;
+        border : solid 1px black;
+        text-align: center;
+        padding: 5px;
+        margin: 10px;
+        background-color: beige;
+
+    }
+    @media only screen and (min-width: 391px) and (max-width: 768px) {
+
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    }
+
+    @media screen and (min-width: 1025px) {
+
+    }
+}
