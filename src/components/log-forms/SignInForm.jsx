@@ -31,24 +31,14 @@ const SignInForm = () => {
         e.preventDefault();
         const emailError = document.querySelector('.email.error');
         const passwordError = document.querySelector('.password.error');
-<<<<<<< HEAD
         //${process.env.REACT_APP_API_URL}
         const url = `http://localhost:8000/users/login`;
         if (validateEmail(email) && password !== ""){
-=======
-
-        if (validateEmail(email) && password !== ""){
-            const url =`${process.env.REACT_APP_API_URL}users/login`;
->>>>>>> dev
             const login={
                 email,
                 password
             };
-<<<<<<< HEAD
             axios.post(url,login,{ withCredentials: true })//{ withCredentials: true }
-=======
-            axios.post(url, login)
->>>>>>> dev
                 .then((res) => {
                     console.log(res)
                     if (res.data.errors) {
