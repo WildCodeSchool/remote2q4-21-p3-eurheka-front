@@ -22,8 +22,9 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
-
+        position: relative;
     }
+
     .ResourceCard{
         width: 120px;
         height: 40px;
@@ -32,7 +33,18 @@
         padding: 5px;
         margin: 10px;
         background-color: beige;
-
+    }
+    .ResourceModal{
+        display: none;
+    }
+    .ShowResourceModal{
+        position: absolute;
+        top : -100px;
+        width: 450px;
+        height: 350px;
+        background-color: aqua;
+        display: block;
+        z-index: 3; 
     }
     @media only screen and (min-width: 391px) and (max-width: 768px) {
 

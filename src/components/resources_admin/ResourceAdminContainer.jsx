@@ -1,12 +1,27 @@
 import React, { useState } from 'react';
 import { FileUploader } from "react-drag-drop-files";
 import './ResourceAdminContainer.scss';
+import ResourceAdminModal from './ResourceAdminModal';
 
 const ResourceAdminContainer = ({ catDoc, docs }) => {
     const [file, setFile] = useState(null);
     const [name,setName]=useState('');
     const [pathVideo,setPathVideo]=useState('');
     const [visibility, setVisibility]=useState(1);
+    const [displayId, setDisplayId]=useState(null);
+    const handleModal=(id,displayModal)=>{
+        const modalBox=document.getElementById('resourceModal');
+        if(displayModal){
+            setDisplayId(id);
+            modalBox.classList.remove('ResourceModal');
+            modalBox.classList.add('ShowResourceModal');
+        }
+        else
+        {
+            modalBox.classList.remove('ShowResourceModal');
+            modalBox.classList.add('ResourceModal');
+        }
+    }
    //Handling file change
     const handleChange = (file) => {
         setFile(file);
@@ -63,8 +78,9 @@ const ResourceAdminContainer = ({ catDoc, docs }) => {
                 </form>
             </div>
             <div className="ListResourceDiv">
+                <ResourceAdminModal className="ResourceModal" displayModal={handleModal} resource={displayId} />
                 {docs.map((doc, index) => {
-                    return <div key={index} className="ResourceCard">{doc.name} A
+                    return <div key={index} className="ResourceCard" onClick={()=>handleModal(doc.id_resource,true)}>{doc.name} A
 
                     </div>
                 })}

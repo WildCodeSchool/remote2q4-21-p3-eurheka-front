@@ -9,11 +9,10 @@ const ResourcesAdmin = (props) => {
    
     useEffect(()=>{
         const url=`${process.env.REACT_APP_API_URL}resource/adminCat/`+getIdDoc;
-        console.log(url);
         axios.get(url,{withCredentials:true})
             .then((res)=>res.data)
             .then((data)=>{setDocs(data)
-            console.log(data);})
+            })
     },[getIdDoc]);
 
     const displayModal=(id)=>{
