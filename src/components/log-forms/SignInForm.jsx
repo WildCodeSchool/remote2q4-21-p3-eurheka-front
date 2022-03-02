@@ -29,11 +29,11 @@ const SignInForm = () => {
         e.preventDefault();
         const emailError = document.querySelector('.email.error');
         const passwordError = document.querySelector('.password.error');
-        
+        //${process.env.REACT_APP_API_URL}
         if (validateEmail(email) && password !== ""){
             axios({
                 method: "post",
-                url: '${process.env.REACT_APP_API_URL}api/users/login',
+                url: 'http://localhost:8000/api/users/login',
                 withCredentials: true,
                 data: {
                    email,
