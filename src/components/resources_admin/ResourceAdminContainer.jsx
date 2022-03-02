@@ -29,7 +29,7 @@ const ResourceAdminContainer = ({ catDoc, docs }) => {
                 alert('Veuillez indiquer le document à envoyer');
                 return -1;
             }
-            path=file; //to test
+            path=file.name; //to test
         }
         if(name===''){
             alert('Veuillez renseigner le nom du document');
