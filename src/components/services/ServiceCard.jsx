@@ -9,7 +9,6 @@ export const ServiceCard = (props) => {
         setChangeSize(!changeSize);
     }
 
-
     return (
         <div className='ServiceCard'>
             <div className={changeSize ? props.containerClass : props.containerClassReduce}>
