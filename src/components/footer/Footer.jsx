@@ -52,13 +52,13 @@ const Footer = (props) => {
                 </div>
                 <div className='socials'>
                     <div className='icons-container'>
-                        <a href="https://www.google.fr" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-google fa-2xl"></i></a>
-                        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-facebook-f fa-2xl"></i></a>
+                        <div className='icons-animation'><a href="https://www.google.fr" target="_blank" rel="noopener noreferrer" ><i className="fa-brands fa-google fa-2xl"></i></a></div>
+                        <div className='icons-animation'><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-facebook-f fa-2xl"></i></a></div>
                         
                     </div>
                     <div className='icons-container'>
-                        <a href="https://fr.linkedin.com/company/eurheka-estellelorusso" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-linkedin-in fa-2xl"></i></a>
-                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-instagram fa-2xl"></i></a>
+                        <div className='icons-animation'><a href="https://fr.linkedin.com/company/eurheka-estellelorusso" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-linkedin-in fa-2xl"></i></a></div>
+                        <div className='icons-animation'><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-instagram fa-2xl"></i></a></div>
                     </div>
                 </div>
             </div>
