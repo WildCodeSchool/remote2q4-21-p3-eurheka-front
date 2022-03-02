@@ -1,19 +1,18 @@
 .NavBar {
-    height: 106px;
+    height: 100px;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     background-color: var(--main-color-light-background);
-
+    font-family: 'Titillium Web', sans-serif;
 }
 
 .left-container{
     display: flex;
     height: 100%;
     align-items: center;
-    font-family: 'Titillium Web', sans-serif;
 }
 
 .link-container {
@@ -23,6 +22,7 @@
 .logo-container {
     height: 71%; 
     margin-left: 31px;
+    margin-right: 31px;
 }
 
 .Header-logo {
@@ -43,7 +43,6 @@
     margin-left: 20px;
     margin-right: 20px;
     color: var(--main-color-navbar-link);
-    font-family: 'Titillium Web', sans-serif;
     font-size: 25px;
     font-weight: 400;
 }
@@ -54,7 +53,6 @@
     margin-left: 20px;
     margin-right: 20px;
     color: var(--main-color-navbar-link);
-    font-family: 'Titillium Web', sans-serif;
     font-size: 25px;
     font-weight: 400;
 }
