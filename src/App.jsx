@@ -16,26 +16,35 @@ import Test from './pages/Test.jsx';
 function App() {
   const [footerStyle, setFooterStyle] = useState(true)
   const [uId, setUId] = useState(null);
+  const [uLevel,setULevel]=useState(null);
 
   useEffect(() => {
     const fetchToken = async() => {
       await axios({
         method: "get",
-        url: '${process.env.REACT_APP_API_URL}jwtid',
+        url: `${process.env.REACT_APP_API_URL}session/`,
         withCredentials: true,
       })
-         .then((res) => setUId(res.data))
-         .catch((err) => console.log("No token"));
+         .then((res) => {
+            console.log(res.data);
+            setUId(res.data.userId);
+            setULevel(res.data.userLevelString);
+          })
+         .catch((err) =>{
+          console.log("No token");
+          setUId(0);
+          setULevel('not connected');
+         } );
     }    
     fetchToken();
-  });
+  },[]);
 
   const fetchUId=(newId) => {
     setUId(newId)
   };
 
   return (
-    <UserIdContext.Provider value={{uId, fetchUId}} >
+    <UserIdContext.Provider value={{uId, uLevel}} >
     <div className="App">
       <NavBar />    
       <Routes>

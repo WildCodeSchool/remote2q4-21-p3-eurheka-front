@@ -6,13 +6,14 @@ import './ResourcesAdmin.scss';
 const ResourcesAdmin = (props) => {
     const [getIdDoc,setGetIdDoc]=useState(1);
     const [docs,setDocs]=useState([]);
-    //const url=`${process.env.REACT_APP_API_URL}resource/bycat/getIdDoc`;
    
     useEffect(()=>{
-        const url='http://localhost:8000/api/resource/bycat/'+getIdDoc;
+        const url=`${process.env.REACT_APP_API_URL}resource/adminCat/`+getIdDoc;
+        console.log(url);
         axios.get(url,{withCredentials:true})
             .then((res)=>res.data)
-            .then((data)=>setDocs(data))
+            .then((data)=>{setDocs(data)
+            console.log(data);})
     },[getIdDoc]);
 
     const displayModal=(id)=>{
