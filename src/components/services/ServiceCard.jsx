@@ -1,31 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './ServiceCard.scss'
 
 export const ServiceCard = (props) => {
-    // const {containerFormat, setContainerFormat} = props
-    const {changeSize, setChangeSize} = props
-    const {changeSize2, setChangeSize2} = props
-    const {changeSize3, setChangeSize3} = props
 
-    function changeButton1() {
+    const [changeSize, setChangeSize] = useState(true)
+
+    function changeButton() {
         setChangeSize(!changeSize);
     }
 
-    function changeButton2() {
-        setChangeSize2(!changeSize2);
-    }
 
-    function changeButton3() {
-        setChangeSize3(!changeSize3);
-    }
-    
     return (
-        // <div className='ServiceCard'>
-        <div className={props.gridContainer}>
-            <div className={props.containerClass}>
-                <div className='serviceTitleContainer' onClick={changeButton1}>
+        <div className='ServiceCard'>
+            <div className={changeSize ? props.containerClass : props.containerClassReduce}>
+                <div className='serviceTitleContainer' onClick={changeButton}>
                     <h2 className='serviceCardTitle'>{props.title}</h2>
-                    <span className='arrowStyle'><i className="fa-solid fa-chevron-down"></i></span>
+                    <span className='arrowStyle'>{changeSize ? <i className="fa-solid fa-chevron-up"></i> : <i className="fa-solid fa-chevron-down"></i>} </span>
                 </div>
                 <h3 className='serviceCardSubTitle'>{props.subTitle}</h3>
                 <ul className='serviceDescriptionList'>
@@ -39,7 +29,24 @@ export const ServiceCard = (props) => {
                     {props.task8 ? <li>{props.task8}</li> : null }
                 </ul>
                 <button className='serviceButton'>S'inscrire</button>
-                {/* <button className='serviceDescriptionListOn' onClick={changeButton}>bouton</button> */}
+            </div>
+            <div className={changeSize ? props.secondContainerClass : props.SecondContainerClassReduce}>
+                <div className='serviceTitleContainer' onClick={changeButton}>
+                    <h2 className='serviceCardTitle'>{props.titleb}</h2>
+                    <span className='arrowStyle'>{changeSize ? <i className="fa-solid fa-chevron-down"></i> : <i className="fa-solid fa-chevron-up"></i>} </span>
+                </div>
+                <h3 className='serviceCardSubTitle'>{props.subTitleb}</h3>
+                <ul className='serviceDescriptionList'>
+                    {props.task1b ? <li>{props.task1b}</li> : null }
+                    {props.task2b ? <li>{props.task2b}</li> : null }
+                    {props.task3b ? <li>{props.task3b}</li> : null }
+                    {props.task4b ? <li>{props.task4b}</li> : null }
+                    {props.task5b ? <li>{props.task5b}</li> : null }
+                    {props.task6b ? <li>{props.task6b}</li> : null }
+                    {props.task7b ? <li>{props.task7b}</li> : null }
+                    {props.task8b ? <li>{props.task8b}</li> : null }
+                </ul>
+                <button className='serviceButton'>S'inscrire</button>
             </div>
         </div>
     )
