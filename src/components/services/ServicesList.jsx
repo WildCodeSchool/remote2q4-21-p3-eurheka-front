@@ -4,15 +4,6 @@ import themeServices from '../../assets/data/themeServices';
 import './ServicesList.scss';
 
 const ServicesList = () => {
-    // const [containerFormat, setContainerFormat] = useState(false)
-    // const [changeSize, setChangeSize] = useState(true)
-
-    // function changeButton() {
-    //     setChangeSize(!changeSize);
-    // }
-
-
-
 
     return (
         <div className='ServicesList'>
