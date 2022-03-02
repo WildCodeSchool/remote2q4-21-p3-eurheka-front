@@ -10,8 +10,95 @@ const SignUpForm = () => {
     const [ email, setEmail] = useState('');
     const [ password, setPassword] = useState('');
     const [ controlPassword, setControlPassword] = useState('');
+    const [ checkCG, setCheckCG] = useState(false);
+    const [ stage, setStage] = useState(false);
+    const [ focus, setFocus] = useState(false);
+    const [ accompanied, setAccompanied] = useState(false);
 
     const handleRegister = async (e) => {
+        e.preventDefault();
+        let errorMessage = document.getElementsByClassName("Error");
+        for (let i=0; i<errorMessage.length; i++){
+            errorMessage[i].innerHTML="";
+        }
+        const newUser = {
+            firstname: firstname,
+            lastname: lastname,
+            password: password,
+            email: email,
+            stage: stage,
+            focus: focus,
+            accompanied: accompanied
+        }        
+        const url = `${process.env.REACT_APP_API_URL}users/`;
+            axios.post(url, newUser) 
+                .then(function (response) {
+                    if (response.status === 201) {
+                        const userId = response.data.userId;
+                        alert("Votre compte a été créé, veuillez vous connecter");
+                        setFirstName("");
+                        setLastName("");
+                        setEmail("");
+                        setPassword("");
+                        setControlPassword("");
+                        setCheckCG(false);
+                        setStage(false);
+                        setFocus(false);
+                        setAccompanied(false);
+                    }                    
+                })
+                .catch(function (error) {
+                    const HTTPError = error.response.status;
+                    let docName = '';
+                    let message = '';
+                    switch (HTTPError) {
+                        case 409:
+                            console.log('User already exist');
+                            console.log(error.response.data);
+                            docName = 'emailError';
+                            message = "L'adresse mail existe déjà";
+                            let errorDiv = document.getElementById(docName);
+                            errorDiv.innerHTML = message;
+                            errorDiv.classList.add('ErrorDisplay');
+                            break;
+                        case 422:
+                            console.log('Erreur de validation');
+                            console.log(error.response.data);
+                            const ErrorArray = error.response.data;
+                            ErrorArray.forEach((error) => {
+                                console.log(error);
+                                if (error.includes('mail')) {
+                                    docName = 'emailError';
+                                    message = "L'adresse mail n'est pas valide";
+                                }
+                                if (error.includes('password')) {
+                                    docName = "passwordError";
+                                    message = "Le mot de passe doit comporter 8 caractères minimum";
+                                }
+                                if (error.includes('firstname')) {
+                                    docName = 'firstNameError';
+                                    message = "Le prénom d'utilisateur n'est pas valide"
+                                }
+                                if (error.includes('lastname')) {
+                                    docName = 'lastNameError';
+                                    message = "Le nom d'utilisateur n'est pas valide"
+                                }
+                                let errorDiv = document.getElementById(docName);
+                                errorDiv.innerHTML = message;
+                                errorDiv.classList.add('ErrorDisplay');
+                            })
+                            break;
+                        default: console.log('Unknown error');
+                    }
+                });
+    }
+
+    const passwordControl = (e) => {
+        if (password !== controlPassword){
+            const passwordError = document.getElementById('password-error');
+            passwordError.style.display = "block";
+            passwordError.innerHTML = "Les mots de passe doivent être identiques";
+        }
     }
 
     return (
@@ -27,7 +114,7 @@ const SignUpForm = () => {
                     onChange={(e) => setFirstName(e.target.value)}
                     value={firstname}
                     />
-                    <div className="firstname.error"></div>
+                    <div id="firstNameError" className="Error firstNameError"></div>
                 </div>
                 <div className="lastname">
                     <label htmlFor="lastname" className="label">Nom</label>
@@ -39,7 +126,7 @@ const SignUpForm = () => {
                     onChange={(e) => setLastName(e.target.value)}
                     value={lastname}
                     />
-                    <div className="lastname.error"></div>
+                    <div id="lastNameError" className="Error lastNameError"></div>
                 </div>
             </div>
             <div className="sign-up-email">
@@ -52,7 +139,7 @@ const SignUpForm = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
                 />
-                <div className="email.error"></div>
+                <div className="Error emailError" id="emailError" ></div>
             </div>
             <div className="passwords">
                 <div className="first-password">
@@ -73,33 +160,33 @@ const SignUpForm = () => {
                     name="password" 
                     id="password2" 
                     className="input-classic"
-                    onChange={(e) => setPassword(e.target.value)}
-                    value={password}
+                    onChange={(e) => setControlPassword(e.target.value)}
+                    value={controlPassword}
+                    onBlur={passwordControl}
                     />
                 </div>
-            </div>
-            <div className="password.error"></div>
-            <div className="checkbox-duo">
-                <input type="checkbox" id="stage" name="stage" value="stage"
-                className="checkbox-box"></input>
-                <label for="stage" className="check-text">En recherche d'emploi/stage</label>
+                <div id="passwordError" className="Error credential-error">{}</div>
             </div>
             <div className="checkbox-duo">
-                <input type="checkbox" id="accompanied" name="accompanied" value="accompanied"
+                <input type="checkbox" id="stage" name="stage" value="stage" checked={stage} onChange={(e) => setStage(e.target.checked)}
                 className="checkbox-box"></input>
-                <label for="accompanied" className="check-text">Etre accompagné</label>
+                <label htmlFor="stage" className="check-text">En recherche d'emploi/stage</label>
             </div>
             <div className="checkbox-duo">
-                <input type="checkbox" id="focus" name="focus" value="focus"
+                <input type="checkbox" id="accompanied" name="accompanied" value="accompanied" checked={accompanied} onChange={(e) => setAccompanied(e.target.checked)}
                 className="checkbox-box"></input>
-                <label for="focus" className="check-text">Faire le point</label>
+                <label htmlFor="accompanied" className="check-text">Etre accompagné</label>
             </div>
             <div className="checkbox-duo">
-                <input type="checkbox" id="conditions" name="conditions" value="conditions"
+                <input type="checkbox" id="focus" name="focus" value="focus" checked={focus} onChange={(e) => setFocus(e.target.checked)}
                 className="checkbox-box"></input>
-                <label for="conditions" className="check-text">J'accepte les <NavLink to="/conditions-generales" className="general-conditions">conditions générales</NavLink></label>
+                <label htmlFor="focus" className="check-text">Faire le point</label>
             </div>
-            <div onClick="submit" type="submit " value="Valider" className="signUp-btn">Valider mes informations</div>
+            <div className="checkbox-duo">
+                <input onChange={(e) =>setCheckCG(e.target.checked)} type="checkbox" id="conditions" name="conditions" className="checkbox-box"></input>
+                <label htmlFor="conditions" className="check-text">J'accepte les <NavLink to="/conditions-generales" className="general-conditions">conditions générales</NavLink></label>
+            </div>
+            <button disabled={!checkCG} type="submit " value="Valider" className="signUp-btn">Valider mes informations</button>
         </form>
     )
 }
