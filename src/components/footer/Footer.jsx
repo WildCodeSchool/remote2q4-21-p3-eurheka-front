@@ -7,46 +7,53 @@ import "./Footer.css"
 const Footer = (props) => {
     const {footerStyle, setFooterStyle} = props
 
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
     return (
         <div className={footerStyle ? 'Footer' : 'Footer-light'}>
             <div className='footer-container'>
                 <div className='logo-container'>
                     <NavLink to="/">
-                        <img className='footer-logo' src={footerStyle ? Logo_Icone_Jaune :  Logo_Icone_Bleu} alt="Eurheka logo" />
+                        <img className='footer-logo' src={footerStyle ? Logo_Icone_Jaune :  Logo_Icone_Bleu} alt="Eurheka logo" onClick={scrollToTop}/>
                     </ NavLink>
                 </div>
                 <div className='navigation-container'>
                     <ul className='navigation-block'>
                         <NavLink to="/">
-                            <li className='navigation-list'>Accueil</li>
+                            <li className='navigation-list' onClick={scrollToTop}>Accueil</li>
                         </ NavLink>
                         <NavLink to="/prestations">
-                            <li className='navigation-list'>Prestations</li>
+                            <li className='navigation-list' onClick={scrollToTop}>Prestations</li>
                         </NavLink>
                         <NavLink to="/bibliotheque">
-                            <li className='navigation-list'>Bibliothèques</li>
+                            <li className='navigation-list' onClick={scrollToTop}>Bibliothèques</li>
                         </NavLink>
                     </ul>
                     <ul className='navigation-block'>
                         <NavLink to="/contact-avis">
-                            <li className='navigation-list'>Contact / Avis</li>
+                            <li className='navigation-list' onClick={scrollToTop}>Contact / Avis</li>
                         </NavLink>
                         <NavLink to="/">
-                            <li className='navigation-list'>Connexion</li>
+                            <li className='navigation-list' onClick={scrollToTop}>Connexion</li>
                         </NavLink>
                         <NavLink to="/">
-                            <li className='navigation-list'>Conditions</li>
+                            <li className='navigation-list' onClick={scrollToTop}>Conditions</li>
                         </NavLink>
                     </ul>
                     <ul className='navigation-block'>
                         <NavLink to="/">
-                            <li className='navigation-list'>Conditions générales</li>
+                            <li className='navigation-list' onClick={scrollToTop}>Conditions générales</li>
                         </NavLink>
                         <NavLink to="/">
-                            <li className='navigation-list'>Conditions</li>
+                            <li className='navigation-list' onClick={scrollToTop}>Conditions</li>
                         </NavLink>
                         <NavLink to="/">
-                            <li className='navigation-list'>A propos</li>
+                            <li className='navigation-list' onClick={scrollToTop}>A propos</li>
                         </NavLink>
                     </ul>
                 </div>
