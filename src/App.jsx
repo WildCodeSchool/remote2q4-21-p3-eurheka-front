@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { UserIdContext } from  "./context/AppContext.js";
 import axios from "axios";
 import Home from './pages/home/Home';
@@ -30,8 +30,12 @@ function App() {
     fetchToken();
   });
 
+  const fetchUId=(newId) => {
+    setUId(newId)
+  };
+
   return (
-    <UserIdContext.Provider value={uId} >
+    <UserIdContext.Provider value={{uId, fetchUId}} >
     <div className="App">
       <NavBar />    
       <Routes>
