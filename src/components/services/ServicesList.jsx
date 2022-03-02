@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ServiceCard } from './ServiceCard';
-import ServiceCardRedux from './ServiceCardRedux';
 import themeServices from '../../assets/data/themeServices';
 import './ServicesList.scss';
 
@@ -8,15 +7,19 @@ const ServicesList = () => {
     // const [containerFormat, setContainerFormat] = useState(false)
     const [changeSize, setChangeSize] = useState(true)
 
-    function changeButton() {
-        setChangeSize(!changeSize);
-    }
-    console.log(changeSize)
+    // function changeButton() {
+    //     setChangeSize(!changeSize);
+    // }
+
+
+
 
     return (
         <div className='ServicesList'>
-            {/* {themeServices.map((data) => (
-                <ServiceCard containerClass={(data.id === 1 || data.id === 4 || data.id === 5) ? 'lightContainer' : 'darkContainer'}
+            {themeServices.map((data) => (
+                <ServiceCard 
+                    gridContainer={changeSize ? `test${data.id}` : `test${data.id}bis`}
+                    containerClass={(data.id === 1 || data.id === 4 || data.id === 5) ? 'lightContainer' : 'darkContainer'}
                     key={data.id}
                     title={data.title}
                     subTitle={data.subTitle}
@@ -28,10 +31,12 @@ const ServicesList = () => {
                     task6={data.task6}
                     task7={data.task7}
                     task8={data.task8}
+                    changeSize={changeSize}
+                    setChangeSize={setChangeSize}
                 />
-            )) */}
-{/* } */}
-
+            ))
+            } 
+{/* 
             <ServiceCard 
                 gridContainer={changeSize ? `test${themeServices[0].id}` : `test${themeServices[0].id}bis`}
                 containerClass={(themeServices[0].id === 1 || themeServices[0].id === 4 || themeServices[0].id === 5) ? 'lightContainer' : 'darkContainer'}
@@ -51,7 +56,7 @@ const ServicesList = () => {
                 />
             
             <ServiceCard 
-                gridContainer={changeSize ? 'test2' : 'test2bis'}
+                gridContainer={changeSize ? `test${themeServices[1].id}` : `test${themeServices[1].id}bis`}
                 containerClass={(themeServices[1].id === 1 || themeServices[1].id === 4 || themeServices[1].id === 5) ? 'lightContainer' : 'darkContainer'}
                     key={themeServices[1].id}
                     title={themeServices[1].title}
@@ -64,9 +69,11 @@ const ServicesList = () => {
                     task6={themeServices[1].task6}
                     task7={themeServices[1].task7}
                     task8={themeServices[1].task8}
+                    changeSize={changeSize}
+                    setChangeSize={setChangeSize}
                 />
             <ServiceCard 
-                gridContainer={'test3'}
+                gridContainer={changeSize2 ? `test${themeServices[2].id}` : `test${themeServices[2].id}bis`}
                 containerClass={(themeServices[2].id === 1 || themeServices[2].id === 4 || themeServices[2].id === 5) ? 'lightContainer' : 'darkContainer'}
                     key={themeServices[2].id}
                     title={themeServices[2].title}
@@ -81,7 +88,7 @@ const ServicesList = () => {
                     task8={themeServices[2].task8}
                 />
             <ServiceCard 
-                gridContainer={'test4'}
+                gridContainer={changeSize2 ? `test${themeServices[3].id}` : `test${themeServices[3].id}bis`}
                 containerClass={(themeServices[3].id === 1 || themeServices[3].id === 4 || themeServices[3].id === 5) ? 'lightContainer' : 'darkContainer'}
                     key={themeServices[3].id}
                     title={themeServices[3].title}
@@ -96,7 +103,7 @@ const ServicesList = () => {
                     task8={themeServices[3].task8}
                 />
             <ServiceCard 
-                gridContainer={'test5'}
+                gridContainer={changeSize3 ? `test${themeServices[4].id}` : `test${themeServices[4].id}bis`}
                 containerClass={(themeServices[4].id === 1 || themeServices[4].id === 4 || themeServices[4].id === 5) ? 'lightContainer' : 'darkContainer'}
                     key={themeServices[4].id}
                     title={themeServices[4].title}
@@ -111,7 +118,7 @@ const ServicesList = () => {
                     task8={themeServices[4].task8}
                 />
             <ServiceCard 
-                gridContainer={'test6'}
+                gridContainer={changeSize3 ? `test${themeServices[5].id}` : `test${themeServices[5].id}bis`}
                 containerClass={(themeServices[5].id === 1 || themeServices[5].id === 4 || themeServices[5].id === 5) ? 'lightContainer' : 'darkContainer'}
                     key={themeServices[5].id}
                     title={themeServices[5].title}
@@ -125,7 +132,9 @@ const ServicesList = () => {
                     task7={themeServices[5].task7}
                     task8={themeServices[5].task8}
                 />
-            <button className='serviceDescriptionListOn' onClick={changeButton}>bouton</button>
+            <button onClick={changeButton}>bouton col1</button>
+            <button onClick={changeButton2}>bouton col2</button>
+            <button onClick={changeButton3}>bouton col3</button> */}
 
             {/* <div className='columnList'>
                 <ServiceCard containerFormat={containerFormat} setContainerFormat={setContainerFormat}/>

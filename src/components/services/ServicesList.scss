@@ -1,6 +1,6 @@
 .ServicesList{
     // width: 80%;
-    height: 900px;
+    height: 20%;
     // display: flex;
     // justify-content: space-between;
     // margin-top: 40px;
@@ -12,7 +12,7 @@
     width: 80%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 200px 1fr;
+    grid-template-rows: 150px 1fr 150px;
     column-gap: 20px;
     row-gap: 20px;
     grid-auto-flow: column;

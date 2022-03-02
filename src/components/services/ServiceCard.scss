@@ -23,12 +23,27 @@
     font-family: "Poppins";
     grid-row-start: 1;
     background-color: var(--main-color-dark-background);
+
+    .serviceDescriptionList{
+        display:none;
+    }
+
+    .serviceButton{
+        display: none;
+    }
 }
 
 .test2{
     font-family: "Poppins";
     grid-row-start: 3;
     background-color: var(--main-color-light-background);
+
+    .serviceDescriptionList{
+        display:none;
+    }
+    .serviceButton{
+        display: none;
+    }
 }
 
 .test2bis{
@@ -42,6 +57,22 @@
     font-family: "Poppins";
     grid-column-start: 2;
     grid-row-start: 1;
+    background-color: var(--main-color-light-background);
+
+    .serviceDescriptionList{
+        display:none;
+    }
+    .serviceButton{
+        display: none;
+    }
+}
+
+.test3bis{
+    font-family: "Poppins";
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background-color: var(--main-color-light-background);
 }
 .test4{
     font-family: "Poppins";
@@ -50,6 +81,18 @@
     grid-row-end:4;
     background-color: var(--main-color-dark-background);
 }
+.test4bis{
+    font-family: "Poppins";
+    grid-column-start: 2;
+    grid-row-start: 3;
+    background-color: var(--main-color-dark-background);
+    .serviceDescriptionList{
+        display:none;
+    }
+    .serviceButton{
+        display: none;
+    }
+}
 .test5{
     font-family: "Poppins";
     grid-column-start: 3;
@@ -57,36 +100,85 @@
     grid-row-end: span 2;
     background-color: var(--main-color-dark-background);
 }
+.test5bis{
+    font-family: "Poppins";
+    grid-column-start: 3;
+    grid-row-start: 1;
+    background-color: var(--main-color-dark-background);
+
+    .serviceDescriptionList{
+        display:none;
+    }
+    .serviceButton{
+        display: none;
+    }
+}
 .test6{
     font-family: "Poppins";
     grid-column-start: 3;
     grid-row-start: 3;
+    background-color: var(--main-color-light-background);
+
+    .serviceDescriptionList{
+        display:none;
+    }
+    .serviceButton{
+        display: none;
+    }
+}
+.test6bis{
+    font-family: "Poppins";
+    grid-column-start: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    background-color: var(--main-color-light-background);
 }
 
-.serviceDescriptionListOn{
+.serviceDescriptionList{
     list-style-type: '_ ';
+    font-weight: 300;
 }
 
 .lightContainer{
     background-color: var(--main-color-dark-background);
     color: var(--main-color-light-text);
     padding-left: 25px;
-
+    padding-right: 25px;
 }
 
 .darkContainer{
     background-color: var(--main-color-light-background);
     color: var(--main-color-dark-title);
     padding-left: 25px;
-    
+    padding-right: 25px;
 }
 
-// .serviceCardOff{
-//     height: 30%;
-//     background-color: var(--main-color-light-background);
-//     color: var(--main-color-dark-title);
+.serviceTitleContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.serviceCardTitle{
+    font-family: "Poppins";
+    font-weight: 600;
+    margin-top: 15px;
+}
 
-//     .serviceDescriptionListOff{
-//         display: none;
-//     }
-// }
+.arrowStyle{
+    color: white;
+}
+
+.serviceCardSubTitle{
+    font-family: "Poppins";
+    font-weight: 300;
+}
+
+.serviceButton{
+    background-color: var(--main-color-light-button);
+    color: var(--main-color-lighter-text);
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100px;
+    height: 40px;
+}
