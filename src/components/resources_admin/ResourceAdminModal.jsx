@@ -1,16 +1,44 @@
 import React,{useEffect,useState} from 'react';
 import axios from 'axios';
+import './ResourceAdminModal.scss';
 
 const ResourceAdminModal = ({resource,displayModal}) => {
-    useEffect(()=>{
-        const url=`${process.env.REACT_APP_API_URL}resource/`+resource;
-        //Axios
-    },[]);
-
+    const [docs,setDocs]=useState(null);
+    const url=`${process.env.REACT_APP_API_URL}resource/admin/`+resource;
+    useEffect(async ()=>{
+        if(resource!==null){
+        axios.get(url,{withCredentials:true})
+            .then((res)=>res.data)
+            .then((data)=>{setDocs(data)
+            })
+            .catch((err)=>{
+                console.log(err);
+            })
+        }
+    },[resource]);
+    useEffect(async()=>{
+        //axios theme
+    })
+    let ok=false;
     return (
-        <div  id="resourceModal">
-            {resource}
-            <button onClick={()=>{displayModal(0,false)}}>Click</button> 
+        <div  id="resourceModal" className='ResourceModal'>
+            {docs&&<div className="ModalAdminDoc">
+               Nom : {docs.name}<br />
+               Chemin {docs.path}<br />
+               catégorie : {docs.CategoryResource}<br />
+                Visibilité : <select value={docs.visibility}>
+                    <option value="1">Utilisateur non connecté</option>
+                    <option value="2">Utilisateur connecté</option>
+                    <option value="3">Entreprises</option>
+                </select>
+                <br />
+                {docs&&docs.themes.map((theme, index)=>{
+                   return( <p key={index}>
+                       Theme : {theme.themeName}
+                    </p>)
+                })}
+                 </div>}
+            <button onClick={()=>{displayModal(0,false)}} className="BtnModalClose">Fermer</button> 
         </div>
     )
 }

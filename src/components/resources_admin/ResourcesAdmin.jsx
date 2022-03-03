@@ -13,6 +13,9 @@ const ResourcesAdmin = (props) => {
             .then((res)=>res.data)
             .then((data)=>{setDocs(data)
             })
+            .catch((err)=>{
+                console.log (err);
+            })
     },[getIdDoc]);
 
     const displayModal=(id)=>{

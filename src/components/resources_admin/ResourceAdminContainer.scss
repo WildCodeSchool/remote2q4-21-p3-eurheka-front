@@ -42,9 +42,12 @@
         top : -100px;
         width: 450px;
         height: 350px;
-        background-color: aqua;
+        background-color: var(--main-color-light-background);
+        color : var(--sec-color-dark-text);
         display: block;
         z-index: 3; 
+        padding: 10px;
+        border : solid black 2px;
     }
     @media only screen and (min-width: 391px) and (max-width: 768px) {
 
