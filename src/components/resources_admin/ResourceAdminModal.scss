@@ -1,7 +1,12 @@
 .ModalAdminDoc{
     position: relative;
 
-   
+    .BtnModalClose{
+        position: absolute;
+        top :10px;
+        right: 10px;
+        padding : 5px;
+    }
 
     @media only screen and (min-width: 391px) and (max-width: 768px) {
 
@@ -14,10 +19,4 @@
     @media screen and (min-width: 1025px) {
 
     }
-}
-.BtnModalClose{
-    position: absolute;
-    top :10px;
-    right: 10px;
-    padding : 5px;
 }
