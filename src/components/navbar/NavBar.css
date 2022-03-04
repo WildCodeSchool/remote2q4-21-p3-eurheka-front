@@ -1,5 +1,5 @@
 .NavBar {
-    height: 106px;
+    height: 100px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -9,12 +9,23 @@
     position: sticky;
     top: 0;
     z-index: 100;
+    font-family: 'Titillium Web', sans-serif;
+}
 
+.left-container{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.link-container {
+    display: flex;
 }
 
 .logo-container {
     height: 71%; 
     margin-left: 31px;
+    margin-right: 31px;
 }
 
 .Header-logo {
@@ -35,7 +46,6 @@
     margin-left: 20px;
     margin-right: 20px;
     color: var(--main-color-navbar-link);
-    font-family: 'Titillium Web', sans-serif;
     font-size: 25px;
     font-weight: 400;
 }
@@ -46,7 +56,6 @@
     margin-left: 20px;
     margin-right: 20px;
     color: var(--main-color-navbar-link);
-    font-family: 'Titillium Web', sans-serif;
     font-size: 25px;
     font-weight: 400;
 }
@@ -57,11 +66,11 @@
     background-color: var(--main-color-dark-background);
     text-decoration: none;
     color: var(--main-color-navbar-link);
-    height: 20px;
+    height: 10px;
     width: 100%;
-    bottom: -34px;
+    bottom: -85%;
     left: 0px;
-}
+} 
 
 .login-button {
     height: 100%;

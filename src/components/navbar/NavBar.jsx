@@ -7,29 +7,33 @@ const NavBar = () => {
 
     return (
         <div className='NavBar'>
-            <div className="logo-container">
-                <Link to='/'><img className='Header-logo' src={home} alt="logo" /></Link>
+            <div className='left-container'>
+                <div className="logo-container">
+                    <Link to='/'><img className='Header-logo' src={home} alt="logo" /></Link>
+                </div>
+                <div className='link-container'>
+                    <NavLink to="/" className={({ isActive }) =>
+                    isActive ? "selected" : "navigation-link"
+                    }>
+                        Accueil
+                    </NavLink>
+                    <NavLink to="/prestations" className={({ isActive }) =>
+                    isActive ? "selected" : "navigation-link"
+                    }>
+                        Prestations
+                    </NavLink>
+                    <NavLink to="/bibliotheque" className={({ isActive }) =>
+                    isActive ? "selected" : "navigation-link"
+                    }>
+                        Bibliothèques
+                    </NavLink>
+                    <NavLink to="/contact-avis" className={({ isActive }) =>
+                    isActive ? "selected" : "navigation-link"
+                    }>
+                        Contact/Avis
+                    </NavLink>
+                </div>
             </div>
-            <NavLink to="/" className={({ isActive }) =>
-              isActive ? "selected" : "navigation-link"
-            }>
-                Accueil
-            </NavLink>
-            <NavLink to="/prestations" className={({ isActive }) =>
-              isActive ? "selected" : "navigation-link"
-            }>
-                Prestations
-            </NavLink>
-            <NavLink to="/bibliotheque" className={({ isActive }) =>
-              isActive ? "selected" : "navigation-link"
-            }>
-                Bibliothèques
-            </NavLink>
-            <NavLink to="/contact-avis" className={({ isActive }) =>
-              isActive ? "selected" : "navigation-link"
-            }>
-                Contact/Avis
-            </NavLink>
             <NavLink to="/login" className='login-button'>
                 Se connecter
             </NavLink>
