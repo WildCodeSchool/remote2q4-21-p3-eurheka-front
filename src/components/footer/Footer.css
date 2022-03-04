@@ -15,6 +15,8 @@
     color: var(--main-color-lighter-text);
 }
 
+
+
 .Footer-light {
     display: flex;
     background-color: var(--main-color-light-background) ;
@@ -48,6 +50,11 @@
     margin-left: 50px;
 }
 
+.footer-logo:hover {
+	-webkit-animation: blink 0.9s both;
+	animation: blink 0.9s both;
+}
+
 .navigation-container {
     display: flex;
     width: 80%;
@@ -59,12 +66,15 @@
     list-style-type: none;
     font-family: "Poppins";
     font-weight: 300;
-
 }
 
 .navigation-list{
     margin-top: 20px;
-    
+}
+
+.navigation-list:hover{
+    -webkit-animation: blink 0.9s both;
+	animation: blink 0.9s both;
 }
 
 .socials {
@@ -77,6 +87,35 @@
 
 .icons-container {
     justify-content: space-around;
+}
+
+
+
+.icons-animation:hover{
+	-webkit-animation: blink 0.9s both;
+	animation: blink 0.9s both;
+}
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .icons-container i {
