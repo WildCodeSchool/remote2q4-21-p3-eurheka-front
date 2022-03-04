@@ -31,8 +31,7 @@ const SignInForm = () => {
         e.preventDefault();
         const emailError = document.querySelector('.email.error');
         const passwordError = document.querySelector('.password.error');
-        //${process.env.REACT_APP_API_URL}
-        const url = `http://localhost:8000/users/login`;
+        const url = `${process.env.REACT_APP_API_URL}users/login`;
         if (validateEmail(email) && password !== ""){
             const login={
                 email,
