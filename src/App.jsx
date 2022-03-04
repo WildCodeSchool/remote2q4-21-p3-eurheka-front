@@ -37,13 +37,6 @@ function App() {
     }    
     fetchToken();
   },[]);
-<<<<<<< HEAD
-=======
-
-  const fetchUId=(newId) => {
-    setUId(newId)
-  };
->>>>>>> dev
 
   return (
     <UserIdContext.Provider value={{uId, uLevel}} >
