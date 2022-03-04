@@ -1,11 +1,16 @@
 .ResourceAdminContainer{ 
-    border: solid 1px black;
+    
+    .AddDocTitle{
+        margin: 10px;
+
+    }
 
     .NewResourceDivContainer{
         display: flex;
         flex-direction: column;
         border: solid 1px black;
         padding : 10px;
+        margin: 10px;
     }
 
     .SubmitBtn{
@@ -15,6 +20,7 @@
 
     .LabelAdminContainer{
         margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .ListResourceDiv{
@@ -41,7 +47,7 @@
 
     .ShowResourceModal{
         position: absolute;
-        top : -100px;
+        bottom : -100%;
         width: 450px;
         height: 350px;
         background-color: var(--main-color-light-background);
