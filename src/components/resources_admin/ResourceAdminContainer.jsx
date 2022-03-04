@@ -64,9 +64,9 @@ const ResourceAdminContainer = ({ catDoc, docs }) => {
                 Ajouter un nouveau document
                 <form action="" onSubmit={handleSubmit}>
                     <div className='NewResourceDivContainer'>
-                        <label htmlFor="name">Nom du document : <input type="text" id="name" value={name} onChange={(e)=>setName(e.target.value)}/> </label>
+                        <label htmlFor="name"  className='LabelAdminContainer'>Nom du document : <input type="text" id="name" value={name} onChange={(e)=>setName(e.target.value)}/> </label>
                         {catDoc > 1 ? <FileUploader handleChange={handleChange} name="file" types={fileTypes} label="Glisser et déposer le fichier" /> : <> <label forhtml="video">Chemin de la vidéo : <input type="text" id="video" value={pathVideo} onChange={(e)=>setPathVideo(e.target.value)}/> </label></>}
-                        <label htmlFor=''>Destiné au public :&nbsp; 
+                        <label htmlFor='' className='LabelAdminContainer'>Destiné au public :&nbsp; 
                             <select onChange={(e)=>setVisibility(e.target.value)}>
                                 <option value="1">Non connecté</option>
                                 <option value="2">Utilisateur connecté</option>
