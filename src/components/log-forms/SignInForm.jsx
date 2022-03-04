@@ -45,7 +45,6 @@ const SignInForm = () => {
                         emailError.innerHTML = res.data.errors.email;
                         passwordError.innerHTML = res.data.errors.password;
                     } else {
-                       // fetchUId(res.data.userId);
                         window.location = '/';
 
                     }
