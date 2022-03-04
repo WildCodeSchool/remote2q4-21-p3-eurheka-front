@@ -1,6 +1,6 @@
 .UserActionsList{
     display:flex;
-    width: 70%;
+    width: 85%;
     height: auto;
     justify-content: space-between;
     align-items: center;
@@ -28,10 +28,16 @@
     }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1023px) {
     .UserActionsList{
         flex-wrap: wrap;
         justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1180px) {
+    .UserActionsList{
+        width: 85%;
     }
 }
 

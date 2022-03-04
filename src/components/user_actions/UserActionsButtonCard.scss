@@ -3,7 +3,7 @@
     flex-direction: column;
     width: 300px;
     background-color: var(--main-color-general-background);
-    height: 320px;
+    height: 300px;
     align-items: center;
     text-align: center;
     border: 10px solid var(--main-color-light-background);
@@ -36,7 +36,7 @@
         margin-top: 20px;
         margin-bottom: 20px;
         width: 117px;
-        height: 47px;
+        height: 37px;
     }
 }
 
@@ -123,6 +123,52 @@
             margin-top: 0;
             width: 70px;
             height: 25px;
+        }
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1180px) {
+    .UserActionsButtonCard{
+        display: flex;
+        flex-direction: column;
+        width: 240px;
+        background-color: var(--main-color-general-background);
+        height: 256px;
+        align-items: center;
+        text-align: center;
+        border: 7px solid var(--main-color-light-background);
+        margin-bottom: 20px;
+    
+        .card-title{
+            margin-top: 20px;
+            font-weight: 600;
+            font-size: 16px;
+        }
+    
+        .buttonCard-logo-block{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    
+        .card-result{
+            font-size: 14px;
+            font-weight: 500;
+        }
+    
+        .card-description{
+            font-weight: 300;  
+            font-size: 12px;
+            margin-top: 20px;
+        }
+    
+        .card-button{
+            background-color: var(--main-color-dark-button);
+            color: var(--main-color-lighter-text);
+            font-weight: 400;
+            font-size: 14px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            width: 93px;
+            height: 37px;
         }
     }
 }

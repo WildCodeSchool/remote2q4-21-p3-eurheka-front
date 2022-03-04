@@ -91,8 +91,6 @@
 @media screen and (max-width: 390px) {
     .NavBar {
         height: 90px;
-
-
     }
     .logo-container {
         height: 63%; 
@@ -126,7 +124,7 @@
 
 @media screen and (min-width: 391px) and (max-width: 767px) {
     .NavBar {
-        height: 10vh;
+        height: 5vh;
         width: 100%;
     }
     .logo-container {

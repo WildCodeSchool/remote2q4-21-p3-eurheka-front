@@ -3,7 +3,7 @@
     flex-direction: column;
     width: 300px;
     background-color: var(--main-color-general-background);
-    height: 320px;
+    height: 300px;
     align-items: center;
     text-align: center;
     border: 10px solid var(--main-color-light-background);
@@ -63,8 +63,50 @@
             font-size: 20px;
             margin: 25px;
         }
-
-
-
+    }
 }
+@media screen and (min-width: 1024px) and (max-width: 1180px) {
+    .UserActionsEventCard{
+        display: flex;
+        flex-direction: column;
+        width: 240px;
+        background-color: var(--main-color-general-background);
+        height: 256px;
+        align-items: center;
+        text-align: center;
+        border: 7px solid var(--main-color-light-background);
+        margin-bottom: 20px;
+    
+        .card-title{
+            margin-top: 20px;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .event-container{
+            width: 70%;
+            border: 2px solid var(--sec-color-dark-text);
+            padding: 15px;
+        }
+    
+        .event-title{
+            font-size: 14px;
+            font-weight: 500;
+        }
+    
+        .event-type{
+            font-size: 14px;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .clock-text {
+            font-size: 14px;
+        }
+
+        .place{
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+    
+    }
 }
