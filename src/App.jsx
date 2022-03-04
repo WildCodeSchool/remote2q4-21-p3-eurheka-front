@@ -17,7 +17,7 @@ function App() {
   const [uId, setUId] = useState(null);
   const [uLevel,setULevel]=useState(null);
 
-  useEffect(() => {
+  useEffect(async() => {
     const fetchToken = async() => {
       await axios({
         method: "get",
@@ -25,7 +25,6 @@ function App() {
         withCredentials: true,
       })
          .then((res) => {
-            console.log(res.data);
             setUId(res.data.userId);
             setULevel(res.data.userLevelString);
           })
@@ -37,10 +36,6 @@ function App() {
     }    
     fetchToken();
   },[]);
-
-  const fetchUId=(newId) => {
-    setUId(newId)
-  };
 
   return (
     <UserIdContext.Provider value={{uId, uLevel}} >

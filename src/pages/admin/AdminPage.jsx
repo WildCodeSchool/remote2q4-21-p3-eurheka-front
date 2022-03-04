@@ -1,4 +1,5 @@
 import React,{useContext} from 'react'
+import ResourcesAdmin from '../../components/resources_admin/ResourcesAdmin';
 import { UserIdContext } from  '../../context/AppContext';
 const AdminPage = (props) => {
     const {uId, uLevel}=useContext( UserIdContext);
@@ -15,10 +16,11 @@ const AdminPage = (props) => {
     return (
         <div>
             {admin&& <div className="AdminPage">
-                Page administrateur
+                {/* Page administrateur */}
+                <ResourcesAdmin />
                 </div>}
             {superAdmin&& <div className="SuperAdminPage">
-                Page super administrateur
+                {/* Page super administrateur */}
             </div>}
             {!admin&&!superAdmin&&<div>
                 Vous n'êtes pas autorisé à accèder à cette page
