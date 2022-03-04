@@ -5,6 +5,7 @@ import './ResourceAdminModal.scss';
 const ResourceAdminModal = ({ resource, displayModal }) => {
     const [docs, setDocs] = useState(null);
     const url = `${process.env.REACT_APP_API_URL}resource/admin/` + resource;
+
     useEffect(async () => {
         if (resource !== null) {
             axios.get(url, { withCredentials: true })
@@ -22,10 +23,11 @@ const ResourceAdminModal = ({ resource, displayModal }) => {
                 })
         }
     }, [resource]);
+
     useEffect(async () => {
         //axios theme
-    })
-    let ok = false;
+    }, [])
+
     return (
         <div id="resourceModal" className='ResourceModal'>
             {docs && <div className="ModalAdminDoc">
@@ -47,7 +49,6 @@ const ResourceAdminModal = ({ resource, displayModal }) => {
                 <p>Modifier</p>
                 <button onClick={() => { displayModal(0, false) }} className="BtnModalClose">Fermer</button>
             </div>}
-
         </div>
     )
 }
