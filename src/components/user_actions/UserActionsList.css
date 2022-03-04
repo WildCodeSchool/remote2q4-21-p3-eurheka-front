@@ -6,6 +6,43 @@
     align-items: center;
     margin-left: auto;
     margin-right: auto;
+    font-family: "Poppins", sans-serif;
+    flex-wrap: wrap;
+    padding-top: 20vh ;
+
+
+}
+
+@media screen and (max-width: 390px) {
+    .UserActionsList{
+        flex-direction: column;
+        padding-top: 80px ;
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (min-width: 391px) and (max-width: 768px) {
+    .UserActionsList{
+        justify-content: space-around;
+        padding-top: 10vh ;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .UserActionsList{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* .UserActionsList{
+    display:flex;
+    width: 70%;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 100px;
     font-family: "Poppins", sans-serif;
 }
@@ -27,4 +64,4 @@
         flex-wrap: wrap;
         justify-content: center;
     }
-}
+} */

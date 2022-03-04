@@ -122,6 +122,7 @@
     .Footer {
         height: auto;
         width: 100vw;
+        margin-top: 60px;
     }
 
     .Footer-light {

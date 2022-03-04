@@ -6,6 +6,9 @@
     justify-content: space-between;
     align-items: center;
     background-color: var(--main-color-light-background);
+    position: sticky;
+    top: 0;
+    z-index: 100;
     font-family: 'Titillium Web', sans-serif;
 }
 
@@ -87,8 +90,9 @@
 
 @media screen and (max-width: 390px) {
     .NavBar {
-        height: 5vh;
-        width: 390px;
+        height: 90px;
+
+
     }
     .logo-container {
         height: 63%; 
@@ -120,9 +124,9 @@
     }
 }
 
-@media screen and (min-width: 390px) and (max-width: 767px) {
+@media screen and (min-width: 391px) and (max-width: 767px) {
     .NavBar {
-        height: 5vh;
+        height: 10vh;
         width: 100%;
     }
     .logo-container {
