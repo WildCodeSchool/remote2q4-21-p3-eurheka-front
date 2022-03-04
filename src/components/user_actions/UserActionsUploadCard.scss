@@ -3,11 +3,12 @@
     flex-direction: column;
     width: 300px;
     background-color: var(--main-color-general-background);
-    height: 320px;
+    height: 300px;
     align-items: center;
     text-align: center;
     border: 10px solid var(--main-color-light-background);
     margin-bottom: 30px;
+    box-sizing: border-box;
 
     .card-title{
         margin-top: 20px;
@@ -37,13 +38,13 @@
         justify-content: space-evenly;
         width: 250px;
         height: 250px;
-        border: 10px solid var(--main-color-light-background);
+        border: 6px solid var(--main-color-light-background);
         box-sizing: border-box;
 
         .card-title{
-            font-size: 20px;
-            font-weight: bolder;
-            margin: 10px;
+            margin-top: 20px;
+            font-weight: 600;
+            font-size: 16px;
         }
 
         .uploadCard-logo-block{
@@ -60,37 +61,37 @@
         }
     
         .card-description{
-            margin: 10px;
-            font-size: 15px;
+            font-size: 12px;
+            font-weight: 500;
         }
 
-        p {
-            font-size: 15px;
-            font-weight: bolder;
-    }
+        .upload-link{
+            font-weight: 300;  
+            font-size: 12px;
+            margin-top: 15px;
+        }
     }
 }
 
-@media screen and (min-width: 391px) and (max-width: 768px) {
+@media screen and (min-width: 391px) and (max-width: 767px) {
     .UserActionsUploadCard{
-        min-width: 250px;
-        max-width: 320px;
-        height: max-content;
-        min-height: 290px;
-        border: 10px solid var(--main-color-light-background);
+        justify-content: space-evenly;
+        width: 250px;
+        height: 250px;
+        border: 6px solid var(--main-color-light-background);
         box-sizing: border-box;
 
         .card-title{
-            font-weight: bolder;
-            font-size: 20px;
-            margin: 25px;
+            margin-top: 20px;
+            font-weight: 600;
+            font-size: 16px;
         }
 
         .uploadCard-logo-block{
             min-height: 60px;
             max-width: 60px;
             font-size: 20px;
-            margin-top: 5px;
+            margin-top: 10px;
             margin-bottom: 10px;
         }
     
@@ -100,13 +101,92 @@
         }
     
         .card-description{
-            margin: 10px;
-            font-size: 15px;
+            font-size: 12px;
+            font-weight: 500;
         }
 
-        p {
-            font-size: 15px;
-            font-weight: bolder;
+        .upload-link{
+            font-weight: 300;  
+            font-size: 12px;
+            margin-top: 15px;
+        }
     }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .UserActionsUploadCard{    
+        display: flex;
+        flex-direction: column;
+        width: 215px;
+        background-color: var(--main-color-general-background);
+        height: 225px;
+        align-items: center;
+        text-align: center;
+        border: 5px solid var(--main-color-light-background);
+        margin-bottom: 20px;
+
+        .card-title{
+            font-size: 14px;
+            margin-bottom: 7px;
+        }
+
+        .uploadCard-logo-block{
+            min-height: 60px;
+            max-width: 80px;
+            font-size: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    
+        .card-result{
+            font-size: 13px;
+            margin-top: 15px;
+        }
+    
+        .card-description{
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .upload-link{
+            font-weight: 300;  
+            font-size: 12px;
+            margin-top: 15px;
+        }
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1180px) {
+    .UserActionsUploadCard{
+        display: flex;
+        flex-direction: column;
+        width: 240px;
+        background-color: var(--main-color-general-background);
+        height: 256px;
+        align-items: center;
+        text-align: center;
+        border: 7px solid var(--main-color-light-background);
+        margin-bottom: 20px;
+    
+        .card-title{
+            margin-top: 20px;
+            font-weight: 600;
+            font-size: 16px;
+        }
+    
+        .buttonCard-logo-block{
+            margin-top: 20%;
+            margin-bottom: 20%;
+        }
+    
+        .card-description{
+            font-size: 12px;
+            font-weight: 500;
+        }
+    
+        .upload-link{
+            font-weight: 300;  
+            font-size: 12px;
+            margin-top: 20px;
+        }
     }
 }
