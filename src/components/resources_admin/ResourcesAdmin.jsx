@@ -6,6 +6,7 @@ import './ResourcesAdmin.scss';
 const ResourcesAdmin = (props) => {
     const [getIdDoc, setGetIdDoc] = useState(1);
     const [docs, setDocs] = useState([]);
+    const [showComponent, setShowComponent] = useState(false);
 
     useEffect(() => {
         const url = `${process.env.REACT_APP_API_URL}resource/adminCat/` + getIdDoc;
@@ -24,25 +25,43 @@ const ResourcesAdmin = (props) => {
             })
     }, [getIdDoc]);
 
-    const displayModal = (id) => {
+    const displayModal = (id, caller) => {
         setGetIdDoc(id);
+        const titlesSelector = document.getElementsByClassName('navBarResourceListItem');
+        for (let i = 0; i < titlesSelector.length; i++) {
+            titlesSelector[i].classList.remove('ResourceUnderLine');
+        }
+        const titleSelector = document.getElementById(caller);
+        titleSelector.classList.add('ResourceUnderLine');
     }
+
+    const handleShowClick = (id) => {
+        const docContainer = document.getElementById(id);
+        if (!showComponent) {
+            docContainer.classList.remove('BlocHidden');
+        }
+        else {
+            docContainer.classList.add('BlocHidden');
+        }
+        setShowComponent(!showComponent);
+    }
+
     return (
         <div className='ResourceAdmin'>
             <div className="navBarResource">
-                <h2>Gérer les ressources</h2>
-                {/* <span className='arrowStyle'>{changeSize ? <i className="fa-solid fa-chevron-up"></i> : <i className="fa-solid fa-chevron-down"></i>} </span> */}
-                <i className="fa-solid fa-chevron-up"></i>
-                <ul className="navBarResourceList">
-                    <li className="navBarResourceListItem" onClick={() => displayModal(1)}>Vidéo</li>
-                    <li className="navBarResourceListItem" onClick={() => displayModal(2)}>Documents</li>
-                    <li className="navBarResourceListItem" onClick={() => displayModal(3)}>Fiches métiers</li>
-                </ul>
-            </div>
-            <div className="ResourcePageContainer">
-                <ResourceAdminContainer catDoc={getIdDoc}
-                    docs={docs} />
-
+                <h2 className='ResourceAdminTitle'>Gérer les ressources</h2>
+                <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding" : "fa-solid fa-chevron-down CloseFolding"} onClick={() => handleShowClick('ResourceAdminBloc')}></i>
+                <div className="ResourceAdminBloc BlocHidden" id="ResourceAdminBloc">
+                    <ul className="navBarResourceList">
+                        <li id="video" className="navBarResourceListItem ResourceUnderLine" onClick={(e) => displayModal(1, 'video')}>Vidéo</li>
+                        <li id="document" className="navBarResourceListItem" onClick={(e) => displayModal(2, 'document')}>Documents</li>
+                        <li id="job" className="navBarResourceListItem" onClick={(e) => displayModal(3, 'job')}>Fiches métiers</li>
+                    </ul>
+                    <div className="ResourcePageContainer">
+                        <ResourceAdminContainer catDoc={getIdDoc}
+                            docs={docs} />
+                    </div>
+                </div>
             </div>
         </div>
     )
