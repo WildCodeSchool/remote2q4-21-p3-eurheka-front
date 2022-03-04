@@ -9,12 +9,13 @@ import Contact from './pages/contact/Contact';
 import Login from './pages/login/Login';
 import NavBar from './components/navbar/NavBar';
 import Footer from './components/footer/Footer';
-import './App.css';
 import AdminPage from './pages/admin/AdminPage.jsx';
+import './App.css';
 
 function App() {
   const [footerStyle, setFooterStyle] = useState(true)
   const [uId, setUId] = useState(null);
+  const [uLevel,setULevel]=useState(null);
 
   useEffect(() => {
     const fetchToken = async() => {
