@@ -15,8 +15,6 @@
     color: var(--main-color-lighter-text);
 }
 
-
-
 .Footer-light {
     display: flex;
     background-color: var(--main-color-light-background) ;
@@ -39,7 +37,6 @@
 .footer-container{
     display: flex;
     max-width: 1920px;
-
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -60,7 +57,6 @@
     width: 80%;
     justify-content: space-around;
 }
-
 
 .navigation-block {
     list-style-type: none;
@@ -88,8 +84,6 @@
 .icons-container {
     justify-content: space-around;
 }
-
-
 
 .icons-animation:hover{
 	-webkit-animation: blink 0.9s both;
@@ -122,10 +116,7 @@
     margin: 15px;
     padding-top: 15px;
     padding-bottom: 15px;
-
 }
-
-
 
 @media screen and (max-width: 390px) {
     .Footer {
