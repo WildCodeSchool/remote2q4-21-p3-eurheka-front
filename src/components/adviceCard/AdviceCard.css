@@ -28,8 +28,9 @@
 
 @media screen and (max-width: 390px) {
     .AdviceCard{
-        width : 75vw;
-        height: 25vh;
+        width : 80vw;
+        height: max-content;
+        min-height: 30vh;
         margin-bottom: 40px ;
         }
     .h3-title {
@@ -48,32 +49,31 @@
     }
 }
 
-@media screen and (min-width: 391px) and (max-width: 767px) {
+@media screen and (min-width: 391px) and (max-width: 768px) {
     .AdviceCard{
-        width : 80vw;
-        height: 30vh;
-        margin-left: 20%;
-        margin-right: 20%;
-        margin-bottom: 50px ;
+        width : max-content;
+        min-width: 70vw;
+        min-height: 25vh;
+        max-width: 50vw;
+        height: max-content;
+        margin-bottom: 20px;
     }
 
     .h3-title {
-        font-weight: 600;
-        font-size: 25px;
-        margin: 15px 20px 0 20px;
+        margin: 15px 20px 10px 20px;
     }
 
     .taskList {
-        font-size: 15px;
-        line-height: 35px;
+        font-size: 20px;
+        line-height: 40px;
     }
     .dots-paragraph {
-        margin-top: 0;
-        margin-left: 45px;
+        margin-top: 5px;
+        margin-left: 40px;
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
     .AdviceCard{
         width : 30vw;
         height: 25vh;
