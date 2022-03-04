@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import axios from "axios";
+import { UserIdContext } from  "../../context/AppContext.js";
 import RetreivePassword from ".//retreivePassword/RetreivePassword";
 import "./SignInForm.css";
 
@@ -7,6 +8,7 @@ const SignInForm = () => {
     const [email, setEmail]= useState("");
     const [password, setPassword]= useState("");
     const [forgotPassword, setForgotPassword] = useState(false);
+    const { uId, fetchUId } = useContext(UserIdContext);
     
     const handleModals = (e) => {
         if (e.target.id === 'forgotPassword') {
@@ -29,24 +31,23 @@ const SignInForm = () => {
         e.preventDefault();
         const emailError = document.querySelector('.email.error');
         const passwordError = document.querySelector('.password.error');
-        
+        //${process.env.REACT_APP_API_URL}
+        const url = `http://localhost:8000/users/login`;
         if (validateEmail(email) && password !== ""){
-            axios({
-                method: "post",
-                url: '${process.env.REACT_APP_API_URL}api/users/login',
-                withCredentials: true,
-                data: {
-                   email,
-                   password
-                },
-            })
+            const login={
+                email,
+                password
+            };
+            axios.post(url,login,{ withCredentials: true })//{ withCredentials: true }
                 .then((res) => {
                     console.log(res)
                     if (res.data.errors) {
                         emailError.innerHTML = res.data.errors.email;
                         passwordError.innerHTML = res.data.errors.password;
                     } else {
+                        fetchUId(res.data.userId);
                         window.location = '/';
+
                     }
                 })
                 .catch((err) => {
