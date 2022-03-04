@@ -1,37 +1,51 @@
 .UserActionsList{
     display:flex;
-    width: 70%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
     height: auto;
     justify-content: space-between;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
     font-family: "Poppins", sans-serif;
-    flex-wrap: wrap;
     padding-top: 20vh ;
-
-
 }
 
 @media screen and (max-width: 390px) {
     .UserActionsList{
+        height: 80%;
+        width: 80%;
         flex-direction: column;
         padding-top: 80px ;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
 }
 
-@media screen and (min-width: 391px) and (max-width: 768px) {
+@media screen and (min-width: 391px) and (max-width: 767px) {
     .UserActionsList{
+        height: 80%;
+        width: 80%;
+        flex-direction: column;
+        padding-top: 80px ;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .UserActionsList{
+        display:flex;
+        flex-direction: row;
         justify-content: space-around;
-        padding-top: 10vh ;
+        align-items: center;
+        padding-top: 12vh ;
+
+        width: 92%;
     }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1180px) {
     .UserActionsList{
-        flex-wrap: wrap;
-        justify-content: center;
+        width: 85%;
     }
 }
 
