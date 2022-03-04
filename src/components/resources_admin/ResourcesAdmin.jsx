@@ -31,7 +31,12 @@ const ResourcesAdmin = (props) => {
         <div className='ResourceAdmin'>
             <div className="navBarResource">
                 <h2>Gérer les ressources</h2>
+<<<<<<< HEAD
                 <i className='CloseFolding'>X</i>
+=======
+                {/* <span className='arrowStyle'>{changeSize ? <i className="fa-solid fa-chevron-up"></i> : <i className="fa-solid fa-chevron-down"></i>} </span> */}
+                <i className="fa-solid fa-chevron-up"></i>
+>>>>>>> dev
                 <ul className="navBarResourceList">
                     <li className="navBarResourceListItem" onClick={() => displayModal(1)}>Vidéo</li>
                     <li className="navBarResourceListItem" onClick={() => displayModal(2)}>Documents</li>

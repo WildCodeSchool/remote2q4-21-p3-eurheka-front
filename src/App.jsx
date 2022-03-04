@@ -9,6 +9,7 @@ import Contact from './pages/contact/Contact';
 import Login from './pages/login/Login';
 import NavBar from './components/navbar/NavBar';
 import Footer from './components/footer/Footer';
+import AdminPage from './pages/admin/AdminPage.jsx';
 import './App.css';
 
 function App() {
@@ -36,6 +37,13 @@ function App() {
     }    
     fetchToken();
   },[]);
+<<<<<<< HEAD
+=======
+
+  const fetchUId=(newId) => {
+    setUId(newId)
+  };
+>>>>>>> dev
 
   return (
     <UserIdContext.Provider value={{uId, uLevel}} >
@@ -47,6 +55,8 @@ function App() {
         <Route path='/bibliotheque' element={<Library />}/>
         <Route path='/contact-avis' element={<Contact />}/>
         <Route path='/login' element={<Login />}/>
+        {/*Admin routes*/}
+        <Route path='/admin' element={<AdminPage />}/>
       </ Routes>
       <Footer footerStyle={footerStyle} setFooterStyle={setFooterStyle} />
     </div>
