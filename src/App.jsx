@@ -10,6 +10,7 @@ import Login from './pages/login/Login';
 import NavBar from './components/navbar/NavBar';
 import Footer from './components/footer/Footer';
 import './App.css';
+import AdminPage from './pages/admin/AdminPage.jsx';
 
 function App() {
   const [footerStyle, setFooterStyle] = useState(true)
@@ -19,7 +20,7 @@ function App() {
     const fetchToken = async() => {
       await axios({
         method: "get",
-        url: '${process.env.REACT_APP_API_URL}jwtid',
+        url: `${process.env.REACT_APP_API_URL}session`,
         withCredentials: true,
       })
          .then((res) => setUId(res.data))
@@ -42,6 +43,8 @@ function App() {
         <Route path='/bibliotheque' element={<Library />}/>
         <Route path='/contact-avis' element={<Contact />}/>
         <Route path='/login' element={<Login />}/>
+        {/*Admin routes*/}
+        <Route path='/admin' element={<AdminPage />}/>
       </ Routes>
       <Footer footerStyle={footerStyle} setFooterStyle={setFooterStyle} />
     </div>
