@@ -4,15 +4,15 @@ import themeServices from '../../assets/data/themeServices';
 import './ServicesList.scss';
 
 const ServicesList = () => {
-    console.log(themeServices[0+1].id)
+    
     const cardRender = [];
     for (let i = 0; i < themeServices.length; i++) {
         cardRender.push(
             <ServiceCard 
-                    containerClass={i === 0 || i === 4 ? 'firstCard' : 'secondCardReduce'}
-                    containerClassReduce={i === 0 || i === 4 ? 'firstCardReduce' : 'firstCard'}
-                    secondContainerClass={i === 0 || i === 4 ? 'secondCard' : 'firstCardReduce'}
-                    SecondContainerClassReduce={i === 0 || i === 4 ? 'secondCardReduce' : 'secondCard'}
+                    containerClass={i === 0 || i === 4 ? 'firstCard' : 'secondCard'}
+                    containerClassReduce={i === 0 || i === 4 ? 'firstCardReduce' : 'secondCardReduce'}
+                    secondContainerClass={i === 0 || i === 4 ? 'secondCard' : 'firstCard'}
+                    SecondContainerClassReduce={i === 0 || i === 4 ? 'secondCardReduce' : 'firstCardReduce'}
                     key={themeServices[i].id}
                     title={themeServices[i].title}
                     subTitle={themeServices[i].subTitle}
