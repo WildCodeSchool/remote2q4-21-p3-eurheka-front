@@ -129,14 +129,21 @@
 
 @media screen and (max-width: 390px) {
     .NavBar {
-        height: 90px;
+        height: 60px;
         width: 100%;
     }
     .logo-container {
         height: 43%;
         width: auto; 
-        margin-left: 9px;
-        margin-right: 5px;
+        margin-left: 0px;
+        margin-right: 6px;
+    }
+    .Header-logo {
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: baseline;
     }
     .navigation-link {
         height: 90%;
@@ -203,17 +210,17 @@
     }
     .logo-container {
         height: 61%; 
-        margin-left: 21px;
+        margin-left: 14px;
     }
     .navigation-link {
         margin-left: 7px;
         margin-right: 7px;
-        font-size: 18px;
+        font-size: 16px;
     }
     .selected {
         margin-left: 7px;
         margin-right: 7px;
-        font-size: 18px;
+        font-size: 16px;
     }
     .selected::after {
         height: 10px;

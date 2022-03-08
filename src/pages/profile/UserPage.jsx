@@ -7,6 +7,7 @@ const UserPage = (props) => {
     {
         user=true;
     }
+    
     return (
         <div>            
             {user&& <div className="UserPage">

@@ -18,6 +18,7 @@ const Disconnect = () => {
                 .catch((err) => console.log(err));
         window.location = "/";
     }
+    
     return (
         <div onClick={handleLogout} className="logout-button">
             Se déconnecter

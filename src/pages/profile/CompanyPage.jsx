@@ -8,6 +8,7 @@ const CompanyPage = () => {
     {
         company=true;
     }
+    
     return (
         <div>            
             {company&& <div className="CompanyPage">
