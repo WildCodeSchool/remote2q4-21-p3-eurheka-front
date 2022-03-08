@@ -25,10 +25,9 @@
 }
 
 .credential-error {
-    color: var(#F64E4E);
+    color: #F64E4E;
     font-size: 14px;
     font-weight: 300;
-    display: none;
 }
 
 .label {
