@@ -29,7 +29,7 @@ export const ServiceCard = (props) => {
                 </ul>
                 <button className='serviceButton'>S'inscrire</button>
             </div>
-            <div className={changeSize ? props.secondContainerClass : props.SecondContainerClassReduce}>
+            <div className={changeSize ? props.SecondContainerClassReduce : props.secondContainerClass}>
                 <div className='serviceTitleContainer' onClick={changeButton}>
                     <h2 className='serviceCardTitle'>{props.titleb}</h2>
                     <span className='arrowStyle'>{changeSize ? <i className="fa-solid fa-chevron-down"></i> : <i className="fa-solid fa-chevron-up"></i>} </span>
