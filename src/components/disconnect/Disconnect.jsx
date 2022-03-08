@@ -5,8 +5,7 @@ import { UserIdContext } from  '../../context/AppContext';
 import axios from "axios";
 import './Disconnect.css';
 
-const Disconnect = () => {
-            
+const Disconnect = () => {            
     const removeCookie = (key) => {
         if (window !== "undefined") {
             cookie.remove(key, {expires: 1});
@@ -17,6 +16,7 @@ const Disconnect = () => {
         await axios.get(url,{ withCredentials: true })
                 .then(() => removeCookie('jwt'))
                 .catch((err) => console.log(err));
+        window.location = "/";
     }
     return (
         <div onClick={handleLogout} className="logout-button">

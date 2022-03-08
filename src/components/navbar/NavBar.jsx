@@ -14,14 +14,12 @@ const NavBar = () => {
     let admin=false;
     let companyUser=false;
     let independantUser=false;
-
     if(uId === 0)
     {
         connected=false;
     } else {
         connected=true;
     }
-
     if(uLevel&&uLevel.includes('admin')){ 
         admin=true;
     } else if (uLevel&&uLevel.includes('user')){
@@ -31,7 +29,6 @@ const NavBar = () => {
         admin=false;
         companyUser=true;
     }
-
     const removeCookie = (key) => {
         if (window !== "undefined") {
             cookie.remove(key, {expires: 1})
@@ -43,7 +40,6 @@ const NavBar = () => {
                 .then(() => removeCookie('jwt'))
                 .catch((err) => console.log(err));
     }
-
     return (
         <div className='NavBar'>
             <div className='left-container'>
@@ -85,7 +81,7 @@ const NavBar = () => {
                             <NavLink to="/admin" className={({ isActive }) =>
                             isActive ? "selected" : "navigation-link"} >Administration</NavLink>
                         }
-                        {!admin&&independantUser&&q
+                        {!admin&&independantUser&&
                             <NavLink to="/mon-profil-particulier" className={({ isActive }) =>
                             isActive ? "selected" : "navigation-link"} >Mon profil particulier</NavLink>
                         }
@@ -100,5 +96,4 @@ const NavBar = () => {
         </div>
     );
 };
-
 export default NavBar;
