@@ -6,6 +6,7 @@ const ResourceAdminModal = ({ resource, displayModal }) => {
     const [docs, setDocs] = useState(null);
     const [themeUsed, setThemeUsed] = useState([]);
     const [visibility, setVisibility] = useState();
+    const [docName, setDocName] = useState('');
     const tempTab = [];
 
     useEffect(() => {
@@ -17,6 +18,7 @@ const ResourceAdminModal = ({ resource, displayModal }) => {
                     .then((data) => {
                         setVisibility(data.visibility);
                         setDocs(data);
+                        setDocName(data.name)
                         setThemeUsed([...data.themes]);
                     })
                     .catch((err) => {
@@ -40,45 +42,52 @@ const ResourceAdminModal = ({ resource, displayModal }) => {
         setThemeUsed(themeUsed.map(item => item.idTheme === id ? { ...theTheme, checked } : item));
     }
 
-    const sendDoc = () => {
+    const sendDoc = (e) => {
+        e.preventDefault();
+        const newDoc = {
+            visibility: visibility,
+            themes: themeUsed,
+            idDoc: resource,
+            name : docName
+        }
+        //Send ewDoc to backend
+        console.log(newDoc);
+    }
 
+    const deleteDoc = () => {
+        alert('delete');
+        //delete from back
     }
 
     return (
         <div id="resourceModal" className='ResourceModal'>
             {docs && <div className="ModalAdminDoc">
-                Nom : {docs.name}<br />
-                Chemin {docs.path}<br />
-                catégorie : {docs.CategoryResource}<br />
-                Visibilité : <select value={visibility} onChange={(e) => { setVisibility(e.target.value) }}>
-                    <option value="1">Utilisateur non connecté</option>
-                    <option value="2">Utilisateur connecté</option>
-                    <option value="3">Entreprises</option>
-                </select>
-                <br />
-                {docs &&
-                    <div className="DocContainer">
-                        <div className='DocInfoContainer'>
-                            {docs.themes.map((theme, index) => {
-                                return (<p key={index}>
-                                    Theme : {theme.themeName}
-                                </p>)
-                            })}
-                        </div>
-                        <div className="ThemeContainer">
-                            {/*Put the theme here */}
-                            {themeUsed.map((theme, index) => {
-                                return (
-                                    <div key={index}>
-                                        <label htmlFor={theme.themeName}>{theme.themeName} <input type="checkbox" id="{theme.themeName}" name="{theme.themeName}" value="{theme.idTheme}" checked={theme.checked} onChange={() => handleChangeTheme(theme.idTheme)} /></label>
-                                    </div>
-                                )
-                            })}
-                        </div>
+                <form onSubmit={(e) => sendDoc(e)}>
+                    <div className="DivHeadDocModal">
+                        <label className='LabelDocContainer' htmlFor='name'> Nom : <input type="text" id="name" value={docs.name} onChange={(e) => setDocName(e.target.value)} /> </label>
+                        <label className='LabelDocContainer' htmlFor='visibleCat'>Visibilité : <select value={visibility} onChange={(e) => { setVisibility(e.target.value) }}>
+                            <option value="1">Utilisateur non connecté</option>
+                            <option value="2">Utilisateur connecté</option>
+                            <option value="3">Entreprises</option>
+                        </select></label>
                     </div>
-                }
-                <p>Supprimer</p>
-                <p>Modifier</p>
+                    <br />
+                    {docs &&
+                        <div className="DocContainer">
+                            <div className="ThemeContainer">
+                                {themeUsed.map((theme, index) => {
+                                    return (
+                                        <label className="LabelThemeContainer" key={index} htmlFor={theme.themeName}><input type="checkbox" id="{theme.themeName}" name="{theme.themeName}" value="{theme.idTheme}" checked={theme.checked} onChange={() => handleChangeTheme(theme.idTheme)} /> {theme.themeName}</label>
+                                    )
+                                })}
+                            </div>
+                        </div>
+                    }
+                    <div className="DivDocModalBtnForm">
+                        <input type="submit" value="Modifier" className='DocContainerModalSubmitBtn' />
+                        <button className='DeleteDocBtn' onClick={deleteDoc}>Supprimer</button>
+                    </div>
+                </form>
                 <button onClick={() => { displayModal(0, false) }} className="BtnModalClose">Fermer</button>
             </div>}
         </div>
