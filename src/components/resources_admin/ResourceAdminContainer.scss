@@ -1,0 +1,72 @@
+.ResourceAdminContainer{ 
+    
+    .AddDocTitle{
+        margin: 10px;
+
+    }
+
+    .NewResourceDivContainer{
+        display: flex;
+        flex-direction: column;
+        border: solid 1px black;
+        padding : 10px;
+        margin: 10px;
+    }
+
+    .SubmitBtn{
+        width: 130px;
+        margin-top: 10px;
+    }
+
+    .LabelAdminContainer{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .ListResourceDiv{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        position: relative;
+    }
+
+    .ResourceCard{
+        width: 120px;
+        height: 40px;
+        border : solid 1px black;
+        text-align: center;
+        padding: 5px;
+        margin: 10px;
+        background-color: beige;
+    }
+
+    .ResourceModal{
+        display: none;
+    }
+
+    .ShowResourceModal{
+        position: absolute;
+        bottom : -100%;
+        width: 450px;
+        height: 350px;
+        background-color: var(--main-color-light-background);
+        color : var(--sec-color-dark-text);
+        display: block;
+        z-index: 3; 
+        padding: 10px;
+        border : solid black 2px;
+    }
+
+    @media only screen and (min-width: 391px) and (max-width: 768px) {
+
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    }
+
+    @media screen and (min-width: 1025px) {
+
+    }
+}

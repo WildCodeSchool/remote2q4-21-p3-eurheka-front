@@ -11,7 +11,6 @@ const CreateUser = () => {
     const [password1, setPassword1] = useState('');
     const [password2, setPassword2] = useState('');
     const [email, setEmail] = useState('');
-
     const [stage, setStage] = useState(true);
     const [accompanied, setAccompanied] = useState(false);
     const [focus, setFocus] = useState(false);
@@ -102,7 +101,6 @@ const CreateUser = () => {
                             })
                             break;
                         default: console.log('Unknown error');
-
                     }
                 });
             //Go to connexion page ?

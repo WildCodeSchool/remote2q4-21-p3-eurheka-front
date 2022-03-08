@@ -9,31 +9,38 @@ import Contact from './pages/contact/Contact';
 import Login from './pages/login/Login';
 import NavBar from './components/navbar/NavBar';
 import Footer from './components/footer/Footer';
+import AdminPage from './pages/admin/AdminPage.jsx';
+import UserPage from './pages/profile/UserPage.jsx';
+import CompanyPage from './pages/profile/CompanyPage.jsx';
 import './App.css';
 
 function App() {
   const [footerStyle, setFooterStyle] = useState(true)
   const [uId, setUId] = useState(null);
+  const [uLevel,setULevel]=useState(null);
 
-  useEffect(() => {
+  useEffect(async() => {
     const fetchToken = async() => {
       await axios({
         method: "get",
-        url: '${process.env.REACT_APP_API_URL}jwtid',
+        url: `${process.env.REACT_APP_API_URL}session/`,
         withCredentials: true,
       })
-         .then((res) => setUId(res.data))
-         .catch((err) => console.log("No token"));
+         .then((res) => {
+            setUId(res.data.userId);
+            setULevel(res.data.userLevelString);
+          })
+         .catch((err) =>{
+          console.log("No token");
+          setUId(0);
+          setULevel('not connected');
+         } );
     }    
     fetchToken();
-  });
-
-  const fetchUId=(newId) => {
-    setUId(newId)
-  };
+  },[]);
 
   return (
-    <UserIdContext.Provider value={{uId, fetchUId}} >
+    <UserIdContext.Provider value={{uId, uLevel, setUId, setULevel}} >
     <div className="App">
       <NavBar />    
       <Routes>
@@ -42,6 +49,12 @@ function App() {
         <Route path='/bibliotheque' element={<Library />}/>
         <Route path='/contact-avis' element={<Contact />}/>
         <Route path='/login' element={<Login />}/>
+        {/*Admin routes*/}
+        <Route path='/admin' element={<AdminPage />}/>
+        {/*User routes*/}
+        <Route path='/mon-profil-particulier' element={<UserPage />}/>
+        {/*Company routes*/}
+        <Route path='/mon-profil-entreprise' element={<CompanyPage />}/>
       </ Routes>
       <Footer footerStyle={footerStyle} setFooterStyle={setFooterStyle} />
     </div>
