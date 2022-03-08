@@ -45,7 +45,6 @@ const SignInForm = () => {
                         passwordError.innerHTML = res.data.errors.password;
                     } else {
                         window.location = '/';
-
                     }
                 })
                 .catch((err) => {
