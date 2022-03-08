@@ -51,12 +51,14 @@ const ResourceAdminModal = ({ resource, displayModal }) => {
             name : docName
         }
         //Send ewDoc to backend
+        const url=`${process.env.REACT_APP_API_URL}resource/` + resource;
         console.log(newDoc);
     }
 
     const deleteDoc = () => {
         alert('delete');
         //delete from back
+        const url=`${process.env.REACT_APP_API_URL}resource/` + resource;
     }
 
     return (
