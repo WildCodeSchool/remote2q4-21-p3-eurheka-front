@@ -1,39 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState,useCallback } from 'react';
 import axios from 'axios';
 import './ResourceAdminModal.scss';
-const resArrayTheme = [
-    {
-        id: 1,
-        name: 'RH'
-    },
-    {
-        id: 2,
-        name: 'Test TH'
-    },
-    {
-        id: 3,
-        name: 'Test 2 THEME'
-    },
-    {
-        id: 4,
-        name: 'Test 3 THEME'
-    }
-];
-const ResourceAdminModal = ({ resource, displayModal }) => {
+
+const ResourceAdminModal =({ resource, displayModal }) => {
     const [docs, setDocs] = useState(null);
-    const [themes, setThemes] = useState([]);
     const [themeUsed, setThemeUsed] = useState([]);
     const [visibility, setVisibility] = useState();
-    const url = `${process.env.REACT_APP_API_URL}resource/admin/` + resource;
+    const tempTab = [];
 
     useEffect(() => {
+        const url = `${process.env.REACT_APP_API_URL}resource/admin/` + resource;
         const fetchDoc = async () => {
             if (resource !== null) {
                 await axios.get(url, { withCredentials: true })
                     .then((res) => res.data)
                     .then((data) => {
-                        setDocs(data);
                         setVisibility(data.visibility);
+                        setDocs(data);
+                        setThemeUsed([...data.themes]);
                     })
                     .catch((err) => {
                         console.log(err);
@@ -48,20 +32,9 @@ const ResourceAdminModal = ({ resource, displayModal }) => {
         fetchDoc();
     }, [resource]);
 
-    useEffect(() => {
-        //axios theme
-        const fetchTheme = async () => {
-            //axios
-        }
-        setThemes(resArrayTheme);
-    }, []);
     const handleChangeTheme = () => {
-
+       
     }
-    //Make
-    resArrayTheme.forEach((themeItem) => {
-        //if()
-    });
 
     return (
         <div id="resourceModal" className='ResourceModal'>
@@ -69,17 +42,33 @@ const ResourceAdminModal = ({ resource, displayModal }) => {
                 Nom : {docs.name}<br />
                 Chemin {docs.path}<br />
                 catégorie : {docs.CategoryResource}<br />
-                Visibilité : <select value={visibility}>
+                Visibilité : <select value={visibility} onChange={(e) => { setVisibility(e.target.value) }}>
                     <option value="1">Utilisateur non connecté</option>
                     <option value="2">Utilisateur connecté</option>
                     <option value="3">Entreprises</option>
                 </select>
                 <br />
-                {docs && docs.themes.map((theme, index) => {
-                    return (<p key={index}>
-                        Theme : {theme.themeName}
-                    </p>)
-                })}
+                {docs &&
+                    <div className="DocContainer">
+                        <div className='DocInfoContainer'>
+                            {docs.themes.map((theme, index) => {
+                                return (<p key={index}>
+                                    Theme : {theme.themeName}
+                                </p>)
+                            })}
+                        </div>
+                        <div className="ThemeContainer">
+                            {/*Put the theme here */}
+                            {themeUsed.map((theme, index) => {
+                                return (
+                                    <div key={index}>
+                                        <label htmlFor={theme.themeName}>{theme.themeName} <input type="checkbox" checked={theme.checked} /></label>
+                                    </div>
+                                )
+                            })}
+                        </div>
+                    </div>
+                }
                 <p>Supprimer</p>
                 <p>Modifier</p>
                 <button onClick={() => { displayModal(0, false) }} className="BtnModalClose">Fermer</button>

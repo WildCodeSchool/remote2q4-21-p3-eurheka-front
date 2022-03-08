@@ -59,6 +59,7 @@ const ResourceAdminContainer = ({ catDoc, docs }) => {
             visibility: visibility,
             category: catDoc
         }
+        console.log(newDoc);
     }
 
     return (
