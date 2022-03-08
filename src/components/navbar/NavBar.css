@@ -1,5 +1,5 @@
 .NavBar {
-    height: 100px;
+    height: 80px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -15,17 +15,35 @@
 .left-container{
     display: flex;
     height: 100%;
+    width: 65%;
     align-items: center;
 }
 
+.right-container {
+    height: 100%;
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
+
+.connected-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
 .link-container {
     display: flex;
 }
 
 .logo-container {
-    height: 71%; 
-    margin-left: 31px;
-    margin-right: 31px;
+    height: 61%; 
+    margin-left: 21px;
+    margin-right: 21px;
 }
 
 .Header-logo {
@@ -43,20 +61,20 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
     color: var(--main-color-navbar-link);
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 400;
 }
 
 .selected {
     position : relative;
     text-decoration: none;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
     color: var(--main-color-navbar-link);
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 400;
 }
 
@@ -83,21 +101,49 @@
     background-color: var(--main-color-dark-background);
     text-decoration: none;
     font-family: 'Titillium Web', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--main-color-lighter-text);
+}
+
+.login-link {
+    color: var(--main-color-lighter-text);
+    text-decoration: none;
+}
+
+.logout-button {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+    padding-left: 15px;
+    background-color: var(--main-color-dark-background);
+    text-decoration: none;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
     font-weight: 400;
     color: var(--main-color-lighter-text);
 }
 
 @media screen and (max-width: 390px) {
     .NavBar {
-        height: 90px;
+        height: 60px;
         width: 100%;
     }
     .logo-container {
         height: 43%;
         width: auto; 
-        margin-left: 9px;
-        margin-right: 5px;
+        margin-left: 0px;
+        margin-right: 6px;
+    }
+    .Header-logo {
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: baseline;
     }
     .navigation-link {
         height: 90%;
@@ -164,17 +210,41 @@
     }
     .logo-container {
         height: 61%; 
-        margin-left: 21px;
+        margin-left: 14px;
+    }
+    .left-container{
+        display: flex;
+        height: 100%;
+        width: 60%;
+        align-items: center;
+    }
+    
+    .right-container {
+        height: 100%;
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
+    }
+    
+    .connected-container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
     }
     .navigation-link {
         margin-left: 7px;
         margin-right: 7px;
-        font-size: 18px;
+        font-size: 16px;
     }
     .selected {
         margin-left: 7px;
         margin-right: 7px;
-        font-size: 18px;
+        font-size: 16px;
     }
     .selected::after {
         height: 10px;
@@ -185,6 +255,6 @@
     .login-button {
         padding-right: 10px;
         padding-left: 10px;
-        font-size: 18px;
+        font-size: 16px;
     }
 }

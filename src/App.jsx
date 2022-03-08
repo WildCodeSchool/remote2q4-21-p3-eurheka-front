@@ -10,6 +10,8 @@ import Login from './pages/login/Login';
 import NavBar from './components/navbar/NavBar';
 import Footer from './components/footer/Footer';
 import AdminPage from './pages/admin/AdminPage.jsx';
+import UserPage from './pages/profile/UserPage.jsx';
+import CompanyPage from './pages/profile/CompanyPage.jsx';
 import './App.css';
 
 function App() {
@@ -38,7 +40,7 @@ function App() {
   },[]);
 
   return (
-    <UserIdContext.Provider value={{uId, uLevel}} >
+    <UserIdContext.Provider value={{uId, uLevel, setUId, setULevel}} >
     <div className="App">
       <NavBar />    
       <Routes>
@@ -49,6 +51,10 @@ function App() {
         <Route path='/login' element={<Login />}/>
         {/*Admin routes*/}
         <Route path='/admin' element={<AdminPage />}/>
+        {/*User routes*/}
+        <Route path='/mon-profil-particulier' element={<UserPage />}/>
+        {/*Company routes*/}
+        <Route path='/mon-profil-entreprise' element={<CompanyPage />}/>
       </ Routes>
       <Footer footerStyle={footerStyle} setFooterStyle={setFooterStyle} />
     </div>
