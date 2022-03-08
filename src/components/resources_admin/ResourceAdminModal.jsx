@@ -1,8 +1,8 @@
-import React, { useEffect, useState,useCallback } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
 import './ResourceAdminModal.scss';
 
-const ResourceAdminModal =({ resource, displayModal }) => {
+const ResourceAdminModal = ({ resource, displayModal }) => {
     const [docs, setDocs] = useState(null);
     const [themeUsed, setThemeUsed] = useState([]);
     const [visibility, setVisibility] = useState();
@@ -32,8 +32,16 @@ const ResourceAdminModal =({ resource, displayModal }) => {
         fetchDoc();
     }, [resource]);
 
-    const handleChangeTheme = () => {
-       
+    const handleChangeTheme = (id) => {
+        //Find Theme in array
+        const theTheme = themeUsed.find((item) =>
+            item.idTheme === id);
+        let checked = !theTheme.checked;
+        setThemeUsed(themeUsed.map(item => item.idTheme === id ? { ...theTheme, checked } : item));
+    }
+
+    const sendDoc = () => {
+
     }
 
     return (
@@ -62,7 +70,7 @@ const ResourceAdminModal =({ resource, displayModal }) => {
                             {themeUsed.map((theme, index) => {
                                 return (
                                     <div key={index}>
-                                        <label htmlFor={theme.themeName}>{theme.themeName} <input type="checkbox" checked={theme.checked} /></label>
+                                        <label htmlFor={theme.themeName}>{theme.themeName} <input type="checkbox" id="{theme.themeName}" name="{theme.themeName}" value="{theme.idTheme}" checked={theme.checked} onChange={() => handleChangeTheme(theme.idTheme)} /></label>
                                     </div>
                                 )
                             })}
