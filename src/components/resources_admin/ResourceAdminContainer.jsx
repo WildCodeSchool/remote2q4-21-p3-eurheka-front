@@ -65,7 +65,7 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload,reload }) => {
     return (
         <div className='ResourceAdminContainer'>
             <div className="NewResourceDiv">
-                <form action="" onSubmit={handleSubmit}>
+                <form encType='multipart/form-data' onSubmit={handleSubmit}>
                     <div className='NewResourceDivContainer'>
                         <h3 className='AddDocTitle'>Ajouter un nouveau document</h3>
                         <label htmlFor="name" className='LabelAdminContainer'>Nom du document : <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} /> </label>
