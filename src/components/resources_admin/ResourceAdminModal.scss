@@ -15,6 +15,19 @@
 
     .DocContainerModalSubmitBtn, .DeleteDocBtn {
         padding: 5px;
+        background-color: white;
+        box-shadow: 2px 2px 2px black;
+    }
+
+    .DeleteDocBtn{
+        border-style: solid;
+        border-width: 1px; 
+    }
+
+    .DeleteDocBtn:active{
+        border-top-width: 3px;
+        border-left-width: 3px;
+        padding: 3px;
     }
 
     .LabelDocContainer{

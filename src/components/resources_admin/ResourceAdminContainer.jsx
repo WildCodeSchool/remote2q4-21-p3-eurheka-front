@@ -3,7 +3,7 @@ import { FileUploader } from "react-drag-drop-files";
 import './ResourceAdminContainer.scss';
 import ResourceAdminModal from './ResourceAdminModal';
 
-const ResourceAdminContainer = ({ catDoc, docs }) => {
+const ResourceAdminContainer = ({ catDoc, docs, setReload,reload }) => {
     const [file, setFile] = useState(null);
     const [name, setName] = useState('');
     const [pathVideo, setPathVideo] = useState('');
@@ -82,7 +82,12 @@ const ResourceAdminContainer = ({ catDoc, docs }) => {
                 </form>
             </div>
             <div className="ListResourceDiv">
-                <ResourceAdminModal className="ResourceModal" displayModal={handleModal} resource={displayId} />
+                <ResourceAdminModal
+                    className="ResourceModal"
+                    displayModal={handleModal}
+                    resource={displayId}
+                    reload={reload}
+                    setReload={setReload} />
                 {docs.map((doc, index) => {
                     return <div key={index} className="ResourceCard" onClick={() => handleModal(doc.id_resource, true)}>{doc.name}
                     </div>

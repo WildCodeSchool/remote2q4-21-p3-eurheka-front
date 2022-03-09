@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
 import './ResourceAdminModal.scss';
 
-const ResourceAdminModal = ({ resource, displayModal }) => {
+const ResourceAdminModal = ({ resource, displayModal,setReload,reload }) => {
     const [docs, setDocs] = useState(null);
     const [themeUsed, setThemeUsed] = useState([]);
     const [visibility, setVisibility] = useState();
@@ -48,17 +48,51 @@ const ResourceAdminModal = ({ resource, displayModal }) => {
             visibility: visibility,
             themes: themeUsed,
             idDoc: resource,
-            name : docName
+            name: docName
         }
-        //Send ewDoc to backend
-        const url=`${process.env.REACT_APP_API_URL}resource/` + resource;
+        //Send newDoc to backend
+        const url = `${process.env.REACT_APP_API_URL}resource/` + resource;
         console.log(newDoc);
+        if (window.confirm('Voulez-vous modifier cette ressource ?')) {
+        axios.put(url,newDoc,{withCredentials:true})
+            .then((response) => {
+                if (response.status === 200) {
+                    window.alert('Ressource modifiée.');
+                    displayModal(0, false);
+                    setReload(!reload);
+                }
+            })
+            .catch((err) => {
+                console.log(err);
+                const HTTPError = err.response.status;
+                if (HTTPError === 401) {
+                    alert('Vous avez été déconnecté.');
+                    window.location = '/';
+                }
+            });
+        }
     }
 
     const deleteDoc = () => {
-        alert('delete');
-        //delete from back
-        const url=`${process.env.REACT_APP_API_URL}resource/` + resource;
+        if (window.confirm('Voulez-vous supprimer cette ressource ?')) {
+            const url = `${process.env.REACT_APP_API_URL}resource/` + resource;
+            axios.delete(url, { withCredentials: true })
+                .then((response) => {
+                    if (response.status === 200) {
+                        window.alert('Ressource supprimée.');
+                        displayModal(0, false);
+                        setReload(!reload);
+                    }
+                })
+                .catch((err) => {
+                    console.log(err);
+                    const HTTPError = err.response.status;
+                    if (HTTPError === 401) {
+                        alert('Vous avez été déconnecté.');
+                        window.location = '/';
+                    }
+                });
+        }
     }
 
     return (
@@ -87,7 +121,7 @@ const ResourceAdminModal = ({ resource, displayModal }) => {
                     }
                     <div className="DivDocModalBtnForm">
                         <input type="submit" value="Modifier" className='DocContainerModalSubmitBtn' />
-                        <button className='DeleteDocBtn' onClick={deleteDoc}>Supprimer</button>
+                        <div className='DeleteDocBtn' onClick={deleteDoc}>Supprimer</div>       
                     </div>
                 </form>
                 <button onClick={() => { displayModal(0, false) }} className="BtnModalClose">Fermer</button>
