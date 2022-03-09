@@ -36,6 +36,7 @@
     justify-content: right;
     align-items: center;
 }
+
 .link-container {
     display: flex;
 }
@@ -218,7 +219,6 @@
         width: 60%;
         align-items: center;
     }
-    
     .right-container {
         height: 100%;
         width: 40%;
@@ -227,7 +227,6 @@
         justify-content: right;
         align-items: center;
     }
-    
     .connected-container {
         height: 100%;
         width: 100%;
