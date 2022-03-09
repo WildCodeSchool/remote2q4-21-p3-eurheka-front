@@ -1,0 +1,68 @@
+.ModalAdminDoc{
+    position: relative;
+    .BtnModalClose{
+        position: absolute;
+        top :10px;
+        right: 10px;
+        padding : 5px;
+    }
+
+    .DivHeadDocModal{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .DocContainerModalSubmitBtn, .DeleteDocBtn {
+        padding: 5px;
+        background-color: white;
+        box-shadow: 2px 2px 2px black;
+    }
+
+    .DeleteDocBtn{
+        border-style: solid;
+        border-width: 1px; 
+    }
+
+    .DeleteDocBtn:active{
+        border-top-width: 3px;
+        border-left-width: 3px;
+        padding: 3px;
+    }
+
+    .LabelDocContainer{
+        margin: 10px 0;
+    }
+
+    .ThemeContainer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .LabelThemeContainer{
+        margin: 10px 0;
+    }
+
+    .DivDocModalBtnForm{
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        margin: 0 auto;
+        justify-content: space-around;
+    }
+
+    @media only screen and (min-width: 391px) and (max-width: 768px) {
+
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+        .DivDocModalBtnForm{
+            width: 60%;
+        }
+    }
+
+    @media screen and (min-width: 1025px) {
+        .DivDocModalBtnForm{
+            width: 40%;
+        }
+    }
+}

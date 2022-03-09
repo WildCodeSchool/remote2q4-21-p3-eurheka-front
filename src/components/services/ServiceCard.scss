@@ -1,0 +1,108 @@
+.ServiceCard{
+    display: grid;
+    grid-template-rows: 150px 1fr 150px;
+    font-family: "Poppins";
+    row-gap: 20px;
+
+    .serviceTitleContainer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .serviceCardTitle{
+        font-family: "Poppins";
+        font-weight: 600;
+        margin-top: 15px;
+    }
+
+    .arrowStyle{
+        color: white;
+    }
+    
+    .serviceCardSubTitle{
+        font-family: "Poppins";
+        font-weight: 300;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .serviceDescriptionList{
+        list-style-type: '_ ';
+        font-weight: 300;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    .firstCard{
+        font-family: "Poppins";
+        grid-row-start: 1;
+        grid-row-end: span 2;
+        background-color: var(--main-color-dark-background);
+        color: var(--main-color-light-text);
+        padding-left: 25px;
+        padding-right: 25px;
+
+        .serviceButton{
+            background-color: var(--main-color-light-button);
+            color: var(--main-color-lighter-text);
+            font-weight: 400;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            width: 100px;
+            height: 40px;
+        }
+    }
+    
+    .firstCardReduce{
+        grid-row-start: 1;
+        background-color: var(--main-color-dark-background);
+        color: var(--main-color-light-text);
+        padding-left: 25px;
+        padding-right: 25px;
+    
+        .serviceDescriptionList{
+            display:none;
+        }
+    
+        .serviceButton{
+            display: none;
+        }
+    }
+    
+    .secondCardReduce{
+        grid-row-start: 3;
+        background-color: var(--main-color-light-background);
+        color: var(--main-color-dark-title);
+        padding-left: 25px;
+        padding-right: 25px;
+
+        .serviceDescriptionList{
+            display:none;
+        }
+        .serviceButton{
+            display: none;
+        }
+    }
+    
+    .secondCard{
+        grid-row-start: 2;
+        grid-row-end: 4;
+        background-color: var(--main-color-light-background);
+        color: var(--main-color-dark-title);
+        padding-left: 25px;
+        padding-right: 25px;
+
+        .serviceButton{
+            background-color: var(--main-color-dark-background);
+            color: var(--main-color-lighter-text);
+            font-weight: 400;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            width: 100px;
+            height: 40px;
+        }
+    }
+}
+
+
+

@@ -1,9 +1,18 @@
+.Home {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .Home-header {
-    height: 50vh;
+    height: 30vh;
     width: 100%;
     background-size:cover;
     background-position:center;
     background-image: linear-gradient(0deg, rgba(9, 48, 70, 0.6), rgba(9, 48, 70, 0.6)), url(../../assets/pictures/redd-PTRzqc_h1r4-unsplash.jpg);
+    z-index: -100;
+    position: absolute;
 }
 
 .Home-header h2 {
@@ -19,32 +28,32 @@
 @media screen and (max-width: 390px) {
     .Home-header{
         height: 20vh ;
-        width: 390px;
-    }
-
-    .Home-header h2 {
-        font-size: 15px;
-        padding-top: 0.5vh;
-        padding-left: 5vw;
-        }
-}
-
-@media screen and (min-width: 391px) and (max-width: 767px) {
-    .Home-header{
-        height: 25vh ;
         width: 100%;
     }
 
     .Home-header h2 {
-        font-size: 15px;
+        font-size: 20px;
+        padding-top: 10px;
+        padding-left: 20px;
+        }
+}
+
+@media screen and (min-width: 391px) and (max-width: 768px) {
+    .Home-header{
+        height: 20vh ;
+        width: 100%;
+    }
+
+    .Home-header h2 {
+        font-size: 25px;
         padding-top: 1vh;
         padding-left: 4vw;
         }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
     .Home-header{
-        height: 35vh ;
+        height: 30vh ;
         width: 100%;
     }
 
