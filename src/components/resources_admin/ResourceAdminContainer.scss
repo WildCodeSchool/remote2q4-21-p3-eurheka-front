@@ -9,6 +9,29 @@
         flex-direction: column;
     }
 
+    .newDocMainContainer{
+        display: flex;
+        flex-direction: column;
+        border: solid 1px black;
+    }
+
+    .ThemeContainer{
+        width: 100%;
+    }
+    
+    .LabelThemeNewDoc{
+        margin : 5px 10px;
+        display: inline-block;
+    }
+
+    .newDocThemeContainer{
+        margin : 5px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
     .DownloadFile{
         width: 80%;
         margin: 0 auto;
@@ -17,7 +40,6 @@
     .NewResourceDivContainer{
         display: flex;
         flex-direction: column;
-        border: solid 1px black;
         padding : 10px;
         margin: 10px;
     }
@@ -98,6 +120,15 @@
             width: 450px;
             height: 350px;
             padding: 10px;
+        }
+
+        .newDocMainContainer{
+            flex-direction:row;
+        }
+
+        .newDocThemeContainer{
+            margin : 10px;
+            
         }
     }
 }
