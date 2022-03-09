@@ -1,8 +1,17 @@
 .ResourceAdminContainer{ 
-    
     .AddDocTitle{
         margin: 10px;
+    }
 
+    .gIfIEN{
+        max-width: 380px;
+        min-width: 0;
+        flex-direction: column;
+    }
+
+    .DownloadFile{
+        width: 80%;
+        margin: 0 auto;
     }
 
     .NewResourceDivContainer{
@@ -47,8 +56,8 @@
 
     .ShowResourceModal{
         position: absolute;
-        bottom : -100%;
-        width: 450px;
+        bottom :0;
+        width: 320px;
         height: 350px;
         background-color: var(--main-color-light-background);
         color : var(--sec-color-dark-text);
@@ -63,10 +72,32 @@
     }
 
     @media screen and (min-width: 769px) and (max-width: 1024px) {
+        .gIfIEN{
+            max-width: 508px;
+            flex-direction: row;
+            min-width: 322px;
+        }
 
+        .ShowResourceModal{
+            bottom : 0;
+            width: 450px;
+            height: 350px;
+            padding: 10px;
+        }
     }
 
     @media screen and (min-width: 1025px) {
-
+        .gIfIEN{
+            max-width: 508px;
+            flex-direction: row;
+            min-width: 322px;
+        }
+        
+        .ShowResourceModal{
+            bottom : -100%;
+            width: 450px;
+            height: 350px;
+            padding: 10px;
+        }
     }
 }

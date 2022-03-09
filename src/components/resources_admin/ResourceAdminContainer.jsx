@@ -3,7 +3,7 @@ import { FileUploader } from "react-drag-drop-files";
 import './ResourceAdminContainer.scss';
 import ResourceAdminModal from './ResourceAdminModal';
 
-const ResourceAdminContainer = ({ catDoc, docs }) => {
+const ResourceAdminContainer = ({ catDoc, docs, setReload,reload }) => {
     const [file, setFile] = useState(null);
     const [name, setName] = useState('');
     const [pathVideo, setPathVideo] = useState('');
@@ -59,16 +59,17 @@ const ResourceAdminContainer = ({ catDoc, docs }) => {
             visibility: visibility,
             category: catDoc
         }
+        console.log(newDoc);
     }
 
     return (
         <div className='ResourceAdminContainer'>
             <div className="NewResourceDiv">
-                <form action="" onSubmit={handleSubmit}>
+                <form encType='multipart/form-data' onSubmit={handleSubmit}>
                     <div className='NewResourceDivContainer'>
                         <h3 className='AddDocTitle'>Ajouter un nouveau document</h3>
                         <label htmlFor="name" className='LabelAdminContainer'>Nom du document : <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} /> </label>
-                        {catDoc > 1 ? <FileUploader handleChange={handleChange} name="file" types={fileTypes} label="Glisser et déposer le fichier" /> : <> <label forhtml="video" className='LabelAdminContainer'>Chemin de la vidéo : <input type="text" id="video" value={pathVideo} onChange={(e) => setPathVideo(e.target.value)} /> </label></>}
+                        {catDoc > 1 ? <FileUploader className="DownloadFile" handleChange={handleChange} name="file" types={fileTypes} label="Glisser et déposer le fichier" /> : <> <label forhtml="video" className='LabelAdminContainer'>Chemin de la vidéo : <input type="text" id="video" value={pathVideo} onChange={(e) => setPathVideo(e.target.value)} /> </label></>}
                         <label htmlFor='' className='LabelAdminContainer'>Destiné au public :&nbsp;
                             <select onChange={(e) => setVisibility(e.target.value)}>
                                 <option value="1">Non connecté</option>
@@ -81,7 +82,12 @@ const ResourceAdminContainer = ({ catDoc, docs }) => {
                 </form>
             </div>
             <div className="ListResourceDiv">
-                <ResourceAdminModal className="ResourceModal" displayModal={handleModal} resource={displayId} />
+                <ResourceAdminModal
+                    className="ResourceModal"
+                    displayModal={handleModal}
+                    resource={displayId}
+                    reload={reload}
+                    setReload={setReload} />
                 {docs.map((doc, index) => {
                     return <div key={index} className="ResourceCard" onClick={() => handleModal(doc.id_resource, true)}>{doc.name}
                     </div>
