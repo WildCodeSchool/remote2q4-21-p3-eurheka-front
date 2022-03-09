@@ -61,7 +61,6 @@ const Footer = (props) => {
                     <div className='icons-container'>
                         <div className='icons-animation'><a href="https://www.google.fr" target="_blank" rel="noopener noreferrer" className='rs-buttons'><i className="fa-brands fa-google fa-2xl"></i></a></div>
                         <div className='icons-animation'><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className='rs-buttons'><i className="fa-brands fa-facebook-f fa-2xl"></i></a></div>
-                        
                     </div>
                     <div className='icons-container'>
                         <div className='icons-animation'><a href="https://fr.linkedin.com/company/eurheka-estellelorusso" target="_blank" rel="noopener noreferrer" className='rs-buttons'><i className="fa-brands fa-linkedin-in fa-2xl"></i></a></div>
