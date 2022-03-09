@@ -7,7 +7,6 @@ const ResourceAdminModal = ({ resource, displayModal,setReload,reload }) => {
     const [themeUsed, setThemeUsed] = useState([]);
     const [visibility, setVisibility] = useState();
     const [docName, setDocName] = useState('');
-    const tempTab = [];
 
     useEffect(() => {
         const url = `${process.env.REACT_APP_API_URL}resource/admin/` + resource;
@@ -50,14 +49,12 @@ const ResourceAdminModal = ({ resource, displayModal,setReload,reload }) => {
             idDoc: resource,
             name: docName
         }
-        //Send newDoc to backend
         const url = `${process.env.REACT_APP_API_URL}resource/` + resource;
-        console.log(newDoc);
-        if (window.confirm('Voulez-vous modifier cette ressource ?')) {
+        if (window.confirm('Voulez-vous modifier ce document ?')) {
         axios.put(url,newDoc,{withCredentials:true})
             .then((response) => {
                 if (response.status === 200) {
-                    window.alert('Ressource modifiée.');
+                    window.alert('Document modifié.');
                     displayModal(0, false);
                     setReload(!reload);
                 }
@@ -69,17 +66,23 @@ const ResourceAdminModal = ({ resource, displayModal,setReload,reload }) => {
                     alert('Vous avez été déconnecté.');
                     window.location = '/';
                 }
+                if(HTTPError===500){
+                    alert('Une erreur est survenue.')
+                }
+                if(HTTPError===404){
+                    alert("Le document spécifié n'existe pas")
+                }
             });
         }
     }
 
     const deleteDoc = () => {
-        if (window.confirm('Voulez-vous supprimer cette ressource ?')) {
+        if (window.confirm('Voulez-vous supprimer ce document ?')) {
             const url = `${process.env.REACT_APP_API_URL}resource/` + resource;
             axios.delete(url, { withCredentials: true })
                 .then((response) => {
                     if (response.status === 200) {
-                        window.alert('Ressource supprimée.');
+                        window.alert('Document supprimé.');
                         displayModal(0, false);
                         setReload(!reload);
                     }
