@@ -53,7 +53,7 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload }) => {
     const fileTypes = ["PDF"];
 
     const handleCheckTheme = (e) => {
-
+        alert(e.target.value);
     }
 
     //Handling submit form
@@ -111,7 +111,7 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload }) => {
                                 {themes && themes.map((theme) => {
                                     return (
                                         <div key={theme.idTheme}>
-                                            <label className='LabelThemeNewDoc' htmlFor={theme.themeName}><input type="checkbox" id={theme.themeName} checked={theme.checked} onChange={(e) => handleCheckTheme(e)} /> {theme.themeName}</label>
+                                            <label className='LabelThemeNewDoc' htmlFor={theme.themeName}><input type="checkbox" value={theme.idTheme} id={theme.themeName} checked={theme.checked} onChange={(e) => handleCheckTheme(e)} /> {theme.themeName}</label>
                                         </div>
                                     )
                                 })}
