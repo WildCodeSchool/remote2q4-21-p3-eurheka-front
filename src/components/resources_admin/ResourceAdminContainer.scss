@@ -80,7 +80,7 @@
         position: absolute;
         bottom :0;
         width: 320px;
-        height: 350px;
+        max-height: 650px;
         background-color: var(--main-color-light-background);
         color : var(--sec-color-dark-text);
         display: block;
@@ -118,7 +118,7 @@
         .ShowResourceModal{
             bottom : -100%;
             width: 450px;
-            height: 350px;
+            max-height: 650px;
             padding: 10px;
         }
 
