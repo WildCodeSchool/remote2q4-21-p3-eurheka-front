@@ -9,12 +9,13 @@
     justify-content: space-around;
 }
 
-.title-container h3 {
+.title-container {
     color: var(--main-color-light-text);
     font-family: 'Poppins';
     font-weight: 600;
     font-size: 30px;
-    line-height: 45px;    
+    line-height: 45px;  
+    margin-top: 20px;  
 }
 
 .odd-logo-container {
@@ -65,12 +66,30 @@
 
 @media only screen and (min-width: 391px) and (max-width: 768px) {
     .Partners-container {
-        height: 400px;
+        height: 300px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-    
-    
+        margin-bottom: 20px;
+    }
+    .title-container {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+    .odd-logo-container {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        object-fit: contain;
+    }
+    .even-logo-container {
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        object-fit: contain;
     }
 }
