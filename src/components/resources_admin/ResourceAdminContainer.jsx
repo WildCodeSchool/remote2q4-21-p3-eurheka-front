@@ -53,7 +53,10 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload }) => {
     const fileTypes = ["PDF"];
 
     const handleCheckTheme = (e) => {
-        alert(e.target.value);
+        const id=parseInt(e.target.value);
+        const theTheme = themes.find((item) =>item.idTheme === id);
+        let checked = !theTheme.checked;
+        setThemes(themes.map(item => item.idTheme === id ? { ...theTheme, checked } : item));
     }
 
     //Handling submit form
