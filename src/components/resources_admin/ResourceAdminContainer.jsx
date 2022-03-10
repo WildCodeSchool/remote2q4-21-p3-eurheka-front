@@ -82,6 +82,10 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme })
             alert('Veuillez renseigner le nom du document');
             return -1;
         }
+        console.log(file);
+        const formData=new formData();
+        formData.append('file',file);
+
         const newDoc = {
             name: name,
             path: path,
