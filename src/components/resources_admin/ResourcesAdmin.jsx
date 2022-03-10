@@ -3,7 +3,7 @@ import axios from 'axios';
 import ResourceAdminContainer from './ResourceAdminContainer';
 import './ResourcesAdmin.scss';
 
-const ResourcesAdmin = (props) => {
+const ResourcesAdmin = ({reloadTheme}) => {
     const [getIdDoc, setGetIdDoc] = useState(1);
     const [docs, setDocs] = useState([]);
     const [showComponent, setShowComponent] = useState(false);
@@ -62,7 +62,8 @@ const ResourcesAdmin = (props) => {
                         <ResourceAdminContainer catDoc={getIdDoc}
                             docs={docs}
                             setReload={setReload}
-                            reload={reload} />
+                            reload={reload} 
+                            reloadTheme={reloadTheme}/>
                     </div>
                 </div>
             </div>

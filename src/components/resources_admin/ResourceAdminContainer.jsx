@@ -4,7 +4,7 @@ import './ResourceAdminContainer.scss';
 import ResourceAdminModal from './ResourceAdminModal';
 import axios from 'axios';
 
-const ResourceAdminContainer = ({ catDoc, docs, setReload, reload }) => {
+const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme }) => {
     const [file, setFile] = useState(null);
     const [name, setName] = useState('');
     const [pathVideo, setPathVideo] = useState('');
@@ -30,7 +30,7 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload }) => {
                 });
         }
         fetchTheme();
-    }, []);
+    }, [reloadTheme]);
 
     const handleModal = (id, displayModal) => {
         const modalBox = document.getElementById('resourceModal');

@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import './ThemeAdmin.scss';
 import Themecontainer from './Themecontainer';
-const ThemeAdmin = (props) => {
+
+const ThemeAdmin = ({reload,setReload}) => {
     const [showComponent, setShowComponent] = useState(false);
     const [themeName, setThemeName] = useState('');
-    const [reload,setReload]=useState(false);
-
     const handleShowClick = (id) => {
         const docContainer = document.getElementById(id);
         if (!showComponent) {
@@ -26,9 +25,10 @@ const ThemeAdmin = (props) => {
         }
         const url = `${process.env.REACT_APP_API_URL}theme/`;
         axios
-            .post(url,{themeName}, { withCredentials: true })
-            .then((response) => {
-                if (response.status === 200) {
+            .post(url,{name:themeName}, { withCredentials: true })
+            .then((response)=>response)
+            .then(({data,status}) => {
+                if (status === 201) {
                     setReload(!reload);
                 }
             })
