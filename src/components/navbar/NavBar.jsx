@@ -35,7 +35,7 @@ const NavBar = () => {
         <div className='NavBar'>
             <div className='left-container'>
                 <div className="logo-container">
-                    <Link to='/'><img className='Header-logo' src={home} alt="logo" /></Link>
+                    <Link to='/' className="logo-link"><img className='Header-logo' src={home} alt="logo" /></Link>
                 </div>
                 <div className='link-container'>
                     <NavLink to="/" className={({ isActive }) =>
@@ -74,11 +74,11 @@ const NavBar = () => {
                         }
                         {!admin&&independantUser&&
                             <NavLink to="/mon-profil-particulier" className={({ isActive }) =>
-                            isActive ? "selected" : "navigation-link"} >Mon profil particulier</NavLink>
+                            isActive ? "selected" : "navigation-link"} >Mon profil</NavLink>
                         }
                         {!admin&&companyUser&&
                             <NavLink to="/mon-profil-entreprise" className={({ isActive }) =>
-                            isActive ? "selected" : "navigation-link"} >Mon profil entreprise</NavLink>
+                            isActive ? "selected" : "navigation-link"}>Mon profil entreprise</NavLink>
                         }
                         <Disconnect />
                     </div>
