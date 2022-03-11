@@ -62,6 +62,15 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme })
     //Handling submit form
     const handleSubmit = (e) => {
         e.preventDefault();
+        let pathAPI='';
+        switch(catDoc){
+            case 1 : pathAPI='video/';
+                break;
+            case 2 : pathAPI='doc/';
+                break;
+            case 3 : pathAPI='job/';
+                break;
+        }
         let path = '';
         //checking if all informations are sets
         if (catDoc === 1) {
@@ -83,15 +92,34 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme })
             return -1;
         }
         console.log(file);
-        const formData=new formData();
-        formData.append('file',file);
-
-        const newDoc = {
-            name: name,
-            path: path,
-            visibility: visibility,
-            category: catDoc
+        const formData=new FormData();
+        if(catDoc===1){ ///video
+            formData.append('video',pathVideo);
         }
+        else{
+            formData.append('file',file);
+        }
+        formData.append('visibility',visibility);
+        formData.append('id_cat',catDoc);
+        formData.append('name',name);
+        for (var key of formData.entries()) {
+			console.log(key[0] + ', ' + key[1])
+		}
+        const url = `${process.env.REACT_APP_API_URL}resource/${pathAPI}`;
+        axios.post(url,formData,{ withCredentials: true })
+            .then((response)=>{
+                if (response.status===201){
+                    console.log('OK');
+                }
+            })
+            .catch((err)=>{
+                console.log(err);
+                const HTTPError = err.response.status;
+                if (HTTPError === 401) {
+                    alert('Vous avez été déconnecté.');
+                    window.location = '/';
+                }
+            })
     }
 
     return (
