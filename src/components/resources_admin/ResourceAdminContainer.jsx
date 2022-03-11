@@ -90,8 +90,7 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme })
             axios.post(url,newDoc,{ withCredentials: true })
             .then((response)=>{
                 if (response.status===201){
-                    console.log('OK');
-                    //Have to finali process
+                    setReload(!reload);
                 }
             })
             .catch((err)=>{
@@ -123,8 +122,7 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme })
             axios.post(url,formData,{ withCredentials: true })
                 .then((response)=>{
                     if (response.status===201){
-                        console.log('OK');
-                        //Have to finali process
+                        setReload(!reload);
                     }
                 })
                 .catch((err)=>{
