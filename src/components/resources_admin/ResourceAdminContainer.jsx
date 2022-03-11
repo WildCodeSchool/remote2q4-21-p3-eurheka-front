@@ -83,7 +83,8 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme })
                 visibility:visibility,
                 name:name,
                 video:pathVideo,
-                id_cat:catDoc
+                id_cat:catDoc,
+                themes: themes
             }
             const url = `${process.env.REACT_APP_API_URL}resource/${pathAPI}`;
             axios.post(url,newDoc,{ withCredentials: true })
@@ -116,6 +117,11 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme })
             formData.append('visibility',visibility);
             formData.append('id_cat',catDoc);
             formData.append('name',name);
+            //Adding themes
+            // themes.forEach((theme)=>{
+            //     formData.append('themes',{...theme});
+            // });
+            formData.append('themes',JSON.stringify(themes))
             const url = `${process.env.REACT_APP_API_URL}resource/${pathAPI}`;
             axios.post(url,formData,{ withCredentials: true })
                 .then((response)=>{
