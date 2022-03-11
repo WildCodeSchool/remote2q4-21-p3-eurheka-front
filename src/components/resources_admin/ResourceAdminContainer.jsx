@@ -79,34 +79,14 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme })
                 return -1;
             }
             path = pathVideo;
-        }
-        else {
-            if (file === null) {
-                alert('Veuillez indiquer le document à envoyer');
-                return -1;
+            const newDoc={
+                visibility:visibility,
+                name:name,
+                video:pathVideo,
+                id_cat:catDoc
             }
-            path = file.name; //to test
-        }
-        if (name === '') {
-            alert('Veuillez renseigner le nom du document');
-            return -1;
-        }
-        console.log(file);
-        const formData=new FormData();
-        if(catDoc===1){ ///video
-            formData.append('video',pathVideo);
-        }
-        else{
-            formData.append('file',file);
-        }
-        formData.append('visibility',visibility);
-        formData.append('id_cat',catDoc);
-        formData.append('name',name);
-        for (var key of formData.entries()) {
-			console.log(key[0] + ', ' + key[1])
-		}
-        const url = `${process.env.REACT_APP_API_URL}resource/${pathAPI}`;
-        axios.post(url,formData,{ withCredentials: true })
+            const url = `${process.env.REACT_APP_API_URL}resource/${pathAPI}`;
+            axios.post(url,newDoc,{ withCredentials: true })
             .then((response)=>{
                 if (response.status===201){
                     console.log('OK');
@@ -119,7 +99,42 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme })
                     alert('Vous avez été déconnecté.');
                     window.location = '/';
                 }
-            })
+            });
+        }
+        else {
+            if (file === null) {
+                alert('Veuillez indiquer le document à envoyer');
+                return -1;
+            }
+            path = file.name; //to test
+            if (name === '') {
+                alert('Veuillez renseigner le nom du document');
+                return -1;
+            }
+            const formData=new FormData();
+            formData.append('file',file);
+            formData.append('visibility',visibility);
+            formData.append('id_cat',catDoc);
+            formData.append('name',name);
+            for (var key of formData.entries()) {
+                console.log(key[0] + ', ' + key[1])
+            }
+            const url = `${process.env.REACT_APP_API_URL}resource/${pathAPI}`;
+            axios.post(url,formData,{ withCredentials: true })
+                .then((response)=>{
+                    if (response.status===201){
+                        console.log('OK');
+                    }
+                })
+                .catch((err)=>{
+                    console.log(err);
+                    const HTTPError = err.response.status;
+                    if (HTTPError === 401) {
+                        alert('Vous avez été déconnecté.');
+                        window.location = '/';
+                    }
+                });
+        }
     }
 
     return (
