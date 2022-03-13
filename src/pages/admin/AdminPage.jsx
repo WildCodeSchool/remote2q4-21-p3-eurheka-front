@@ -1,30 +1,36 @@
-import React,{useContext} from 'react'
+import React, { useContext, useState } from 'react'
 import ResourcesAdmin from '../../components/resources_admin/ResourcesAdmin';
-import { UserIdContext } from  '../../context/AppContext';
+import ThemeAdmin from '../../components/themes_admin/ThemeAdmin';
+import { UserIdContext } from '../../context/AppContext';
+
 const AdminPage = (props) => {
-    const {uId, uLevel}=useContext( UserIdContext);
-    let admin=false;
-    let superAdmin=false;
-    if(uLevel&&uLevel.includes('super'))
-    {
-        superAdmin=true;
+    const [reload, setReload] = useState(false);
+    const { uId, uLevel } = useContext(UserIdContext);
+    let admin = false;
+    let superAdmin = false;
+    if (uLevel && uLevel.includes('super')) {
+        superAdmin = true;
     }
-    if(uLevel&&uLevel.includes('admin'))
-    {
-        admin=true;
+    if (uLevel && uLevel.includes('admin')) {
+        admin = true;
     }
     return (
         <div>
-            {admin&& <div className="AdminPage">
+            {admin && <div className="AdminPage">
                 {/* Page administrateur */}
-                <ResourcesAdmin />
-                </div>}
-            {superAdmin&& <div className="SuperAdminPage">
+                <ThemeAdmin
+                    reload={reload}
+                    setReload={setReload} />
+                <ResourcesAdmin
+                    reloadTheme={reload}
+                />
+            </div>}
+            {superAdmin && <div className="SuperAdminPage">
                 {/* Page super administrateur */}
             </div>}
-            {!admin&&!superAdmin&&<div>
+            {!admin && !superAdmin && <div>
                 Vous n'êtes pas autorisé à accèder à cette page
-                </div>}
+            </div>}
         </div>
     )
 }
