@@ -44,6 +44,7 @@ function App() {
   return (
     <UserIdContext.Provider value={{uId, uLevel, setUId, setULevel}} >
     <div className="App">
+      <SplashPage />
       <NavBar />    
       <Routes>
         <Route exact path='/' element={<Home />}/>
@@ -57,7 +58,7 @@ function App() {
         <Route path='/mon-profil-particulier' element={<UserPage />}/>
         {/*Company routes*/}
         <Route path='/mon-profil-entreprise' element={<CompanyPage />}/>
-        <Route path='/splash' element={<SplashPage />}/>
+        {/* <Route path='/splash' element={<SplashPage />}/> */}
       </ Routes>
       <Footer footerStyle={footerStyle} setFooterStyle={setFooterStyle} />
     </div>
