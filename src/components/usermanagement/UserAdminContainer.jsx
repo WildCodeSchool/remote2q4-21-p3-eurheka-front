@@ -27,7 +27,25 @@ const UserAdminContainer = () => {
 
     const handleUpdate = (idUser) => {
         const exist = users.find((item) => item.id_users === idUser);
-        setReload(!reload);
+        const userLevel=exist.user_level;
+        const url = `${process.env.REACT_APP_API_URL}users/admin/${idUser}`;
+        axios.put(url,{user_level:userLevel},{ withCredentials: true })
+            .then((response)=>{
+                if (response.status === 204) {
+                    setReload(!reload);
+                }
+            })
+            .catch((err)=>{
+                console.log(err.response);
+                const HTTPError = err.response.status;
+                if (HTTPError === 401) {
+                    alert('Vous avez été déconnecté.');
+                    window.location = '/';
+                }
+                if(HTTPError ===500&&err.response.data.error===1451){
+                    alert(err.response.data.message);
+                }
+            });
 
     };
 
@@ -61,8 +79,8 @@ const UserAdminContainer = () => {
     }
 
     return (
-        <div>
-            <table>
+        <div className='UserAdminContainer'>
+            <table className='UserTable'>
                 <thead><tr>
                     <th>
                         Nom - Prenom
