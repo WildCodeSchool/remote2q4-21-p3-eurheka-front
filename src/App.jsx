@@ -12,12 +12,14 @@ import Footer from './components/footer/Footer';
 import AdminPage from './pages/admin/AdminPage.jsx';
 import UserPage from './pages/profile/UserPage.jsx';
 import CompanyPage from './pages/profile/CompanyPage.jsx';
+import SplashPage from './pages/splash/SplashPage.jsx';
 import './App.css';
 
 function App() {
   const [footerStyle, setFooterStyle] = useState(true)
   const [uId, setUId] = useState(null);
   const [uLevel,setULevel]=useState(null);
+
 
   useEffect(async() => {
     const fetchToken = async() => {
@@ -55,6 +57,7 @@ function App() {
         <Route path='/mon-profil-particulier' element={<UserPage />}/>
         {/*Company routes*/}
         <Route path='/mon-profil-entreprise' element={<CompanyPage />}/>
+        <Route path='/splash' element={<SplashPage />}/>
       </ Routes>
       <Footer footerStyle={footerStyle} setFooterStyle={setFooterStyle} />
     </div>
