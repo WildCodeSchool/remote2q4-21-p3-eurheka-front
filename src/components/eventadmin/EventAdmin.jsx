@@ -9,6 +9,7 @@ const EventAdmin = (props) => {
     const [eventName,setEventName]=useState('');
     const [eventCategory,setEventCategory]=useState(1);
     const [eventDate,setEventDate]=useState('');
+    const [reload,setReload]=useState(false);
 
     useEffect(() => {
         const getCategories = async () => {
@@ -37,7 +38,7 @@ const EventAdmin = (props) => {
     }
 
     const handleAddClick=()=>{
-        if(window.confirm("Voulez vous ajouter le message")){
+        if(window.confirm("Voulez vous ajouter l'évènement'")){
             const url=`${process.env.REACT_APP_API_URL}event/`;
             const newEvent={
                 category:eventCategory,
@@ -46,7 +47,9 @@ const EventAdmin = (props) => {
             }
             axios.post(url,newEvent,{withCredentials:true})
                 .then((res)=>{
-
+                    if (res.status===201){
+                        setReload(!reload);
+                    }
                 })
                 .catch((err) => {
                     console.log(err);
@@ -79,7 +82,10 @@ const EventAdmin = (props) => {
                         </label>
                         <input type="button" value="Ajouter" onClick={handleAddClick}/>
                     </div>
-                    <EventAdminContainer />
+                    <EventAdminContainer
+                     reload={reload}
+                     setReload={setReload}
+                     />
                 </div>
             </div>
         </div>
