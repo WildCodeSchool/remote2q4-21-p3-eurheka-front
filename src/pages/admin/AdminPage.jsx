@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react'
+import EventAdmin from '../../components/eventadmin/EventAdmin';
 import ResourcesAdmin from '../../components/resources_admin/ResourcesAdmin';
 import ThemeAdmin from '../../components/themes_admin/ThemeAdmin';
 import { UserIdContext } from '../../context/AppContext';
@@ -24,6 +25,7 @@ const AdminPage = (props) => {
                 <ResourcesAdmin
                     reloadTheme={reload}
                 />
+                <EventAdmin />
             </div>}
             {superAdmin && <div className="SuperAdminPage">
                 {/* Page super administrateur */}
