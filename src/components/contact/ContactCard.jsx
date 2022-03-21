@@ -20,7 +20,7 @@ const ContactCard = () => {
                 lastname: lastname,
                 email: email,
                 subject: subject,
-                description: description
+                message: description
         }
         
         const url = `${process.env.REACT_APP_API_URL}mail/`;
@@ -61,7 +61,7 @@ const ContactCard = () => {
                 <h2 className='contact-form-title'>Votre demande</h2>
                 <div className='contact-information-container'>
                     <div className='contact-input-container'>
-                        <label for="firstname" className='contact-form-subtitle'>Prénom</label>
+                        <label htmlFor="firstname" className='contact-form-subtitle'>Prénom</label>
                         <input 
                             type="text" 
                             id="firstname" 
@@ -72,7 +72,7 @@ const ContactCard = () => {
                             onBlur={(e) => e.target.placeholder = "edouard"}
                             onChange={(e) => setFirstname(e.target.value)}
                         />
-                        <label for="lastname" className='contact-form-subtitle'>Nom</label>
+                        <label htmlFor="lastname" className='contact-form-subtitle'>Nom</label>
                         <input 
                             type="text" 
                             id="lastname" 
@@ -85,7 +85,7 @@ const ContactCard = () => {
                         />
                     </div>
                     <div className='contact-input-container'>
-                    <label for="email" className='contact-form-subtitle'>Email</label>
+                    <label htmlFor="email" className='contact-form-subtitle'>Email</label>
                         <input 
                             type="text" 
                             id="email" 
@@ -96,7 +96,7 @@ const ContactCard = () => {
                             onBlur={(e) => e.target.placeholder = "edouard.doe@gmail.com"}
                             onChange={(e) => setEmail(e.target.value)}
                         />
-                        <label for="subject" className='contact-form-subtitle'>Objet</label>
+                        <label htmlFor="subject" className='contact-form-subtitle'>Objet</label>
                         <input 
                             type="text" 
                             id="subject" 
@@ -109,7 +109,7 @@ const ContactCard = () => {
                         />
                     </div>
                 </div>
-                <label for="description" className='contact-form-subtitle'>Informations supplémentaires</label>
+                <label htmlFor="description" className='contact-form-subtitle'>Informations supplémentaires</label>
                 <textarea 
                     type="text" 
                     id="description" 
