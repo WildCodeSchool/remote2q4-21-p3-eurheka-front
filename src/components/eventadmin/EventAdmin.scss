@@ -38,4 +38,21 @@
         margin-bottom: 5px;
     }
 
+    .EventAdminAddTitle{
+        margin-left: 7px;
+    }
+
+    .EventAdminAdd{
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+    }
+
+    .EventAdminLabel{
+        margin: 5px;
+    }
+
+    .EventAdminAddBtn{
+        width: 100px;
+    }
 }

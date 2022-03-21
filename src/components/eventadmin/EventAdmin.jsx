@@ -64,14 +64,15 @@ const EventAdmin = (props) => {
 
     return (
         <div className='EventAdmin'>
-            <div className="navBarEvent">
+            <div>
                 <h2 className='EventAdminTitle'>Gestion des évenements</h2>
                 <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding" : "fa-solid fa-chevron-down CloseFolding"} onClick={() => handleShowClick('EventAdminBloc')}></i>
                 <div className="EventAdminBloc BlocHidden" id="EventAdminBloc">
                     <div className="EventAdminAdd">
-                        <label htmlFor="eventName">Nom de l'évènement : <input type="text" id="eventName" value={eventName} onChange={(e)=>setEventName(e.target.value)}/></label>
-                        <label htmlFor="eventDate">Date de l'évènement : <input type="datetime-local" id="eventDate" value={eventDate} onChange={(e)=>setEventDate(e.target.value)}/></label>
-                        <label htmlFor="eventCategory">
+                        <h3 className='EventAdminAddTitle'>Ajouter un évènement</h3>
+                        <label className='EventAdminLabel' htmlFor="eventName">Nom de l'évènement : <input type="text" id="eventName" value={eventName} onChange={(e)=>setEventName(e.target.value)}/></label>
+                        <label className='EventAdminLabel' htmlFor="eventDate">Date de l'évènement : <input type="datetime-local" id="eventDate" value={eventDate} onChange={(e)=>setEventDate(e.target.value)}/></label>
+                        <label className='EventAdminLabel' htmlFor="eventCategory">
                             <select id="eventCategory" value={eventCategory} onChange={(e)=>setEventCategory(e.target.value)}>
                                 {categories && categories.map((category) => {
                                     return (
@@ -80,7 +81,7 @@ const EventAdmin = (props) => {
                                 })}
                             </select>
                         </label>
-                        <input type="button" value="Ajouter" onClick={handleAddClick}/>
+                        <input className='EventAdminAddBtn' type="button" value="Ajouter" onClick={handleAddClick}/>
                     </div>
                     <EventAdminContainer
                      reload={reload}
