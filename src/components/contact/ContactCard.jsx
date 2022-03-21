@@ -41,21 +41,16 @@ const ContactCard = () => {
                 })
                 .catch(function (error){
                     const HTTPError = error.response.status;
-                    let docName = '';
-                    let message = '';
                     if ((HTTPError === 500)||(HTTPError===422)) {
-                        if(HTTPError===500)
+                        if(HTTPError===500){
                             console.log('SMTP server not found');
+                            alert("Un problème technique est survenu le message n'a put être envoyé")
+                        }
                         else {
                             console.log('Erreur de données');
                             alert('Veuillez remplir les champs correctement');
                         }
                         console.log(error.response.data);
-                        docName = 'emailError';
-                        message = "Une erreur s'est produite lors de l'envoi";
-                        let errorDiv = document.getElementById(docName);
-                        errorDiv.innerHTML = message;
-                        errorDiv.classList.add('ErrorDisplay');
                     }  else {
                         console.log('Unknown error');
                     }
