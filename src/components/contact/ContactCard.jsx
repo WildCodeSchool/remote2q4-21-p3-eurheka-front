@@ -11,6 +11,10 @@ const ContactCard = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if(firstname===''||lastname===''||email===''||subject===''||description===''){
+            alert('Veuillez remplir tous les champs');
+            return -1;
+        }
         let errorMessage = document.getElementsByClassName("Error");
         for (let i=0; i<errorMessage.length; i++){
             errorMessage[i].innerHTML="";
@@ -20,7 +24,7 @@ const ContactCard = () => {
                 lastname: lastname,
                 email: email,
                 subject: subject,
-                description: description
+                message: description
         }
         
         const url = `${process.env.REACT_APP_API_URL}mail/`;
@@ -37,16 +41,16 @@ const ContactCard = () => {
                 })
                 .catch(function (error){
                     const HTTPError = error.response.status;
-                    let docName = '';
-                    let message = '';
-                    if (HTTPError === 500) {
-                        console.log('SMTP server not found');
+                    if ((HTTPError === 500)||(HTTPError===422)) {
+                        if(HTTPError===500){
+                            console.log('SMTP server not found');
+                            alert("Un problème technique est survenu le message n'a put être envoyé")
+                        }
+                        else {
+                            console.log('Erreur de données');
+                            alert('Veuillez remplir les champs correctement');
+                        }
                         console.log(error.response.data);
-                        docName = 'emailError';
-                        message = "Une erreur s'est produite lors de l'envoi";
-                        let errorDiv = document.getElementById(docName);
-                        errorDiv.innerHTML = message;
-                        errorDiv.classList.add('ErrorDisplay');
                     }  else {
                         console.log('Unknown error');
                     }
@@ -61,10 +65,11 @@ const ContactCard = () => {
                 <h2 className='contact-form-title'>Votre demande</h2>
                 <div className='contact-information-container'>
                     <div className='contact-input-container'>
-                        <label for="firstname" className='contact-form-subtitle'>Prénom</label>
+                        <label htmlFor="firstname" className='contact-form-subtitle'>Prénom</label>
                         <input 
                             type="text" 
                             id="firstname" 
+                            value={firstname}
                             name="firstname" 
                             className='contact-input' 
                             placeholder="edouard"
@@ -72,10 +77,11 @@ const ContactCard = () => {
                             onBlur={(e) => e.target.placeholder = "edouard"}
                             onChange={(e) => setFirstname(e.target.value)}
                         />
-                        <label for="lastname" className='contact-form-subtitle'>Nom</label>
+                        <label htmlFor="lastname" className='contact-form-subtitle'>Nom</label>
                         <input 
                             type="text" 
-                            id="lastname" 
+                            id="lastname"
+                            value={lastname} 
                             name="lastname" 
                             className='contact-input' 
                             placeholder="doe"
@@ -85,22 +91,24 @@ const ContactCard = () => {
                         />
                     </div>
                     <div className='contact-input-container'>
-                    <label for="email" className='contact-form-subtitle'>Email</label>
+                    <label htmlFor="email" className='contact-form-subtitle'>Email</label>
                         <input 
                             type="text" 
                             id="email" 
                             name="email" 
+                            value={email}
                             className='contact-input' 
                             placeholder="edouard.doe@gmail.com"
                             onFocus={(e) => e.target.placeholder = ""}  
                             onBlur={(e) => e.target.placeholder = "edouard.doe@gmail.com"}
                             onChange={(e) => setEmail(e.target.value)}
                         />
-                        <label for="subject" className='contact-form-subtitle'>Objet</label>
+                        <label htmlFor="subject" className='contact-form-subtitle'>Objet</label>
                         <input 
                             type="text" 
                             id="subject" 
                             name="subject" 
+                            value={subject}
                             className='contact-input' 
                             placeholder="Prendre un rendez-vous vidéo"
                             onFocus={(e) => e.target.placeholder = ""}  
@@ -109,11 +117,12 @@ const ContactCard = () => {
                         />
                     </div>
                 </div>
-                <label for="description" className='contact-form-subtitle'>Informations supplémentaires</label>
+                <label htmlFor="description" className='contact-form-subtitle'>Informations supplémentaires</label>
                 <textarea 
                     type="text" 
                     id="description" 
                     name="description" 
+                    value={description}
                     className='contact-input-description'
                     placeholder="Je vais passer une entretien pour un post de chargé de communication le 12 février. Ce rendez-vous
                     me premettrait de gagner en confiance avant ce rdv et d’avoir des réponses à mes questions. "
