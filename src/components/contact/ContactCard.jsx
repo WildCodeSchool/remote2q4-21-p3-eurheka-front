@@ -11,6 +11,10 @@ const ContactCard = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        if(firstname===''||lastname===''||email===''||subject===''||description===''){
+            alert('Veuillez remplir tous les champs');
+            return -1;
+        }
         let errorMessage = document.getElementsByClassName("Error");
         for (let i=0; i<errorMessage.length; i++){
             errorMessage[i].innerHTML="";
@@ -39,8 +43,13 @@ const ContactCard = () => {
                     const HTTPError = error.response.status;
                     let docName = '';
                     let message = '';
-                    if (HTTPError === 500) {
-                        console.log('SMTP server not found');
+                    if ((HTTPError === 500)||(HTTPError===422)) {
+                        if(HTTPError===500)
+                            console.log('SMTP server not found');
+                        else {
+                            console.log('Erreur de données');
+                            alert('Veuillez remplir les champs correctement');
+                        }
                         console.log(error.response.data);
                         docName = 'emailError';
                         message = "Une erreur s'est produite lors de l'envoi";
