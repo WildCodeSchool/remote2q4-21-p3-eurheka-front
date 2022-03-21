@@ -65,6 +65,7 @@ const ContactCard = () => {
                         <input 
                             type="text" 
                             id="firstname" 
+                            value={firstname}
                             name="firstname" 
                             className='contact-input' 
                             placeholder="edouard"
@@ -75,7 +76,8 @@ const ContactCard = () => {
                         <label htmlFor="lastname" className='contact-form-subtitle'>Nom</label>
                         <input 
                             type="text" 
-                            id="lastname" 
+                            id="lastname"
+                            value={lastname} 
                             name="lastname" 
                             className='contact-input' 
                             placeholder="doe"
@@ -90,6 +92,7 @@ const ContactCard = () => {
                             type="text" 
                             id="email" 
                             name="email" 
+                            value={email}
                             className='contact-input' 
                             placeholder="edouard.doe@gmail.com"
                             onFocus={(e) => e.target.placeholder = ""}  
@@ -101,6 +104,7 @@ const ContactCard = () => {
                             type="text" 
                             id="subject" 
                             name="subject" 
+                            value={subject}
                             className='contact-input' 
                             placeholder="Prendre un rendez-vous vidéo"
                             onFocus={(e) => e.target.placeholder = ""}  
@@ -114,6 +118,7 @@ const ContactCard = () => {
                     type="text" 
                     id="description" 
                     name="description" 
+                    value={description}
                     className='contact-input-description'
                     placeholder="Je vais passer une entretien pour un post de chargé de communication le 12 février. Ce rendez-vous
                     me premettrait de gagner en confiance avant ce rdv et d’avoir des réponses à mes questions. "
