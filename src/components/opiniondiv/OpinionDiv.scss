@@ -65,20 +65,33 @@
     }
 
     @media screen and (min-width: 1025px)  {
-        margin-bottom: 200px;
+        width: 65%;
+        height: 400px;
+        text-align: center;
+        background : linear-gradient(0deg, rgba(249, 181, 19, 0.85), rgba(249, 181, 19, 0.85)), url('../../assets/pictures/markus-spiske-CWcjRu6ANAE-unsplash.jpg');
+        font-family: var(--title-font);
+        margin-bottom: 50px;
+        margin-top: 50px;
 
         .OpinionCont{
             text-align: left;
             font-style: italic;
             color: var(--main-color-dark-text);
-            font-size: 20px;
+            font-size: 16px;
             font-weight: 300;
+        }
+
+        .OpinionTitle {
+            font-size: 18px;
+            font-weight: 600;
+            color : var(--main-color-dark-text);
+            padding-top: 20px;
         }
 
         .OpinionAutor{
             margin-top: 20px;
             color: var(--main-color-dark-text);
-            font-size: 20px;
+            font-size: 16px;
             font-weight: 300;
         }
 

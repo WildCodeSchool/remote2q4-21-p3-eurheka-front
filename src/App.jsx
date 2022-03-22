@@ -10,8 +10,9 @@ import Login from './pages/login/Login';
 import NavBar from './components/navbar/NavBar';
 import Footer from './components/footer/Footer';
 import AdminPage from './pages/admin/AdminPage.jsx';
-import UserPage from './pages/profile/UserPage.jsx';
-import CompanyPage from './pages/profile/CompanyPage.jsx';
+import SplashPage from './pages/splash/SplashPage.jsx';
+import UserPage from './components/profileUser/UserPage.jsx';
+import CompanyPage from './components/profileUser/CompanyPage.jsx';
 import './App.css';
 
 function App() {
@@ -19,29 +20,31 @@ function App() {
   const [uId, setUId] = useState(null);
   const [uLevel,setULevel]=useState(null);
 
-  // useEffect(async() => {
-  //   const fetchToken = async() => {
-  //     await axios({
-  //       method: "get",
-  //       url: `${process.env.REACT_APP_API_URL}session/`,
-  //       withCredentials: true,
-  //     })
-  //        .then((res) => {
-  //           setUId(res.data.userId);
-  //           setULevel(res.data.userLevelString);
-  //         })
-  //        .catch((err) =>{
-  //         console.log("No token");
-  //         setUId(0);
-  //         setULevel('not connected');
-  //        } );
-  //   }    
-  //   fetchToken();
-  // },[]);
+
+  useEffect(async() => {
+    const fetchToken = async() => {
+      await axios({
+        method: "get",
+        url: `${process.env.REACT_APP_API_URL}session/`,
+        withCredentials: true,
+      })
+         .then((res) => {
+            setUId(res.data.userId);
+            setULevel(res.data.userLevelString);
+          })
+         .catch((err) =>{
+          console.log("No token");
+          setUId(0);
+          setULevel('not connected');
+         } );
+    }    
+    fetchToken();
+  },[]);
 
   return (
     <UserIdContext.Provider value={{uId, uLevel, setUId, setULevel}} >
     <div className="App">
+      <SplashPage />
       <NavBar />    
       <Routes>
         <Route exact path='/' element={<Home />}/>
