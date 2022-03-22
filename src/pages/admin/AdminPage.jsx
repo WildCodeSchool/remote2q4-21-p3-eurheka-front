@@ -21,7 +21,7 @@ const AdminPage = (props) => {
             {admin && <div className="AdminPage">
                 {/* Page administrateur */}
                 <h1>Administration</h1>
-                <h2>adminsitration générale</h2>
+                <h2>administration générale</h2>
                 <ThemeAdmin
                     reload={reload}
                     setReload={setReload} />
