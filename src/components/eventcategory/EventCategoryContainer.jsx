@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './EventCategoryContainer.scss';
 
-const EventCategoryContainer = ({ reload }) => {
+const EventCategoryContainer = ({ reload,setReload }) => {
     const [categories, setCategories] = useState([]);
     const [newName, setNewName] = useState('');
-
+    const [idCategory,setIdCategory]=useState(0);
     useEffect(() => {
         const getCategory = async () => {
             const url = `${process.env.REACT_APP_API_URL}event/category/`;
@@ -21,19 +21,42 @@ const EventCategoryContainer = ({ reload }) => {
         getCategory();
     }, [reload]);
 
-    const updateCategory = (text) => {
+    const updateCategory = (text,id) => {
         setNewName(text);
+        setIdCategory(id);
         const popup = document.getElementById('popup');
         popup.classList.toggle('displayPopup');
     }
 
     const handleModification = () => {
         const popup = document.getElementById('popup');
+        const url = `${process.env.REACT_APP_API_URL}event/category/${idCategory}`;
+        console.log(`ID : ${idCategory} - ${newName}`);
+        axios.put(url,{category_name:newName},{withCredentials:true})
+            .then((res)=>{
+                if (res.status===204){
+                    setReload(!reload);
+                }
+            })
+            .catch((err)=>{
+                console.log(err);
+            })
         popup.classList.toggle('displayPopup');
     }
 
-    const deleteCategory = () => {
-
+    const deleteCategory = (id) => {
+       if(window.confirm('Voulez-vous supprimer cette catégorie ?')){
+            const url = `${process.env.REACT_APP_API_URL}event/category/${id}`;
+           axios.delete(url,{withCredentials:true})
+            .then((res)=>{
+                if (res.status===204){
+                    setReload(!reload);
+                }
+            })
+            .catch((err)=>{
+                console.log(err);
+            })
+        }
     }
 
     const handleClose=()=>{
@@ -54,14 +77,13 @@ const EventCategoryContainer = ({ reload }) => {
                                 type="button"
                                 value="Modifier"
                                 className='ModifCategoryBtn'
-                                onClick={() => updateCategory(category.category_name)} />
+                                onClick={() => updateCategory(category.category_name,category.id_category)} />
                             <input
                                 type="button"
                                 value="Supprimer"
                                 className='ModifCategoryBtn'
                                 onClick={() => deleteCategory(category.id_category)} />
                         </li>
-
                     )
                 })}
             </ul>

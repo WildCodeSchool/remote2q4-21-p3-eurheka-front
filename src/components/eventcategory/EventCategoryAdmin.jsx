@@ -49,7 +49,8 @@ const EventCategoryAdmin = ({ setReloadEvent, reloadEvent }) => {
                     <input className='EventCategoryAdminAddBtn' type="button" value="Ajouter" onClick={handleAddClick} />
                 </div>
                 <EventCategoryContainer 
-                reload={reload}/>
+                    setReload={setReload}
+                    reload={reload}/>
             </div>
         </div>
     )
