@@ -122,8 +122,8 @@ const CreateUser = () => {
 
     return (
         <div className='CreateUser'>
-            <h2>Créer son profil</h2>
-            <p>Augmenter vos chances d'être contacté par des recruteurs...</p>
+            <h2 className="mainTitleCreate">Créer son profil</h2>
+            <p className="mainTextCreate">Augmenter vos chances d'être contacté par des recruteurs...</p>
             <form>
                 <div className="globalContainer">
                     <div className="leftFields">
@@ -154,15 +154,29 @@ const CreateUser = () => {
                         </div>
                     </div>
                     <div className="rightFields">
-                        <label htmlFor="stage" className='container'><input type="checkbox" className='createUserInput' id="stage" checked={stage} onChange={(e) => { setStage(e.target.checked) }} /><span className="checkmark"></span> En recherche d'emploi/stage</label>
-                        <label htmlFor="accompanied" className='container'><input type="checkbox" className='createUserInput' id="accompanied" checked={accompanied} onChange={(e) => { setAccompanied(e.target.checked) }} /><span className="checkmark"></span>Être accompagné</label>
-                        <label htmlFor="focus" className='container'><input type="checkbox" className='createUserInput' id="focus" checked={focus} onChange={(e) => { setFocus(e.target.checked) }} /><span className="checkmark"></span>Faire le point</label>
+                        <div className="checkbox-duo">
+                          <input type="checkbox" id="stage" name="stage" value="stage" checked={stage} onChange={(e) => setStage(e.target.checked)}
+                          className="checkbox-box"></input>
+                          <label htmlFor="stage" className="check-text">En recherche d'emploi/stage</label>
+                        </div>
+                        <div className="checkbox-duo">
+                        <input type="checkbox" id="accompanied" name="accompanied" value="accompanied" checked={accompanied} onChange={(e) => setAccompanied(e.target.checked)}
+                    className="checkbox-box"></input>
+                        <label htmlFor="accompanied" className="check-text">Etre accompagné</label>
+                        </div>
+                        <div className="checkbox-duo">
+                        <input type="checkbox" id="focus" name="focus" value="focus" checked={focus} onChange={(e) => setFocus(e.target.checked)}
+                        className="checkbox-box"></input>
+                        <label htmlFor="focus" className="check-text">Faire le point</label>
+                        </div>
                     </div>
                 </div>
                 <div className="btnContainer">
-                <label htmlFor="conditions" className="check-text">J'accepte les <NavLink to="/conditions-generales" className="general-conditions">
-                conditions générales </NavLink><input type="checkbox" name="conditions" onChange={(e)=>setCheckCG(e.target.checked)}></input></label><br />
-                    <button disabled={!checkCG} type="submit" className='btnCreate' onClick={(e) => submitClick(e)}>s'inscrire</button>
+                <div className="conditionsContainer">
+                <input className="checkBox"type="checkbox" name="conditions" onChange={(e)=>setCheckCG(e.target.checked)}></input><label htmlFor="conditions" className="check-text">J'accepte les <NavLink to="/conditions-generales" className="general-conditions">
+                conditions générales </NavLink></label>
+                </div>
+                <button disabled={!checkCG} type="submit" className='btnCreate' onClick={(e) => submitClick(e)}>S'inscrire</button>
                 </div>
             </form>
         </div>

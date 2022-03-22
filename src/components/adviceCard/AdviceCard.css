@@ -1,9 +1,11 @@
 .AdviceCard {
     display: flex;
     flex-direction: row;
-    width: 25vw;
-    height: 35vh;
+    width: 330px;
+    height: 350px;
+    padding-bottom: 10px;
     font-family: 'Poppins';
+    margin: 20px;
 }
 
 .h3-title {
