@@ -4,21 +4,17 @@ import logo_splash from '../../assets/logos/Logo_Eurheka_Entier_Logo_Bleu.png'
 import './Splash.scss'
 
 const Splash = () => {
-    const [view, setView] = useState(true)
-    const scrollToMenu = async () => {
-        setView(!view)
+    const scrollToMenu = () => {
         let pageHeight = window.innerHeight;
-        await window.scrollTo({
+        window.scrollTo({
             top: pageHeight,
             left: 0,
             behavior: 'smooth'
         });
-        
-        console.log(view)
     };
 
     return (
-        <div className={view ? 'Splash' : 'splashNone'}>
+        <div className={'Splash'}>
             <img src={logo_splash} alt="logo_eurheka" className='logo'/>
             <h1 className='splashTitle'>Accompagnement et transformation</h1>
             <div className='buttonContainer'>
