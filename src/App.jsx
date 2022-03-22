@@ -10,14 +10,16 @@ import Login from './pages/login/Login';
 import NavBar from './components/navbar/NavBar';
 import Footer from './components/footer/Footer';
 import AdminPage from './pages/admin/AdminPage.jsx';
-import UserPage from './pages/profile/UserPage.jsx';
-import CompanyPage from './pages/profile/CompanyPage.jsx';
+import SplashPage from './pages/splash/SplashPage.jsx';
+import UserPage from './components/profileUser/UserPage.jsx';
+import CompanyPage from './components/profileUser/CompanyPage.jsx';
 import './App.css';
 
 function App() {
   const [footerStyle, setFooterStyle] = useState(true)
   const [uId, setUId] = useState(null);
   const [uLevel,setULevel]=useState(null);
+
 
   useEffect(async() => {
     const fetchToken = async() => {
@@ -42,6 +44,7 @@ function App() {
   return (
     <UserIdContext.Provider value={{uId, uLevel, setUId, setULevel}} >
     <div className="App">
+      <SplashPage />
       <NavBar />    
       <Routes>
         <Route exact path='/' element={<Home />}/>

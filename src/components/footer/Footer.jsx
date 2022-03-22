@@ -8,8 +8,9 @@ const Footer = (props) => {
     const {footerStyle, setFooterStyle} = props
 
     const scrollToTop = () => {
+        let pageHeight = window.innerHeight;
         window.scrollTo({
-            top: 0,
+            top: pageHeight,
             behavior: 'smooth'
         });
     };

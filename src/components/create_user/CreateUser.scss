@@ -1,16 +1,30 @@
 .CreateUser{
     width : 80%;
-    margin : auto;
     color :var(--main-color-lighter-text);
     font-family: var(--title-font);
-    font-size: 12px;
+    font-size: 10px;
     background-color: var(--main-color-dark-background);
-    margin-bottom: 70px;
+    margin-top: 10px;
+    margin-bottom: 50px;
     text-align: center;
 
     .globalContainer{
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .mainTitleCreate {
+        font-size: 20px;
+        font-weight: 600;
+        color : var(--main-color-light-title);
+        padding-top: 15px;
+    }
+
+    .mainTextCreate {
+        font-size: 14px;
+        margin: 20px;
     }
 
     .leftFields
@@ -20,20 +34,8 @@
         flex : 3;
     }
 
-    h2{
-        font-weight: 600;
-        font-size: 30px;
-        color : var(--main-color-light-title);
-        padding-top: 15px;
-        margin-bottom: 30px;
-    }
-
     .createUserInput{
         background-color:rgba(255, 255, 255, 0.4);
-    }
-
-    p {
-        margin-bottom: 15px;
     }
 
     .innerLeftFields{
@@ -43,6 +45,7 @@
     }
 
     .labelLeft{
+        font-size: 14px;
         margin-bottom: 10px;
         margin-top: 10px;
     }
@@ -53,75 +56,49 @@
         flex: 1;
     }
 
-    .innerRightFields p,.innerLeftFields p{
-        margin : 10px 0px;
-    }
-
     .rightFields{
-        padding-left: 20px;
-        flex :1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;     
         justify-content: center;
-        padding-top: 30px;
+        padding-top: 20px;
     }
 
     .container{
         position : relative;
-        padding-left: 30px;
         display: block;
         margin-bottom: 10px;
     }
 
-    .container input{
-        position: absolute;
-        opacity: 0;
-        cursor : pointer;
+    .conditionsContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
     }
 
-    .checkmark{
-        position : absolute;
-        top :0;
-        left : 0;
-        height: 15px;
-        width: 15px;
-        background-color: rgba(255, 255, 255, 0.4);;
-    }
-
-    .checkmark:after{
-        content :"";
-        position : absolute;
-        display : none;
-    }
-
-    .container input:checked ~ .checkmark:after{
-        display : block;
-    }
-
-    .container .checkmark:after{
-        left : 5px;
-        top:-1px;
-        width: 5px;
-        height: 10px;
-        border : solid var(--main-color-light-title);
-        border-width: 0 3px 3px 0;
-        transform: rotate(45deg);
+    .check-text {
+        font-size: 12px;
     }
 
     .btnContainer{
         display: flex;
-        justify-content: flex-end;
-        margin: 10px ;;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;  
+        margin: 10px ;
     }
 
     .btnCreate{
+        width: 125px;
         color : var(--main-color-lighter-text);
-        margin-right: 25px;
         margin-bottom: 25px;
         background-color: var(--main-color-light-button);
-        padding:7px  15px;
+        padding: 5px;
     }
 
     .wrongPass{
-        background-color: rgba(255, 0, 0, 0.4);
+        background-color: red;
     }
     
     .ErrorDisplay{
@@ -131,199 +108,210 @@
     }
     
     @media only screen and (min-width: 391px) and (max-width: 768px) {
-        margin : 50px auto 70px;
-        font-family: var(--title-font);
-        font-size: 12px;
-        padding-left: 25px;
-
-
-            width : 70%;
-        .leftFields{
-            flex-direction: column;
-        }
-        .globalContainer{
-            flex-direction: column;
-        }
+            width : 80%;
+            color :var(--main-color-lighter-text);
+            font-family: var(--title-font);
+            font-size: 10px;
+            background-color: var(--main-color-dark-background);
+            margin-top: 10px;
+            margin-bottom: 50px;
+            text-align: center;
+        
+            .globalContainer{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .mainTitleCreate {
+                font-size: 20px;
+                font-weight: 600;
+                color : var(--main-color-light-title);
+                padding-top: 15px;
+            }
+        
+            .mainTextCreate {
+                font-size: 14px;
+                margin: 20px;
+            }
+        
+            .leftFields
+            {
+                display: flex;
+                flex-direction: column;
+                flex : 3;
+            }
+        
+            .createUserInput{
+                background-color:rgba(255, 255, 255, 0.4);
+            }
+        
+            p {
+                margin-bottom: 15px;
+            }
+        
+            .innerLeftFields{
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+            }
+        
+            .labelLeft{
+                font-size: 14px;
+                margin-bottom: 10px;
+                margin-top: 10px;
+            }
+        
+            .innerRightFields{
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+            }
+        
+            .innerRightFields p,.innerLeftFields p{
+                margin : 10px 0px;
+            }
+        
+            .rightFields{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;     
+                justify-content: center;
+                padding-top: 20px;
+            }
+        
+            .container{
+                position : relative;
+                display: block;
+                margin-bottom: 10px;
+            }
+        
+            .conditionsContainer {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+            }
+        
+            .check-text {
+                font-size: 12px;
+            }
+        
+            .btnContainer{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;  
+                margin: 10px ;
+            }
+        
+            .btnCreate{
+                width: 125px;
+                color : var(--main-color-lighter-text);
+                margin-bottom: 25px;
+                background-color: var(--main-color-light-button);
+                padding: 5px;
+            }
+        
+            .wrongPass{
+                background-color: red;
+            }
+            
+            .ErrorDisplay{
+                margin-top: 5px;
+                padding-left: 10px;
+                color : red;
+            }
     }
 
-    @media screen and (min-width: 769px) and (max-width: 1024px) {
-        .leftFields{
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+        margin-top: 30px;
+        width: 90%;
+        .globalContainer{
             flex-direction: row;
         }
-        .globalContainer{
-            flex-direction: column;
+        .leftFields{
+            flex-direction: row;
+            justify-content: space-around;
+            margin: 0px;
         }
-
+        .innerLeftFields{
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            margin-left: 0px;
+            margin-right: 20px;
+        }
+        .innerRightFields{
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            margin-left: 0px;
+            margin-right: 20px;
+        }
+        .rightFields{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;     
+            justify-content: left;
+            padding-top: 0px;
+            padding-bottom: 40px;
+        }     
     }
 
     @media screen and (min-width: 1025px)  {
-        .leftFields{
-            flex-direction: row;
-            padding-left: 30px;
-            margin-bottom: 10px;
-        }
+        margin-top: 60px;
+        margin-bottom: 60px;
+        width: 75%;
         .globalContainer{
             flex-direction: row;
+            justify-content: space-around;
         }
-        .container{
-            padding-left: 30px;
-            margin-bottom: 30px;
+        .mainTitleCreate {
+            font-size: 20px;
+            font-weight: 600;
+            color : var(--main-color-light-title);
+            padding-top: 20px;
         }
-        margin : 200px auto;
+        .leftFields{
+            width: 66%;
+            flex-direction: row;
+            margin: 0px;
+        }
+        .innerLeftFields{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        .innerRightFields{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+        .rightFields{
+            width: 33%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;     
+            justify-content: left;
+            margin-right: 0px;
+            padding-top: 0px;
+            padding-bottom: 40px;
+        }
+        .checkbox-duo {
+            padding-left: 50px;
+            margin-top: 10px;
+        }
+        .check-text {            
+            font-size: 14px;
+        }
+    
     }
 }
-
-// .CreateUser{
-//     width : 70%;
-//     margin : 50px auto;
-//     color :var(--main-color-lighter-text);
-//     font-family: var(--title-font);
-//     font-size: 12px;
-//     background-color: var(--main-color-dark-background);
-//     padding-left: 25px;
-
-//     .globalContainer{
-//         display: flex;
-//         flex-direction: column;
-//     }
-
-//     .leftFields
-//     {
-//         display: flex;
-//         flex-direction: column;
-//         flex : 3;
-//     }
-
-//     h2{
-//        font-weight: 600;
-//         font-size: 30px;
-//         color : var(--main-color-light-title);
-//         padding-top: 15px;
-//     }
-
-//     .createUserInput{
-//         background-color:rgba(255, 255, 255, 0.4);
-//     }
-
-//     .innerLeftFields{
-//         display: flex;
-//         flex-direction: column;
-//         flex: 1;
-//     }
-
-//     .labelLeft{
-//         margin-bottom: 10px;
-//         margin-top: 10px;
-//     }
-
-//     .innerRightFields{
-//         display: flex;
-//         flex-direction: column;
-//         flex: 1;
-//     }
-
-//     .innerRightFields p,.innerLeftFields p{
-//         margin : 10px 0px;
-//     }
-
-//     .rightFields{
-//         padding-left: 20px;
-//         flex :1;
-//         justify-content: center;
-//         padding-top: 30px;
-//     }
-
-//     .container{
-//         position : relative;
-//         padding-left: 30px;
-//         display: block;
-//         margin-bottom: 10px;
-//     }
-
-//     .container input{
-//         position: absolute;
-//         opacity: 0;
-//         cursor : pointer;
-//     }
-
-//     .checkmark{
-//         position : absolute;
-//         top :0;
-//         left : 0;
-//         height: 15px;
-//         width: 15px;
-//         background-color: rgba(255, 255, 255, 0.4);;
-//     }
-
-//     .checkmark:after{
-//         content :"";
-//         position : absolute;
-//         display : none;
-//     }
-
-//     .container input:checked ~ .checkmark:after{
-//         display : block;
-//     }
-
-//     .container .checkmark:after{
-//         left : 5px;
-//         top:-1px;
-//         width: 5px;
-//         height: 10px;
-//         border : solid var(--main-color-light-title);
-//         border-width: 0 3px 3px 0;
-//         transform: rotate(45deg);
-//     }
-
-//     .btnContainer{
-//         display: flex;
-//         justify-content: flex-end;
-//     }
-
-//     .btnCreate{
-//         color : var(--main-color-lighter-text);
-//         margin-right: 25px;
-//         margin-bottom: 25px;
-//         background-color: var(--main-color-light-button);
-//         padding:7px  15px;
-//     }
-
-//     .wrongPass{
-//         background-color: rgba(255, 0, 0, 0.4);
-//     }
-    
-//     @media only screen and (min-width: 391px) and (max-width: 768px) {
-//         .leftFields{
-//             flex-direction: column;
-//         }
-//         .globalContainer{
-//             flex-direction: column;
-//         }
-//     }
-
-//     @media screen and (min-width: 769px) and (max-width: 1024px) {
-//         .leftFields{
-//             flex-direction: row;
-//         }
-//         .globalContainer{
-//             flex-direction: column;
-//         }
-
-//     }
-
-//     @media screen and (min-width: 1025px)  {
-//         .leftFields{
-//             flex-direction: row;
-//             padding-left: 30px;
-//             margin-bottom: 10px;
-//         }
-//         .globalContainer{
-//             flex-direction: row;
-//         }
-//         .container{
-//             padding-left: 30px;
-//             margin-bottom: 30px;
-//         }
-//         margin : 200px auto;
-//     }
-// }
