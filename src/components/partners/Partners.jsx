@@ -6,7 +6,7 @@ const Partners = () => {
     return (
         <div className='Partners-container'>
             <div className="title-container">
-                <h3>Ils nous font confiance !</h3>
+                Ils nous font confiance !
             </div>
             <div className="logo-container">
                 <div className="odd-logo-container">

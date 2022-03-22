@@ -1,14 +1,45 @@
 .ResourceAdminContainer{ 
-    
     .AddDocTitle{
         margin: 10px;
+    }
 
+    .gIfIEN{
+        max-width: 380px;
+        min-width: 0;
+        flex-direction: column;
+    }
+
+    .newDocMainContainer{
+        display: flex;
+        flex-direction: column;
+        border: solid 1px black;
+    }
+
+    .ThemeContainer{
+        width: 100%;
+    }
+    
+    .LabelThemeNewDoc{
+        margin : 5px 10px;
+        display: inline-block;
+    }
+
+    .newDocThemeContainer{
+        margin : 5px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .DownloadFile{
+        width: 80%;
+        margin: 0 auto;
     }
 
     .NewResourceDivContainer{
         display: flex;
         flex-direction: column;
-        border: solid 1px black;
         padding : 10px;
         margin: 10px;
     }
@@ -47,9 +78,9 @@
 
     .ShowResourceModal{
         position: absolute;
-        bottom : -100%;
-        width: 450px;
-        height: 350px;
+        bottom :0;
+        width: 320px;
+        max-height: 650px;
         background-color: var(--main-color-light-background);
         color : var(--sec-color-dark-text);
         display: block;
@@ -63,10 +94,41 @@
     }
 
     @media screen and (min-width: 769px) and (max-width: 1024px) {
+        .gIfIEN{
+            max-width: 508px;
+            flex-direction: row;
+            min-width: 322px;
+        }
 
+        .ShowResourceModal{
+            bottom : 0;
+            width: 450px;
+            height: 350px;
+            padding: 10px;
+        }
     }
 
     @media screen and (min-width: 1025px) {
+        .gIfIEN{
+            max-width: 508px;
+            flex-direction: row;
+            min-width: 322px;
+        }
+        
+        .ShowResourceModal{
+            bottom : -100%;
+            width: 450px;
+            max-height: 650px;
+            padding: 10px;
+        }
 
+        .newDocMainContainer{
+            flex-direction:row;
+        }
+
+        .newDocThemeContainer{
+            margin : 10px;
+            
+        }
     }
 }

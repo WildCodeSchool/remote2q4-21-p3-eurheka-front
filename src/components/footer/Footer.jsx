@@ -18,7 +18,7 @@ const Footer = (props) => {
         <div className={footerStyle ? 'Footer' : 'Footer-light'}>
             <div className='footer-container'>
                 <div className='logo-container'>
-                    <NavLink to="/">
+                    <NavLink to="/" className='logo-container-bis'>
                         <img className='footer-logo' src={footerStyle ? Logo_Icone_Jaune :  Logo_Icone_Bleu} alt="Eurheka logo" onClick={scrollToTop}/>
                     </ NavLink>
                 </div>
@@ -59,13 +59,12 @@ const Footer = (props) => {
                 </div>
                 <div className='socials'>
                     <div className='icons-container'>
-                        <div className='icons-animation'><a href="https://www.google.fr" target="_blank" rel="noopener noreferrer" ><i className="fa-brands fa-google fa-2xl"></i></a></div>
-                        <div className='icons-animation'><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-facebook-f fa-2xl"></i></a></div>
-                        
+                        <div className='icons-animation'><a href="https://www.google.fr" target="_blank" rel="noopener noreferrer" className='rs-buttons'><i className="fa-brands fa-google fa-2xl"></i></a></div>
+                        <div className='icons-animation'><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className='rs-buttons'><i className="fa-brands fa-facebook-f fa-2xl"></i></a></div>
                     </div>
                     <div className='icons-container'>
-                        <div className='icons-animation'><a href="https://fr.linkedin.com/company/eurheka-estellelorusso" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-linkedin-in fa-2xl"></i></a></div>
-                        <div className='icons-animation'><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-instagram fa-2xl"></i></a></div>
+                        <div className='icons-animation'><a href="https://fr.linkedin.com/company/eurheka-estellelorusso" target="_blank" rel="noopener noreferrer" className='rs-buttons'><i className="fa-brands fa-linkedin-in fa-2xl"></i></a></div>
+                        <div className='icons-animation'><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className='rs-buttons'><i className="fa-brands fa-instagram fa-2xl"></i></a></div>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,58 @@
+.EventAdmin{
+    border-style: solid;
+    position: relative;
+    border-color: black;
+    border-width: 1px;
+    width: 80%;
+    margin: 25px auto;
+    color: var(--main-color-light-text);
+    background-color: var(--main-color-dark-background);
+
+    h2{
+        color: var(--main-color-light-text);
+        font-family: var(--title-font);
+        padding-left: 10px;
+        padding-top: 10px;
+        font-size: 16px;
+    }
+
+    .CloseFolding
+    {
+        position: absolute;
+        top :10px;
+        font-size: 30px;
+        font-weight: bolder;
+        color : gray;
+        right: 10px;
+    }
+ 
+    .EventAdminBloc{
+        display: block;
+    }
+    
+    .BlocHidden{
+        display: none;
+    }
+
+    .EventAdminTitle{
+        margin-bottom: 5px;
+    }
+
+    .EventAdminAddTitle{
+        margin-left: 7px;
+    }
+
+    .EventAdminAdd{
+        display: flex;
+        flex-direction: column;
+        margin: 5px;
+    }
+
+    .EventAdminLabel{
+        margin: 5px;
+    }
+
+    .EventAdminAddBtn{
+        width: 100px;
+    }
+}

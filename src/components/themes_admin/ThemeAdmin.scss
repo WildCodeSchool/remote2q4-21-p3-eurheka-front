@@ -1,4 +1,4 @@
-.ResourceAdmin{  
+.ThemeAdmin{  
     border-style: solid;
     position: relative;
     border-color: black;
@@ -7,6 +7,7 @@
     margin: 25px auto;
     color: var(--main-color-light-text);
     background-color: var(--main-color-dark-background);
+    
 
     h2{
         color: var(--main-color-light-text);
@@ -14,34 +15,6 @@
         padding-left: 10px;
         padding-top: 10px;
         font-size: 16px;
-    }
-    
-    .navBarResourceList{
-        display: flex;
-        margin-top: 10px;
-        flex-direction: row;
-        list-style-type: none;
-        justify-content: space-around;
-        margin-bottom: 15px;
-    }
-
-    .navBarResourceListItem{
-        position: relative;
-        cursor: pointer;
-    }
-
-    .ResourceUnderLine{
-        color: var(--main-color-light-text);
-    }
-
-    .ResourceUnderLine::after{
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 3px;
-        background-color: var(--main-color-light-text);
-        bottom: -10px;
-        left: 0;
     }
 
     .CloseFolding
@@ -54,7 +27,7 @@
         right: 10px;
     }
  
-    .ResourceAdminBloc{
+    .ThemeAdminBloc{
         display: block;
     }
     
@@ -62,7 +35,23 @@
         display: none;
     }
 
-    .ResourceAdminTitle{
+    .ThemeAdminTitle{
         margin-bottom: 5px;;
     }
+
+    .AddThemeTitle{
+        margin: 10px;
+    }
+
+    .ThemeAdd{
+        padding : 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .AddThemeBtn{
+        width: 125px;
+        margin: 10px 0;
+    }
+
 }

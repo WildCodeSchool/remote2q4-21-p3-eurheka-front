@@ -3,10 +3,11 @@ import axios from 'axios';
 import ResourceAdminContainer from './ResourceAdminContainer';
 import './ResourcesAdmin.scss';
 
-const ResourcesAdmin = (props) => {
+const ResourcesAdmin = ({reloadTheme}) => {
     const [getIdDoc, setGetIdDoc] = useState(1);
     const [docs, setDocs] = useState([]);
     const [showComponent, setShowComponent] = useState(false);
+    const [reload,setReload]=useState(false);
 
     useEffect(() => {
         const url = `${process.env.REACT_APP_API_URL}resource/adminCat/` + getIdDoc;
@@ -23,7 +24,7 @@ const ResourcesAdmin = (props) => {
                     window.location = '/';
                 }
             })
-    }, [getIdDoc]);
+    }, [getIdDoc,reload]);
 
     const displayModal = (id, caller) => {
         setGetIdDoc(id);
@@ -59,7 +60,10 @@ const ResourcesAdmin = (props) => {
                     </ul>
                     <div className="ResourcePageContainer">
                         <ResourceAdminContainer catDoc={getIdDoc}
-                            docs={docs} />
+                            docs={docs}
+                            setReload={setReload}
+                            reload={reload} 
+                            reloadTheme={reloadTheme}/>
                     </div>
                 </div>
             </div>
