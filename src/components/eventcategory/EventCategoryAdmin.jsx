@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import EventCategoryContainer from './EventCategoryContainer';
 import './EventCategoryAdmin.scss';
 
 const EventCategoryAdmin = ({ setReloadEvent, reloadEvent }) => {
     const [showComponent, setShowComponent] = useState(false);
     const [categoryName, setCategoryName] = useState('');
+    const [reload,setReload]=useState(false);
 
     const handleShowClick = (id) => {
         const docContainer = document.getElementById(id);
@@ -18,7 +20,22 @@ const EventCategoryAdmin = ({ setReloadEvent, reloadEvent }) => {
     }
 
     const handleAddClick = () => {
+        if(categoryName!==''){
+            const url = `${process.env.REACT_APP_API_URL}event/category/`;
+            axios.post(url,{category_name:categoryName},{withCredentials:true})
+            .then((res)=>{
+                if(res.status===201){
+                    setReload(!reload);
+                    setReloadEvent(!reloadEvent);
+                }
+            })
+            .catch((err)=>{
+                console.log(err);
+            });
 
+        }
+        else
+            alert('Veuillez donner un nom à la catégorie');
     }
 
     return (
@@ -31,7 +48,8 @@ const EventCategoryAdmin = ({ setReloadEvent, reloadEvent }) => {
                     <label className='EventCategoryAdminLabel' htmlFor="eventName">Nom de la catégorie : <input type="text" id="eventName" value={categoryName} onChange={(e) => setCategoryName(e.target.value)} /></label>
                     <input className='EventCategoryAdminAddBtn' type="button" value="Ajouter" onClick={handleAddClick} />
                 </div>
-                {/* container        */}
+                <EventCategoryContainer 
+                reload={reload}/>
             </div>
         </div>
     )
