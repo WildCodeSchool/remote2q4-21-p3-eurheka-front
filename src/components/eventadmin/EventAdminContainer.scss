@@ -1,0 +1,17 @@
+.EventAdminContainer{
+    padding: 10px;
+
+    .EventAdminContainerList{
+        margin-left: 10px;
+        list-style-type: none;
+    }
+
+    .PassedEvent{
+        text-decoration:line-through;
+    }
+
+    .EventAdminListItem{
+        margin: 5px;
+        display: inline-block;
+    }
+}
