@@ -19,25 +19,25 @@ function App() {
   const [uId, setUId] = useState(null);
   const [uLevel,setULevel]=useState(null);
 
-  useEffect(async() => {
-    const fetchToken = async() => {
-      await axios({
-        method: "get",
-        url: `${process.env.REACT_APP_API_URL}session/`,
-        withCredentials: true,
-      })
-         .then((res) => {
-            setUId(res.data.userId);
-            setULevel(res.data.userLevelString);
-          })
-         .catch((err) =>{
-          console.log("No token");
-          setUId(0);
-          setULevel('not connected');
-         } );
-    }    
-    fetchToken();
-  },[]);
+  // useEffect(async() => {
+  //   const fetchToken = async() => {
+  //     await axios({
+  //       method: "get",
+  //       url: `${process.env.REACT_APP_API_URL}session/`,
+  //       withCredentials: true,
+  //     })
+  //        .then((res) => {
+  //           setUId(res.data.userId);
+  //           setULevel(res.data.userLevelString);
+  //         })
+  //        .catch((err) =>{
+  //         console.log("No token");
+  //         setUId(0);
+  //         setULevel('not connected');
+  //        } );
+  //   }    
+  //   fetchToken();
+  // },[]);
 
   return (
     <UserIdContext.Provider value={{uId, uLevel, setUId, setULevel}} >
