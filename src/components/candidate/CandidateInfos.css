@@ -1,0 +1,78 @@
+.CandidateInfos {
+    width: 70%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color-dark-background);
+    color: var(--main-color-light-title);
+    font-family: var(--text-font);
+    padding: 20px;
+}
+
+.titleInfos {
+    width: 100%;
+    text-align: left;
+}
+
+.detailInfos {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+.identityInfos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+
+.identityLine {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+.contactInfos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    width: 30%;
+}
+
+.contactLine {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+.otherInfos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+
+.passwordInfos {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+.validateInfos {
+    background-color: var(--main-color-light-button);
+    color: var(--main-color-dark-text);
+}
