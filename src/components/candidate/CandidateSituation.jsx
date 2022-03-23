@@ -39,6 +39,10 @@ const CandidateSituation = (uId, user) => {
                     <label htmlFor="jobName" className='labelSituation'>Intitulé de mon poste actuel :</label>
                     <input className='jobName' type="text" id="jobName" value={jobName} onChange={(e) => { setJobName(e.target.value) }} />
                 </div>
+                <div className='inputLine'>
+                    <label htmlFor="jobDate" className='labelSituation'>Occupé depuis le :</label>
+                    <input className='jobDate' type="datetime-local" id="jobDate" value={jobDate} onChange={(e) => { setJobDate(e.target.value) }} />
+                </div>
             </div>      
             <div className='searchSituation'>
                 <div className="inputLine">
