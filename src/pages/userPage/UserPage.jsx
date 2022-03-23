@@ -20,7 +20,7 @@ const UserPage = (props) => {
     useEffect(()=>{
         const getUser = async() =>{
             const url = `${process.env.REACT_APP_API_URL}users/${uId}`;
-            axios.get(url, {withCredentials: true})
+            await axios.get(url, {withCredentials: true})
             .then((res) => {
                 setUser(res.data)
             })
@@ -33,6 +33,7 @@ const UserPage = (props) => {
                     }
             })
         }
+        getUser();
     },[]);
 
     return (
@@ -46,7 +47,8 @@ const UserPage = (props) => {
                 </div>
                 <CandidateInfos 
                 uId={uId}
-                user={user}/>
+                user={user}
+                setUser={setUser}/>
                 <CandidateSituation />
                 <CandidateDoc />
                 <CandidateSettings />

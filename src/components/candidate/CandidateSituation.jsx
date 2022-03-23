@@ -4,21 +4,21 @@ import './CandidateSituation.css';
 
 const CandidateSituation = (uId, user) => {
 
-    const [in_post, setIn_post] = useState(true);
+    const [inpost, setInpost] = useState(true);
     const [freeDate, setFreeDate] = useState('');
     const [jobDate, setJobDate] = useState('');
     const [enterpriseName, setEnterpriseName] = useState('');
     const [jobName, setJobName] = useState('');
     const [jobSearch, setJobSearch] = useState(false);
 
-    /*useEffect(() => {
-        setIn_post(user.in_post);
+    useEffect(() => {
+        setInpost(user.in_post);
         setFreeDate(user.free_date);
         setEnterpriseName(user.enterprise_name);
         setJobDate(user.job_date);
         setJobName(user.job_name);
         setJobSearch(user.job_search);        
-    }, [])*/
+    }, [user])
 
 
     return (
@@ -27,8 +27,8 @@ const CandidateSituation = (uId, user) => {
             <div className='contentSituation'>
             <div className='currentSituation'>
                 <div className="inputLine">
-                    <label htmlFor="in_post" className="labelSituation">Je suis actuellement en poste</label>
-                    <input type="checkbox" id="in_post" name="in_post" value="in_post" checked={in_post} onChange={(e) => setIn_post(e.target.checked)}
+                    <label htmlFor="inpost" className="labelSituation">Je suis actuellement en poste</label>
+                    <input type="checkbox" id="inpost" name="inpost" value="inpost" checked={inpost} onChange={(e) => setInpost(e.target.checked)}
                         className="checkbox-box"></input>                   
                 </div>
                 <div className='inputLine'>

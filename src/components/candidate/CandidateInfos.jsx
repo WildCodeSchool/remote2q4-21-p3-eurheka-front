@@ -2,117 +2,51 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import './CandidateInfos.css';
 
-const CandidateInfos = ({uId, user}) => {
+const CandidateInfos = ({uId, user, setUser}) => {
     
     const [firstname, setFirstname] = useState('');
-    const [lastname, setLastname] = useState('');
-    const [password1, setPassword1] = useState('');
-    const [password2, setPassword2] = useState('');
+    const [lastname, setLastname] = useState('');    
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [address, setAddress] = useState('');
     const [birthday, setBirthday] = useState('');    
-    const [stage, setStage] = useState(true);
+    
+    const [password1, setPassword1] = useState('');
+    const [password2, setPassword2] = useState('');
+    const [stage, setStage] = useState(false);
     const [accompanied, setAccompanied] = useState(false);
     const [focus, setFocus] = useState(false);
 
-    /*useEffect(() => {
+    useEffect (() => {
+        if (user) {
         setFirstname(user.firstname);
         setLastname(user.lastname);
-        setEmail(user.email);        
+        setEmail(user.email);
         setPhone(user.phone);
         setAddress(user.adresse);
         setBirthday(user.birthday);
-    }, [])*/
+        }
+    }, [user])
 
     const submitClick = (e) => {
         e.preventDefault();
-        //Reset all error panels
-        const errorDivs = document.getElementsByClassName('error');
-        for (let i = 0; i < errorDivs.length; i++) {
-            errorDivs[i].classList.remove('ErrorDisplay');
-            errorDivs[i].innerHTML = '';
+        const url = `${process.env.REACT_APP_API_URL}users/${uId}`;
+        const newUser = {
+            firstname: firstname, 
+            lastname: lastname,
+            email: email,
+            phone: phone,
+            adresse: address,
+            birthday: birthday,
         }
-        if (firstname && lastname && password1 && password2 && email) {
-            if (password1 !== password2) {
-                alert('Les mots de passes sont différents');
-                return -1;
-            }
-            if ((firstname.length > 255) || (lastname.length > 255) || (password1.length > 255) || (email.length > 255)) {
-                alert('Les valeurs ne peuvent dépasser 255 caractères');
-                return -1;
-            }
-            const newUser = {
-                firstname: firstname,
-                lastname: lastname,
-                password: password1,
-                email: email,
-                phone: phone,
-                address: address,
-                birthday: birthday,
-                stage: stage,
-                focus: focus,
-                accompanied: accompanied,
-            }
-            //Send user to back
-            const url = `${process.env.REACT_APP_API_URL}users/${uId}`;
-            axios.put(url, newUser)
-                .then(function (response) {
-                    if (response.status === 201) {
-                        const userId = response.data.userId;
-                        
-                    }
-                })
-                .catch(function (error) {
-                    const HTTPError = error.response.status;
-                    let docName = '';
-                    let message = '';
-                    switch (HTTPError) {
-                        case 409:
-                            console.log('User already exist');
-                            console.log(error.response.data);
-                            docName = 'mailError';
-                            message = "L'adresse mail existe déjà";
-                            let errorDiv = document.getElementById(docName);
-                            errorDiv.innerHTML = message;
-                            errorDiv.classList.add('ErrorDisplay');
-                            break;
-                        case 422:
-                            console.log('Erreur de validation');
-                            console.log(error.response.data);
-                            const ErrorArray = error.response.data;
-                            ErrorArray.forEach((error) => {
-                                console.log(error);
-                                if (error.includes('mail')) {
-                                    docName = 'mailError';
-                                    message = "L'adresse mail n'est pas valide";
-                                }
-                                if (error.includes('password')) {
-                                    docName = "passwordError";
-                                    message = "Le mot de passe doit comporter 8 caractères minimum";
-                                }
-                                if (error.includes('firstname')) {
-                                    docName = 'firstNameError';
-                                    message = "Le prénom d'utilisateur n'est pas valide"
-                                }
-                                if (error.includes('lastname')) {
-                                    docName = 'lastNameError';
-                                    message = "Le nom d'utilisateur n'est pas valide"
-                                }
-                                let errorDiv = document.getElementById(docName);
-                                errorDiv.innerHTML = message;
-                                errorDiv.classList.add('ErrorDisplay');
-                            })
-                            break;
-                        default: console.log('Unknown error');
-                    }
-                });
-            //Go to connexion page ?
-        }
-        else {
-            alert('Veuillez saisir toutes les informations');
-        }
-    }
+        axios.put(url, newUser, {withCredentials: true})
+        .then((res) => {
+            console.log(res)
+        })
+        .catch((err) => {
+            console.log(err)
+        })  
+       }
 
     const checkPassord = (newpass) => {
         setPassword2(newpass);
@@ -125,8 +59,13 @@ const CandidateInfos = ({uId, user}) => {
         }
     }
 
+    const handleChange = () => {
+
+    }
+
     return (
         <div className='CandidateInfos'>
+            { user && <>
             <div className='titleInfos'>Gérer mes informations personnelles</div>
             <div className='detailInfos'>
                <div className='identityInfos'>
@@ -173,10 +112,12 @@ const CandidateInfos = ({uId, user}) => {
                                 
                 <label htmlFor="password2" className='labelPassword'>Confirmer le mot de passe</label>
                 <input className='passwordInput' type="password" id="password2" value={password2} onChange={(e) => { checkPassord(e.target.value) }} />
-            </div>  
+            </div> 
             <button className='validateInfos' onClick={submitClick}>Valider mes changements</button>        
-        </div>
+            </>}
+        </div> 
     )
+       
 }
 
 export default CandidateInfos;
