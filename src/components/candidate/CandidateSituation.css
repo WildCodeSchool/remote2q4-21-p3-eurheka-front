@@ -1,6 +1,6 @@
-.CandidateInfos {
+.CandidateSituation {
     width: 70%;
-    height: auto;
+    height: 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,46 +12,37 @@
     margin: 30px;
 }
 
-.titleInfos {
+.titleSituation {
     width: 100%;
     text-align: left;
     margin-bottom: 20px;
 }
 
-.detailInfos {
+.contentSituation {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: left;
+    justify-content: space-around;
 }
 
-.identityInfos {
+.currentSituation {
+    width: 50%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 30%;
-}
-
-.identityLine {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: left;
-    margin:10px;
 }
 
-.contactInfos {
+.searchSituation {
+    width: 50%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: left;
-    width: 30%;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
-.contactLine {
+.inputLine {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -60,46 +51,16 @@
     margin:10px;
 }
 
-.otherInfos {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: left;
-    width: 30%;
-    margin-left: 40px;
-}
-
-.labelInfos {
+.labelSituation {
     width: 200px;
     flex-wrap: wrap;
     margin-left: 15px;
 }
 
-.labelPassword {
-    width: 180px;
-    flex-wrap: wrap;
-    margin-left: 10px;
-    margin-right: 20px;
-}
-
-.passwordInfos {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: left;
-    margin:10px;
-}
-
-.passwordInput {
-    margin-right: 30px;
-}
-
-.validateInfos {
+.validateSituation {
     width: 180px;
     height: 40px;
     background-color: var(--main-color-light-button);
     color: var(--main-color-dark-text);
     margin: 20px;
 }
-

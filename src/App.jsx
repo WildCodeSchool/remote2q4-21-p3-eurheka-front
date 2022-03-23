@@ -11,7 +11,7 @@ import NavBar from './components/navbar/NavBar';
 import Footer from './components/footer/Footer';
 import AdminPage from './pages/admin/AdminPage.jsx';
 import SplashPage from './pages/splash/SplashPage.jsx';
-import UserPage from './components/profileUser/UserPage.jsx';
+import UserPage from './pages/userPage/UserPage.jsx';
 import CompanyPage from './components/profileUser/CompanyPage.jsx';
 import './App.css';
 

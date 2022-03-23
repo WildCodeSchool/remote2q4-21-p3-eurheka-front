@@ -16,14 +16,14 @@ const CandidateInfos = ({uId, user}) => {
     const [accompanied, setAccompanied] = useState(false);
     const [focus, setFocus] = useState(false);
 
-    useEffect(() => {
+    /*useEffect(() => {
         setFirstname(user.firstname);
         setLastname(user.lastname);
         setEmail(user.email);        
         setPhone(user.phone);
         setAddress(user.adresse);
         setBirthday(user.birthday);
-    }, [])
+    }, [])*/
 
     const submitClick = (e) => {
         e.preventDefault();
@@ -131,21 +131,21 @@ const CandidateInfos = ({uId, user}) => {
             <div className='detailInfos'>
                <div className='identityInfos'>
                    <div className='identityLine'>
-                       <label htmlFor="name" className='labelLeft'>Nom</label>
+                       <label htmlFor="name" className='labelInfos'>Nom</label>
                        <input className='createUserInput' type="text" id="name" value={lastname} onChange={(e) => { setLastname(e.target.value) }} />
                    </div>
                     <div className='identityLine'>
-                       <label htmlFor="firstname" className='labelLeft'>Prénom</label>
+                       <label htmlFor="firstname" className='labelInfos'>Prénom</label>
                        <input className='createUserInput' type="text" id="firstname" value={firstname} onChange={(e) => { setFirstname(e.target.value) }} />
                     </div>
                 </div> 
                <div className='contactInfos'>
-               <div className='contactLine'>
-                       <label htmlFor="phone" className='labelLeft'>Mobile</label>
+                    <div className='contactLine'>
+                       <label htmlFor="phone" className='labelInfos'>Mobile</label>
                        <input className='createUserInput' type="text" id="phone" value={phone} onChange={(e) => { setPhone(e.target.value) }} />
                    </div>
                     <div className='contactLine'>
-                       <label htmlFor="email" className='labelLeft'>Email</label>
+                       <label htmlFor="email" className='labelInfos'>Email</label>
                        <input className='createUserInput' type="text" id="email" value={email} onChange={(e) => { setEmail(e.target.value) }} />
                     </div>
                 </div> 
@@ -153,26 +153,26 @@ const CandidateInfos = ({uId, user}) => {
                     <div className="checkboxLine">
                         <input type="checkbox" id="stage" name="stage" value="stage" checked={stage} onChange={(e) => setStage(e.target.checked)}
                           className="checkbox-box"></input>
-                        <label htmlFor="stage" className="check-text">En recherche d'emploi/stage</label>
+                        <label htmlFor="stage" className="labelInfos">En recherche d'emploi/stage</label>
                     </div>
                     <div className="checkboxLine">
                         <input type="checkbox" id="accompanied" name="accompanied" value="accompanied" checked={accompanied} onChange={(e) => setAccompanied(e.target.checked)}
                     className="checkbox-box"></input>
-                        <label htmlFor="accompanied" className="check-text">Etre accompagné</label>
+                        <label htmlFor="accompanied" className="labelInfos">Etre accompagné</label>
                     </div>
                     <div className="checkboxLine">
                         <input type="checkbox" id="focus" name="focus" value="focus" checked={focus} onChange={(e) => setFocus(e.target.checked)}
                         className="checkbox-box"></input>
-                        <label htmlFor="focus" className="check-text">Faire le point</label>
+                        <label htmlFor="focus" className="labelInfos">Faire le point</label>
                     </div>
                 </div> 
             </div> 
             <div className='passwordInfos'>
-                <label htmlFor="password1" className='labelLeft'>Mot de passe</label>
-                <input className='createUserInput' type="password" id="password1" value={password1} onChange={(e) => { setPassword1(e.target.value) }} />
+                <label htmlFor="password1" className='labelPassword'>Mot de passe</label>
+                <input className='passwordInput' type="password" id="password1" value={password1} onChange={(e) => { setPassword1(e.target.value) }} />
                                 
-                <label htmlFor="password2" className='labelLeft'>Confirmer le mot de passe</label>
-                <input className='createUserInput' type="password" id="password2" value={password2} onChange={(e) => { checkPassord(e.target.value) }} />
+                <label htmlFor="password2" className='labelPassword'>Confirmer le mot de passe</label>
+                <input className='passwordInput' type="password" id="password2" value={password2} onChange={(e) => { checkPassord(e.target.value) }} />
             </div>  
             <button className='validateInfos' onClick={submitClick}>Valider mes changements</button>        
         </div>

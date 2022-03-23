@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-/*import './CandidateSettings.css';*/
+import './CandidateSituation.css';
 
 const CandidateSituation = (uId, user) => {
 
@@ -11,88 +11,50 @@ const CandidateSituation = (uId, user) => {
     const [jobName, setJobName] = useState('');
     const [jobSearch, setJobSearch] = useState(false);
 
-    useEffect(() => {
+    /*useEffect(() => {
         setIn_post(user.in_post);
         setFreeDate(user.free_date);
         setEnterpriseName(user.enterprise_name);
         setJobDate(user.job_date);
         setJobName(user.job_name);
         setJobSearch(user.job_search);        
-    }, [])
+    }, [])*/
 
-    const submitClick = (e) => {
-        e.preventDefault();
-        const newUser = {
-            in_post: in_post,
-            freeDate: freeDate,
-            jobDate: jobDate,
-            enterpriseName: enterpriseName,
-            jobName: jobName,
-            jobSearch: jobSearch,
-        }
-        const url = `${process.env.REACT_APP_API_URL}users/${uId}`;
-            axios.put(url, newUser)
-                .then(function (response) {
-                    if (response.status === 201) {
-                        const userId = response.data.userId;
-                        
-                    }
-                })
-                .catch(function (error) {
-                    const HTTPError = error.response.status;
-                    let docName = '';
-                    let message = '';
-                    switch (HTTPError) {
-                        case 409:
-                            console.log('User already exist');
-                            /*console.log(error.response.data);
-                            docName = 'mailError';
-                            message = "L'adresse mail existe déjà";
-                            let errorDiv = document.getElementById(docName);
-                            errorDiv.innerHTML = message;
-                            errorDiv.classList.add('ErrorDisplay');
-                            break;*/
-                        case 422:
-                            console.log('Erreur de validation');
-                            /*console.log(error.response.data);
-                            const ErrorArray = error.response.data;
-                            ErrorArray.forEach((error) => {
-                                console.log(error);
-                                if (error.includes('mail')) {
-                                    docName = 'mailError';
-                                    message = "L'adresse mail n'est pas valide";
-                                }
-                                if (error.includes('password')) {
-                                    docName = "passwordError";
-                                    message = "Le mot de passe doit comporter 8 caractères minimum";
-                                }
-                                if (error.includes('firstname')) {
-                                    docName = 'firstNameError';
-                                    message = "Le prénom d'utilisateur n'est pas valide"
-                                }
-                                if (error.includes('lastname')) {
-                                    docName = 'lastNameError';
-                                    message = "Le nom d'utilisateur n'est pas valide"
-                                }
-                                let errorDiv = document.getElementById(docName);
-                                errorDiv.innerHTML = message;
-                                errorDiv.classList.add('ErrorDisplay');
-                            })*/
-                            break;
-                        default: console.log('Unknown error');
-                    }
-                });
-            } 
-            else {
-                alert ('Veuillez saisir toutes les informations');
-            }
-    }
 
     return (
         <div className='CandidateSituation'>
-            Here are the candidate situtation            
+            <div className='titleSituation'>Ma situation professionelle</div>
+            <div className='contentSituation'>
+            <div className='currentSituation'>
+                <div className="inputLine">
+                    <label htmlFor="in_post" className="labelSituation">Je suis actuellement en poste</label>
+                    <input type="checkbox" id="in_post" name="in_post" value="in_post" checked={in_post} onChange={(e) => setIn_post(e.target.checked)}
+                        className="checkbox-box"></input>                   
+                </div>
+                <div className='inputLine'>
+                    <label htmlFor="enterpriseName" className='labelSituation'>Si oui mon employeur est :</label>
+                    <input className='enterpriseName' type="text" id="enterpriseName" value={enterpriseName} onChange={(e) => { setEnterpriseName(e.target.value) }} />
+                </div>
+                <div className='inputLine'>
+                    <label htmlFor="jobName" className='labelSituation'>Intitulé de mon poste actuel :</label>
+                    <input className='jobName' type="text" id="jobName" value={jobName} onChange={(e) => { setJobName(e.target.value) }} />
+                </div>
+            </div>      
+            <div className='searchSituation'>
+                <div className="inputLine">
+                    <label htmlFor="jobSearch" className="labelSituation">Je suis en recherche d'emploi </label>
+                    <input type="checkbox" id="jobSearch" name="jobSearch" value="jobSearch" checked={jobSearch} onChange={(e) => setJobSearch(e.target.checked)}
+                        className="checkbox-box"></input>                   
+                </div>
+                <div className='inputLine'>
+                    <label htmlFor="freeDate" className='labelSituation'>Je suis disponible à partir du :</label>
+                    <input className='freeDate' type="datetime-local" id="freeDate" value={freeDate} onChange={(e) => { setFreeDate(e.target.value) }} />
+                </div>
+            </div>   
+            </div> 
+            <button className='validateSituation'>Valider mes changements</button>
         </div>
     )
 }
 
-export default CandidateSituation
+export default CandidateSituation;
