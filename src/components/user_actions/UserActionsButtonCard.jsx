@@ -9,9 +9,9 @@ const UserActionsButtonCard = () => {
             <div className='buttonCard-logo-block'>
                 <i className="fa-solid fa-spinner fa-2xl"></i>
             </div>
-            <p className='card-result'>13 offres d’emploi disponibles...</p>
-            <p className='card-description'>Trouvez votre futur job parmi nos offres d’emploi disponibles</p>
-            <button className='card-button'>Consulter</button>
+            <p className='card-result'>---</p>
+            <p className='card-description'>A venir</p>
+            {/* <button className='card-button'>Consulter</button> */}
             </div>
         </div>
     )
