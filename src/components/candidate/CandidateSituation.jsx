@@ -2,9 +2,9 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import './CandidateSituation.css';
 
-const CandidateSituation = (uId, user) => {
+const CandidateSituation = ({uId, user, setUser}) => {
 
-    const [inpost, setInpost] = useState(true);
+    const [inpost, setInpost] = useState(false);
     const [freeDate, setFreeDate] = useState('');
     const [jobDate, setJobDate] = useState('');
     const [enterpriseName, setEnterpriseName] = useState('');
@@ -12,23 +12,46 @@ const CandidateSituation = (uId, user) => {
     const [jobSearch, setJobSearch] = useState(false);
 
     useEffect(() => {
+        if (user) {
         setInpost(user.in_post);
         setFreeDate(user.free_date);
         setEnterpriseName(user.enterprise_name);
         setJobDate(user.job_date);
         setJobName(user.job_name);
-        setJobSearch(user.job_search);        
+        setJobSearch(user.job_search);  
+        }      
     }, [user])
 
+    const submitClick = (e) => {
+        e.preventDefault();
+        const url = `${process.env.REACT_APP_API_URL}users/${uId}`;
+        console.log(uId);
+        const newUser = {
+            in_post: inpost, 
+            free_date: freeDate,
+            enterprise_name: enterpriseName,
+            job_date: jobDate,
+            job_name: jobName,
+            job_search: jobSearch,
+        }
+        axios.put(url, newUser, {withCredentials: true})
+        .then((res) => {
+            console.log(res)
+        })
+        .catch((err) => {
+            console.log(err)
+        })  
+       }
 
     return (
         <div className='CandidateSituation'>
+            { user && <>
             <div className='titleSituation'>Ma situation professionelle</div>
             <div className='contentSituation'>
             <div className='currentSituation'>
                 <div className="inputLine">
                     <label htmlFor="inpost" className="labelSituation">Je suis actuellement en poste</label>
-                    <input type="checkbox" id="inpost" name="inpost" value="inpost" checked={inpost} onChange={(e) => setInpost(e.target.checked)}
+                    <input type="checkbox" id="inpost" name="inpost" value={inpost} checked={inpost} onChange={(e) => setInpost(e.target.checked)}
                         className="checkbox-box"></input>                   
                 </div>
                 <div className='inputLine'>
@@ -47,7 +70,7 @@ const CandidateSituation = (uId, user) => {
             <div className='searchSituation'>
                 <div className="inputLine">
                     <label htmlFor="jobSearch" className="labelSituation">Je suis en recherche d'emploi </label>
-                    <input type="checkbox" id="jobSearch" name="jobSearch" value="jobSearch" checked={jobSearch} onChange={(e) => setJobSearch(e.target.checked)}
+                    <input type="checkbox" id="jobSearch" name="jobSearch" value={jobSearch} checked={jobSearch} onChange={(e) => setJobSearch(e.target.checked)}
                         className="checkbox-box"></input>                   
                 </div>
                 <div className='inputLine'>
@@ -56,7 +79,8 @@ const CandidateSituation = (uId, user) => {
                 </div>
             </div>   
             </div> 
-            <button className='validateSituation'>Valider mes changements</button>
+            <button className='validateSituation' onClick={submitClick}>Valider mes changements</button>
+            </> }
         </div>
     )
 }

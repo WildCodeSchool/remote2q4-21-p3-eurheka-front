@@ -49,7 +49,10 @@ const UserPage = (props) => {
                 uId={uId}
                 user={user}
                 setUser={setUser}/>
-                <CandidateSituation />
+                <CandidateSituation 
+                uId={uId}
+                user={user}
+                setUser={setUser}/>
                 <CandidateDoc />
                 <CandidateSettings />
             </div>}            
