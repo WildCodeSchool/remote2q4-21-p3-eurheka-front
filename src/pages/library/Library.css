@@ -16,6 +16,22 @@
         padding-left: 40px;
  }
 
+ .main-title  {
+    text-align: center;
+    color: var(--main-color-dark-title);
+    font-family: 'Poppins';
+    height: 150px;
+    line-height: 50px;
+    /* margin-bottom: 20px; */
+    padding-top: 50px;
+}
+
+.main-title h1 {
+    text-transform: uppercase;
+}
+
+
+
 @media screen and (max-width: 390px) {
     .Library-header{
         height: 20vh ;

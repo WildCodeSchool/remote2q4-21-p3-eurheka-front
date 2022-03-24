@@ -1,0 +1,64 @@
+.mainTitle-lightTheme {
+    background : var(--main-color-light-background);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Poppins';
+    color: var(--main-color-dark-title);
+    padding: 15px 25px 30px 25px;
+    width: 80%;
+    margin: auto;
+    margin-top: 80px;
+}
+
+
+li.list-lightTheme {
+    width: 500px;
+}
+
+.doc-resources-container {
+    background : var(--main-color-light-background);
+    padding: 15px 25px 30px 25px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 80px;
+    }
+
+
+.doc-resources-container-reduced {
+    display: none;
+}
+
+.mainTitle-darkTheme {
+    background : var(--main-color-dark-title);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: 'Poppins';
+    color: var(--main-color-light-background);
+    padding: 15px 25px 30px 25px;
+    width: 80%;
+    margin: auto;
+    margin-top: 80px;
+}
+
+.video-resources-container {
+    background : var(--main-color-dark-background);
+    padding: 15px 25px 30px 25px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 80px;
+}
+
+.video-resources-container-reduced {
+    display: none;
+}
+
+.video-resources-container .resources {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+
+
