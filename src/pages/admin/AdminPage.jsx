@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react'
+import AdminCvs from '../../admincv/AdminCvs';
 import EventAdmin from '../../components/eventadmin/EventAdmin';
 import EventCategoryAdmin from '../../components/eventcategory/EventCategoryAdmin';
 import ResourcesAdmin from '../../components/resources_admin/ResourcesAdmin';
@@ -42,6 +43,7 @@ const AdminPage = (props) => {
                 <h2>Super Admin</h2>
                 {/* Page super administrateur */}
                 <UserManagement />
+                <AdminCvs />
             </div>}
             {!admin && !superAdmin && <div>
                 Vous n'êtes pas autorisé à accèder à cette page
