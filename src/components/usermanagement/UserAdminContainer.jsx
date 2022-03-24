@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import './UserAdminContainer.scss';
+import UserAdminCard from './UserAdminCard';
 
 const UserAdminContainer = () => {
     const [users, setUsers] = useState([]);
     const [reload, setReload] = useState(false);
+    const [idUser,setIdUser]=useState(0);
+
     useEffect(() => {
         const getUsers = async () => {
             const url = `${process.env.REACT_APP_API_URL}users/admin`;
@@ -27,22 +30,22 @@ const UserAdminContainer = () => {
 
     const handleUpdate = (idUser) => {
         const exist = users.find((item) => item.id_users === idUser);
-        const userLevel=exist.user_level;
+        const userLevel = exist.user_level;
         const url = `${process.env.REACT_APP_API_URL}users/admin/${idUser}`;
-        axios.put(url,{user_level:userLevel},{ withCredentials: true })
-            .then((response)=>{
+        axios.put(url, { user_level: userLevel }, { withCredentials: true })
+            .then((response) => {
                 if (response.status === 204) {
                     setReload(!reload);
                 }
             })
-            .catch((err)=>{
+            .catch((err) => {
                 console.log(err.response);
                 const HTTPError = err.response.status;
                 if (HTTPError === 401) {
                     alert('Vous avez été déconnecté.');
                     window.location = '/';
                 }
-                if(HTTPError ===500&&err.response.data.error===1451){
+                if (HTTPError === 500 && err.response.data.error === 1451) {
                     alert(err.response.data.message);
                 }
             });
@@ -51,20 +54,20 @@ const UserAdminContainer = () => {
 
     const handleRemove = (idUser) => {
         const url = `${process.env.REACT_APP_API_URL}users/${idUser}`;
-        axios.delete(url,{ withCredentials: true })
-            .then((response)=>{
+        axios.delete(url, { withCredentials: true })
+            .then((response) => {
                 if (response.status === 204) {
                     setReload(!reload);
                 }
             })
-            .catch((err)=>{
+            .catch((err) => {
                 console.log(err.response);
                 const HTTPError = err.response.status;
                 if (HTTPError === 401) {
                     alert('Vous avez été déconnecté.');
                     window.location = '/';
                 }
-                if(HTTPError ===500&&err.response.data.error===1451){
+                if (HTTPError === 500 && err.response.data.error === 1451) {
                     alert(err.response.data.message);
                 }
             });
@@ -76,6 +79,17 @@ const UserAdminContainer = () => {
         if (exist) {
             setUsers(users.map(item => item.id_users === idUser ? { ...exist, user_level: newLevel } : item));
         }
+    }
+
+    const handlePopUp = (id) => {
+        const popup = document.getElementById('popUpUserAdmin');
+        popup.classList.add('popupOpen');
+        setIdUser(id);
+    }
+
+    const handlePopUpClose = () => {
+        const popup = document.getElementById('popUpUserAdmin');
+        popup.classList.remove('popupOpen');
     }
 
     return (
@@ -103,7 +117,7 @@ const UserAdminContainer = () => {
                     {users.map((user) => {
                         return (
                             <tr key={user.id_users}>
-                                <td>{user.userName}</td>
+                                <td><span className="Clickable" onClick={()=>handlePopUp(user.id_users)}>{user.userName}</span></td>
                                 <td>{user.name === null ? 'Aucune' : user.name}</td>
                                 <td>
                                     <select value={user.user_level} onChange={(e) => handleLevelChange(e, user.id_users)}>
@@ -119,6 +133,14 @@ const UserAdminContainer = () => {
                     })}
                 </tbody>
             </table>
+            <div className="popContainer">
+                <div className="popupUserAdmin" id="popUpUserAdmin">
+                    <div className="innerPopup">
+                        <span className='closePopup ' onClick={handlePopUpClose}>X</span>
+                        <UserAdminCard idUser={idUser} />
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
