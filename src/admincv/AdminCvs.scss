@@ -41,4 +41,16 @@
     .CvsAdminContainer{
         border: solid 1px black;
     }
+
+    .CvsAdminList{
+        list-style-type: none;
+        margin-left: 10px;
+    }
+    .CvsAdminItem{
+        margin : 10px;
+    }
+    .CvsAdminItem a {
+        color: var(--main-color-light-text);
+        text-decoration: none;
+    }
 }
