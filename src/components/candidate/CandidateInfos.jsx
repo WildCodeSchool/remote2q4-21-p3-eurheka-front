@@ -10,12 +10,8 @@ const CandidateInfos = ({uId, user, setUser}) => {
     const [phone, setPhone] = useState('');
     const [address, setAddress] = useState('');
     const [birthday, setBirthday] = useState('');    
-    
     const [password1, setPassword1] = useState('');
     const [password2, setPassword2] = useState('');
-    const [stage, setStage] = useState(false);
-    const [accompanied, setAccompanied] = useState(false);
-    const [focus, setFocus] = useState(false);
 
     useEffect (() => {
         if (user) {
@@ -57,10 +53,6 @@ const CandidateInfos = ({uId, user, setUser}) => {
         else {
             pass2.classList.remove('wrongPass');
         }
-    }
-
-    const handleChange = () => {
-
     }
 
     return (
