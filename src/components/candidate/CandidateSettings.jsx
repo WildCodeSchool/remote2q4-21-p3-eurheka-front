@@ -6,7 +6,6 @@ const CandidateSettings = (props) => {
 
     return (
         <div className='CandidateSettings'>
-            Here are the candidate settings            
         </div>
     )
 }

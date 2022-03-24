@@ -69,6 +69,15 @@
     margin-left: 40px;
 }
 
+.otherLine {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    margin:10px;
+}
+
 .labelInfos {
     width: 200px;
     flex-wrap: wrap;
