@@ -10,7 +10,10 @@ const NavBar = () => {
     const {uId, uLevel}=useContext( UserIdContext);
 
     const scrollToMenu = () => {
-        let pageHeight = window.innerHeight;
+        let pageHeight = 0
+        if (uId === 0) {
+            pageHeight = window.innerHeight;
+        }
         window.scrollTo({
             top: pageHeight,
             left: 0,
