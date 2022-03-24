@@ -1,0 +1,34 @@
+.UserPage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headerUserPage {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.UserMainTitle {
+    font-size: 24px;
+    font-family: var(--text-font);
+    color: var(--main-color-dark-title);
+}
+
+.UserSecTitle {
+    font-size: 20px;
+    font-family: var(--text-font);
+    color: var(--main-color-dark-title);
+}
+
+.UserThirdTitle {
+    font-size: 16px;
+    font-family: var(--text-font);
+    color: var(--main-color-dark-title);
+}

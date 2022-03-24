@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import './EventAdmin.scss';
 import EventAdminContainer from './EventAdminContainer';
 
-const EventAdmin = (props) => {
+const EventAdmin = ({reloadEvent}) => {
     const [showComponent, setShowComponent] = useState(false);
     const [categories, setCategories] = useState([]);
     const [eventName,setEventName]=useState('');
@@ -24,7 +24,7 @@ const EventAdmin = (props) => {
                 });
         }
         getCategories();
-    }, []);
+    }, [reloadEvent]);
 
     const handleShowClick = (id) => {
         const docContainer = document.getElementById(id);
@@ -65,7 +65,7 @@ const EventAdmin = (props) => {
     return (
         <div className='EventAdmin'>
             <div>
-                <h2 className='EventAdminTitle'>Gestion des évenements</h2>
+                <h2 className='EventAdminTitle'>Gérer les évenements</h2>
                 <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding" : "fa-solid fa-chevron-down CloseFolding"} onClick={() => handleShowClick('EventAdminBloc')}></i>
                 <div className="EventAdminBloc BlocHidden" id="EventAdminBloc">
                     <div className="EventAdminAdd">
