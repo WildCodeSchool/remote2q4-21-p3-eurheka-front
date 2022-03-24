@@ -90,22 +90,22 @@ const NavBar = () => {
             <div className='right-container'>
                 {!connected&& 
                     <div className='login-button'>
-                        <NavLink to="/login" className='login-link'>Se connecter</NavLink>
+                        <NavLink to="/login" className='login-link' onClick={scrollToMenu}>Se connecter</NavLink>
                     </div>
                 }
                 {connected&&
                     <div className='connected-container'>
                         {admin&&
                             <NavLink to="/admin" className={({ isActive }) =>
-                            isActive ? "selected" : "navigation-link"} >Administration</NavLink>
+                            isActive ? "selected" : "navigation-link"} onClick={scrollToMenu}>Administration</NavLink>
                         }
                         {!admin&&independantUser&&
                             <NavLink to="/mon-profil-particulier" className={({ isActive }) =>
-                            isActive ? "selected" : "navigation-link"} >Mon profil</NavLink>
+                            isActive ? "selected" : "navigation-link"} onClick={scrollToMenu}>Mon profil</NavLink>
                         }
                         {!admin&&companyUser&&
                             <NavLink to="/mon-profil-entreprise" className={({ isActive }) =>
-                            isActive ? "selected" : "navigation-link"}>Mon profil entreprise</NavLink>
+                            isActive ? "selected" : "navigation-link" } onClick={scrollToMenu}>Mon profil entreprise</NavLink>
                         }
                         <Disconnect />
                     </div>
