@@ -11,7 +11,6 @@ import './Home.css';
 const Home = () => {
 
   const {uId}=useContext( UserIdContext);
-
   let connected=false;
 
   if(uId === 0)

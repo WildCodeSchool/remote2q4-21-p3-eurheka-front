@@ -17,7 +17,6 @@ const Inscription = () => {
 
     return (
         <div className="Inscription">
-            
             <div className="Inscription-title">Vous avez une demande spécifique ?</div>
             {!connected&& 
                 <p className="Inscription-text">Inscrivez-vous pour pouvoir nous contacter.</p>
@@ -30,15 +29,12 @@ const Inscription = () => {
                         <button className="Inscription-button">S'inscrire</button>
                     }
                 </NavLink>
-            
                 <NavLink to="/contact-avis">
                     {connected&& 
                         <button className="Inscription-button">S'inscrire</button>
                     }
                 </NavLink>
-            
-
-            
+                        
         </div>
     )
 }
