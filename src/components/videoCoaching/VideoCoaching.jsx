@@ -18,7 +18,6 @@ const VideoCoaching = () => {
             secondClassName='video-resources-container-reduced'
             paginationClassName='video-pagination'
             resourcesPerPage= {6}
-
           />
     </div>
     )

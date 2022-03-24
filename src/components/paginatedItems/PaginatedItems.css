@@ -37,8 +37,8 @@
     display: flex;
     list-style: none;
     outline: none;
-
   }
+
   .video-pagination > .active > a{
     background-color: var(--main-color-light-background);
     border-color: var(--main-color-light-background);
@@ -114,14 +114,11 @@
   .resources {
     display: flex;
     flex-direction: column;
-
   }
 
   .react_paginate {
     display: flex;
     flex-direction: column;
-
-
   }
 
   .documents {
@@ -134,7 +131,6 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-
   }
 
   .image {
