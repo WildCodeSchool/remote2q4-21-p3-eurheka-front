@@ -6,6 +6,7 @@ const EventCategoryContainer = ({ reload,setReload }) => {
     const [categories, setCategories] = useState([]);
     const [newName, setNewName] = useState('');
     const [idCategory,setIdCategory]=useState(0);
+    
     useEffect(() => {
         const getCategory = async () => {
             const url = `${process.env.REACT_APP_API_URL}event/category/`;
@@ -31,7 +32,6 @@ const EventCategoryContainer = ({ reload,setReload }) => {
     const handleModification = () => {
         const popup = document.getElementById('popup');
         const url = `${process.env.REACT_APP_API_URL}event/category/${idCategory}`;
-        console.log(`ID : ${idCategory} - ${newName}`);
         axios.put(url,{category_name:newName},{withCredentials:true})
             .then((res)=>{
                 if (res.status===204){

@@ -62,7 +62,7 @@ const ThemeAdmin = ({reload,setReload}) => {
                         </div>
                     </form>
                     <div>
-                        <Themecontainer reload={reload}/>
+                        <Themecontainer reload={reload} setReload={setReload}/>
                     </div>
                 </div>
             </div>
