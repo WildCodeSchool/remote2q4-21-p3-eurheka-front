@@ -8,7 +8,6 @@ import { UserIdContext } from '../../context/AppContext';
 import "./UserPage.css";
 
 const UserPage = (props) => {
-    const [reload, setReload] = useState(false);
     const [user, setUser] =useState(null);
     const { uFirstname } = useContext(UserIdContext);
     const { uId, uLevel } = useContext(UserIdContext);
@@ -42,7 +41,7 @@ const UserPage = (props) => {
                 {/* Page candidat */}
                 <div className="headerUserPage">
                 <h1 className="UserMainTitle">MON PROFIL</h1>
-                <h2 className="UserSecTitle">Bienvenue {props.firstname}</h2>
+                <h2 className="UserSecTitle">Bienvenue {uFirstname}</h2>
                 <h3 className="UserThirdTitle">Votre espace candidat</h3>
                 </div>
                 <CandidateInfos 
