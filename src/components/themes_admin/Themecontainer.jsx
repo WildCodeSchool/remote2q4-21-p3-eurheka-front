@@ -1,9 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import './ThemeContainer.scss';
 
-const Themecontainer = ({ reload }) => {
+const Themecontainer = ({ reload,setReload }) => {
     const [themes, setThemes] = useState([]);
-
+    const [newName,setNewName]=useState('');
+    const [idTheme,setIdTheme]=useState(0);
+    
     useEffect(() => {
         const fetchTheme = () => {
             const url = `${process.env.REACT_APP_API_URL}theme/`;
@@ -23,15 +26,77 @@ const Themecontainer = ({ reload }) => {
         }
         fetchTheme();
     }, [reload]);
+
+    const updateTheme = (text,id) => {
+        setNewName(text);
+        setIdTheme(id);
+        const popup = document.getElementById('popup');
+        popup.classList.toggle('displayPopup');
+    }
+
+    const deleteTheme = (id) => {
+        if(window.confirm('Voulez-vous supprimer cette catégorie ?')){
+             const url = `${process.env.REACT_APP_API_URL}theme/${id}`;
+            axios.delete(url,{withCredentials:true})
+             .then((res)=>{
+                 if (res.status===200){
+                     setReload(!reload);
+                 }
+             })
+             .catch((err)=>{
+                 console.log(err);
+             })
+         }
+     }
+
+     const handleModification = () => {
+        const popup = document.getElementById('popup');
+        const url = `${process.env.REACT_APP_API_URL}theme/${idTheme}`;
+        axios.put(url,{name:newName},{withCredentials:true})
+            .then((res)=>{
+                if (res.status===200){
+                    setReload(!reload);
+                }
+            })
+            .catch((err)=>{
+                console.log(err);
+            })
+        popup.classList.toggle('displayPopup');
+    }
+
+    const handleClose=()=>{
+        const popup = document.getElementById('popup');
+        popup.classList.toggle('displayPopup');
+    }
+
     return (
-        <div>
+        <div  className='ThemeAdminContainer'>
+            <ul className="ThemeAdminContainerlist">
             {themes.map((theme) => {
                 return (
-                    <div key={theme.id_theme}>
+                    <li className='ThemeContainerItem' key={theme.id_theme}>
                         {theme.name}
-                    </div>
+                        <input
+                            type="button"
+                            value="Modifier"
+                            className='ModifThemeBtn'
+                            onClick={() => updateTheme(theme.name,theme.id_theme)} />
+                        <input
+                            type="button"
+                            value="Supprimer"
+                            className='ModifThemeBtn'
+                            onClick={() => deleteTheme(theme.id_theme)} />
+                    </li>
                 )
             })}
+            </ul>
+            <div className="popUpModif" id="popup">
+                <div className="innerPopUp">
+                    <label htmlFor="newName">Nouveau nom : <input className="ThemeModInput" type="text" value={newName} id="newName" onChange={(e) => setNewName(e.target.value)} /></label>
+                    <input className="ThemeModInput" type="button" value="Modifier" onClick={handleModification} />
+                    <span className='closePopup' onClick={handleClose}>X</span>
+                </div>
+            </div>
         </div>
     )
 }
