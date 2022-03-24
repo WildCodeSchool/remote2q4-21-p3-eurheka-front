@@ -1,12 +1,12 @@
 import React from 'react';
 import ResourcesCard from '../resourcesCard/ResourcesCard';
-import './VideoJob.css'
+import './VideoCoaching.css'
 
-const VideoJob = () => {
+const VideoCoaching = () => {
   return (
-    <div className="VideoJob">
+    <div className="VideoCoaching">
           <ResourcesCard 
-            mainTitle = "Job Vidéos"
+            mainTitle = "Coaching vidéo"
             mainTitleClassName="mainTitle-darkTheme"
             url={'https://jsonplaceholder.typicode.com/photos?_limit=100'}
             listClassName='list-lightTheme'
@@ -18,10 +18,11 @@ const VideoJob = () => {
             secondClassName='video-resources-container-reduced'
             paginationClassName='video-pagination'
             resourcesPerPage= {6}
+
           />
     </div>
     )
   }
 
 
-export default VideoJob;
+export default VideoCoaching;

@@ -21,7 +21,7 @@ useEffect(() => {
           <ResourcesCard 
             mainTitle = "Fiches métiers"
             mainTitleClassName='mainTitle-lightTheme'
-            // url={'https://jsonplaceholder.typicode.com/posts'}
+            url={'https://jsonplaceholder.typicode.com/posts'}
             listClassName='list-darkTheme'
             containerListClassName='container-list'
 
@@ -31,6 +31,8 @@ useEffect(() => {
             secondClassName='doc-resources-container-reduced'
             paginationClassName='doc-pagination'
             jobResources={jobResources}
+            resourcesPerPage= {10}
+
           />
     </div>
     )

@@ -65,23 +65,21 @@
 
   .container {
     display: flex;
+    margin: auto;
   }
 
   .container-list {
-    /* display: flex; */
     list-style: none;
   }
 
   .video-container-list {
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
     list-style: none;
   }
 
-  /* .video-list {
-   display: flex;
-  } */
 
   .list-darkTheme {
     font-family: 'Poppins';
@@ -101,9 +99,8 @@
     list-style: none;
     background-color: var(--main-color-light-background);
     background-position: center;
-    width: 300px;
+    width: 350px;
     color: var(--main-color-lighter-text);
-    text-align: center;
     padding: 10px;
     margin-bottom: 20px;
   }
@@ -112,7 +109,19 @@
   .main-app {
     display: flex;
     flex-direction: column;
-    align-items: center;
+  }
+
+  .resources {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .react_paginate {
+    display: flex;
+    flex-direction: column;
+
+
   }
 
   .documents {
@@ -123,12 +132,12 @@
     padding: 10px 5px 0px 5px;
     color: var(--main-color-lighter-text);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+
   }
 
   .image {
-    width: 300px;
-    display: flex;
-    align-items: center;
+    width: 200px;
   }
-  
 

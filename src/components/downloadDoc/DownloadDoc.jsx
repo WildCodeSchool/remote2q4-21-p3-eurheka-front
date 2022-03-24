@@ -16,6 +16,8 @@ const DownloadDoc = () => {
             firstClassName='doc-resources-container'
             secondClassName='doc-resources-container-reduced'
             paginationClassName='doc-pagination'
+            resourcesPerPage= {10}
+
           />
     </div>
     )
