@@ -1,0 +1,48 @@
+.AdminRDV{
+    border-style: solid;
+    position: relative;
+    border-color: black;
+    border-width: 1px;
+    width: 80%;
+    margin: 25px auto;
+    color: var(--main-color-light-text);
+    background-color: var(--main-color-dark-background);
+
+    h2{
+        color: var(--main-color-light-text);
+        font-family: var(--title-font);
+        padding-left: 10px;
+        padding-top: 10px;
+        font-size: 16px;
+    }
+    .RDVAdminTitle{
+        margin-bottom: 5px;
+    }
+
+    .CloseFolding
+    {
+        position: absolute;
+        top :10px;
+        font-size: 30px;
+        font-weight: bolder;
+        color : gray;
+        right: 10px;
+    }
+
+    .RDVAdminBloc{
+        display: block;
+    }
+    
+    .BlocHidden{
+        display: none;
+    }
+
+    .RDVList{
+        list-style-type: none;
+        margin-left: 10px;
+    }
+
+    .RDVListItem{
+        margin: 10px;
+    }
+}
