@@ -89,20 +89,13 @@ const CandidateInfos = ({uId, user, setUser}) => {
                     </div>
                 </div> 
                <div className='otherInfos'>
-                    <div className="checkboxLine">
-                        <input type="checkbox" id="stage" name="stage" value="stage" checked={stage} onChange={(e) => setStage(e.target.checked)}
-                          className="checkbox-box"></input>
-                        <label htmlFor="stage" className="labelInfos">En recherche d'emploi/stage</label>
+                    <div className='otherLine'>
+                       <label htmlFor="address" className='labelInfos'>Adresse</label>
+                       <input className='createUserInput' type="text" id="address" value={address} onChange={(e) => { setAddress(e.target.value) }} />
                     </div>
-                    <div className="checkboxLine">
-                        <input type="checkbox" id="accompanied" name="accompanied" value="accompanied" checked={accompanied} onChange={(e) => setAccompanied(e.target.checked)}
-                    className="checkbox-box"></input>
-                        <label htmlFor="accompanied" className="labelInfos">Etre accompagné</label>
-                    </div>
-                    <div className="checkboxLine">
-                        <input type="checkbox" id="focus" name="focus" value="focus" checked={focus} onChange={(e) => setFocus(e.target.checked)}
-                        className="checkbox-box"></input>
-                        <label htmlFor="focus" className="labelInfos">Faire le point</label>
+                    <div className='otherLine'>
+                       <label htmlFor="birthday" className='labelInfos'>Date de naissance</label>
+                       <input className='birthday' type="datetime-local" id="birthday" value={birthday} onChange={(e) => { setBirthday(e.target.value) }} />
                     </div>
                 </div> 
             </div> 
