@@ -1,0 +1,43 @@
+.CandidateSettings {
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color-dark-background);
+    color: var(--main-color-light-title);
+    font-family: var(--text-font);
+    padding: 20px;
+    margin: 30px;
+}
+
+.titleSettings {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.detailSettings {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+.appointmentSettings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.opinionSettings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}

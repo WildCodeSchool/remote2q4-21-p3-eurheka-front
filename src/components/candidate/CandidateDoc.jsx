@@ -2,8 +2,11 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { FileUploader } from "react-drag-drop-files";
 import './CandidateDoc.css';
+import DropCV from "./DropCV.jsx";
+import ShowCV from "./ShowCV.jsx";
 
 const CandidateDoc = (props) => {
+    const [reload, setReload] = useState(false);
 
     return (
         <div className='CandidateDoc'>
@@ -11,11 +14,13 @@ const CandidateDoc = (props) => {
             <div className='detailDoc'>
                 <div className='myDoc'>
                     <div className='titleMyDoc'>Mes CV sauvegardés</div>
-                    <div className='allMyDoc'>Here we map the CV... </div>
+                    <ShowCV />
                 </div>
                 <div className='newDoc'>
-                <div className='titleNewDoc'>Déposer un nouveau CV</div>
-                    <div className='allMyDoc'>Here we drag&drop... </div>
+                    <div className='titleNewDoc'>Déposer un nouveau CV</div>
+                    <DropCV 
+                    reload={reload}
+                    setReload={setReload}/>
                 </div>
             </div>         
         </div>
