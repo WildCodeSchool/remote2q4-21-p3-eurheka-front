@@ -6,6 +6,19 @@
     font-family: var(--title-font);
     margin-bottom: 70px;
 
+    .lcUbOd{
+        background-color: var(--main-color-dark-background);
+    }
+
+    .lcUbOd:enabled{
+        background-color: var(--main-color-dark-background);
+        box-shadow: 0 0 3px 2px var(--main-color-dark-background);
+    }
+
+    .eaptOe:hover{
+        box-shadow: 0 0 3px 2px var(--main-color-dark-background);
+    }
+
     .OpinionTitle{
         color: var(--sec-color-dark-text);
         font-weight: 600;
