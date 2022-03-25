@@ -19,11 +19,6 @@
         box-shadow: 0 0 3px 2px var(--main-color-dark-background);
     }
 
-    .rec-carousel-item:focus {
-        outline: none;
-        box-shadow: inset 0 0 1px 1px lightgrey;
-    }
-
     .OpinionTitle{
         color: var(--sec-color-dark-text);
         font-weight: 600;
