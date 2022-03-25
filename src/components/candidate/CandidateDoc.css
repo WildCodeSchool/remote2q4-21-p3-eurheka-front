@@ -38,7 +38,7 @@
     width: 200px;
     flex-wrap: wrap;
     margin-left: 0px;
-    text-align: left;
+    text-align: center;
 }
 
 .newDoc {
@@ -52,7 +52,7 @@
 .titleNewDoc {
     width: 200px;
     flex-wrap: wrap;
-    margin-left: 15px;
-    text-align: left;
+    margin-left: 0px;
+    text-align: center;
 }
 

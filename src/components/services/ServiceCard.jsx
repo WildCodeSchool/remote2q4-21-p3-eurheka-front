@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { NavLink } from 'react-router-dom'
 import './ServiceCard.scss'
 
 export const ServiceCard = (props) => {
@@ -27,7 +28,7 @@ export const ServiceCard = (props) => {
                     {props.task7 ? <li>{props.task7}</li> : null }
                     {props.task8 ? <li>{props.task8}</li> : null }
                 </ul>
-                <button className='serviceButton'>S'inscrire</button>
+                <NavLink to="/contact-avis"><button className='serviceButton'>S'inscrire</button></NavLink>
             </div>
             <div className={changeSize ? props.SecondContainerClassReduce : props.secondContainerClass}>
                 <div className='serviceTitleContainer' onClick={changeButton}>
@@ -45,7 +46,7 @@ export const ServiceCard = (props) => {
                     {props.task7b ? <li>{props.task7b}</li> : null }
                     {props.task8b ? <li>{props.task8b}</li> : null }
                 </ul>
-                <button className='serviceButton'>S'inscrire</button>
+                <NavLink to="/contact-avis"><button className='serviceButton'>S'inscrire</button></NavLink>
             </div>
         </div>
     )
