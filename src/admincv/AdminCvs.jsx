@@ -44,8 +44,8 @@ const AdminCvs = () => {
                 <div className="CvsAdminContainer">
                     <ul className='CvsAdminList'>
                         {cvs&&cvs.map((cv)=>{
-                            return(
-                                <li key={cv.id_cv} className="CvsAdminItem"><a href={cv.path} target="_blank">CV de {cv.user}</a></li>
+                            return( 
+                                <li key={cv.id_cv} className="CvsAdminItem"><a href={`${process.env.REACT_APP_URL}${cv.path}`} target="_blank">CV de {cv.user}</a></li>
                             )
                         })
 
