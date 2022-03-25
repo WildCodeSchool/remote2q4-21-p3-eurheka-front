@@ -1,0 +1,11 @@
+.CV {
+    height: auto;
+    width: 100px;
+    margin: 5px;
+    object-fit: contain;
+}
+
+.imgCV {
+    max-height: 100px;
+    width: auto;
+}

@@ -52,7 +52,8 @@ const UserPage = (props) => {
                 uId={uId}
                 user={user}
                 setUser={setUser}/>
-                <CandidateDoc />
+                <CandidateDoc 
+                uId={uId}/>
                 <CandidateSettings />
             </div>}            
         </div>

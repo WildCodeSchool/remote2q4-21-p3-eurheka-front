@@ -22,12 +22,13 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     justify-content: left;
 }
 
 .myDoc {
     width: 50%;
+    height: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,10 +44,11 @@
 
 .newDoc {
     width: 50%;
+    height: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
 }
 
 .titleNewDoc {
