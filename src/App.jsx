@@ -41,10 +41,21 @@ function App() {
     fetchToken();
   },[]);
 
+  let connected=false;
+
+  if(uId === 0)
+  {
+      connected=false;
+  } else {
+      connected=true;
+  }
+
   return (
     <UserIdContext.Provider value={{uId, uLevel, setUId, setULevel}} >
     <div className="App">
-      <SplashPage />
+      {!connected&&
+        <SplashPage />
+      }
       <NavBar />    
       <Routes>
         <Route exact path='/' element={<Home />}/>
