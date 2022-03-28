@@ -9,8 +9,7 @@ const CandidateSettings = (props) => {
             <div className='titleSettings'>Gérer mes préférences</div>
             <div className='detailSettings'>
                 <div className='appointmentSettings'>
-                    <div className='titleAppointments'>Mes rendez-vous</div>
-                    <div className='allAppointments'>Ici les rendez-vous </div>
+                    <div className='titleAppointments'></div>
                 </div>
                 <div className='opinionSettings'>
                 <div className='titleOpinions'>Mes avis</div>
