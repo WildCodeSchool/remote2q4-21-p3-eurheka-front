@@ -14,7 +14,9 @@ const CandidateDoc = (props) => {
             <div className='detailDoc'>
                 <div className='myDoc'>
                     <div className='titleMyDoc'>Mes CV sauvegardés</div>
-                    <ShowCV />
+                    <ShowCV 
+                    reload={reload}
+                    setReload={setReload}/>
                 </div>
                 <div className='newDoc'>
                     <div className='titleNewDoc'>Déposer un nouveau CV</div>
