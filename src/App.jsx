@@ -67,8 +67,7 @@ function App() {
         <Route path='/admin' element={<AdminPage />}/>
         {/*User routes*/}
         <Route path='/mon-profil-particulier' element={<UserPage />}/>
-        {/*Company routes*/}
-        <Route path='/mon-profil-entreprise' element={<CompanyPage />}/>
+        
       </ Routes>
       <Footer footerStyle={footerStyle} setFooterStyle={setFooterStyle} />
     </div>
