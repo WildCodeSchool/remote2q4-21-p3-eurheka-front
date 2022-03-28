@@ -14,6 +14,7 @@ import SplashPage from './pages/splash/SplashPage.jsx';
 import UserPage from './pages/userPage/UserPage.jsx';
 import CompanyPage from './components/profileUser/CompanyPage.jsx';
 import './App.css';
+import JobOffer from './pages/joboffer/JobOffer.jsx';
 
 function App() {
   const [footerStyle, setFooterStyle] = useState(true)
@@ -63,6 +64,7 @@ function App() {
         <Route path='/bibliotheque' element={<Library />}/>
         <Route path='/contact-avis' element={<Contact />}/>
         <Route path='/login' element={<Login />}/>
+        <Route path='/emploi' element={<JobOffer />} />
         {/*Admin routes*/}
         <Route path='/admin' element={<AdminPage />}/>
         {/*User routes*/}
