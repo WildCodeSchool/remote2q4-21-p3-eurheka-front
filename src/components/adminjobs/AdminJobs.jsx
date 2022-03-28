@@ -12,6 +12,8 @@ const AdminJobs = () => {
     const [showComponent, setShowComponent] = useState(false);
     const [name, setName] = useState('');
     const [jobType, setJobtype] = useState(1);
+    const [jobCategories, setJobCategories] = useState([]);
+    const [jobCategory, setJobCategory] = useState(1);
 
     useEffect(() => {
         const getTypes = async () => {
@@ -27,7 +29,26 @@ const AdminJobs = () => {
                     console.log(err);
                 });
         }
+
         getTypes();
+
+    }, []);
+
+    useEffect(() => {
+        const getCategories = async () => {
+            const url = `${process.env.REACT_APP_API_URL}job/category/`;
+            await axios
+                .get(url, { withCredentials: true })
+                .then((result) => {
+                    if (result.status === 200) {
+                        setJobCategories(result.data)
+                    }
+                })
+                .catch((err) => {
+                    console.log(err);
+                });
+        }
+        getCategories();
     }, []);
 
     const handleChange = (file) => {
@@ -65,6 +86,7 @@ const AdminJobs = () => {
         formData.append('name', name);
         formData.append('file', file);
         formData.append('id_type', jobType);
+        formData.append('cat_job', jobCategory);
         const url = `${process.env.REACT_APP_API_URL}job/`;
         axios
             .post(url, formData, { withCredentials: true })
@@ -100,6 +122,16 @@ const AdminJobs = () => {
                             }
                         </select>
                     </label>
+                    <label htmlFor="jobCategory" className='LabelNewJobAdmin'>Catégorie de l'offre :
+                        <select id="jobCategory" value={jobCategory} onChange={(e) => setJobCategory(e.target.value)}>
+                            {jobCategories && jobCategories.map((CategoryItem) => {
+                                return (
+                                    <option value={CategoryItem.id_job_category} key={CategoryItem.id_job_category}>{CategoryItem.name}</option>
+                                )
+                            })
+                            }
+                        </select>
+                    </label> 
                     <FileUploader className="DownloadFile" handleChange={handleChange} name="file" types={fileTypes} label="Glisser et déposer le fichier" />
                     <input type="button" value="Ajouter" onClick={addJob} className='AddJobBtn' />
                 </div>
