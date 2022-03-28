@@ -34,7 +34,9 @@ const ShowCV = ({uId, reload, setReload}) => {
                     <CV 
                     path={cv.path}
                     idCV={cv.id_cv}
-                    key={cv.id_cv}/>
+                    key={cv.id_cv}
+                    reload={reload}
+                    setReload={setReload}/>
                 )
             })}
                 
