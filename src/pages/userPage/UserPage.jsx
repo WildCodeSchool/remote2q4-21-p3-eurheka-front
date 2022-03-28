@@ -6,6 +6,7 @@ import CandidateDoc from '../../components/candidate/CandidateDoc';
 import CandidateSettings from '../../components/candidate/CandidateSettings';
 import { UserIdContext } from '../../context/AppContext';
 import "./UserPage.css";
+import CandidateOpinon from '../../components/candidate/CandidateOpinon';
 
 const UserPage = (props) => {
     const [user, setUser] =useState(null);
@@ -55,6 +56,7 @@ const UserPage = (props) => {
                 <CandidateDoc 
                 uId={uId}/>
                 <CandidateSettings />
+                <CandidateOpinon uId={uId} user={user}/>
             </div>}            
         </div>
     )
