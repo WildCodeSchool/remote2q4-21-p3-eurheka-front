@@ -5,7 +5,7 @@ import  "./Appt.css";
 const Appt = ({ idAppt, appts, setAppts, reload, setReload, name, date}) => {
 
     const deleteAppt = async() =>{
-        const url = `${process.env.REACT_APP_API_URL}event/myevents`;
+        const url = `${process.env.REACT_APP_API_URL}event/${idAppt}`;
         await axios.delete(url, {withCredentials: true})
         .then((res) => {
             console.log(res.data);
