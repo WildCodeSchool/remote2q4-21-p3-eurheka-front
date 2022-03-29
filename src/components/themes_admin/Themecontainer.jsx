@@ -84,7 +84,7 @@ const Themecontainer = ({ reload,setReload }) => {
                         <input
                             type="button"
                             value="Supprimer"
-                            className='ModifThemeBtn'
+                            className='SuppressThemeBtn'
                             onClick={() => deleteTheme(theme.id_theme)} />
                     </li>
                 )
