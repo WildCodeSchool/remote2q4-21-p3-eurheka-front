@@ -141,31 +141,35 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme })
             <div className="NewResourceDiv">
                 <form encType='multipart/form-data' onSubmit={handleSubmit}>
                     <div className="newDocMainContainer">
+                        <div className="newDocOptions">
                         <div className='NewResourceDivContainer'>
-                            <h3 className='AddDocTitle'>Ajouter un nouveau document</h3>
+                            <div className='AddDocTitle'>Ajouter un nouveau document</div>
                             <label htmlFor="name" className='LabelAdminContainer'>Nom du document : <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} /> </label>
                             {catDoc > 1 ? <FileUploader className="DownloadFile" handleChange={handleChange} name="file" types={fileTypes} label="Glisser et déposer le fichier" /> : <> <label forhtml="video" className='LabelAdminContainer'>Chemin de la vidéo : <input type="text" id="video" value={pathVideo} onChange={(e) => setPathVideo(e.target.value)} /> </label></>}
-                            <label htmlFor='' className='LabelAdminContainer'>Destiné au public :&nbsp;
-                                <select onChange={(e) => setVisibility(e.target.value)}>
+                            <div className='publicDuo'>
+                                <label htmlFor='' className='LabelAdminContainer'>Destiné au public : </label>
+                                <select className='publicSelect' onChange={(e) => setVisibility(e.target.value)}>
                                     <option value="1">Non connecté</option>
                                     <option value="2">Utilisateur connecté</option>
                                     <option value="3">Entreprise</option>
                                 </select>
-                            </label>
-                            <input type="submit" value="ajouter le document" className='SubmitBtn' />
+                            </div>                          
                         </div>
                         <div className="ThemeContainer">
-                             Liste des thèmes :
+                             Choisissez un thème dans la liste suivante:
                             <div className="newDocThemeContainer">
                                 {themes && themes.map((theme) => {
                                     return (
-                                        <div key={theme.idTheme}>
-                                            <label className='LabelThemeNewDoc' htmlFor={theme.themeName}><input type="checkbox" value={theme.idTheme} id={theme.themeName} checked={theme.checked} onChange={(e) => handleCheckTheme(e)} /> {theme.themeName}</label>
+                                        <div className='divThemeDoc'key={theme.idTheme}>
+                                            <input className='checkThemeNewDoc'type="checkbox" value={theme.idTheme} id={theme.themeName} checked={theme.checked} onChange={(e) => handleCheckTheme(e)} />
+                                            <label className='LabelThemeNewDoc' htmlFor={theme.themeName}>{theme.themeName}</label>
                                         </div>
                                     )
                                 })}
                             </div>
                         </div>
+                        </div>
+                        <input type="submit" value="ajouter le document" className='SubmitBtn' />
                     </div>
                 </form>
             </div>
