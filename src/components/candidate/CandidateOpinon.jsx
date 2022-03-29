@@ -51,25 +51,23 @@ const CandidateOpinon = ({user, uId}) => {
     return (
         <div className='CandidateOpinon'>
             <div className='titleOpinion'>Donnez votre avis sur Eurhéka</div>
-            <div className='descriptionOpinion'>
             <button className={ display ? 'displayButton' : 'displayButtonNone'} onClick={viewOpinion}>Déposer un avis</button>
+            <form onSubmit={submitOpinion} className={ display ? 'descriptionOpinionNone' : 'descriptionOpinion'}>
                 <label htmlFor="description " 
-                className={ display ? 'descriptionTitleNone' : 'descriptionTitle'}>Votre avis :</label>
-                <input 
+                className='descriptionTitle'></label>
+                <textarea 
                     type="text" 
                     id="description" 
                     name="description" 
                     value={description}
-                    className={ display ? 'descriptionContainerNone' : 'descriptionContainer'}
-                    placeholder="---"
+                    className='descriptionContainer'
                     onFocus={(e) => e.target.placeholder = ""}  
-                    onBlur={(e) => e.target.placeholder = "---"}
                     onChange={(e) => setDescription(e.target.value)}
                 />
                 <button 
-                className={ display ? 'validateOpinionNone' : 'validateOpinion'}
-                onClick={submitOpinion}>Envoyer mon avis</button>
-            </div>
+                type="submit"
+                className='validateOpinion'>Envoyer mon avis</button>
+            </form>
         </div>
     )
 }
