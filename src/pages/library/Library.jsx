@@ -2,6 +2,7 @@ import React from 'react';
 import DownloadDoc from '../../components/downloadDoc/DownloadDoc';
 import BusinessSheet from '../../components/businessSheet/BusinessSheet';
 import VideoJob from '../../components/videoJob/VideoJob';
+import VideoCoaching from '../../components/videoCoaching/VideoCoaching';
 import './Library.css';
 
 const Library = () => {
@@ -16,6 +17,7 @@ const Library = () => {
       </div>
       <DownloadDoc />
       <VideoJob />
+       {/* <VideoCoaching /> */}
       <BusinessSheet />
     </div>
   );

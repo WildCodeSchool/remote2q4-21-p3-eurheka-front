@@ -1,0 +1,52 @@
+.EventCategoryContainer{
+    position: relative;
+    border : solid 1px black;
+    margin : 10px;
+    .ModifCategoryBtn{
+        margin-left: 15px;
+    }
+
+    .EventCategoryContainerlist{
+        list-style-type: none;
+        margin-left: 10px;
+    }
+
+    .EventCategoryContainerItem{
+        margin: 15px;
+    }
+
+    .popUpModif{
+        display: none;
+        position: absolute;
+        top:0;
+        left:20%;
+        width : 250px;
+        height: 80px;
+        z-index: 3;
+        border : 1px solid;
+        padding : 15px;
+        background-color: var(--main-color-light-background);
+        color : var(--main-color-dark-title);
+    }
+
+    .displayPopup{
+       display: block;
+    }
+
+    .EventCategoryModInput{
+        margin: 5px;
+    }
+
+    .innerPopUp{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .closePopup{
+        position: absolute;
+        right: -10px;
+        top : -10px;
+        cursor: pointer;
+    }
+}

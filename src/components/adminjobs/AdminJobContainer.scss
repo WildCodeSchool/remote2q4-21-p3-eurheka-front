@@ -1,0 +1,26 @@
+.AdminJobContainer{
+    margin: 20px 0;
+    border: solid 1px black;
+    padding-left: 10px;
+
+    h3{
+        margin-top: 15px;
+    }
+
+    .AdminJobList{
+        list-style-type: none;
+        margin-left: 10px;
+    }
+
+    .AdminJobItem{
+        margin: 10px 0;
+    }
+
+    .AdminJobItem a {
+        color :inherit;
+    }
+
+    .BtnDeleteJob{
+        margin: 0 10px;
+    }
+}

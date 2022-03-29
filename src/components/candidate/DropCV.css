@@ -1,0 +1,19 @@
+.DropCV {
+    width: 70%;
+    height: 100%;
+    margin: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.validateCV {
+    width: 180px;
+    height: 40px;
+    background-color: var(--main-color-light-button);
+    color: var(--main-color-dark-text);
+    margin-top: 20px;
+}

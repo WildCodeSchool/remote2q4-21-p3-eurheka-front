@@ -11,9 +11,10 @@ import NavBar from './components/navbar/NavBar';
 import Footer from './components/footer/Footer';
 import AdminPage from './pages/admin/AdminPage.jsx';
 import SplashPage from './pages/splash/SplashPage.jsx';
-import UserPage from './components/profileUser/UserPage.jsx';
+import UserPage from './pages/userPage/UserPage.jsx';
 import CompanyPage from './components/profileUser/CompanyPage.jsx';
 import './App.css';
+import JobOffer from './pages/joboffer/JobOffer.jsx';
 
 function App() {
   const [footerStyle, setFooterStyle] = useState(true)
@@ -41,10 +42,21 @@ function App() {
     fetchToken();
   },[]);
 
+  let connected=false;
+
+  if(uId === 0)
+  {
+      connected=false;
+  } else {
+      connected=true;
+  }
+
   return (
     <UserIdContext.Provider value={{uId, uLevel, setUId, setULevel}} >
     <div className="App">
-      <SplashPage />
+      {!connected&&
+        <SplashPage />
+      }
       <NavBar />    
       <Routes>
         <Route exact path='/' element={<Home />}/>
@@ -52,6 +64,7 @@ function App() {
         <Route path='/bibliotheque' element={<Library />}/>
         <Route path='/contact-avis' element={<Contact />}/>
         <Route path='/login' element={<Login />}/>
+        <Route path='/emploi' element={<JobOffer />} />
         {/*Admin routes*/}
         <Route path='/admin' element={<AdminPage />}/>
         {/*User routes*/}

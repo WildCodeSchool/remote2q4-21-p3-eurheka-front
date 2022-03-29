@@ -11,7 +11,7 @@ const BusinessSheet = () => {
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   // indique le nombre de ressources par pages
-  const [resourcesPerPage, setResourcesPerPage] = useState(10);
+  const [resourcesPerPage, setResourcesPerPage] = useState(5);
 
   // fetch des ressources depuis la BDD
   useEffect(() => {

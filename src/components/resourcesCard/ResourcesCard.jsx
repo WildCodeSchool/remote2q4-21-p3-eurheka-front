@@ -28,6 +28,7 @@ const ResourcesCard = ({jobResources}, props) => {
                         listClassName={props.listClassName}
                         secondListClassName={props.secondListClassName}
                         containerListClassName={props.containerListClassName}
+                        resourcesPerPage={props.resourcesPerPage}
                         />
                         
                     </div> : <div clasName={props.secondClassName}>  </div>}

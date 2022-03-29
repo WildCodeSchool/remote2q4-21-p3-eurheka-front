@@ -1,6 +1,7 @@
 const adviceCards = [
     {
         id: 1,
+        link: "/prestations",
         title: "Être accompagné",
         task1: "Stratégie",
         task2: "Premier job",
@@ -10,6 +11,7 @@ const adviceCards = [
     },
     {
         id: 2,
+        link: "/login",
         title: "Optimiser sa candidature",
         task1: "CV",
         task2: "Entretiens",
@@ -19,6 +21,7 @@ const adviceCards = [
     },
     {
         id: 3,
+        link: "/bibliotheque",
         title: "Bibliothèques",
         task1: "Vidéos explicatives",
         task2: "Fiches d'emploi",

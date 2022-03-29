@@ -10,17 +10,62 @@
         padding: 1px;
     }
 
+    .Clickable{
+        cursor: pointer;
+    }
+
+    .popupContainer,.innerPopup{
+        position : relative;
+    }
+
+    .popupUserAdmin{
+        position: absolute;
+        z-index: 3;
+        width : 90%;
+        height: 500px;
+        background-color: var(--main-color-light-background);
+        color: var(--main-color-dark-title);
+        top : -200px;
+        left : 10px;
+        display: none;
+        padding : 15px;
+        overflow: scroll;
+    }
+
+    .popupOpen{
+        display: block;
+    }
+
+    .closePopup{
+        position : absolute;
+        top : 5px;
+        right : 5px;
+        cursor: pointer;
+    }
+
     @media only screen and (min-width: 391px) and (max-width: 768px) {
 
     }
 
     @media screen and (min-width: 769px) and (max-width: 1024px) {
-      
+        .popupUserAdmin{
+            width: 80%;
+            height: 200px;
+            top : -100px;
+        }
     }
 
     @media screen and (min-width: 1025px) {
         .UserTable{
             padding: 5px;
+        }
+
+        .popupUserAdmin{
+            width : 75%;
+            height: 250px;
+            top : 15px;
+            left : 150px;
+            overflow: hidden;
         }
     }
 }

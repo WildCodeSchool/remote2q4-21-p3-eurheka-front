@@ -1,0 +1,52 @@
+.ThemeAdminContainer{
+    position: relative;
+    border : solid 1px black;
+    margin : 10px;
+    .ModifThemeBtn{
+        margin-left: 15px;
+    }
+
+    .ThemeAdminContainerlist{
+        list-style-type: none;
+        margin-left: 10px;
+    }
+
+    .ThemeContainerItem{
+        margin: 15px;
+    }
+
+    .popUpModif{
+        display: none;
+        position: absolute;
+        top:50%;
+        left:20%;
+        width : 250px;
+        height: 80px;
+        z-index: 3;
+        border : 1px solid;
+        padding : 15px;
+        background-color: var(--main-color-light-background);
+        color : var(--main-color-dark-title);
+    }
+
+    .displayPopup{
+       display: block;
+    }
+
+    .ThemeModInput{
+        margin: 5px;
+    }
+
+    .innerPopUp{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .closePopup{
+        position: absolute;
+        right: -10px;
+        top : -10px;
+        cursor: pointer;
+    }
+}

@@ -6,17 +6,18 @@ const VideoJob = () => {
   return (
     <div className="VideoJob">
           <ResourcesCard 
-            mainTitle = "Coaching vidéo"
+            mainTitle = "Job Vidéos"
             mainTitleClassName="mainTitle-darkTheme"
             url={'https://jsonplaceholder.typicode.com/photos?_limit=100'}
             listClassName='list-lightTheme'
             secondListClassName='video-list'
             containerListClassName='video-container-list'
-            icon='favorite'
-            iconClassName='favorite'
+            // icon='favorite'
+            // iconClassName='favorite'
             firstClassName='video-resources-container'
             secondClassName='video-resources-container-reduced'
             paginationClassName='video-pagination'
+            resourcesPerPage= {6}
           />
     </div>
     )

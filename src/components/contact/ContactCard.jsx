@@ -72,9 +72,9 @@ const ContactCard = () => {
                             value={firstname}
                             name="firstname" 
                             className='contact-input' 
-                            placeholder="edouard"
+                            placeholder="Jean"
                             onFocus={(e) => e.target.placeholder = ""}  
-                            onBlur={(e) => e.target.placeholder = "edouard"}
+                            onBlur={(e) => e.target.placeholder = "Jean"}
                             onChange={(e) => setFirstname(e.target.value)}
                         />
                         <label htmlFor="lastname" className='contact-form-subtitle'>Nom</label>
@@ -84,9 +84,9 @@ const ContactCard = () => {
                             value={lastname} 
                             name="lastname" 
                             className='contact-input' 
-                            placeholder="doe"
+                            placeholder="Dupont"
                             onFocus={(e) => e.target.placeholder = ""}  
-                            onBlur={(e) => e.target.placeholder = "doe"}
+                            onBlur={(e) => e.target.placeholder = "Dupont"}
                             onChange={(e) => setLastname(e.target.value)}
                         />
                     </div>
@@ -98,9 +98,9 @@ const ContactCard = () => {
                             name="email" 
                             value={email}
                             className='contact-input' 
-                            placeholder="edouard.doe@gmail.com"
+                            placeholder="jean.dupont@mail.com"
                             onFocus={(e) => e.target.placeholder = ""}  
-                            onBlur={(e) => e.target.placeholder = "edouard.doe@gmail.com"}
+                            onBlur={(e) => e.target.placeholder = "jean.dupont@mail.com"}
                             onChange={(e) => setEmail(e.target.value)}
                         />
                         <label htmlFor="subject" className='contact-form-subtitle'>Objet</label>

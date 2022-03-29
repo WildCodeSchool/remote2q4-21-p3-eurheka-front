@@ -28,6 +28,10 @@
     margin-top: 10px;
 }
 
+.adviceCardLink {
+    text-decoration: none;
+}
+
 @media screen and (max-width: 390px) {
     .AdviceCard{
         width : 80vw;

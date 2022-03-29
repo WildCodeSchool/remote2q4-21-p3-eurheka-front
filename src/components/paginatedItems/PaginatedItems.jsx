@@ -4,18 +4,19 @@ import axios from "axios";
 
 import './PaginatedItems.css'
 
-const PaginatedItems =(props, {jobResources}) => {
-  const [resourcesPerPage] = useState(10);
+const PaginatedItems =(props) => {
+  const [resourcesPerPage] = useState(parseInt(props.resourcesPerPage));
   const [offset, setOffset] = useState(0);
   const [resources, setResources] = useState([]);
   const [pageCount, setPageCount] = useState(0);
 
-  const getResourceData = () => {
-    return jobResources.map((resource) => (
+  const getResourceData = (data) => {
+    return data.map((resource) => (
       <div className="container" key={resource.id}>
         <ul className={props.containerListClassName}>
-           <li className={props.secondListClassName}  ><img className='image' src={resource.url} alt="" /></li>
-          <li className={props.listClassName}>{resource.name}</li>
+        { props.secondListClassName === 'video-list' ?
+           <li className={props.secondListClassName}  ><img className='image' src={resource.url} alt="" /></li> : null}
+          <li className={props.listClassName}>{resource.title}</li>
         </ul>
         <i className={`material-icons ${props.iconClassName}`}>{props.icon}</i>
 
@@ -51,7 +52,10 @@ const PaginatedItems =(props, {jobResources}) => {
   };
   return (
     <div className="main-app">
+      <div className="resources">
       {resources}
+      </div>
+      <div className="react_paginate">
       
       <ReactPaginate
    previousLabel={"<<"}
@@ -66,6 +70,7 @@ const PaginatedItems =(props, {jobResources}) => {
    subContainerClassName={"pages pagination"}
    activeClassName={"active"}
       />
+      </div>
     </div>
   );
 }
