@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import PaginatedItems from '../paginatedItems/PaginatedItems';
 import './ResourcesCard.css'
 
-const ResourcesCard = (props) => {
+const ResourcesCard = ({jobResources}, props) => {
     const [isReduce, setIsReduce] = useState(true);
+    console.log(jobResources);
     function handleChange() {
         setIsReduce(!isReduce)
 }
@@ -20,6 +21,7 @@ const ResourcesCard = (props) => {
                     <div className={props.firstClassName}>
                         <PaginatedItems 
                         url={props.url}
+                        jobResources={jobResources}
                         icon={props.icon}
                         iconClassName={props.iconClassName}
                         paginationClassName={props.paginationClassName}
