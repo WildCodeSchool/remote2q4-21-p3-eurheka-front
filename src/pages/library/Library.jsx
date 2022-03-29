@@ -14,8 +14,8 @@ const Library = () => {
           <h1>bibliothèques</h1>
           <p>Accédez à la bibliothèque de documents, vidéos...</p>
       </div>
-      {/* <DownloadDoc />
-      <VideoJob /> */}
+      <DownloadDoc />
+      <VideoJob />
       <BusinessSheet />
     </div>
   );
