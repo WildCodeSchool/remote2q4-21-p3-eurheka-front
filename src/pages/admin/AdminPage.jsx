@@ -4,6 +4,7 @@ import AdminJobs from '../../components/adminjobs/AdminJobs';
 import AdminRDV from '../../components/adminrdv/AdminRDV';
 import EventAdmin from '../../components/eventadmin/EventAdmin';
 import EventCategoryAdmin from '../../components/eventcategory/EventCategoryAdmin';
+import OpinionAdmin from '../../components/opinions_admin/OpinionAdmin';
 import ResourcesAdmin from '../../components/resources_admin/ResourcesAdmin';
 import ThemeAdmin from '../../components/themes_admin/ThemeAdmin';
 import UserManagement from '../../components/usermanagement/UserManagement';
@@ -48,6 +49,7 @@ const AdminPage = (props) => {
                 <AdminCvs />
                 <AdminRDV />
                 <AdminJobs />
+                <OpinionAdmin />
             </div>}
             {!admin && !superAdmin && <div>
                 Vous n'êtes pas autorisé à accèder à cette page
