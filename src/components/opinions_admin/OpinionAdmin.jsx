@@ -22,6 +22,12 @@ const OpinionAdmin = () => {
                 <h2 className='OpinionAdminTitle'>Gérer les avis</h2>
                 <i className={ showComponent ? "fa-solid fa-chevron-up CloseFolding" : "fa-solid fa-chevron-down CloseFolding"} onClick={() => handleShowClick('OpinionAdminBloc')}></i>
                 <div className="OpinionAdminBloc BlocHidden" id="OpinionAdminBloc">
+                    <div className='opinionMenu'>
+                        <p className='menuAuthor'>Auteur</p>
+                        <p className='menuDetail'>Avis</p>
+                        <p className='menuIsValid'>Validation</p>
+                        <p className='menuDelete'>Supprimer</p>
+                    </div>
                     <OpinionAdminContainer />
                 </div>
             </div>

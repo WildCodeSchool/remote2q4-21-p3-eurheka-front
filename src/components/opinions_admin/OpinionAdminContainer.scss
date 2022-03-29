@@ -1,3 +1,39 @@
 .OpinionAdminContainer{
     max-width: 100%;
+
+    
+
+    .opinionContainer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+
+    .opinionAuthor{
+        width: 150px;
+        // background-color: red;
+        margin-top: 20px;
+    }
+
+    .opinionDetail{
+        width: 50%;
+        // background-color: blue;
+        margin-top: 20px;
+    }
+
+    .opinionIsValid{
+        width: 100px;
+        margin-top: 20px;
+    }
+
+    .opinionIsValidButton{
+        width: 100px;
+        margin-top: 20px;
+    }
+
+    .opinionDeleteButton{
+        width: 100px;
+        margin-top: 20px;
+    }
 }
