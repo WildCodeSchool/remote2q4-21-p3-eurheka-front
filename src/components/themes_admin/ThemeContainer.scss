@@ -39,7 +39,7 @@
         top:50%;
         left:20%;
         width : 250px;
-        height: 80px;
+        height: 100px;
         z-index: 3;
         padding : 15px;
         background-color: var(--main-color-light-background);
@@ -50,15 +50,32 @@
        display: block;
     }
 
-    .ThemeModInput{
-        margin: 5px;
-    }
-
     .innerPopUp{
         position: relative;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
+
+    .newNameEvent {
+        font-size: 10px;
+        margin: 10px;
+    }
+
+    .ThemeModInput {
+        margin: 10px;
+        width: 100%;
+    }
+
+    .ThemeModBtn{
+        background-color: var(--main-color-dark-background);
+        color: white;
+        border: solid 1px var(--main-color-light-title); 
+        border-radius: 2px;
+        padding: 5px;
+        width: 100px;
+    }  
 
     .closePopup{
         position: absolute;

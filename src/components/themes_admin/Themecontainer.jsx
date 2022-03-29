@@ -92,8 +92,9 @@ const Themecontainer = ({ reload,setReload }) => {
             </ul>
             <div className="popUpModif" id="popup">
                 <div className="innerPopUp">
-                    <label htmlFor="newName_Event">Nouveau nom : <input className="ThemeModInput" type="text" value={newName} id="newName_Event" onChange={(e) => setNewName(e.target.value)} /></label>
-                    <input className="ThemeModInput" type="button" value="Modifier" onClick={handleModification} />
+                    <label htmlFor="newNameEvent">Nouveau nom : </label>
+                    <input className="ThemeModInput" type="text" value={newName} id="newName_Event" onChange={(e) => setNewName(e.target.value)} />
+                    <input className="ThemeModBtn" type="button" value="Modifier" onClick={handleModification} />
                     <span className='closePopup' onClick={handleClose}>X</span>
                 </div>
             </div>
