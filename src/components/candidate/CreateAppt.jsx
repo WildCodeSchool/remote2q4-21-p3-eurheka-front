@@ -27,7 +27,6 @@ const CreateAppt = ({uId, reload, setReload, appts, setAppts}) => {
         }) 
     };
 
-
     return (
         <div className='CreateAppt'>
             <div className='typeAppt'>

@@ -11,7 +11,6 @@ const ShowAppt = ({uId, reload, setReload}) => {
             const url = `${process.env.REACT_APP_API_URL}/event/myevents`;
             await axios.get(url, {withCredentials: true})
             .then((res) => {
-                console.log(res.data);
                 setAppts(res.data);
             })
             .catch((err) => {
