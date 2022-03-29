@@ -169,7 +169,7 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme })
                             </div>
                         </div>
                         </div>
-                        <input type="submit" value="ajouter le document" className='SubmitBtn' />
+                        <button type="submit" className='SubmitBtn'>Ajouter la ressource</button>
                     </div>
                 </form>
             </div>
