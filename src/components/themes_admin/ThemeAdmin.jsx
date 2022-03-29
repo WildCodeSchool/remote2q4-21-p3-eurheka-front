@@ -50,22 +50,24 @@ const ThemeAdmin = ({reload,setReload}) => {
 
     return (
         <div className='ThemeAdmin'>
-            <div className="navBarTheme">
-                <h2 className='ThemeAdminTitle'>Gérer les thèmes de documents</h2>
+                <div className='ThemeAdminTitle'>Gérer les thèmes de documents</div>
                 <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding" : "fa-solid fa-chevron-down CloseFolding"} onClick={() => handleShowClick('ThemeAdminBloc')}></i>
                 <div className="ThemeAdminBloc BlocHidden" id="ThemeAdminBloc">
-                    <form onSubmit={(e) => handleAddSubmit(e)}>
-                        <div className="ThemeAdd">
-                            <h3 className='AddThemeTitle'>Ajouter un thème</h3>
-                            <label htmlFor="themeName">Nom : <input type="text" value={themeName} onChange={(e) => setThemeName(e.target.value)} id="themeName" /></label>
-                            <input type="submit" value="Ajouter" className='AddThemeBtn'/>
-                        </div>
-                    </form>
-                    <div>
+                    <div className='ExistingTheme'>
+                        <div className='ExistingThemeTitle'>Mes thèmes créés</div>
                         <Themecontainer reload={reload} setReload={setReload}/>
                     </div>
+                    <div className='CreateTheme'>                        
+                        <form className='formTheme' onSubmit={(e) => handleAddSubmit(e)}>
+                               <div className='AddThemeTitle'>Ajouter un thème</div>
+                               <div className='duoTheme'>
+                                   <label className='labelTheme' htmlFor="themeName">Nom du thème </label>
+                                   <input className='inputTheme' type="text" value={themeName} onChange={(e) => setThemeName(e.target.value)} id="themeName" />
+                               </div>
+                               <button type="submit" value="Ajouter" className='AddThemeBtn'>Ajouter</button>
+                        </form>
+                    </div>
                 </div>
-            </div>
         </div>
     )
 }
