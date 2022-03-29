@@ -143,17 +143,19 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme })
                     <div className="newDocMainContainer">
                         <div className="newDocOptions">
                         <div className='NewResourceDivContainer'>
-                            <div className='AddDocTitle'>Ajouter un nouveau document</div>
-                            <label htmlFor="name" className='LabelAdminContainer'>Nom du document : <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} /> </label>
-                            {catDoc > 1 ? <FileUploader className="DownloadFile" handleChange={handleChange} name="file" types={fileTypes} label="Glisser et déposer le fichier" /> : <> <label forhtml="video" className='LabelAdminContainer'>Chemin de la vidéo : <input type="text" id="video" value={pathVideo} onChange={(e) => setPathVideo(e.target.value)} /> </label></>}
-                            <div className='publicDuo'>
-                                <label htmlFor='' className='LabelAdminContainer'>Destiné au public : </label>
-                                <select className='publicSelect' onChange={(e) => setVisibility(e.target.value)}>
-                                    <option value="1">Non connecté</option>
-                                    <option value="2">Utilisateur connecté</option>
-                                    <option value="3">Entreprise</option>
-                                </select>
-                            </div>                          
+                            <div className="AddDocTitle">Ajouter un nouveau document</div>
+                            <div className="blocChoices">
+                                <label htmlFor="name" className='LabelAdminContainer'>Nom du document : <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} /> </label>
+                                {catDoc > 1 ? <FileUploader className="DownloadFile" handleChange={handleChange} name="file" types={fileTypes} label="Glisser et déposer le fichier" /> : <> <label forhtml="video" className='LabelAdminContainer'>Chemin de la vidéo : <input type="text" id="video" value={pathVideo} onChange={(e) => setPathVideo(e.target.value)} /> </label></>}
+                                <div className='publicDuo'>
+                                    <label htmlFor='' className='LabelAdminContainer'>Destiné au public : </label>
+                                    <select className='publicSelect' onChange={(e) => setVisibility(e.target.value)}>
+                                        <option value="1">Non connecté</option>
+                                        <option value="2">Utilisateur connecté</option>
+                                        <option value="3">Entreprise</option>
+                                    </select>
+                                </div>   
+                            </div>                       
                         </div>
                         <div className="ThemeContainer">
                              Choisissez un thème dans la liste suivante:

@@ -61,6 +61,13 @@
         margin: 10px;
     }
 
+    .blocChoices {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+    }
+
     .SubmitBtn{
         margin: 10px;
         background-color: var(--main-color-light-title);
