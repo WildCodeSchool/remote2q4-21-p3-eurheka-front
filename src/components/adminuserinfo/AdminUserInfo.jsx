@@ -66,41 +66,53 @@ const AdminUserInfo = ({ user, uId }) => {
 
     return (
         <div className='AdminUserInfo'>
-            <h2 className='AdminUserInfoTitle'>Mes informations</h2>
+            <div className='AdminUserInfoTitle'>Mes informations</div>
             <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding" : "fa-solid fa-chevron-down CloseFolding"} onClick={() => handleShowClick('AdminUserInfoBloc')}></i>
             <div className="AdminUserInfoBloc BlocHidden" id="AdminUserInfoBloc">
-                <div className="AdminUserInfonContainer">
+                <div className="AdminInfoContainer">
                     <div className="AdminUserInfoParts">
-                        <label htmlFor="name_user" className='labelInfos'>Nom : 
-                            <input className='createUserInput' type="text" id="name_user" value={lastname} onChange={(e) => { setLastname(e.target.value) }} />
-                        </label>
-                        <label htmlFor="firstname" className='labelInfos'>Prénom : 
-                            <input className='createUserInput' type="text" id="firstname" value={firstname} onChange={(e) => { setFirstname(e.target.value) }} />
-                        </label>
+                        <div className="AdminDuo">
+                            <label htmlFor="name_user" className='labelUserInfo'>Nom : </label>
+                            <input className='inputUserInfo' type="text" id="name_user" value={lastname} onChange={(e) => { setLastname(e.target.value) }} />
+                        </div>
+                        <div className="AdminDuo">
+                            <label htmlFor="firstname" className='labelUserInfo'>Prénom : </label>
+                            <input className='inputUserInfo' type="text" id="firstname" value={firstname} onChange={(e) => { setFirstname(e.target.value) }} />
+                        </div>
                     </div>
                     <div className="AdminUserInfoParts">
-                        <label htmlFor="phone" className='labelInfos'>Mobile : 
-                            <input className='createUserInput' type="text" id="phone" value={phone} onChange={(e) => { setPhone(e.target.value) }} />
-                        </label>
-                        <label htmlFor="email" className='labelInfos'>Email : 
-                            <input className='createUserInput' type="text" id="email" value={email} onChange={(e) => { setEmail(e.target.value) }} />
-                        </label>
-                        <label htmlFor="address" className='labelInfos'>Adresse :
-                            <input className='createUserInput' type="text" id="address" value={address} onChange={(e) => { setAddress(e.target.value) }} />
-                        </label>
+                        <div className="AdminDuo">
+                            <label htmlFor="phone" className='labelUserInfo'>Mobile : </label>
+                            <input className='inputUserInfo' type="text" id="phone" value={phone} onChange={(e) => { setPhone(e.target.value) }} />
+                        </div>
+                        <div className="AdminDuo">
+                            <label htmlFor="email" className='labelUserInfo'>Email :</label>
+                            <input className='inputUserInfo' type="text" id="email" value={email} onChange={(e) => { setEmail(e.target.value) }} />
+                        </div>
+                    </div>
+                    <div className="AdminUserInfoParts">
+                        <div className="AdminDuo">
+                            <label htmlFor="address" className='labelUserInfo'>Adresse :</label>
+                            <input className='inputUserInfo' type="text" id="address" value={address} onChange={(e) => { setAddress(e.target.value) }} />
+                        </div>
                     </div>
                     <div className="AdminUserInfoPassword">
-                        Laisser le mot de passe vide si vous ne souhaitez pas le changer.
-                        <label htmlFor="password1" className='labelPassword'>Mot de passe
-                            <input className='passwordInput' type="password" id="password1" value={password1} onChange={(e) => { setPassword1(e.target.value) }} />
-                        </label>
-                        <label htmlFor="password2" className='labelPassword'>Confirmer le mot de passe
-                            <input className='passwordInput' type="password" id="password2" value={password2} onChange={(e) => { setPassword2(e.target.value) }} />
-                        </label>
+                        <p>Indiquez ci-dessous votre nouveau mot de passe en cas de changement.</p>
+                        <div className="AdminUserInfoParts">
+                            <div className="AdminInfoPassword">
+                                <label htmlFor="password1" className='labelPassword'>Mot de passe</label>
+                                <input className='passwordInput' type="password" id="password1" value={password1} onChange={(e) => { setPassword1(e.target.value) }} />
+                            </div>
+                            <div className="AdminInfoPassword">
+                                <label htmlFor="password2" className='labelPassword'>Confirmer le mot de passe</label>
+                                <input className='passwordInput' type="password" id="password2" value={password2} onChange={(e) => { setPassword2(e.target.value) }} />
+                            </div>
+                        </div>
+                        <div className="btnContainer">
+                            <button className="ModifyInfoBtn" onClick={handleSubmit}>Modifier mes informations</button>
+                        </div>
                     </div>
-                    <div className="AdminUserInfoParts">
-                        <button onClick={handleSubmit}>Modifier</button>
-                    </div>
+                    
                 </div>
             </div>
         </div>
