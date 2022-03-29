@@ -99,8 +99,15 @@
     }
 
     .AddThemeBtn{
-        width: 125px;
-        margin: 10px 0;
+        margin: 10px;
+        background-color: var(--main-color-light-title);
+        color: var(--main-color-dark-background);
+        border: solid 1px var(--main-color-light-title);
+        border-radius: 2px;
+        padding: 5px;
+        width: 120px;
+        height: 40px;
+        font-size: 12px;
     }
 
 }
