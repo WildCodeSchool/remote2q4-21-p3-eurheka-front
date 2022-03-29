@@ -3,6 +3,7 @@ import axios from "axios";
 import CandidateInfos from '../../components/candidate/CandidateInfos';
 import CandidateSituation from '../../components/candidate/CandidateSituation';
 import CandidateDoc from '../../components/candidate/CandidateDoc';
+import CandidateAppointment from '../../components/candidate/CandidateAppointment';
 import CandidateSettings from '../../components/candidate/CandidateSettings';
 import { UserIdContext } from '../../context/AppContext';
 import "./UserPage.css";
@@ -53,6 +54,8 @@ const UserPage = (props) => {
                 user={user}
                 setUser={setUser}/>
                 <CandidateDoc 
+                uId={uId}/>
+                <CandidateAppointment 
                 uId={uId}/>
                 <CandidateSettings />
             </div>}            

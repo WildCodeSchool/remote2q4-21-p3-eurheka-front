@@ -106,10 +106,7 @@ const NavBar = () => {
                             <NavLink to="/mon-profil-particulier" className={({ isActive }) =>
                             isActive ? "selected" : "navigation-link"} onClick={scrollToMenu}>Mon profil</NavLink>
                         }
-                        {!admin&&companyUser&&
-                            <NavLink to="/mon-profil-entreprise" className={({ isActive }) =>
-                            isActive ? "selected" : "navigation-link" } onClick={scrollToMenu}>Mon profil entreprise</NavLink>
-                        }
+                        
                         <Disconnect />
                     </div>
                 }
@@ -118,3 +115,8 @@ const NavBar = () => {
     );
 };
 export default NavBar;
+
+/*{!admin&&companyUser&&
+    <NavLink to="/mon-profil-entreprise" className={({ isActive }) =>
+    isActive ? "selected" : "navigation-link" } onClick={scrollToMenu}>Mon profil entreprise</NavLink>
+}*/
