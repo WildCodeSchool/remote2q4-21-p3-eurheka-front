@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
+import { UserIdContext } from  '../../context/AppContext';
 import './UserActionInscription.scss'
 
 const UserActionInscription = () => {
+
+    const {scrollToTop}=useContext( UserIdContext);
     
     return (
         <div className='UserActionInscription'>
@@ -12,7 +15,7 @@ const UserActionInscription = () => {
             </div>
             <p className='card-result'>---</p>
             <p className='card-description'>Rejoignez-nous pour soumettre votre CV</p>
-            <NavLink to="/login"><button className='card-button'>S'inscrire</button></NavLink>
+            <NavLink to="/login"><button className='card-button' onClick={scrollToTop}>S'inscrire</button></NavLink>
         </div>
     )
 }

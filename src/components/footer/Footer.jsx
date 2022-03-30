@@ -7,19 +7,7 @@ import "./Footer.css"
 
 const Footer = (props) => {
     const {footerStyle, setFooterStyle} = props
-    const {uId}=useContext( UserIdContext);
-
-    const scrollToTop = () => {
-        let pageHeight = 0
-        if (uId === 0) {
-            pageHeight = window.innerHeight;
-        }
-        window.scrollTo({
-            top: pageHeight,
-            left: 0,
-            behavior: 'smooth'
-        });
-    };
+    const {scrollToTop}=useContext( UserIdContext);
 
     return (
         <div className={footerStyle ? 'Footer' : 'Footer-light'}>
