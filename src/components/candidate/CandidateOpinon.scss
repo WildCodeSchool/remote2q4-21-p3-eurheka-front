@@ -1,0 +1,56 @@
+.CandidateOpinon{
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    background-color: var(--main-color-dark-background);
+    color: var(--main-color-light-title);
+    font-family: var(--text-font);
+    padding: 20px;
+    margin: 30px;
+
+    .descriptionOpinion{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .descriptionOpinionNone{
+        display: none;
+    }
+
+    .descriptionContainer{
+        height: 200px;
+        width: 400px;
+        text-align: center;
+        padding: 10px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .descriptionTitle{
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+
+    .displayButton{
+        width: 180px;
+        height: 40px;
+        background-color: var(--main-color-light-button);
+        color: var(--main-color-dark-text);
+        margin: 20px;
+    }
+    .displayButtonNone{
+        display: none;
+    }
+
+    .validateOpinion{
+        width: 180px;
+        height: 40px;
+        background-color: var(--main-color-light-button);
+        color: var(--main-color-dark-text);
+        margin: 20px;
+    }
+
+}

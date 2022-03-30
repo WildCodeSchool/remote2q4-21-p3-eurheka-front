@@ -6,6 +6,7 @@ import CandidateDoc from '../../components/candidate/CandidateDoc';
 import CandidateAppointment from '../../components/candidate/CandidateAppointment';
 import CandidateSettings from '../../components/candidate/CandidateSettings';
 import { UserIdContext } from '../../context/AppContext';
+import CandidateOpinon from '../../components/candidate/CandidateOpinon';
 import "./UserPage.css";
 
 const UserPage = (props) => {
@@ -58,6 +59,7 @@ const UserPage = (props) => {
                 <CandidateAppointment 
                 uId={uId}/>
                 <CandidateSettings />
+                <CandidateOpinon uId={uId} user={user}/>
             </div>}            
         </div>
     )
