@@ -10,6 +10,7 @@ import ResourcesAdmin from '../../components/resources_admin/ResourcesAdmin';
 import ThemeAdmin from '../../components/themes_admin/ThemeAdmin';
 import UserManagement from '../../components/usermanagement/UserManagement';
 import { UserIdContext } from '../../context/AppContext';
+import "./AdminPage.css";
 
 const AdminPage = (props) => {
     const [reload, setReload] = useState(false);
@@ -47,8 +48,10 @@ const AdminPage = (props) => {
         <div>
             {admin && <div className="AdminPage">
                 {/* Page administrateur */}
-                <h1>Administration</h1>
-                <h2>administration générale</h2>
+                <div className="headerAdminPage">
+                <h1 className="AdminMainTitle">Mon profil administration</h1>
+                <h2 className="AdminSecTitle">Vos options d'administration</h2>
+                </div>
                 <AdminUserInfo
                     user={user}
                     uId={uId}
@@ -68,7 +71,7 @@ const AdminPage = (props) => {
                 />
             </div>}
             {superAdmin && <div className="SuperAdminPage">
-                <h2>Super Admin</h2>
+                <h2 className="AdminSecTitle">Vos options de super administrateur</h2>
                 {/* Page super administrateur */}
                 <UserManagement />
                 <AdminCvs />
