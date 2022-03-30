@@ -1,6 +1,5 @@
 import {useState, useEffect} from 'react';
 import ResourcesCard from '../resourcesCard/ResourcesCard';
-// import {useParams} from "react-router-dom";
 import axios from 'axios';
 import './BusinessSheet.css'
 import JobResourceCard from '../resourcesCard/JobResourceCard';
@@ -12,6 +11,12 @@ const BusinessSheet = () => {
   const [currentPage, setCurrentPage] = useState(1);
   // indique le nombre de ressources par pages
   const [resourcesPerPage, setResourcesPerPage] = useState(5);
+  const [isReduce, setIsReduce] = useState(true);
+
+  function handleChange() {
+      setIsReduce(!isReduce)
+}
+
 
   // fetch des ressources depuis la BDD
   useEffect(() => {
@@ -33,22 +38,22 @@ const BusinessSheet = () => {
 
   return (
     <div className="BusinessSheet">
-          <JobResourceCard
-            // mainTitle = "Fiches métiers"
-            // mainTitleClassName='mainTitle-lightTheme'
-            // // url={'https://jsonplaceholder.typicode.com/posts'}
-            // listClassName='list-darkTheme'
-            // containerListClassName='container-list'
+      <div className='mainTitle-lightTheme'>
+      <h2>Fiches métiers</h2>
+      <span onClick={handleChange}>{isReduce ? <i className="fa-solid fa-chevron-up"></i> : <i className="fa-solid fa-chevron-down"></i> }</span>
 
-            // icon='visibility'
-            // iconClassName='documents'
-            // firstClassName='doc-resources-container'
-            // secondClassName='doc-resources-container-reduced'
-            // paginationClassName='doc-pagination'
+      </div>
+      
+      {isReduce ?
+        <div className='doc-resources-container'>
+          <JobResourceCard
+            secondListClassName='doc-list'
+            icon="visibility"
             currentResources={currentResources}
             loading={loading}
           />
           <Pagination resourcesPerPage={resourcesPerPage} totalResources={jobResources.length} paginate={paginate} />
+          </div> : null}
     </div>
     )
   }
