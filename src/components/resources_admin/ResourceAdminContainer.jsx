@@ -181,7 +181,8 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme })
                     displayModal={handleModal}
                     resource={displayId}
                     reload={reload}
-                    setReload={setReload} />
+                    setReload={setReload}
+                    reloadTheme={reloadTheme} />
                 {docs.map((doc, index) => {
                     return <div key={index} className="ResourceCard" onClick={() => handleModal(doc.id_resource, true)}>{doc.name}
                     </div>
