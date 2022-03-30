@@ -17,9 +17,11 @@ const AdminPage = (props) => {
     const [reloadEvent, setReloadEvent] = useState(false);
     const [user,setUser]=useState(null);
     const { uId, uLevel } = useContext(UserIdContext);
+    
     useEffect(()=>{
         const getUser=async()=>{
             const url = `${process.env.REACT_APP_API_URL}users/${uId}`;
+            console.log('axios get');
             await axios.get(url, {withCredentials: true})
             .then((res) => {
                 setUser(res.data)
@@ -34,7 +36,7 @@ const AdminPage = (props) => {
             })
         }
         getUser();
-    },[]);
+    },[uId]);
 
     let admin = false;
     let superAdmin = false;
