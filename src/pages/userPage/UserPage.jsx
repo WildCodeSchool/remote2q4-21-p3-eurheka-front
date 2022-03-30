@@ -5,8 +5,8 @@ import CandidateSituation from '../../components/candidate/CandidateSituation';
 import CandidateDoc from '../../components/candidate/CandidateDoc';
 import CandidateSettings from '../../components/candidate/CandidateSettings';
 import { UserIdContext } from '../../context/AppContext';
-import "./UserPage.css";
 import CandidateOpinon from '../../components/candidate/CandidateOpinon';
+import "./UserPage.css";
 
 const UserPage = (props) => {
     const [user, setUser] =useState(null);

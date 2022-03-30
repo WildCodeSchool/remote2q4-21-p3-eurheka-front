@@ -25,7 +25,6 @@ const CandidateOpinon = ({user, uId}) => {
             alert('Veuillez remplir le champs de description');
             return -1;
         }
-
         const newOpinion = {
             opinion: description,
             author: firstname,
@@ -43,10 +42,7 @@ const CandidateOpinon = ({user, uId}) => {
         .catch((err) => {
             console.log(err)
         }) 
-
-
     }
-
 
     return (
         <div className='CandidateOpinon'>
