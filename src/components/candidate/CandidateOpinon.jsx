@@ -63,6 +63,7 @@ const CandidateOpinon = ({user, uId}) => {
                     className='descriptionContainer'
                     onFocus={(e) => e.target.placeholder = ""}  
                     onChange={(e) => setDescription(e.target.value)}
+                    maxlength="500"
                 />
                 <button 
                 type="submit"
