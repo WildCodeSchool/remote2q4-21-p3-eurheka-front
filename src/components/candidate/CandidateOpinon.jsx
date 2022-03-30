@@ -22,7 +22,7 @@ const CandidateOpinon = ({user, uId}) => {
     const submitOpinion = (e) => {
         e.preventDefault();
         if(description===''){
-            alert('Veuillez remplir le champs de description');
+            alert('Veuillez remplir le champ de description');
             return -1;
         }
         const newOpinion = {
