@@ -27,7 +27,6 @@ const EventCategoryContainer = ({ reload,setReload }) => {
         setIdCategory(id);
         const popup = document.getElementById('popupEventCat');
         popup.classList.add('displayPopup2');
-        console.log(popup.classList);
     }
 
     const handleModification = () => {
@@ -63,7 +62,6 @@ const EventCategoryContainer = ({ reload,setReload }) => {
     const handleClose=()=>{
         const popup = document.getElementById('popupEventCat');
         popup.classList.remove('displayPopup2');
-        console.log(popup.classList);
     }
 
     return (
