@@ -68,7 +68,7 @@
     color: white;
     background-color: var(--main-color-light-background);
     /* background-position: center; */
-    /* width: 40vw; */
+    width: 450px;
     color: var(--main-color-dark-text);
     text-align: center;
     padding: 10px;
@@ -78,10 +78,27 @@
 }
 
 .video-container-list {
-    width: 70vw;
+    width: 50vw;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
+.video-responsive {
+    overflow: hidden;
+    /* padding-bottom: 56.25%; */
+    position: relative;
+    height: 0;
+  }
+  
+  .video-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 80%;
+    width: 80%;
+    position: absolute;
+  }
 
+  .iframe {
+      width: 100%;
+  }

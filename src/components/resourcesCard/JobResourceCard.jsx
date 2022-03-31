@@ -16,11 +16,13 @@ const JobResourceCard = ({ currentResources, loading, firstClassName, secondList
       <ul className={firstClassName}>
         {currentResources.map(item => (
           <div>
-            {/* {secondListClassName === 'video-list' ?
-              <li className={secondListClassName}  ><img className='image' src={item.path} alt="" /></li> : null} */}
-          <li  className={secondListClassName} key={currentResources.id}>
-              <p>{item.name}</p>
-              <i className={`material-icons documents`}>{icon}</i>
+            {secondListClassName === 'video-list' ?
+              <li className={secondListClassName}  >
+                <iframe className='iframe' width="560" height="315" src={item.path} title={item.name} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li> : null}
+              <li  className={secondListClassName} key={currentResources.id}>
+                <p>{item.name}</p>
+              {/* <i className={`material-icons documents`}>{icon}</i> */}
+              <a href={item.path}><i className={`material-icons documents`}>{icon}</i></a>
           </li>
           </div>
           
