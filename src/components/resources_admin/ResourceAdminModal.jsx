@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
 import './ResourceAdminModal.scss';
 
-const ResourceAdminModal = ({ resource, displayModal,setReload,reload }) => {
+const ResourceAdminModal = ({ resource, displayModal,setReload,reload,reloadTheme }) => {
     const [docs, setDocs] = useState(null);
     const [themeUsed, setThemeUsed] = useState([]);
     const [visibility, setVisibility] = useState();
@@ -31,7 +31,7 @@ const ResourceAdminModal = ({ resource, displayModal,setReload,reload }) => {
             }
         }
         fetchDoc();
-    }, [resource]);
+    }, [resource,reloadTheme]);
 
     const handleChangeTheme = (id) => {
         //Find Theme in array
@@ -103,7 +103,7 @@ const ResourceAdminModal = ({ resource, displayModal,setReload,reload }) => {
             {docs && <div className="ModalAdminDoc">
                 <form onSubmit={(e) => sendDoc(e)}>
                     <div className="DivHeadDocModal">
-                        <label className='LabelDocContainer' htmlFor='name'> Nom : <input type="text" id="name" value={docs.name} onChange={(e) => setDocName(e.target.value)} /> </label>
+                        <label className='LabelDocContainer' htmlFor='name'> Nom : <input type="text" id="name" value={docName} onChange={(e) => setDocName(e.target.value)} /> </label>
                         <label className='LabelDocContainer' htmlFor='visibleCat'>Visibilité : <select value={visibility} onChange={(e) => { setVisibility(e.target.value) }}>
                             <option value="1">Utilisateur non connecté</option>
                             <option value="2">Utilisateur connecté</option>
@@ -116,7 +116,7 @@ const ResourceAdminModal = ({ resource, displayModal,setReload,reload }) => {
                             <div className="ThemeContainer">
                                 {themeUsed.map((theme, index) => {
                                     return (
-                                        <label className="LabelThemeContainer" key={index} htmlFor={theme.themeName}><input type="checkbox" id="{theme.themeName}" name="{theme.themeName}" value="{theme.idTheme}" checked={theme.checked} onChange={() => handleChangeTheme(theme.idTheme)} /> {theme.themeName}</label>
+                                        <label className="LabelThemeContainer" key={index} htmlFor={theme.themeName}><input type="checkbox" id="{theme.idTheme}" name="{theme.themeName}" value="{theme.idTheme}" checked={theme.checked} onChange={() => handleChangeTheme(theme.idTheme)} /> {theme.themeName}</label>
                                     )
                                 })}
                             </div>
