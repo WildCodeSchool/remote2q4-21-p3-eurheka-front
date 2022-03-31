@@ -40,17 +40,26 @@ const EventCategoryAdmin = ({ setReloadEvent, reloadEvent }) => {
 
     return (
         <div className='EventCategoryAdmin'>
-            <h2 className='EventCategoryAdminTitle'>Gérer les Catégories d'événements</h2>
+            <div className='EventCategoryAdminTitle'>Gérer les Catégories d'événements</div>
             <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding" : "fa-solid fa-chevron-down CloseFolding"} onClick={() => handleShowClick('EventCategoryAdminBloc')}></i>
             <div className="EventCategoryAdminBloc BlocHidden" id="EventCategoryAdminBloc">
                 <div className="EventCategoryAdminAdd">
-                    <h3 className='EventCategoryAdminAddTitle'>Ajouter une catégorie d'évènement</h3>
-                    <label className='EventCategoryAdminLabel' htmlFor="eventName">Nom de la catégorie : <input type="text" id="eventName" value={categoryName} onChange={(e) => setCategoryName(e.target.value)} /></label>
-                    <input className='EventCategoryAdminAddBtn' type="button" value="Ajouter" onClick={handleAddClick} />
-                </div>
-                <EventCategoryContainer 
-                    setReload={setReload}
-                    reload={reload}/>
+                    <div className="ExistingCategory">
+                        <div className='ExistingCategoryTitle'>Catégories existantes</div>
+                        <EventCategoryContainer 
+                         setReload={setReload}
+                         reload={reload}
+                        />
+                    </div>
+                    <div className="CreateCategory">
+                        <div className='CreateCategoryTitle'>Ajouter une catégorie d'évènement</div>
+                        <div className='duoCategory'>
+                            <label className='labelCategory' htmlFor="eventName">Nom de la catégorie : </label>
+                            <input type="text" id="eventName" value={categoryName} onChange={(e) => setCategoryName(e.target.value)} />
+                        </div>
+                        <input className='EventCategoryAdminAddBtn' type="button" value="Ajouter" onClick={handleAddClick} />
+                    </div>
+                </div>    
             </div>
         </div>
     )
