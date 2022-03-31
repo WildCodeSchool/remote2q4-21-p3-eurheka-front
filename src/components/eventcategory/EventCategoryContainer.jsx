@@ -25,12 +25,13 @@ const EventCategoryContainer = ({ reload,setReload }) => {
     const updateCategory = (text,id) => {
         setNewName(text);
         setIdCategory(id);
-        const popup = document.getElementById('popup');
-        popup.classList.toggle('displayPopup');
+        const popup = document.getElementById('popupEventCat');
+        popup.classList.add('displayPopup2');
+        console.log(popup.classList);
     }
 
     const handleModification = () => {
-        const popup = document.getElementById('popup');
+        const popup = document.getElementById('popupEventCat');
         const url = `${process.env.REACT_APP_API_URL}event/category/${idCategory}`;
         axios.put(url,{category_name:newName},{withCredentials:true})
             .then((res)=>{
@@ -41,7 +42,7 @@ const EventCategoryContainer = ({ reload,setReload }) => {
             .catch((err)=>{
                 console.log(err);
             })
-        popup.classList.toggle('displayPopup');
+        popup.classList.remove('displayPopup2');
     }
 
     const deleteCategory = (id) => {
@@ -60,8 +61,9 @@ const EventCategoryContainer = ({ reload,setReload }) => {
     }
 
     const handleClose=()=>{
-        const popup = document.getElementById('popup');
-        popup.classList.toggle('displayPopup');
+        const popup = document.getElementById('popupEventCat');
+        popup.classList.remove('displayPopup2');
+        console.log(popup.classList);
     }
 
     return (
@@ -87,7 +89,7 @@ const EventCategoryContainer = ({ reload,setReload }) => {
                     )
                 })}
             </ul>
-            <div className="popUpModif" id="popup">
+            <div className="popUpModif" id="popupEventCat">
                 <div className="innerPopUp">
                     <label htmlFor="newName">Nouveau nom : <input className="EventCategoryModInput" type="text" value={newName} id="newName" onChange={(e) => setNewName(e.target.value)} /></label>
                     <input className="EventCategoryModInput" type="button" value="Modifier" onClick={handleModification} />
