@@ -1,9 +1,27 @@
 .EventCategoryContainer{
     position: relative;
-    border : solid 1px black;
     margin : 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+
     .ModifCategoryBtn{
         margin-left: 15px;
+        background-color: var(--main-color-dark-background);
+        color: var(--main-color-light-title);
+        border: solid 1px var(--main-color-light-title); 
+        border-radius: 2px;
+        padding: 5px;
+        width: 100px;
+    }
+
+    .SuppressCategoryBtn {
+        margin-left: 15px;
+        background-color: var(--main-color-light-title);
+        color: var(--main-color-dark-background);
+        border: solid 1px var(--main-color-light-title);
+        border-radius: 2px;
+        padding: 5px;
+        width: 100px;
+        font-size: 12px;
     }
 
     .EventCategoryContainerlist{

@@ -81,7 +81,7 @@ const EventCategoryContainer = ({ reload,setReload }) => {
                             <input
                                 type="button"
                                 value="Supprimer"
-                                className='ModifCategoryBtn'
+                                className='SuppressCategoryBtn'
                                 onClick={() => deleteCategory(category.id_category)} />
                         </li>
                     )
