@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { NavLink } from 'react-router-dom'
+import { UserIdContext } from  '../../context/AppContext';
 import './ServiceCard.scss'
 
 export const ServiceCard = (props) => {
+
+    const {scrollToTop}=useContext( UserIdContext);
 
     const [changeSize, setChangeSize] = useState(true)
 
@@ -28,7 +31,7 @@ export const ServiceCard = (props) => {
                     {props.task7 ? <li>{props.task7}</li> : null }
                     {props.task8 ? <li>{props.task8}</li> : null }
                 </ul>
-                <NavLink to="/contact-avis"><button className='serviceButton'>S'inscrire</button></NavLink>
+                <NavLink to="/contact-avis" onClick={scrollToTop}><button className='serviceButton'>S'inscrire</button></NavLink>
             </div>
             <div className={changeSize ? props.SecondContainerClassReduce : props.secondContainerClass}>
                 <div className='serviceTitleContainer' onClick={changeButton}>
@@ -46,7 +49,7 @@ export const ServiceCard = (props) => {
                     {props.task7b ? <li>{props.task7b}</li> : null }
                     {props.task8b ? <li>{props.task8b}</li> : null }
                 </ul>
-                <NavLink to="/contact-avis"><button className='serviceButton'>S'inscrire</button></NavLink>
+                <NavLink to="/contact-avis"><button className='serviceButton' onClick={scrollToTop}>S'inscrire</button></NavLink>
             </div>
         </div>
     )
