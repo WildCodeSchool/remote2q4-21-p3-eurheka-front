@@ -87,7 +87,7 @@ const CandidateInfos = ({uId, user, setUser}) => {
                     </div>
                     <div className='otherLine'>
                        <label htmlFor="birthday" className='labelInfos'>Date de naissance</label>
-                       <input className='birthday' type="datetime-local" id="birthday" value={birthday} onChange={(e) => { setBirthday(e.target.value) }} />
+                       <input className='birthday' type="date" id="birthday" value={birthday} onChange={(e) => { setBirthday(e.target.value) }} />
                     </div>
                 </div> 
             </div> 

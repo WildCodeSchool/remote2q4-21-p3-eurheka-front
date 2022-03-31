@@ -6,7 +6,6 @@ import file from "../../assets/files-icons/file.png"
 const CV = ({path, idCV, cvs, setCVs, reload, setReload}) => {
 
     let newName ="";
-
     const getFileName = (fileName) => {
         if (fileName) {
             newName = fileName.split("_")[1];

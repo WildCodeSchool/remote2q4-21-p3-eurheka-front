@@ -1,4 +1,4 @@
-.CandidateDoc {
+.CandidateAppointment {
     width: 70%;
     height: auto;
     display: flex;
@@ -12,37 +12,38 @@
     margin: 30px;
 }
 
-.titleDoc {
+.titleAppt {
     width: 100%;
     text-align: left;
     margin-bottom: 20px;
 }
 
-.detailDoc {
+.detailAppt {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: left;
+    justify-content: space-between;
 }
 
-.myDoc {
+.myAppt {
     width: 55%;
     height: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
 }
 
-.titleMyDoc {
+.titleMyAppt {
     width: 200px;
     flex-wrap: wrap;
     margin-left: 0px;
     text-align: center;
+    margin: 10px;
 }
 
-.newDoc {
+.newAppt {
     width: 45%;
     height: 70%;
     display: flex;
@@ -51,10 +52,10 @@
     justify-content: left;
 }
 
-.titleNewDoc {
+.titleNewAppt {
     width: 200px;
     flex-wrap: wrap;
     margin-left: 0px;
     text-align: center;
+    margin: 10px;
 }
-

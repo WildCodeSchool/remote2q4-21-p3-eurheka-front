@@ -70,7 +70,7 @@ const EventAdmin = ({reloadEvent}) => {
                 <div className="EventAdminBloc BlocHidden" id="EventAdminBloc">
                     <div className="EventAdminAdd">
                         <h3 className='EventAdminAddTitle'>Ajouter un évènement</h3>
-                        <label className='EventAdminLabel' htmlFor="eventName">Nom de l'évènement : <input type="text" id="eventName" value={eventName} onChange={(e)=>setEventName(e.target.value)}/></label>
+                        <label className='EventAdminLabel' htmlFor="eventNameList">Nom de l'évènement : <input type="text" id="eventNameList" value={eventName} onChange={(e)=>setEventName(e.target.value)}/></label>
                         <label className='EventAdminLabel' htmlFor="eventDate">Date de l'évènement : <input type="datetime-local" id="eventDate" value={eventDate} onChange={(e)=>setEventDate(e.target.value)}/></label>
                         <label className='EventAdminLabel' htmlFor="eventCategory">
                             <select id="eventCategory" value={eventCategory} onChange={(e)=>setEventCategory(e.target.value)}>
