@@ -1,4 +1,4 @@
-.ThemeAdmin{  
+.AdminUserInfo{
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -10,9 +10,8 @@
     background-color: var(--main-color-dark-background);
     color: var(--main-color-light-title);
     font-family: var(--text-font);
-    
 
-    .ThemeAdminTitle{
+    .AdminUserInfoTitle{
         width: 100%;
         text-align: left;
         margin-bottom: 20px;
@@ -27,85 +26,69 @@
         color : white;
         right: 10px;
     }
- 
-    .ThemeAdminBloc{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: left;
+
+    .AdminUserInfoBloc{
+        display: block;
     }
     
     .BlocHidden{
         display: none;
     }
 
-    .ExistingTheme {
-        width: 60%;
-        height: 70%;
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-        justify-content: center;
-    }
-
-    .ExistingThemeTitle {
-        margin: 10px;
-        text-align: center;
-    }
-
-    .CreateTheme {
-        width: 40%;
-        height: 70%;
+    .AdminInfoContainer{
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        margin-left: 50px;
     }
-
-    .formTheme {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .AddThemeTitle{
-        margin: 10px;
-        text-align: center;
-    }
-
-    .duoTheme {
+ 
+    .AdminUserInfoParts{
+        width: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: center;
+        justify-content: left;
+        margin:10px;
     }
 
-    .labelTheme {
-        margin: 10px;
+    .AdminDuo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
     }
 
-    .inputTheme {
-        margin: 10px;
-        width: 250px;
+    .labelUserInfo{
+        width: 100px;
     }
 
-    .ThemeAdd{
-        padding : 10px;
+    .inputUserInfo {
+        width: 200px; 
+        margin-right: 60px;
+    }
+
+    .AdminUserInfoPassword {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
     }
 
-    .AddThemeBtn{
+    .btnContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 20px;
+    }
+
+    .ModifyInfoBtn {
         margin: 10px;
         background-color: var(--main-color-light-title);
         color: var(--main-color-dark-background);
         border: solid 1px var(--main-color-light-title);
         border-radius: 2px;
         padding: 5px;
-        width: 120px;
+        width: 180px;
         height: 40px;
         font-size: 12px;
     }
