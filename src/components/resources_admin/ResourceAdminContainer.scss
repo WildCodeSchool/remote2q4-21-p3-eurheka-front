@@ -96,6 +96,8 @@
     .ResourceCard{
         width: 120px;
         height: 40px;
+        display: flex;
+        flex-direction: column;
         border : solid 1px rgba(255, 255, 255, 0.1);
         text-align: center;
         padding: 5px;
@@ -111,13 +113,13 @@
         position: absolute;
         bottom :0;
         width: 320px;
-        max-height: 650px;
+        height: auto;
         background-color: var(--main-color-light-background);
         color : var(--sec-color-dark-text);
         display: block;
         z-index: 3; 
         padding: 10px;
-        border : solid rgba(255, 255, 255, 0.1) 2px;
+        
     }
 
     @media only screen and (min-width: 391px) and (max-width: 768px) {
@@ -148,8 +150,8 @@
         
         .ShowResourceModal{
             bottom : -100%;
-            width: 450px;
-            max-height: 650px;
+            width: 400px;
+            height: auto;
             padding: 10px;
         }
 
@@ -223,6 +225,25 @@
             width: 140px;
             height: 40px;
             font-size: 12px;
+        }
+
+        .ResourceModal {
+            width: 400px;
+            height: auto;
+            padding: 10px;
+        }
+
+        .ResourceCard{
+            width: 80px;
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            border : solid 1px rgba(255, 255, 255, 0.1);
+            text-align: center;
+            padding: 5px;
+            margin: 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+            object-fit: contain;
         }
     }
 }
