@@ -51,8 +51,20 @@ function App() {
       connected=true;
   }
 
+  const scrollToTop = () => {
+    let pageHeight = 0
+    if (uId === 0) {
+        pageHeight = window.innerHeight;
+    }
+    window.scrollTo({
+        top: pageHeight,
+        left: 0,
+        behavior: 'smooth'
+    });
+};
+
   return (
-    <UserIdContext.Provider value={{uId, uLevel, setUId, setULevel}} >
+    <UserIdContext.Provider value={{uId, uLevel, setUId, setULevel, scrollToTop}} >
     <div className="App">
       {!connected&&
         <SplashPage />
