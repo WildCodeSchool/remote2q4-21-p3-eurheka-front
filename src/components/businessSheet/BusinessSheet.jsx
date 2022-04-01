@@ -1,7 +1,6 @@
 import {useState, useEffect} from 'react';
-import ResourcesCard from '../resourcesCard/ResourcesCard';
 import axios from 'axios';
-import './BusinessSheet.css'
+import './BusinessSheet.css';
 import JobResourceCard from '../resourcesCard/JobResourceCard';
 import Pagination from '../resourcesCard/Pagination';
 
@@ -9,7 +8,6 @@ const BusinessSheet = () => {
   const [jobResources, setJobResources] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  // indique le nombre de ressources par pages
   const [resourcesPerPage, setResourcesPerPage] = useState(5);
   const [isReduce, setIsReduce] = useState(true);
 
@@ -17,8 +15,6 @@ const BusinessSheet = () => {
       setIsReduce(!isReduce)
 }
 
-
-  // fetch des ressources depuis la BDD
   useEffect(() => {
     const fetchResources = async () => {
       setLoading(true);
@@ -34,17 +30,16 @@ const BusinessSheet = () => {
   const currentResources = jobResources.slice(indexOfFirstResource, indexOfLastResource);
   
   const paginate = (pageNumber) => {
-    setCurrentPage(pageNumber)};
+    setCurrentPage(pageNumber);
+  }
 
   return (
-    <div className="BusinessSheet">
+    <div>
       <div className='mainTitle-lightTheme'>
-      <h2>Fiches métiers</h2>
-      <span onClick={handleChange}>{isReduce ? <i className="fa-solid fa-chevron-up"></i> : <i className="fa-solid fa-chevron-down"></i> }</span>
-
+        <h2>Fiches métiers</h2>
+        <span onClick={handleChange}>{isReduce ? <i className="fa-solid fa-chevron-up"></i> : <i className="fa-solid fa-chevron-down"></i> }</span>
       </div>
-      
-      {isReduce ?
+      { isReduce ?
         <div className='doc-resources-container'>
           <JobResourceCard
             secondListClassName='doc-list'
@@ -53,10 +48,9 @@ const BusinessSheet = () => {
             loading={loading}
           />
           <Pagination resourcesPerPage={resourcesPerPage} totalResources={jobResources.length} paginate={paginate} />
-          </div> : null}
+        </div> : null }
     </div>
     )
   }
-
 
 export default BusinessSheet;

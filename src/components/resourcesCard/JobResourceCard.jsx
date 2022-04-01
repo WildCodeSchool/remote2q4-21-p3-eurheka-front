@@ -5,17 +5,17 @@ const JobResourceCard = ({ currentResources, loading, firstClassName, secondList
   const [isReduce, setIsReduce] = useState(true);
 
     function handleChange() {
-        setIsReduce(!isReduce)
-}
+        setIsReduce(!isReduce);
+    }
+
   if(loading) {
       return <p>En cours de chargement...</p>
   }
 
-
   return (
     <div>
       <ul className={firstClassName}>
-        {currentResources.map(item => (
+        { currentResources.map(item => (
           <div>
             {secondListClassName === 'video-list' ?
               <li className={secondListClassName}  >
@@ -25,10 +25,9 @@ const JobResourceCard = ({ currentResources, loading, firstClassName, secondList
               <li  className={secondListClassName} key={currentResources.id}>
                 <p>{item.name}</p>
                 <a target="_blank" href={`${process.env.REACT_APP_URL}${item.path}`}><i className={`material-icons documents`}>{icon}</i></a> 
-          </li> }
+              </li> 
+            }
           </div>
-          
-
         ))}
       </ul>
     </div>

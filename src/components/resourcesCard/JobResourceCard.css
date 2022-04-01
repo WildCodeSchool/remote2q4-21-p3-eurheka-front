@@ -24,7 +24,6 @@
     margin-top: 80px;
 }
 
-
 .doc-resources-container {
     display: flex;
     flex-direction: column;
@@ -39,7 +38,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
     background : var(--main-color-dark-background);
     padding: 15px 25px 30px 25px;
     width: 80%;
@@ -54,7 +52,6 @@
     font-family: 'Poppins';
     color: white;
     background-color: var(--main-color-dark-background);
-    /* background-position: center; */
     width: 40vw;
     color: var(--main-color-lighter-text);
     text-align: center;
@@ -67,14 +64,12 @@
     font-family: 'Poppins';
     color: white;
     background-color: var(--main-color-light-background);
-    /* background-position: center; */
     width: 450px;
     color: var(--main-color-dark-text);
     text-align: center;
     padding: 10px;
     margin-bottom: 20px;
     margin-left:20px;
-
 }
 
 .video-container-list {
@@ -89,16 +84,16 @@
     /* padding-bottom: 56.25%; */
     position: relative;
     height: 0;
-  }
-  
-  .video-responsive iframe {
+}
+
+.video-responsive iframe {
     left: 0;
     top: 0;
     height: 80%;
     width: 80%;
     position: absolute;
-  }
+}
 
-  .iframe {
-      width: 100%;
-  }
+.iframe {
+    width: 100%;
+}

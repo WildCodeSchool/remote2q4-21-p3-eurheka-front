@@ -8,7 +8,6 @@ const DownloadDoc = () => {
   const [jobResources, setJobResources] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  // indique le nombre de ressources par pages
   const [resourcesPerPage, setResourcesPerPage] = useState(5);
   const [isReduce, setIsReduce] = useState(true);
 
@@ -16,8 +15,6 @@ const DownloadDoc = () => {
       setIsReduce(!isReduce)
 }
 
-
-  // fetch des ressources depuis la BDD
   useEffect(() => {
     const fetchResources = async () => {
       setLoading(true);
@@ -33,17 +30,16 @@ const DownloadDoc = () => {
   const currentResources = jobResources.slice(indexOfFirstResource, indexOfLastResource);
   
   const paginate = (pageNumber) => {
-    setCurrentPage(pageNumber)};
+    setCurrentPage(pageNumber);
+  }
 
   return (
-    <div className="BusinessSheet">
+    <div>
       <div className='mainTitle-lightTheme'>
-      <h2>Documents à télécharger</h2>
-      <span onClick={handleChange}>{isReduce ? <i className="fa-solid fa-chevron-up"></i> : <i className="fa-solid fa-chevron-down"></i> }</span>
-
-      </div>
-      
-      {isReduce ?
+        <h2>Documents à télécharger</h2>
+        <span onClick={handleChange}>{isReduce ? <i className="fa-solid fa-chevron-up"></i> : <i className="fa-solid fa-chevron-down"></i> }</span>
+      </div>    
+      { isReduce ?
         <div className='doc-resources-container'>
           <JobResourceCard
             secondListClassName="doc-list"
@@ -52,10 +48,9 @@ const DownloadDoc = () => {
             loading={loading}
           />
           <Pagination resourcesPerPage={resourcesPerPage} totalResources={jobResources.length} paginate={paginate} />
-          </div> : null}
+        </div> : null }
     </div>
     )
   }
-
 
 export default DownloadDoc;

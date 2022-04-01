@@ -8,7 +8,6 @@ const VideoJob = () => {
   const [jobResources, setJobResources] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  // indique le nombre de ressources par pages
   const [resourcesPerPage, setResourcesPerPage] = useState(4);
   const [isReduce, setIsReduce] = useState(true);
 
@@ -16,8 +15,6 @@ const VideoJob = () => {
       setIsReduce(!isReduce)
 }
 
-
-  // fetch des ressources depuis la BDD
   useEffect(() => {
     const fetchResources = async () => {
       setLoading(true);
@@ -33,29 +30,27 @@ const VideoJob = () => {
   const currentResources = jobResources.slice(indexOfFirstResource, indexOfLastResource);
   
   const paginate = (pageNumber) => {
-    setCurrentPage(pageNumber)};
+    setCurrentPage(pageNumber);
+  }
 
   return (
     <div className="BusinessSheet">
       <div className='mainTitle-darkTheme'>
-      <h2>Job vidéos</h2>
-      <span onClick={handleChange}>{isReduce ? <i className="fa-solid fa-chevron-up"></i> : <i className="fa-solid fa-chevron-down"></i> }</span>
-
+        <h2>Job vidéos</h2>
+        <span onClick={handleChange}>{isReduce ? <i className="fa-solid fa-chevron-up"></i> : <i className="fa-solid fa-chevron-down"></i> }</span>
       </div>
-      
-      {isReduce ?
+      { isReduce ?
         <div className='video-resources-container'>
           <JobResourceCard
-          firstClassName='video-container-list'
-          secondListClassName="video-list"
+            firstClassName='video-container-list'
+            secondListClassName="video-list"
             currentResources={currentResources}
             loading={loading}
           />
           <Pagination resourcesPerPage={resourcesPerPage} totalResources={jobResources.length} paginate={paginate} />
-          </div> : null}
+        </div> : null }
     </div>
     )
   }
-
 
 export default VideoJob;
