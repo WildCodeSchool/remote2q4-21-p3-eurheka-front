@@ -1,5 +1,7 @@
+//Desktop mode below
+
 .EventAdminContainer{
-    width: 100%;
+    width: 98%;
     height: auto;
     position: relative;
     margin : 10px;
@@ -19,13 +21,24 @@
         align-items: center; 
         height: auto; 
         width: auto;
-        color: yellow;
         font-size: 16px;
 
     }
 
     .EventAdminListItem{
         margin: 5px;
+        padding: 5px;
         display: inline-block;
+    }
+
+    .SuppressEventBtn {
+        margin-left: 15px;
+        background-color: var(--main-color-light-title);
+        color: var(--main-color-dark-background);
+        border: solid 1px var(--main-color-light-title);
+        border-radius: 2px;
+        padding: 5px;
+        width: 100px;
+        font-size: 12px;
     }
 }
