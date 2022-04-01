@@ -81,7 +81,7 @@ const EventCategoryContainer = ({ reload,setReload }) => {
                             <input
                                 type="button"
                                 value="Supprimer"
-                                className='ModifCategoryBtn'
+                                className='SuppressCategoryBtn'
                                 onClick={() => deleteCategory(category.id_category)} />
                         </li>
                     )
@@ -89,8 +89,9 @@ const EventCategoryContainer = ({ reload,setReload }) => {
             </ul>
             <div className="popUpModif" id="popupEventCat">
                 <div className="innerPopUp">
-                    <label htmlFor="newName">Nouveau nom : <input className="EventCategoryModInput" type="text" value={newName} id="newName" onChange={(e) => setNewName(e.target.value)} /></label>
-                    <input className="EventCategoryModInput" type="button" value="Modifier" onClick={handleModification} />
+                    <label className="newNameCategory" htmlFor="newName">Nouveau nom :</label>
+                    <input className="CategoryModInput" type="text" value={newName} id="newName" onChange={(e) => setNewName(e.target.value)} />
+                    <input className="CategoryModBtn" type="button" value="Modifier" onClick={handleModification} />
                     <span className='closePopup' onClick={handleClose}>X</span>
                 </div>
             </div>

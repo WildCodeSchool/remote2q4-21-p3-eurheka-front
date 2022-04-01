@@ -64,15 +64,28 @@ const EventAdmin = ({reloadEvent}) => {
 
     return (
         <div className='EventAdmin'>
-            <div>
-                <h2 className='EventAdminTitle'>Gérer les évenements</h2>
+                <div className='EventAdminTitle'>Gérer les évenements</div>
                 <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding" : "fa-solid fa-chevron-down CloseFolding"} onClick={() => handleShowClick('EventAdminBloc')}></i>
                 <div className="EventAdminBloc BlocHidden" id="EventAdminBloc">
-                    <div className="EventAdminAdd">
-                        <h3 className='EventAdminAddTitle'>Ajouter un évènement</h3>
-                        <label className='EventAdminLabel' htmlFor="eventNameList">Nom de l'évènement : <input type="text" id="eventNameList" value={eventName} onChange={(e)=>setEventName(e.target.value)}/></label>
-                        <label className='EventAdminLabel' htmlFor="eventDate">Date de l'évènement : <input type="datetime-local" id="eventDate" value={eventDate} onChange={(e)=>setEventDate(e.target.value)}/></label>
-                        <label className='EventAdminLabel' htmlFor="eventCategory">
+                    <div className="ExistingEvent">
+                    <div className='ExistingEventTitle'>Evènements existants</div>
+                        <EventAdminContainer
+                        reload={reload}
+                        setReload={setReload}
+                        />
+                    </div>
+                    <div className="CreateEvent">
+                        <div className='CreateEventTitle'>Ajouter un évènement</div>
+                        <div className='duoEvent'>
+                            <label className='labelEvent' htmlFor="eventNameList">Nom de l'évènement :</label>
+                            <input type="text" id="eventNameList" value={eventName} onChange={(e)=>setEventName(e.target.value)}/>
+                        </div>
+                        <div className='duoEvent'>
+                            <label className='labelEvent' htmlFor="eventDate">Date de l'évènement :</label>
+                            <input type="datetime-local" id="eventDate" value={eventDate} onChange={(e)=>setEventDate(e.target.value)}/>
+                        </div>
+                        <div className='duoEvent'>
+                            <label className='labelEvent' htmlFor="eventCategory">Catégorie de l'évènement :</label>
                             <select id="eventCategory" value={eventCategory} onChange={(e)=>setEventCategory(e.target.value)}>
                                 {categories && categories.map((category) => {
                                     return (
@@ -80,15 +93,10 @@ const EventAdmin = ({reloadEvent}) => {
                                     )
                                 })}
                             </select>
-                        </label>
+                        </div>
                         <input className='EventAdminAddBtn' type="button" value="Ajouter" onClick={handleAddClick}/>
                     </div>
-                    <EventAdminContainer
-                     reload={reload}
-                     setReload={setReload}
-                     />
                 </div>
-            </div>
         </div>
     )
 }
