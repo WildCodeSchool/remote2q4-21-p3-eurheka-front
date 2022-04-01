@@ -119,16 +119,16 @@ const UserAdminContainer = () => {
                             <tr key={user.id_users}>
                                 <td className="usersNameCell"><span className="Clickable" onClick={()=>handlePopUp(user.id_users)}>{user.userName}</span></td>
                                 <td className="usersAdminCell">{user.name === null ? 'Aucune' : user.name}</td>
-                                <td className="usersAdminCell">
-                                    <select value={user.user_level} onChange={(e) => handleLevelChange(e, user.id_users)}>
+                                <td className="usersAdminLevel">
+                                    <select className="usersAdminSelect" value={user.user_level} onChange={(e) => handleLevelChange(e, user.id_users)}>
                                         <option value="2">Utilisateur connecté</option>
                                         <option value="3">Entreprise</option>
                                         <option value="4">Administrateur</option>
                                         <option value="5">Super Admin</option>
                                     </select>
                                 </td>
-                                <td className="usersAdminCell"><button onClick={() => handleUpdate(user.id_users)}>Modifier</button></td>
-                                <td className="usersAdminCell"><button onClick={() => handleRemove(user.id_users)}>Supprimer</button></td>
+                                <td className="usersAdminCell"><button className="usersAdmModify" onClick={() => handleUpdate(user.id_users)}>Modifier</button></td>
+                                <td className="usersAdminCell"><button className="usersAdmSuppress" onClick={() => handleRemove(user.id_users)}>Supprimer</button></td>
                             </tr>)
                     })}
                 </tbody>
