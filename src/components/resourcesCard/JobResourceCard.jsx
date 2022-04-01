@@ -1,18 +1,39 @@
-import React from 'react';
+import {useState} from 'react';
+import './JobResourceCard.css';
 
-const JobResourceCard = ({ currentResources, loading }) => {
+const JobResourceCard = ({ currentResources, loading, firstClassName, secondListClassName, icon } ) => {
+  const [isReduce, setIsReduce] = useState(true);
+
+    function handleChange() {
+        setIsReduce(!isReduce);
+    }
+
   if(loading) {
       return <p>En cours de chargement...</p>
   }
 
+
+
   return (
-    <ul>
-        {currentResources.map(item => (
-            <li key={currentResources.id}>
-                {item.name}
-            </li>
+    <div>
+      <ul className={firstClassName}>
+        { currentResources.map(item => (
+          <div>
+            {secondListClassName === 'video-list' ?
+              <li className={secondListClassName}  >
+              <a href={`https://www.youtube.com/watch?v=${item.path}`} target="_blank"><img src={`https://img.youtube.com/vi/${item.path}/mqdefault.jpg`}/></a>
+              <p>{item.name}</p>
+              </li>
+              :
+              <li  className={secondListClassName} key={currentResources.id}>
+                <p>{item.name}</p>
+                <a className='documentLink' target="_blank" rel="noopener noreferrer" href={`${process.env.REACT_APP_URL}${item.path}`}><i className={`material-icons`}>{icon}</i></a> 
+              </li> 
+            }
+          </div>
         ))}
-    </ul>
+      </ul>
+    </div>
   )
 }
 

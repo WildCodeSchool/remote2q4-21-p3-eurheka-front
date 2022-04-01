@@ -13,7 +13,6 @@ const AdviceCard = (props) => {
                         {props.task3 ? <li>{props.task3}</li> : null }
                         {props.task4 ? <li>{props.task4}</li> : null }
                     </ul>
-                    <p className='dots-paragraph'>{props.task5}</p>
                 </div>
                 </a>
         </div>
