@@ -106,41 +106,30 @@
 
 @media only screen and (min-width: 390px) and (max-width: 768px) {
     .ServiceCard{
-        // display: flex;
+        display: flex;
         flex-direction: column;
         width: 100vw;
-    }
-
-    .firstCardReduce{
-    
-        .serviceDescriptionList{
-            display: flex;
-        }
-    
-        .serviceButton{
-            display: flex;
-        }
-    }
-
-    .secondCardReduce{
-
-        .serviceDescriptionList{
-            display: flex;
-        }
-        .serviceButton{
-            display: flex;
-        }
+        margin-bottom: 20px;
+        font-weight: 300;
+        font-size: 12px;
     }
 
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
 
+    .ServiceCard{
+        display: flex;
+        flex-direction: column;
+        width:60vw;
+        margin-bottom: 20px;
+        font-weight: 300;
+        font-size: 12px;
+    }
+
 }
 
-@media screen and (min-width: 1025px) {
 
-}
 
 
 
