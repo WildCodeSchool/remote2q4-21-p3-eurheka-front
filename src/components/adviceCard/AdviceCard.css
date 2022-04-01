@@ -36,9 +36,6 @@
 @media screen and (max-width: 390px) {
     .AdviceCard{
         width : 80vw;
-        /* height: 500px; */
-        /* min-height: 30vh; */
-        /* margin-bottom: 40px ; */
         margin: auto;
         }
     .h3-title {

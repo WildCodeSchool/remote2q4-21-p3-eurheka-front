@@ -1,8 +1,5 @@
 .AdviceCardList-container {
     display: flex;
-    /* flex-direction: row; */
-    /* width: 100%; */
-    /* margin-top: 70px; */
     margin-bottom: 70px;
 }
 
