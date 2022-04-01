@@ -1,58 +1,97 @@
 .EventAdmin{
-    border-style: solid;
-    position: relative;
-    border-color: black;
-    border-width: 1px;
     width: 80%;
-    margin: 25px auto;
-    color: var(--main-color-light-text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 30px;
+    padding: 20px;
     background-color: var(--main-color-dark-background);
+    color: var(--main-color-light-title);
+    font-family: var(--text-font);
 
-    h2{
-        color: var(--main-color-light-text);
-        font-family: var(--title-font);
-        padding-left: 10px;
-        padding-top: 10px;
+    .EventAdminTitle{
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
         font-size: 16px;
     }
 
-    .CloseFolding
-    {
+    .CloseFolding {
         position: absolute;
         top :10px;
-        font-size: 30px;
+        font-size: 20px;
         font-weight: bolder;
-        color : gray;
+        color : white;
         right: 10px;
     }
  
     .EventAdminBloc{
-        display: block;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: left;
+    }
+
+    .EventAdminTitle{
+        margin-bottom: 5px;
     }
     
     .BlocHidden{
         display: none;
     }
 
-    .EventAdminTitle{
-        margin-bottom: 5px;
-    }
-
-    .EventAdminAddTitle{
-        margin-left: 7px;
-    }
-
-    .EventAdminAdd{
+    .ExistingEvent {
+        width: 60%;
+        height: 70%;
         display: flex;
         flex-direction: column;
-        margin: 5px;
+        align-items: left;
+        justify-content: center;
     }
 
-    .EventAdminLabel{
-        margin: 5px;
+    .ExistingEventTitle {
+        margin: 10px;
+        text-align: center;
+    }
+
+    .duoEvent {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .labelEvent{
+        margin: 10px;
+    }
+
+    .CreateEvent {
+        width: 40%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 50px;
+    }
+
+    .CreateEventTitle {
+        margin: 10px;
+        text-align: center;
     }
 
     .EventAdminAddBtn{
-        width: 100px;
+        margin: 10px;
+        background-color: var(--main-color-light-title);
+        color: var(--main-color-dark-background);
+        border: solid 1px var(--main-color-light-title);
+        border-radius: 2px;
+        padding: 5px;
+        width: 120px;
+        height: 40px;
+        font-size: 12px;
     }
 }

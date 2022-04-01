@@ -1,11 +1,11 @@
 .EventAdminContainer{
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid black;
+    position: relative;
+    margin : 10px;
+    background-color: rgba(255, 255, 255, 0.1);
 
     .EventAdminContainerList{
-        margin-left: 10px;
         list-style-type: none;
+        margin-left: 10px;
     }
 
     .PassedEvent{
