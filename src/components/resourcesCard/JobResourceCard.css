@@ -79,21 +79,12 @@
     justify-content: space-evenly;
 }
 
-.video-responsive {
-    overflow: hidden;
-    /* padding-bottom: 56.25%; */
-    position: relative;
-    height: 0;
-}
-
-.video-responsive iframe {
-    left: 0;
-    top: 0;
-    height: 80%;
-    width: 80%;
-    position: absolute;
-}
-
 .iframe {
     width: 100%;
+}
+
+.documentLink {
+    text-decoration: none;
+    color: white;
+
 }
