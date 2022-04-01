@@ -35,8 +35,7 @@
     }
     
     .LabelThemeNewDoc{
-        margin : 5px 10px;
-        display: inline-block;
+        width: 220px;
     }
 
     .newDocThemeContainer{
@@ -201,10 +200,20 @@
         .ThemeContainer{
             width: 60%;
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             margin: 20px;
+        }
+
+        .newDocThemeContainer{
+            width: 80%;
+            margin : 5px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
         }
 
         .divThemeDoc {
@@ -212,16 +221,23 @@
             margin: 5px;
             font-size: 12px;
             width: 260px;
-        }
-
-        .newDocThemeContainer{
-            margin : 5px;
             display: flex;
-            flex-wrap: wrap;
             flex-direction: row;
             align-items: center;
-            justify-content: left;
-            width: 80%;
+        }
+
+        .checkThemeNewDoc {
+            width: 15px;
+        }
+
+        .LabelThemeNewDoc {
+            width: 220px;
+        }
+
+        .nameNewDoc {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
         }
 
         .SubmitBtn{

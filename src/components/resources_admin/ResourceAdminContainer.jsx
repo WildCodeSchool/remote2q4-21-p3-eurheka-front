@@ -165,7 +165,9 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme })
                                     return (
                                         <div className='divThemeDoc'key={theme.idTheme}>
                                             <input className='checkThemeNewDoc'type="checkbox" value={theme.idTheme} id={theme.themeName} checked={theme.checked} onChange={(e) => handleCheckTheme(e)} />
-                                            <label className='LabelThemeNewDoc' htmlFor={theme.themeName}>{theme.themeName}</label>
+                                            <label className='LabelThemeNewDoc' htmlFor={theme.themeName}>
+                                                <div className='nameNewDoc'>{theme.themeName}</div>
+                                            </label>
                                         </div>
                                     )
                                 })}
