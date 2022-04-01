@@ -18,11 +18,11 @@ const UserManagement = (props) => {
 
     return (
         <div className='UserAdmin'>
-            <h2 className='UserAdminTitle'>Gérer les utilisateurs</h2>
+            <div className='UserAdminTitle'>Gérer les utilisateurs</div>
             <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding" : "fa-solid fa-chevron-down CloseFolding"} onClick={() => handleShowClick('UserAdminBloc')}></i>
             <div className="UserAdminBloc BlocHidden" id="UserAdminBloc">
                 <UserAdminContainer />
-                </div>
+            </div>
         </div>
     )
 }

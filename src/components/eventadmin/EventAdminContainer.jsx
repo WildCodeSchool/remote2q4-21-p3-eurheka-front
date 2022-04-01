@@ -30,7 +30,7 @@ const EventAdminContainer = ({reload, setReload}) => {
             const url= `${process.env.REACT_APP_API_URL}event/${id}`;
             axios.delete(url,{withCredentials:true})
             .then((res)=>{
-                if (res.status===200){
+                if (res.status===204){
                     setReload(!reload);
                 }
             })
