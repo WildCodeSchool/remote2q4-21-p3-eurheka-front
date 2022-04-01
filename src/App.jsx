@@ -13,8 +13,9 @@ import AdminPage from './pages/admin/AdminPage.jsx';
 import SplashPage from './pages/splash/SplashPage.jsx';
 import UserPage from './pages/userPage/UserPage.jsx';
 import CompanyPage from './components/profileUser/CompanyPage.jsx';
-import './App.css';
 import JobOffer from './pages/joboffer/JobOffer.jsx';
+import AboutUsPage from './pages/about_us/AboutUsPage.jsx';
+import './App.css';
 
 function App() {
   const [footerStyle, setFooterStyle] = useState(true)
@@ -81,6 +82,7 @@ function App() {
         <Route path='/admin' element={<AdminPage />}/>
         {/*User routes*/}
         <Route path='/mon-profil-particulier' element={<UserPage />}/>
+        <Route path='/a-propos' element={<AboutUsPage />}/>
         
       </ Routes>
       <Footer footerStyle={footerStyle} setFooterStyle={setFooterStyle} />

@@ -1,0 +1,23 @@
+.AboutUsPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .aboutus-header{
+        height: 30vh;
+        width: 100%;
+        background-size:cover;
+        background-position:center;
+        background-image: linear-gradient(0deg, rgba(9, 48, 70, 0.6), rgba(9, 48, 70, 0.6)), url(../../assets/pictures/redd-PTRzqc_h1r4-unsplash.jpg);
+    }
+
+    .aboutus-header h2 {
+        font-family: 'Poppins';
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 45px;
+        color: var(--main-color-lighter-text);
+        padding-top: 4vh;
+        padding-left: 4vw;
+    }
+}
+

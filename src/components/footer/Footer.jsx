@@ -47,7 +47,7 @@ const Footer = (props) => {
                         <NavLink to="/">
                             <li className='navigation-list' onClick={scrollToTop}>Conditions</li>
                         </NavLink>
-                        <NavLink to="/">
+                        <NavLink to="/a-propos">
                             <li className='navigation-list' onClick={scrollToTop}>A propos</li>
                         </NavLink>
                     </ul>
