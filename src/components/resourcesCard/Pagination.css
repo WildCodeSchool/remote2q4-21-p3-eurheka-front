@@ -3,9 +3,10 @@
     list-style: none;
 }
 
-button {
+.button {
     width: 30px;
     height: 30px;
     font-size: large;
     margin: 5px;
+    background: white;
 }
