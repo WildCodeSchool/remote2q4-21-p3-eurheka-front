@@ -1,5 +1,5 @@
 .UserAdminContainer{
-    width: 60%;
+    width: 65%;
     height: auto;
     
     .UserTable{
@@ -9,6 +9,7 @@
     }
 
     .usersAdminCell {
+        width: 80px;
         margin: 5px;
         padding: 1px;
         font-size: 12px;
@@ -33,6 +34,13 @@
 
     .usersAdminLevel {
         width: 100px;
+    }
+
+    .usersAdminBtn {
+        width: 80px;
+        margin-left: 5px;
+        padding: 1px;
+        font-size: 12px;
     }
 
     .usersAdmModify {

@@ -127,8 +127,8 @@ const UserAdminContainer = () => {
                                         <option value="5">Super Admin</option>
                                     </select>
                                 </td>
-                                <td className="usersAdminCell"><button className="usersAdmModify" onClick={() => handleUpdate(user.id_users)}>Modifier</button></td>
-                                <td className="usersAdminCell"><button className="usersAdmSuppress" onClick={() => handleRemove(user.id_users)}>Supprimer</button></td>
+                                <td className="usersAdminBtn"><button className="usersAdmModify" onClick={() => handleUpdate(user.id_users)}>Modifier</button></td>
+                                <td className="usersAdminBtn"><button className="usersAdmSuppress" onClick={() => handleRemove(user.id_users)}>Supprimer</button></td>
                             </tr>)
                     })}
                 </tbody>
