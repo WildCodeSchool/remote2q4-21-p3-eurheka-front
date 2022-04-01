@@ -98,13 +98,13 @@ const AdminUserInfo = ({ user, uId }) => {
                     </div>
                     <div className="AdminUserInfoPassword">
                         <p>Indiquez ci-dessous votre nouveau mot de passe en cas de changement.</p>
-                        <div className="AdminUserInfoParts">
+                        <div className="AdminUserPassParts">
                             <div className="AdminInfoPassword">
-                                <label htmlFor="password1" className='labelPassword'>Mot de passe</label>
+                                <label htmlFor="password1" className='labelAdmPassword'>Mot de passe :</label>
                                 <input className='passwordInput' type="password" id="password1" value={password1} onChange={(e) => { setPassword1(e.target.value) }} />
                             </div>
                             <div className="AdminInfoPassword">
-                                <label htmlFor="password2" className='labelPassword'>Confirmer le mot de passe</label>
+                                <label htmlFor="password2" className='labelAdmPassword'>Confirmer le mot de passe :</label>
                                 <input className='passwordInput' type="password" id="password2" value={password2} onChange={(e) => { setPassword2(e.target.value) }} />
                             </div>
                         </div>

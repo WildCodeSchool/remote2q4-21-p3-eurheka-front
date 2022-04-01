@@ -71,7 +71,24 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin: 10px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .AdminUserPassParts {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .labelAdmPassword {
+        text-align: left;
+        margin-right: 15px;
+        width:120px;
     }
 
     .btnContainer {
