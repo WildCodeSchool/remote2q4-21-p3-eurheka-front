@@ -38,4 +38,38 @@
     .BlocHidden{
         display: none;
     }
+
+    .UserAdminInnerBloc {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .HowToBloc {
+        width: 30%; 
+        height: auto;
+        background-color: white;
+        color: var(--main-color-dark-title);
+        border-radius: 3px;
+        margin-left: 100px;
+        padding: 5px;
+    }
+
+    .HowToTitle {
+        font-weight: bolder;
+        margin: 5px;
+    }
+
+    .HowToSubTitle {
+        font-weight: bolder;
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    .HowToText {
+        font-size: 14px;
+        margin: 5px;
+    }
 }
