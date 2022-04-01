@@ -3,7 +3,7 @@ import { FileUploader } from "react-drag-drop-files";
 import './ResourceAdminContainer.scss';
 import ResourceAdminModal from './ResourceAdminModal';
 import axios from 'axios';
-import file from "../../assets/files-icons/file.png";
+import filePic from "../../assets/files-icons/file.png";
 
 const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme }) => {
     const [file, setFile] = useState(null);
@@ -170,9 +170,9 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme })
                                     )
                                 })}
                             </div>
+                            <button type="submit" className='SubmitBtn'>Ajouter la ressource</button>
                         </div>
                         </div>
-                        <button type="submit" className='SubmitBtn'>Ajouter la ressource</button>
                     </div>
                 </form>
             </div>
@@ -186,8 +186,8 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme })
                     reloadTheme={reloadTheme} />
                 {docs.map((doc, index) => {
                     return <div key={index} className="ResourceCard" onClick={() => handleModal(doc.id_resource, true)}>
-                        <img src={file} alt="file" className="filePic" />
-                        <p>{doc.name}</p>
+                        <img src={filePic} alt="file" className="filePic" />
+                        <p className="ResourceName">{doc.name}</p>
                     </div>
                 })}
             </div>
