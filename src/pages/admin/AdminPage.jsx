@@ -1,6 +1,6 @@
 import React, { useContext, useState,useEffect } from 'react'
 import axios from 'axios';
-import AdminCvs from '../../admincv/AdminCvs';
+import AdminCvs from '../../components/admincv/AdminCvs';
 import AdminJobs from '../../components/adminjobs/AdminJobs';
 import AdminRDV from '../../components/adminrdv/AdminRDV';
 import AdminUserInfo from '../../components/adminuserinfo/AdminUserInfo';
