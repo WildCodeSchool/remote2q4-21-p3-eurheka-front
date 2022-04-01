@@ -10,3 +10,23 @@
     column-gap: 50px;
 }
 
+
+@media only screen and (min-width: 390px) and (max-width: 768px) {
+    .ServicesList{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .ServicesList{
+        display: flex;
+        flex-direction: column;
+        width: 60vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
