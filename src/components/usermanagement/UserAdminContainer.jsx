@@ -96,19 +96,19 @@ const UserAdminContainer = () => {
         <div className='UserAdminContainer'>
             <table className='UserTable'>
                 <thead><tr>
-                    <th>
+                    <th className="usersAdminCell">
                         Nom - Prenom
                     </th>
-                    <th>
+                    <th className="usersAdminCell">
                         Entreprise
                     </th>
-                    <th>
+                    <th className="usersAdminCell">
                         Niveau
                     </th>
-                    <th>
+                    <th className="usersAdminCell">
                         Modifier
                     </th>
-                    <th>
+                    <th className="usersAdminCell">
                         Supprimer
                     </th>
                 </tr>
@@ -117,18 +117,18 @@ const UserAdminContainer = () => {
                     {users.map((user) => {
                         return (
                             <tr key={user.id_users}>
-                                <td><span className="Clickable" onClick={()=>handlePopUp(user.id_users)}>{user.userName}</span></td>
-                                <td>{user.name === null ? 'Aucune' : user.name}</td>
-                                <td>
-                                    <select value={user.user_level} onChange={(e) => handleLevelChange(e, user.id_users)}>
+                                <td className="usersNameCell"><span className="Clickable" onClick={()=>handlePopUp(user.id_users)}>{user.userName}</span></td>
+                                <td className="usersAdminCell">{user.name === null ? 'Aucune' : user.name}</td>
+                                <td className="usersAdminLevel">
+                                    <select className="usersAdminSelect" value={user.user_level} onChange={(e) => handleLevelChange(e, user.id_users)}>
                                         <option value="2">Utilisateur connecté</option>
                                         <option value="3">Entreprise</option>
                                         <option value="4">Administrateur</option>
                                         <option value="5">Super Admin</option>
                                     </select>
                                 </td>
-                                <td><button onClick={() => handleUpdate(user.id_users)}>Modifier</button></td>
-                                <td><button onClick={() => handleRemove(user.id_users)}>Supprimer</button></td>
+                                <td className="usersAdminBtn"><button className="usersAdmModify" onClick={() => handleUpdate(user.id_users)}>Modifier</button></td>
+                                <td className="usersAdminBtn"><button className="usersAdmSuppress" onClick={() => handleRemove(user.id_users)}>Supprimer</button></td>
                             </tr>)
                     })}
                 </tbody>

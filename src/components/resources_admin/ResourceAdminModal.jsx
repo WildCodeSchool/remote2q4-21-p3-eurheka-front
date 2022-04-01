@@ -101,33 +101,51 @@ const ResourceAdminModal = ({ resource, displayModal,setReload,reload,reloadThem
     return (
         <div id="resourceModal" className='ResourceModal'>
             {docs && <div className="ModalAdminDoc">
-                <form onSubmit={(e) => sendDoc(e)}>
+                <form onSubmit={(e) => sendDoc(e)} className="FormDocModal">
                     <div className="DivHeadDocModal">
-                        <label className='LabelDocContainer' htmlFor='name'> Nom : <input type="text" id="name" value={docName} onChange={(e) => setDocName(e.target.value)} /> </label>
-                        <label className='LabelDocContainer' htmlFor='visibleCat'>Visibilité : <select value={visibility} onChange={(e) => { setVisibility(e.target.value) }}>
-                            <option value="1">Utilisateur non connecté</option>
-                            <option value="2">Utilisateur connecté</option>
-                            <option value="3">Entreprises</option>
-                        </select></label>
+                        <div className="lineHeadmodal">
+                            <label className='LabelDocContainer' htmlFor='name'> Nom :</label>
+                            <input type="text" id="name" value={docName} onChange={(e) => setDocName(e.target.value)} />
+                        </div>
+                        <div className="lineHeadmodal">
+                            <label className='LabelDocContainer' htmlFor='visibleCat'>Visibilité :</label> 
+                            <select value={visibility} onChange={(e) => { setVisibility(e.target.value) }}>
+                               <option value="1">Utilisateur non connecté</option>
+                               <option value="2">Utilisateur connecté</option>
+                               <option value="3">Entreprises</option>
+                            </select>
+                        </div>
                     </div>
-                    <br />
+                    
                     {docs &&
                         <div className="DocContainer">
+                            <div className='LabelDocContainer'>Choisissez une nouveau thème:</div>
                             <div className="ThemeContainer">
                                 {themeUsed.map((theme, index) => {
                                     return (
-                                        <label className="LabelThemeContainer" key={index} htmlFor={theme.themeName}><input type="checkbox" id="{theme.idTheme}" name="{theme.themeName}" value="{theme.idTheme}" checked={theme.checked} onChange={() => handleChangeTheme(theme.idTheme)} /> {theme.themeName}</label>
+                                        <div className="lineThemes" key={index}>
+                                           <input 
+                                           type="checkbox" 
+                                           id="{theme.idTheme}" 
+                                           name="{theme.themeName}" 
+                                           value="{theme.idTheme}" 
+                                           checked={theme.checked} 
+                                           onChange={() => handleChangeTheme(theme.idTheme)} />
+                                           <label  htmlFor={theme.themeName}>
+                                               <div className="LabelThemeContainer">{theme.themeName}</div>
+                                            </label>
+                                       </div>      
                                     )
                                 })}
                             </div>
                         </div>
                     }
                     <div className="DivDocModalBtnForm">
-                        <input type="submit" value="Modifier" className='DocContainerModalSubmitBtn' />
-                        <div className='DeleteDocBtn' onClick={deleteDoc}>Supprimer</div>       
+                        <input type="submit" value="Modifier" className='ModifyDocBtn' />
+                        <div className='DeleteDocBtn' onClick={deleteDoc}>Supprimer</div>          
                     </div>
                 </form>
-                <button onClick={() => { displayModal(0, false) }} className="BtnModalClose">Fermer</button>
+                <button onClick={() => { displayModal(0, false) }} className="BtnModalClose">X</button>
             </div>}
         </div>
     )
