@@ -1,3 +1,5 @@
+//Desktop ok
+
 .AdminJobContainer{
     width: 98%;
     height: auto;
@@ -29,5 +31,50 @@
         padding: 5px;
         width: 100px;
         font-size: 12px;
+    }
+
+    @media only screen and (min-width: 391px) and (max-width: 768px) {
+
+    }
+    
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+    
+    }
+    
+    @media screen and (min-width: 1025px) {
+        .AdminJobContainer{
+            width: 98%;
+            height: auto;
+            position: relative;
+            margin : 10px;
+            background-color: rgba(255, 255, 255, 0.1);
+        
+            .AdminJobList{
+                list-style-type: none;
+                margin-left: 10px;
+                width: 100%;
+                height: auto;
+            }
+        
+            .AdminJobItem{
+                margin: 10px;
+            }
+        
+            .AdminJobItem a {
+                color :inherit;
+            }
+        
+            .BtnDeleteJob{
+                margin-left: 15px;
+                background-color: var(--main-color-light-title);
+                color: var(--main-color-dark-background);
+                border: solid 1px var(--main-color-light-title);
+                border-radius: 2px;
+                padding: 5px;
+                width: 100px;
+                font-size: 12px;
+            }
+        }
+
     }
 }

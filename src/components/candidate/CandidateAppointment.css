@@ -1,3 +1,5 @@
+/*Desktop ok */
+
 .CandidateAppointment {
     width: 70%;
     height: auto;
@@ -58,4 +60,76 @@
     margin-left: 0px;
     text-align: center;
     margin: 10px;
+}
+
+@media only screen and (min-width: 391px) and (max-width: 768px) {
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+@media screen and (min-width: 1025px) {
+    .CandidateAppointment {
+        width: 70%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--main-color-dark-background);
+        color: var(--main-color-light-title);
+        font-family: var(--text-font);
+        padding: 20px;
+        margin: 30px;
+    }
+    
+    .titleAppt {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    
+    .detailAppt {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    
+    .myAppt {
+        width: 55%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: left;
+    }
+    
+    .titleMyAppt {
+        width: 200px;
+        flex-wrap: wrap;
+        margin-left: 0px;
+        text-align: center;
+        margin: 10px;
+    }
+    
+    .newAppt {
+        width: 45%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: left;
+    }
+    
+    .titleNewAppt {
+        width: 200px;
+        flex-wrap: wrap;
+        margin-left: 0px;
+        text-align: center;
+        margin: 10px;
+    }
 }

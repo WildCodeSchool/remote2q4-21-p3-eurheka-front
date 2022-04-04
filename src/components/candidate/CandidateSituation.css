@@ -1,3 +1,5 @@
+/*Desktop ok*/
+
 .CandidateSituation {
     width: 70%;
     height: 30%;
@@ -67,4 +69,85 @@
     width: 120px;
     height: 40px;
     font-size: 12px;
+}
+
+@media only screen and (min-width: 391px) and (max-width: 768px) {
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+@media screen and (min-width: 1025px) {
+    .CandidateSituation {
+        width: 70%;
+        height: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--main-color-dark-background);
+        color: var(--main-color-light-title);
+        font-family: var(--text-font);
+        padding: 20px;
+        margin: 30px;
+    }
+    
+    .titleSituation {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    
+    .contentSituation {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .currentSituation {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: left;
+    }
+    
+    .searchSituation {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    
+    .inputLine {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+        margin:10px;
+    }
+    
+    .labelSituation {
+        width: 200px;
+        flex-wrap: wrap;
+        margin-left: 15px;
+    }
+    
+    .validateSituation {
+        margin: 10px;
+        background-color: var(--main-color-light-title);
+        color: var(--main-color-dark-background);
+        border: solid 1px var(--main-color-light-title);
+        border-radius: 2px;
+        padding: 5px;
+        width: 120px;
+        height: 40px;
+        font-size: 12px;
+    }
 }
