@@ -47,7 +47,7 @@ const CV = ({path, idCV, cvs, setCVs, reload, setReload}) => {
                 </div>
             </a>
             <button 
-            
+            className='suppressOneCV'
             onClick={deleteCVs}>X</button>                       
         </div>
     )
