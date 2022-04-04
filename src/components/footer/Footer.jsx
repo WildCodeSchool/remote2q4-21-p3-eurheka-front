@@ -36,16 +36,10 @@ const Footer = (props) => {
                         <NavLink to="/login">
                             <li className='navigation-list' onClick={scrollToTop}>Connexion</li>
                         </NavLink>
-                        <NavLink to="/">
-                            <li className='navigation-list' onClick={scrollToTop}>Conditions</li>
-                        </NavLink>
                     </ul>
                     <ul className='navigation-block'>
                         <NavLink to="/">
                             <li className='navigation-list' onClick={scrollToTop}>Conditions générales</li>
-                        </NavLink>
-                        <NavLink to="/">
-                            <li className='navigation-list' onClick={scrollToTop}>Conditions</li>
                         </NavLink>
                         <NavLink to="/a-propos">
                             <li className='navigation-list' onClick={scrollToTop}>A propos</li>
