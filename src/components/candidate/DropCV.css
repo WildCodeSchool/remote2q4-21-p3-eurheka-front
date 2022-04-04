@@ -11,9 +11,13 @@
 }
 
 .validateCV {
-    width: 180px;
+    margin: 10px;
+    background-color: var(--main-color-light-title);
+    color: var(--main-color-dark-background);
+    border: solid 1px var(--main-color-light-title);
+    border-radius: 2px;
+    padding: 5px;
+    width: 120px;
     height: 40px;
-    background-color: var(--main-color-light-button);
-    color: var(--main-color-dark-text);
-    margin-top: 20px;
+    font-size: 12px;
 }

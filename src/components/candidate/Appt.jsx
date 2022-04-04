@@ -30,7 +30,7 @@ const Appt = ({ idAppt, appts, setAppts, reload, setReload, name, date}) => {
             <div className='containerAppt'>
                 <p>{name}</p>
                 <p>{date}</p>
-                <button onClick={deleteAppt}>Supprimer</button>
+                <button className='ApptBtn' onClick={deleteAppt}>Supprimer</button>
             </div>        
         </div>
     )

@@ -31,7 +31,12 @@
 
 .deleteApptButton {
     margin: 10px;
-    margin-bottom: 20px;
-    width: 180px; 
+    background-color: var(--main-color-light-title);
+    color: var(--main-color-dark-background);
+    border: solid 1px var(--main-color-light-title);
+    border-radius: 2px;
+    padding: 5px;
+    width: 120px;
     height: 40px;
+    font-size: 12px;
 }
