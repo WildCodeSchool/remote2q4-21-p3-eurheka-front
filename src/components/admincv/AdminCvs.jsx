@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './AdminCvs.scss';
+import CVfile from "../../assets/files-icons/file.png"
 
 const AdminCvs = () => {
     const [showComponent, setShowComponent] = useState(false);
@@ -38,14 +39,19 @@ const AdminCvs = () => {
 
     return (
         <div className='AdminCvs'>
-            <h2 className='CvsAdminTitle'>Consulter les Cvs en ligne</h2>
+            <div className='CvAdminTitle'>Consulter les CV déposés</div>
             <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding" : "fa-solid fa-chevron-down CloseFolding"} onClick={() => handleShowClick('CvsAdminBloc')}></i>
             <div className="CvsAdminBloc BlocHidden" id="CvsAdminBloc">
                 <div className="CvsAdminContainer">
                     <ul className='CvsAdminList'>
                         {cvs&&cvs.map((cv)=>{
                             return( 
-                                <li key={cv.id_cv} className="CvsAdminItem"><a href={`${process.env.REACT_APP_URL}${cv.path}`} target="_blank">CV de {cv.user}</a></li>
+                                <li key={cv.id_cv} className="CvsAdminItem">
+                                    <a href={`${process.env.REACT_APP_URL}${cv.path}`} target="_blank">
+                                        <img className="CvItemImg" src={CVfile} alt="file image" />
+                                        <p className="CvItemName">CV de {cv.user}</p>
+                                    </a>
+                                </li>
                             )
                         })
 
