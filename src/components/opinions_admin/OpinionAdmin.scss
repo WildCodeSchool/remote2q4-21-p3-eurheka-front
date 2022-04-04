@@ -40,10 +40,12 @@
     }
 
     .opinionMenu{
+        width: 100%;
         display: flex;
         justify-content: space-around;
         align-items: center;
         text-align: center;
+        background-color: rgba(255, 255, 255, 0.1);
     }
 
     .menuAuthor{
@@ -51,14 +53,16 @@
     }
 
     .menuDetail{
-        width: 50%;
+        width: 62%;
     }
 
     .menuIsValid{
-        width: 100px;
+        width: 115px;
+        text-align: center;
     }
 
     .menuDelete{
-        width: 100px;
+        width: 115px;
+        text-align: center;
     }
 }

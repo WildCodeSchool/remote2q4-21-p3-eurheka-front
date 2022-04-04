@@ -18,9 +18,8 @@ const OpinionAdmin = () => {
 
     return (
         <div className='OpinionAdmin'>
-            <div className="navBarOpinion">
-                <div className='OpinionAdminTitle'>Gérer les avis</div>
-                <i className={ showComponent ? "fa-solid fa-chevron-up CloseFolding" : "fa-solid fa-chevron-down CloseFolding"} onClick={() => handleShowClick('OpinionAdminBloc')}></i>
+            <div className='OpinionAdminTitle'>Gérer les avis</div>
+            <i className={ showComponent ? "fa-solid fa-chevron-up CloseFolding" : "fa-solid fa-chevron-down CloseFolding"} onClick={() => handleShowClick('OpinionAdminBloc')}></i>
                 <div className="OpinionAdminBloc BlocHidden" id="OpinionAdminBloc">
                     <div className='opinionMenu'>
                         <p className='menuAuthor'>Auteur</p>
@@ -30,7 +29,6 @@ const OpinionAdmin = () => {
                     </div>
                     <OpinionAdminContainer />
                 </div>
-            </div>
         </div>
     )
 }
