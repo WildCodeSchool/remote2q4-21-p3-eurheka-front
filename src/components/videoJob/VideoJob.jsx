@@ -1,27 +1,56 @@
-import React from 'react';
-import ResourcesCard from '../resourcesCard/ResourcesCard';
+import {useState, useEffect} from 'react';
+import axios from 'axios';
+import JobResourceCard from '../resourcesCard/JobResourceCard';
+import Pagination from '../resourcesCard/Pagination';
 import './VideoJob.css'
 
 const VideoJob = () => {
+  const [jobResources, setJobResources] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [resourcesPerPage, setResourcesPerPage] = useState(4);
+  const [isReduce, setIsReduce] = useState(true);
+
+  function handleChange() {
+      setIsReduce(!isReduce)
+}
+
+  useEffect(() => {
+    const fetchResources = async () => {
+      setLoading(true);
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}resource/bycat/1`, { withCredentials: true });
+      setJobResources(res.data);
+      setLoading(false);
+    }
+    fetchResources();
+  }, [])
+
+  const indexOfLastResource = currentPage * resourcesPerPage;
+  const indexOfFirstResource = indexOfLastResource - resourcesPerPage;
+  const currentResources = jobResources.slice(indexOfFirstResource, indexOfLastResource);
+  
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  }
+
   return (
-    <div className="VideoJob">
-          <ResourcesCard 
-            mainTitle = "Job Vidéos"
-            mainTitleClassName="mainTitle-darkTheme"
-            url={'https://jsonplaceholder.typicode.com/photos?_limit=100'}
-            listClassName='list-lightTheme'
-            secondListClassName='video-list'
-            containerListClassName='video-container-list'
-            // icon='favorite'
-            // iconClassName='favorite'
-            firstClassName='video-resources-container'
-            secondClassName='video-resources-container-reduced'
-            paginationClassName='video-pagination'
-            resourcesPerPage= {6}
+    <div className="BusinessSheet">
+      <div className='mainTitle-darkTheme'>
+        <h2>Job vidéos</h2>
+        <span onClick={handleChange}>{isReduce ? <i className="fa-solid fa-chevron-up"></i> : <i className="fa-solid fa-chevron-down"></i> }</span>
+      </div>
+      { isReduce ?
+        <div className='video-resources-container'>
+          <JobResourceCard
+            firstClassName='video-container-list'
+            secondListClassName="video-list"
+            currentResources={currentResources}
+            loading={loading}
           />
+          <Pagination resourcesPerPage={resourcesPerPage} totalResources={jobResources.length} paginate={paginate} />
+        </div> : null }
     </div>
     )
   }
-
 
 export default VideoJob;

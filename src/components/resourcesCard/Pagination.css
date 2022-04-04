@@ -1,0 +1,12 @@
+.paginationButton {
+    display: flex;
+    list-style: none;
+}
+
+.button {
+    width: 30px;
+    height: 30px;
+    font-size: large;
+    margin: 5px;
+    background: white;
+}
