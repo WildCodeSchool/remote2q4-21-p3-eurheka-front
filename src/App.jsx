@@ -83,7 +83,6 @@ function App() {
         {/*User routes*/}
         <Route path='/mon-profil-particulier' element={<UserPage />}/>
         <Route path='/a-propos' element={<AboutUsPage />}/>
-        
       </ Routes>
       <Footer footerStyle={footerStyle} setFooterStyle={setFooterStyle} />
     </div>
