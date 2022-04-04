@@ -74,7 +74,7 @@ function App() {
       <Routes>
         <Route exact path='/' element={<Home />}/>
         <Route path='/prestations' element={<Services />}/>
-        <Route path='/bibliotheque' element={<Library />}/>
+        <Route path='/bibliotheque' element={<Library setUId={setUId} setULevel={setULevel}/>}/>
         <Route path='/contact-avis' element={<Contact />}/>
         <Route path='/login' element={<Login />}/>
         <Route path='/emploi' element={<JobOffer />} />

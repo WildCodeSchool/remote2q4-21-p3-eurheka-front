@@ -1,40 +1,51 @@
-.AdminRDV{
-    border-style: solid;
-    position: relative;
-    border-color: black;
-    border-width: 1px;
-    width: 80%;
-    margin: 25px auto;
-    color: var(--main-color-light-text);
-    background-color: var(--main-color-dark-background);
+//Desktop ok
 
-    h2{
-        color: var(--main-color-light-text);
-        font-family: var(--title-font);
-        padding-left: 10px;
-        padding-top: 10px;
+.AdminRDV{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 30px;
+    padding: 20px;
+    background-color: var(--main-color-dark-background);
+    color: var(--main-color-light-title);
+    font-family: var(--text-font);
+
+    .RDVAdminTitle{
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
         font-size: 16px;
     }
-    .RDVAdminTitle{
-        margin-bottom: 5px;
-    }
 
-    .CloseFolding
-    {
+    .CloseFolding {
         position: absolute;
         top :10px;
-        font-size: 30px;
+        font-size: 20px;
         font-weight: bolder;
-        color : gray;
+        color : white;
         right: 10px;
     }
 
     .RDVAdminBloc{
-        display: block;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: left;
     }
     
     .BlocHidden{
         display: none;
+    }
+
+    .titleRDV {
+        width: 100%;
+        margin-left: 0px;
+        text-align: center;
+        margin: 10px;
     }
 
     .RDVList{
@@ -42,7 +53,114 @@
         margin-left: 10px;
     }
 
-    .RDVListItem{
+    .RDVDuo {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
         margin: 10px;
+        padding: 4px;
+        border: solid 2px rgba(255, 255, 255, 0.1);
+        color: white;
+        
+    }
+
+    .validationRDV {
+        margin-left: 5px;
+    }
+
+    .emphasisRDV {
+        margin-left: 5px;
+        font-weight: bolder;
+        color: var(--main-color-light-text);
+    }
+
+    @media only screen and (min-width: 391px) and (max-width: 768px) {
+
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+    
+    }
+
+    @media screen and (min-width: 1025px) {
+        .AdminRDV{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin: 30px;
+            padding: 20px;
+            background-color: var(--main-color-dark-background);
+            color: var(--main-color-light-title);
+            font-family: var(--text-font);
+        
+            .RDVAdminTitle{
+                width: 100%;
+                text-align: left;
+                margin-bottom: 20px;
+                font-size: 16px;
+            }
+        
+            .CloseFolding {
+                position: absolute;
+                top :10px;
+                font-size: 20px;
+                font-weight: bolder;
+                color : white;
+                right: 10px;
+            }
+        
+            .RDVAdminBloc{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: left;
+            }
+            
+            .BlocHidden{
+                display: none;
+            }
+        
+            .titleRDV {
+                width: 100%;
+                margin-left: 0px;
+                text-align: center;
+                margin: 10px;
+            }
+        
+            .RDVList{
+                list-style-type: none;
+                margin-left: 10px;
+            }
+        
+            .RDVDuo {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: left;
+                margin: 10px;
+                padding: 4px;
+                border: solid 2px rgba(255, 255, 255, 0.1);
+                color: white;
+                
+            }
+        
+            .validationRDV {
+                margin-left: 5px;
+            }
+        
+            .emphasisRDV {
+                margin-left: 5px;
+                font-weight: bolder;
+                color: var(--main-color-light-text);
+            }
+        }
+        
     }
 }

@@ -66,15 +66,21 @@ const AdminRDV = (props) => {
 
     return (
         <div className='AdminRDV'>
-            <h2 className='RDVAdminTitle'>Gérer mes rendez-vous</h2>
+            <div className='RDVAdminTitle'>Gérer mes rendez-vous</div>
             <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding" : "fa-solid fa-chevron-down CloseFolding"} onClick={() => handleShowClick('RDVAdminBloc')}></i>
             <div className="RDVAdminBloc BlocHidden" id="RDVAdminBloc">
                 <div className="RDVAdminContainer">
+                    <div className='titleRDV'>Mes demandes de RDV en cours</div>
                     <ul className="RDVList">
                         {rdvs && rdvs.map((rdv) => {
                             return (
-                                <li key={rdv.eventid} className='RDVListItem'>{rdv.firstname} {rdv.lastname} a demandé un RDV le {rdv.date_event} à {rdv.hour_event} pour le motif : {rdv.name}<br />
-                                    Valider le rendez-vous : <input type="checkbox" checked={rdv.is_valid} onChange={() => { handleValid(rdv.eventid, rdv.is_valid, rdv.id_users) }} /></li>
+                                <li key={rdv.eventid} className='RDVDuo'>
+                                    <p className='emphasisRDV'>{rdv.firstname} {rdv.lastname}</p>
+                                    <p className='validationRDV'> a demandé un RDV le {rdv.date_event} à {rdv.hour_event} pour le motif : </p>
+                                    <p className='emphasisRDV'>{rdv.name}</p>
+                                    <p className='validationRDV'>- Valider le rendez-vous : </p>
+                                    <input className='validationRDV' type="checkbox" checked={rdv.is_valid} onChange={() => { handleValid(rdv.eventid, rdv.is_valid, rdv.id_users) }} />
+                                </li>
                             )
                         })}
                     </ul>
