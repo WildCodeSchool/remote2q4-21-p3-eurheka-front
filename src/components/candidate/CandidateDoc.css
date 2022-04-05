@@ -1,3 +1,5 @@
+/* Desktop ok */
+
 .CandidateDoc {
     width: 70%;
     height: auto;
@@ -56,5 +58,75 @@
     flex-wrap: wrap;
     margin-left: 0px;
     text-align: center;
+}
+
+@media only screen and (min-width: 391px) and (max-width: 768px) {
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+@media screen and (min-width: 1025px) {
+    .CandidateDoc {
+        width: 70%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--main-color-dark-background);
+        color: var(--main-color-light-title);
+        font-family: var(--text-font);
+        padding: 20px;
+        margin: 30px;
+    }
+    
+    .titleDoc {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    
+    .detailDoc {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: left;
+    }
+    
+    .myDoc {
+        width: 55%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .titleMyDoc {
+        width: 200px;
+        flex-wrap: wrap;
+        margin-left: 0px;
+        text-align: center;
+    }
+    
+    .newDoc {
+        width: 45%;
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: left;
+    }
+    
+    .titleNewDoc {
+        width: 200px;
+        flex-wrap: wrap;
+        margin-left: 0px;
+        text-align: center;
+    }
 }
 

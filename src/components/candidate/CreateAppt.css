@@ -1,3 +1,5 @@
+/*Desktop ok*/
+
 .CreateAppt {
     height: 70%;
     display: flex;
@@ -31,7 +33,65 @@
 
 .deleteApptButton {
     margin: 10px;
-    margin-bottom: 20px;
-    width: 180px; 
+    background-color: var(--main-color-light-title);
+    color: var(--main-color-dark-background);
+    border: solid 1px var(--main-color-light-title);
+    border-radius: 2px;
+    padding: 5px;
+    width: 120px;
     height: 40px;
+    font-size: 12px;
+}
+
+@media only screen and (min-width: 391px) and (max-width: 768px) {
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+@media screen and (min-width: 1025px) {
+    .CreateAppt {
+        height: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+    }
+    
+    .typeAppt {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .dateAppt {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .labelAppt {
+        width: 180px;
+        flex-wrap: wrap;
+        margin-right: 20px;
+    }
+    
+    .deleteAppt {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .deleteApptButton {
+        margin: 10px;
+        background-color: var(--main-color-light-title);
+        color: var(--main-color-dark-background);
+        border: solid 1px var(--main-color-light-title);
+        border-radius: 2px;
+        padding: 5px;
+        width: 120px;
+        height: 40px;
+        font-size: 12px;
+    }
 }

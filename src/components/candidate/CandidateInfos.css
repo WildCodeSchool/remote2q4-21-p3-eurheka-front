@@ -1,5 +1,7 @@
+/*Desktop ok*/
+
 .CandidateInfos {
-    width: 70%;
+    width: 80%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -8,8 +10,8 @@
     background-color: var(--main-color-dark-background);
     color: var(--main-color-light-title);
     font-family: var(--text-font);
-    padding: 20px;
-    margin: 30px;
+    padding: 15px;
+    margin: 20px;
 }
 
 .titleInfos {
@@ -21,9 +23,9 @@
 .detailInfos {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
 }
 
 .identityInfos {
@@ -31,7 +33,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 30%;
+    width: 100%;
 }
 
 .identityLine {
@@ -48,7 +50,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: left;
-    width: 30%;
+    width: 100%;
 }
 
 .contactLine {
@@ -65,8 +67,7 @@
     flex-direction: column;
     align-items: left;
     justify-content: left;
-    width: 30%;
-    margin-left: 40px;
+    width: 100%;
 }
 
 .otherLine {
@@ -76,39 +77,196 @@
     align-items: center;
     justify-content: left;
     margin:10px;
+    margin-left: 0px;
 }
 
 .labelInfos {
-    width: 200px;
+    width: 100px;
     flex-wrap: wrap;
-    margin-left: 15px;
+    margin-left: 10px;
+    font-size: 12px;
 }
 
 .labelPassword {
     width: 180px;
     flex-wrap: wrap;
     margin-left: 10px;
-    margin-right: 20px;
+    margin-right: 10px;
+    font-size: 12px;
 }
 
 .passwordInfos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    margin:10px;
+}
+
+.passwordline {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: left;
     margin:10px;
+    margin-left: 0px;
 }
 
 .passwordInput {
-    margin-right: 30px;
+    margin-right: 20px;
 }
 
 .validateInfos {
-    width: 180px;
+    margin: 10px;
+    background-color: var(--main-color-light-title);
+    color: var(--main-color-dark-background);
+    border: solid 1px var(--main-color-light-title);
+    border-radius: 2px;
+    padding: 5px;
+    width: 120px;
     height: 40px;
-    background-color: var(--main-color-light-button);
-    color: var(--main-color-dark-text);
-    margin: 20px;
+    font-size: 12px;
+}
+
+@media only screen and (min-width: 391px) and (max-width: 768px) {
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+@media screen and (min-width: 1025px) {
+    .CandidateInfos {
+        width: 70%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--main-color-dark-background);
+        color: var(--main-color-light-title);
+        font-family: var(--text-font);
+        padding: 20px;
+        margin: 30px;
+    }
+    
+    .titleInfos {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    
+    .detailInfos {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+    }
+    
+    .identityInfos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+    }
+    
+    .identityLine {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+        margin:10px;
+    }
+    
+    .contactInfos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: left;
+        width: 30%;
+    }
+    
+    .contactLine {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+        margin:10px;
+    }
+    
+    .otherInfos {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: left;
+        width: 30%;
+        margin-left: 40px;
+    }
+    
+    .otherLine {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+        margin:10px;
+    }
+    
+    .labelInfos {
+        width: 200px;
+        flex-wrap: wrap;
+        margin-left: 15px;
+        font-size: 16px;
+    }
+    
+    .labelPassword {
+        width: 180px;
+        flex-wrap: wrap;
+        margin-left: 10px;
+        margin-right: 20px;
+        font-size: 16px;
+    }
+    
+    .passwordInfos {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+        margin:10px;
+    }
+
+    .passwordline {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+        margin:10px;
+    }
+    
+    .passwordInput {
+        margin-right: 30px;
+    }
+    
+    .validateInfos {
+        margin: 10px;
+        background-color: var(--main-color-light-title);
+        color: var(--main-color-dark-background);
+        border: solid 1px var(--main-color-light-title);
+        border-radius: 2px;
+        padding: 5px;
+        width: 160px;
+        height: 40px;
+        font-size: 12px;
+    }
+
 }
 
