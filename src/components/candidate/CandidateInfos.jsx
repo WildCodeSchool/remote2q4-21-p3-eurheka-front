@@ -92,11 +92,14 @@ const CandidateInfos = ({uId, user, setUser}) => {
                 </div> 
             </div> 
             <div className='passwordInfos'>
-                <label htmlFor="password1" className='labelPassword'>Mot de passe</label>
-                <input className='passwordInput' type="password" id="password1" value={password1} onChange={(e) => { setPassword1(e.target.value) }} />
-                                
-                <label htmlFor="password2" className='labelPassword'>Confirmer le mot de passe</label>
-                <input className='passwordInput' type="password" id="password2" value={password2} onChange={(e) => { checkPassord(e.target.value) }} />
+                <div className='passwordline'>
+                   <label htmlFor="password1" className='labelPassword'>Mot de passe</label>
+                   <input className='passwordInput' type="password" id="password1" value={password1} onChange={(e) => { setPassword1(e.target.value) }} />
+                </div> 
+                <div className='passwordline'>              
+                   <label htmlFor="password2" className='labelPassword'>Confirmer le mot de passe</label>
+                   <input className='passwordInput' type="password" id="password2" value={password2} onChange={(e) => { checkPassord(e.target.value) }} />
+                </div>
             </div> 
             <button className='validateInfos' onClick={submitClick}>Valider mes changements</button>        
             </>}
