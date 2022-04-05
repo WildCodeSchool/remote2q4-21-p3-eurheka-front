@@ -1,7 +1,7 @@
-/* Desktop ok */
+/*Desktop ok, mobile until 767 ok */
 
 .CandidateDoc {
-    width: 70%;
+    width: 80%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -10,8 +10,8 @@
     background-color: var(--main-color-dark-background);
     color: var(--main-color-light-title);
     font-family: var(--text-font);
-    padding: 20px;
-    margin: 30px;
+    padding: 15px;
+    margin: 20px;
 }
 
 .titleDoc {
@@ -23,14 +23,14 @@
 .detailDoc {
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
-    justify-content: left;
+    justify-content: center;
 }
 
 .myDoc {
-    width: 55%;
-    height: 70%;
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,15 +42,16 @@
     flex-wrap: wrap;
     margin-left: 0px;
     text-align: center;
+    font-size: 14px;
 }
 
 .newDoc {
-    width: 45%;
-    height: 70%;
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
 }
 
 .titleNewDoc {
@@ -58,13 +59,14 @@
     flex-wrap: wrap;
     margin-left: 0px;
     text-align: center;
+    font-size: 14px;
 }
 
-@media only screen and (min-width: 391px) and (max-width: 768px) {
+@media only screen and (min-width: 391px) and (max-width: 767px) {
 
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
 
 }
 
@@ -111,6 +113,7 @@
         flex-wrap: wrap;
         margin-left: 0px;
         text-align: center;
+        font-size: 16px;
     }
     
     .newDoc {
@@ -127,6 +130,7 @@
         flex-wrap: wrap;
         margin-left: 0px;
         text-align: center;
+        font-size: 16px;
     }
 }
 

@@ -1,4 +1,4 @@
-/*Desktop ok*/
+/*Desktop ok, mobile until 767 ok */
 
 .CandidateInfos {
     width: 80%;
@@ -88,7 +88,7 @@
 }
 
 .labelPassword {
-    width: 180px;
+    width: 220px;
     flex-wrap: wrap;
     margin-left: 10px;
     margin-right: 10px;
@@ -111,7 +111,6 @@
     align-items: center;
     justify-content: left;
     margin:10px;
-    margin-left: 0px;
 }
 
 .passwordInput {
@@ -130,11 +129,11 @@
     font-size: 12px;
 }
 
-@media only screen and (min-width: 391px) and (max-width: 768px) {
-
+@media only screen and (min-width: 390px) and (max-width: 767px) {
+    
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
 
 }
 
