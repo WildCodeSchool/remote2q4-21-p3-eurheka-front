@@ -28,8 +28,7 @@ const UserActionsEventCard = () => {
                 <h3 className='event-title'>{events&&events.name}</h3>
                 <h4 className='event-type'>{events&&events.category_name}</h4>
             </div>
-            <p className='clock-text'><i className="fa-solid fa-clock"></i>{events&&events.date_eventFR}</p>
-            {/* <p className='place'><i className="fa-solid fa-location-arrow"></i> À distance</p> */}
+            <p className='clock-text'><i className="fa-solid fa-clock"></i> {events&&events.date_eventFR}</p>
         </div>
     )
 }
