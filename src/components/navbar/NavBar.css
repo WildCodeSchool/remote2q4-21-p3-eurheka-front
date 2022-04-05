@@ -128,7 +128,79 @@
     color: var(--main-color-lighter-text);
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 375px) {
+    .NavBar {
+        height: 48px;
+        width: 100%;
+    }
+    .left-container{
+        display: flex;
+        height: 100%;
+        width: 0%;
+        align-items: center;
+    } 
+    .right-container {
+        border-left: solid 1px white;
+        padding-left: 3px;
+    }
+    .logo-container {
+        width: 0%;
+        height: auto;
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        visibility: hidden;
+    }
+    .logo-link {
+        width: 0%;
+        visibility: hidden;
+    }
+    .Header-logo {
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0px;
+        visibility: hidden;
+    }
+    .navigation-link {
+        height: 90%;
+        margin-left: 2px;
+        margin-right: 6px;
+        font-size: 10px;
+    }
+    .selected {
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size: 10px;
+        font-weight: 400;
+    }
+    .selected::after {
+        height: 7px;
+        width: 100%;
+        bottom: -17px;
+        left: 0px;
+    }
+    .login-button {
+        padding-right: 6px;
+        padding-left: 6px;
+        font-size: 10px;
+    }
+    .logout-button {
+        height: 100%;
+        width: 52%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding-right: 4px;
+        padding-left: 4px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 414px) {
     .NavBar {
         height: 48px;
         width: 100%;
@@ -160,8 +232,8 @@
     }
     .navigation-link {
         height: 90%;
-        margin-left: 2px;
-        margin-right: 6px;
+        margin-left: 3px;
+        margin-right: 3px;
         font-size: 9px;
     }
     .selected {
@@ -183,18 +255,18 @@
     }
     .logout-button {
         height: 100%;
-        width: 45%;
+        width: 52%;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        padding-right: 7px;
-        padding-left: 7px;
+        padding-right: 4px;
+        padding-left: 4px;
         font-size: 9px;
     }
 }
 
-@media screen and (min-width: 391px) and (max-width: 767px) {
+@media screen and (min-width: 415px) and (max-width: 539px) {
     .NavBar {
         height: 48px;
         width: 100%;
@@ -226,45 +298,417 @@
     }
     .navigation-link {
         height: 90%;
-        margin-left: 2px;
-        margin-right: 6px;
-        font-size: 9px;
+        margin: 5px;
+        font-size: 12px;
     }
     .selected {
         margin-left: 5px;
         margin-right: 5px;
-        font-size: 9px;
+        font-size: 12px;
         font-weight: 400;
     }
     .selected::after {
         height: 7px;
         width: 100%;
-        bottom: -17px;
+        bottom: -14px;
         left: 0px;
     }
     .login-button {
         padding-right: 6px;
         padding-left: 6px;
-        font-size: 9px;
+        font-size: 12px;
     }
     .logout-button {
         height: 100%;
-        width: 48%;
+        width: 51%;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        padding-right: 7px;
-        padding-left: 7px;
-        font-size: 9px;
+        padding-right: 1px;
+        padding-left: 3px;
+        font-size: 12px;
     }
 }
 
-@media screen and (min-width: 391px) and (max-width: 767px) {
+@media screen and (min-width: 540px) and (max-width: 619px) {
+    .NavBar {
+        height: 66px;
+    }
+
+    .left-container{
+        display: flex;
+        height: 100%;
+        width: 65%;
+        align-items: center;
+    }
+    .right-container {
+        height: 100%;
+        width: 35%;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
+    }
+
+    .logo-container {
+        width: 87px;
+        height: auto;
+        margin-top: 4px;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    .logo-link {
+        width: 100%;
+        height: 100%;
+    }
+    .Header-logo {
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+
+    .navigation-link {
+        height: 90%;
+        margin: 5px;
+        font-size: 12px;
+    }
+    .selected {
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .selected::after {
+        height: 7px;
+        width: 100%;
+        bottom: -22px;
+        left: 0px;
+    }
+
+    .connected-container {
+        width: 180px;
+    }
+
+    .login-button {
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 12px;
+    }
+    .logout-button {
+        height: 100%;
+        width: 45%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: 13px;
+        padding-right: 5px;
+        padding-left: 5px;
+        font-size: 12px;
+    }
 
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 620px) and (max-width: 679px) {
+    .NavBar {
+        height: 66px;
+    }
+
+    .logo-container {
+        width: 92px;
+        height: auto;
+        margin-top: 4px;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    .logo-link {
+        width: 100%;
+        height: 100%;
+    }
+    .Header-logo {
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+
+    .navigation-link {
+        height: 90%;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 12px;
+    }
+    .selected {
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size: 12px;
+        font-weight: 400;
+    }
+    .selected::after {
+        height: 7px;
+        width: 100%;
+        bottom: -21px;
+        left: 0px;
+    }
+
+    .login-button {
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 12px;
+    }
+    .logout-button {
+        height: 100%;
+        width: 38%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: 13px;
+        padding-right: 5px;
+        padding-left: 5px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 680px) and (max-width: 720px) {
+    .NavBar {
+        height: 66px;
+    }
+
+    .logo-container {
+        width: 92px;
+        height: auto;
+        margin-top: 4px;
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    .logo-link {
+        width: 100%;
+        height: 100%;
+    }
+    .Header-logo {
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+
+    .navigation-link {
+        height: 90%;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 14px;
+    }
+    .selected {
+        margin-left: 5px;
+        margin-right: 5px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .selected::after {
+        height: 7px;
+        width: 100%;
+        bottom: -21px;
+        left: 0px;
+    }
+
+    .login-button {
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 14px;
+    }
+    .logout-button {
+        height: 100%;
+        width: 38%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: 13px;
+        padding-right: 5px;
+        padding-left: 5px;
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (min-width: 721px) and (max-width: 767px) {
+    .NavBar {
+        height: 66px;
+    }
+
+    .left-container{
+        height: auto;
+        width: 62%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+    .right-container {
+        height: 100%;
+        width: 38%;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
+    }
+
+    .logo-container {
+        width: 35%;
+        height: auto;
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-right: 6px;
+    }
+    .logo-link {
+        width: 100%;
+        height: 100%;
+    }
+    .Header-logo {
+        height: auto;
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+
+    .navigation-link {
+        height: 90%;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 14px;
+    }
+    .selected {
+        margin-left: 7px;
+        margin-right: 7px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .selected::after {
+        height: 7px;
+        width: 100%;
+        bottom: -21px;
+        left: 0px;
+    }
+
+    .login-button {
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 14px;
+    }
+    .logout-button {
+        height: 100%;
+        width: 42%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: 13px;
+        padding-right: 5px;
+        padding-left: 5px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 821px) {
+    .NavBar {
+        height: 66px;
+    }
+
+    .left-container{
+        max-height: 100%;
+        width: 62%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+    .right-container {
+        height: 100%;
+        width: 38%;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
+    }
+
+    .logo-container {
+        width: 30%;
+        max-height: 100%;
+        margin-top: 5px;
+        margin-left: 5px;
+        margin-right: 6px;
+    }
+    .logo-link {
+        width: 100%;
+        height: 100%;
+    }
+    .Header-logo {
+        height: auto;
+        width: 62%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0px;
+        margin-left: 5px;
+        margin-bottom: 5px;
+    }
+
+    .navigation-link {
+        height: 90%;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 14px;
+    }
+    .selected {
+        margin-left: 7px;
+        margin-right: 7px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .selected::after {
+        height: 7px;
+        width: 100%;
+        bottom: -22px;
+        left: 0px;
+    }
+
+    .login-button {
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 14px;
+    }
+    .logout-button {
+        height: 100%;
+        width: 42%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: 13px;
+        padding-right: 5px;
+        padding-left: 5px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 822px) and (max-width: 1024px) {
     .NavBar {
         height: 86px;
     }
@@ -307,7 +751,7 @@
     .selected::after {
         height: 10px;
         width: 100%;
-        bottom: -28px;
+        bottom: -30px;
         left: 0px;
     }
     .login-button {
