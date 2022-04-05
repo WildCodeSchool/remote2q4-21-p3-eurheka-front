@@ -121,7 +121,7 @@
         width: 100%;
         display: flex;
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-around;
     }
     
@@ -181,7 +181,7 @@
         border: solid 1px var(--main-color-light-title);
         border-radius: 2px;
         padding: 5px;
-        width: 120px;
+        width: 160px;
         height: 40px;
         font-size: 12px;
     }
