@@ -7,12 +7,11 @@
     align-items: center;
     text-align: center;
     border: 10px solid var(--main-color-light-background);
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-bottom: 30px;
     box-sizing: border-box;
 
     .card-title{
-        margin-top: 20px;
         font-weight: 600;
     }
 
@@ -29,10 +28,6 @@
         font-weight: 300;
         font-style: italic;
     }
-
-    .place{
-        margin-bottom: 20px;
-    }
 }
 
 @media screen and (max-width: 390px) {
@@ -44,7 +39,6 @@
         box-sizing: border-box;
 
         .card-title{
-            margin-top: 20px;
             font-weight: 600;
             font-size: 16px;
         }
@@ -93,7 +87,6 @@
         box-sizing: border-box;
 
         .card-title{
-            margin-top: 20px;
             font-weight: 600;
             font-size: 16px;
         }
@@ -147,7 +140,6 @@
 
         .card-title{
             font-size: 14px;
-            margin-bottom: 7px;
         }
 
         .event-container{
