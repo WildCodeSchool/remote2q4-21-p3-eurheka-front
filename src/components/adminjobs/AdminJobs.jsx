@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { FileUploader } from "react-drag-drop-files";
-
 import './AdminJobs.scss';
 import AdminJobContainer from './AdminJobContainer';
 
@@ -106,13 +105,26 @@ const AdminJobs = () => {
 
     return (
         <div className='AdminJobs'>
-            <h2 className='JobAdminTitle'>Gérer Les offres d'emploi</h2>
+            <div className='JobAdminTitle'>Gérer les offres d'emploi</div>
             <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding" : "fa-solid fa-chevron-down CloseFolding"} onClick={() => handleShowClick('JobAdminBloc')}></i>
             <div className="JobAdminBloc BlocHidden" id="JobAdminBloc">
-                <div className="NewJobContainer">
-                    <h3>Ajouter une offre d'emploi</h3>
-                    <label htmlFor="nameJob" className='LabelNewJobAdmin'>Nom de l'offre : <input type="text" id="nameJob" value={name} onChange={(e) => setName(e.target.value)} /></label>
-                    <label htmlFor="jobType" className='LabelNewJobAdmin'>Type d'offre :
+                
+                <div className="ExistingJob">
+                    <div className="ExistingJobTitle">Offres d'emploi existantes</div>
+                    <AdminJobContainer
+                    reload={reload}
+                    setReload={setReload}
+                    />
+                </div>
+
+                <div className="CreateJob">
+                    <div className="CreateJobTitle" >Ajouter une offre d'emploi</div>
+                    <div className="duoCreateJob">
+                        <label htmlFor="nameJob" className='LabelJob'>Nom de l'offre : </label>
+                        <input type="text" id="nameJob" value={name} onChange={(e) => setName(e.target.value)} />
+                    </div>
+                    <div className="duoCreateJob">
+                        <label htmlFor="jobType" className='LabelJob'>Type d'offre : </label>
                         <select id="jobType" value={jobType} onChange={(e) => setJobtype(e.target.value)}>
                             {jobTypes && jobTypes.map((jobItem) => {
                                 return (
@@ -121,8 +133,9 @@ const AdminJobs = () => {
                             })
                             }
                         </select>
-                    </label>
-                    <label htmlFor="jobCategory" className='LabelNewJobAdmin'>Catégorie de l'offre :
+                    </div>
+                    <div className="duoCreateJob">
+                        <label htmlFor="jobCategory" className='LabelJob'>Catégorie de l'offre : </label>
                         <select id="jobCategory" value={jobCategory} onChange={(e) => setJobCategory(e.target.value)}>
                             {jobCategories && jobCategories.map((CategoryItem) => {
                                 return (
@@ -131,14 +144,10 @@ const AdminJobs = () => {
                             })
                             }
                         </select>
-                    </label> 
+                    </div> 
                     <FileUploader className="DownloadFile" handleChange={handleChange} name="file" types={fileTypes} label="Glisser et déposer le fichier" />
                     <input type="button" value="Ajouter" onClick={addJob} className='AddJobBtn' />
                 </div>
-                <AdminJobContainer
-                    reload={reload}
-                    setReload={setReload}
-                />
             </div>
         </div>
     )

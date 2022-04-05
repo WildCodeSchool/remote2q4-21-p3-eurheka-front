@@ -49,7 +49,6 @@ const AdminJobContainer = ({ reload, setReload }) => {
 
     return (
         <div className='AdminJobContainer'>
-            <h3>Liste des offres d'emploi présentes</h3>
             <ul className="AdminJobList">
                 {jobList && jobList.map((jobItem) => {
                     return (

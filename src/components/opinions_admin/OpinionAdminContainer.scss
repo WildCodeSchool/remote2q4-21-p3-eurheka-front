@@ -1,35 +1,47 @@
 .OpinionAdminContainer{
-    max-width: 100%;
+    width: 100%;
 
     .opinionContainer{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         text-align: center;
     }
 
     .opinionAuthor{
         width: 150px;
-        margin-top: 20px;
+        margin: 10px;
     }
 
     .opinionDetail{
-        width: 50%;
-        margin-top: 20px;
+        width: 60%;
+        margin: 10px;
     }
 
     .opinionIsValid{
         width: 100px;
-        margin-top: 20px;
+        margin: 10px;
     }
 
     .opinionIsValidButton{
+        background-color: var(--main-color-light-title);
+        color: var(--main-color-dark-background);
+        border: solid 1px var(--main-color-light-title);
+        border-radius: 2px;
+        padding: 2px;
         width: 100px;
-        margin-top: 20px;
+        font-size: 10px;
+        margin: 10px;
     }
 
     .opinionDeleteButton{
+        background-color: var(--main-color-dark-background);
+        color: var(--main-color-light-title);
+        border: solid 1px var(--main-color-light-title); 
+        border-radius: 2px;
+        padding: 2px;
         width: 100px;
-        margin-top: 20px;
+        font-size: 10px;
+        margin: 10px;
     }
 }
