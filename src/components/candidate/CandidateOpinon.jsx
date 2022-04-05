@@ -46,7 +46,7 @@ const CandidateOpinon = ({user, uId}) => {
 
     return (
         <div className='CandidateOpinon'>
-            <div className='titleOpinion'>Donnez votre avis sur Eurhéka</div>
+            <div className='titleOpinion'>Donnez votre avis sur Eurheka!</div>
             <button className={ display ? 'displayButton' : 'displayButtonNone'} onClick={viewOpinion}>Déposer un avis</button>
             <form onSubmit={submitOpinion} className={ display ? 'descriptionOpinionNone' : 'descriptionOpinion'}>
                 <label htmlFor="description " 

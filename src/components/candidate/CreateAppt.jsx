@@ -35,7 +35,7 @@ const CreateAppt = ({uId, reload, setReload, appts, setAppts}) => {
             </div>
             <div className='dateAppt'>
                 <label htmlFor="date" className='labelAppt'>Date du rendez-vous</label>
-                <input className='dateAppt' type="datetime-local" id="date" value={date} onChange={(e) => { setDate(e.target.value) }} />
+                <input className='dateInputAppt' type="datetime-local" id="date" value={date} onChange={(e) => { setDate(e.target.value) }} />
             </div>
             <div className='deleteAppt'>
                 <button className='deleteApptButton' onClick={handleSubmit}>Enregistrer cette demande</button>
