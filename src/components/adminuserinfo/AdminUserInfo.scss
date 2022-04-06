@@ -2,16 +2,16 @@
 
 .AdminUserInfo{
     width: 80%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
-    margin: 30px;
-    padding: 20px;
     background-color: var(--main-color-dark-background);
     color: var(--main-color-light-title);
     font-family: var(--text-font);
+    padding: 15px;
+    margin: 20px;
 
     .AdminUserInfoTitle{
         width: 100%;
@@ -22,11 +22,11 @@
 
     .CloseFolding {
         position: absolute;
-        top :10px;
         font-size: 20px;
         font-weight: bolder;
         color : white;
-        right: 10px;
+        right: 30px;
+        top: 200px;
     }
 
     .AdminUserInfoBloc{
@@ -41,15 +41,15 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
  
     .AdminUserInfoParts{
         width: 100%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: left;
-        margin:10px;
     }
 
     .AdminDuo {
@@ -61,11 +61,12 @@
 
     .labelUserInfo{
         width: 100px;
+        font-size: 12px;
+        margin: 8px;
     }
 
     .inputUserInfo {
-        width: 200px; 
-        margin-right: 60px;
+        width: 150px; 
     }
 
     .AdminUserInfoPassword {
@@ -77,51 +78,155 @@
         margin-top: 10px;
     }
 
+    .HowToPassword {
+        font-size: 10px;
+    }
+
     .AdminUserPassParts {
         width: 100%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
-        justify-content: left;
+        justify-content: center;
         margin-top: 10px;
         margin-bottom: 10px;
     }
 
+    .AdminInfoPassword {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-left: 5px;
+    }
+
     .labelAdmPassword {
         text-align: left;
-        margin-right: 15px;
-        width:120px;
+        font-size: 12px;
+        margin: 8px;
+        width:140px;
+    }
+
+    .passwordInput {
+        width: 150px;
     }
 
     .btnContainer {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        margin: 20px;
+        margin: 15px;
     }
 
     .ModifyInfoBtn {
-        margin: 10px;
         background-color: var(--main-color-light-title);
         color: var(--main-color-dark-background);
         border: solid 1px var(--main-color-light-title);
         border-radius: 2px;
-        padding: 5px;
-        width: 180px;
+        padding: 3px;
+        width: 150px;
         height: 40px;
         font-size: 12px;
     }
 
-    @media only screen and (min-width: 391px) and (max-width: 768px) {
+    @media only screen and (min-width: 391px) and (max-width: 719px) {
 
     }
+
+    @media only screen and (min-width: 720px) and (max-width: 820px) {
+
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin: 30px;
+        padding: 20px;
+        background-color: var(--main-color-dark-background);
+        color: var(--main-color-light-title);
+        font-family: var(--text-font);
+
+            .CloseFolding {
+                position: absolute;
+                font-size: 20px;
+                font-weight: bolder;
+                color : white;
+                right: 18px;
+                top: 20px;
+            }
+
+            .AdminInfoContainer{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+         
+            .AdminUserInfoParts{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: left;
+                margin-left: 60px;
+            }
+        
+            .AdminDuo {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: left;
+            }
+
+            .labelUserInfo{
+                width: 100px;
+                font-size: 12px;
+                margin: 8px;
+            }
+
+            .HowToPassword {
+                font-size: 12px;
+            }
+
+            .AdminUserPassParts {
+                width: 95%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: left;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            .AdminInfoPassword {
+                width: auto;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: left;
+                margin-left: 10px;
+            }
+
+            .labelAdmPassword {
+                text-align: left;
+                font-size: 12px;
+                width: auto;
+                max-width: 140px;
+            }
+
+            .passwordInput {
+                width: 140px;
+                margin-right: 0px;
+            }
+    }
     
-    @media screen and (min-width: 769px) and (max-width: 1024px) {
+    @media screen and (min-width: 821px) and (max-width: 1024px) {
     
     }
     
     @media screen and (min-width: 1025px) {
-        .AdminUserInfo{
+        
             width: 80%;
             display: flex;
             flex-direction: column;
@@ -232,7 +337,7 @@
                 height: 40px;
                 font-size: 12px;
             }
-        }
+        
     }
 
 }
