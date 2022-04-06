@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-
-import './JobOffer.scss';
 import JobOfferContainer from '../../components/joboffers/JobOfferContainer';
+import './JobOffer.scss';
 
 const JobOffer = () => {
     const [jobOffers,setJobOffers]=useState([]);
+
     useEffect(()=>{
         const getJobOffers=async()=>{
             const url = `${process.env.REACT_APP_API_URL}job/`; 
@@ -30,8 +30,10 @@ const JobOffer = () => {
                 <h1>Offres d'emploi</h1>
                 <p>Accédez à nos offres d'emploi.</p>
             </div>
-                <JobOfferContainer 
-                    jobs={jobOffers} />
+                <div className='jobs-container'>
+                    <JobOfferContainer 
+                        jobs={jobOffers} />
+                </div>
         </div>
     )
 }
