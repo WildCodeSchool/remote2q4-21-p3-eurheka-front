@@ -120,17 +120,45 @@
     }
 
     .ModifyInfoBtn {
+        width: 150px;
+        height: 30px;
+        padding: 3px;
+        margin: 10px;
         background-color: var(--main-color-light-title);
         color: var(--main-color-dark-background);
         border: solid 1px var(--main-color-light-title);
         border-radius: 2px;
-        padding: 3px;
-        width: 150px;
-        height: 40px;
         font-size: 12px;
     }
 
     @media only screen and (min-width: 391px) and (max-width: 719px) {
+        width: 80%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--main-color-dark-background);
+        color: var(--main-color-light-title);
+        font-family: var(--text-font);
+        padding: 15px;
+        margin: 20px;
+    
+        .AdminUserInfoTitle{
+            width: 100%;
+            text-align: left;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+    
+        .CloseFolding {
+            position: absolute;
+            font-size: 20px;
+            font-weight: bolder;
+            color : white;
+            right: 45px;
+            top: 220px;
+        }
 
     }
 
