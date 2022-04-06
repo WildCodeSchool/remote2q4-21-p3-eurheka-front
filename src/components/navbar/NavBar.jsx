@@ -52,11 +52,11 @@ const NavBar = () => {
     return (
         <div className='NavBar'>
             <div className='left-container'>
-                <div className="logo-container">
+                {/* <div className="logo-container">
                     <Link 
                     to='/' className="logo-link"
                     onClick={scrollToTop}><img className='Header-logo' src={home} alt="logo" /></Link>
-                </div>
+                </div> */}
                 <div className='link-container'>
                     <NavLink 
                     to="/" 

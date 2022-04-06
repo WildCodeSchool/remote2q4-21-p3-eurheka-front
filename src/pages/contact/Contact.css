@@ -23,26 +23,26 @@
     }
 
     .Contact-header h2 {
-        font-size: 15px;
+        font-size: 20px;
         padding-top: 0.5vh;
         padding-left: 5vw;
         }
 }
 
-@media screen and (min-width: 391px) and (max-width: 767px) {
+@media screen and (min-width: 391px) and (max-width: 768px) {
     .Contact-header{
         height: 25vh ;
         width: 100%;
     }
 
     .Contact-header h2 {
-        font-size: 15px;
+        font-size: 20px;
         padding-top: 1vh;
         padding-left: 4vw;
         }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
     .Contact-header{
         height: 35vh ;
         width: 100%;
