@@ -33,7 +33,8 @@ const ShowAppt = ({uId, reload, setReload}) => {
                     <Appt 
                     name={appt.name}
                     idCat={appt.category}
-                    date={appt.event}
+                    date={appt.date_event}
+                    valid={appt.is_valid}
                     idAppt={appt.eventid}
                     key={appt.eventid}
                     reload={reload}
