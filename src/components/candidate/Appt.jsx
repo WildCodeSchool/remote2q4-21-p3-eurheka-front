@@ -2,13 +2,12 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import  "./Appt.css";
 
-const Appt = ({ idAppt, appts, setAppts, reload, setReload, name, date}) => {
+const Appt = ({ idAppt, appts, setAppts, reload, setReload, name, date,valid}) => {
 
     const deleteAppt = async() =>{
         const url = `${process.env.REACT_APP_API_URL}event/${idAppt}`;
         await axios.delete(url, {withCredentials: true})
         .then((res) => {
-            console.log(res.data);
             if (res.status === 204){
                 setReload (!reload);
             }            
@@ -28,8 +27,8 @@ const Appt = ({ idAppt, appts, setAppts, reload, setReload, name, date}) => {
     return (
         <div className='Appt'>  
             <div className='containerAppt'>
-                <p className='contentAppt'>{name}</p>
-                <p className='contentAppt'>{date}</p>
+                <p className={valid?'contentAppt ApptOK':'contentAppt'}>{name}</p>
+                <p className={valid?'contentAppt ApptOK':'contentAppt'}>{date}</p>
                 <button className='ApptBtn' onClick={deleteAppt}>Supprimer</button>
             </div>        
         </div>
