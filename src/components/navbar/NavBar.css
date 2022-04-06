@@ -141,7 +141,8 @@
     } 
     .right-container {
         border-left: solid 1px white;
-        padding-left: 3px;
+        padding-left: 2px;
+        width: 37%;
     }
     .logo-container {
         width: 0%;
@@ -166,8 +167,8 @@
     }
     .navigation-link {
         height: 90%;
-        margin-left: 2px;
-        margin-right: 6px;
+        margin-left: 6px;
+        margin-right: 0px;
         font-size: 10px;
     }
     .selected {
@@ -179,7 +180,7 @@
     .selected::after {
         height: 7px;
         width: 100%;
-        bottom: -17px;
+        bottom: -16px;
         left: 0px;
     }
     .login-button {
@@ -192,9 +193,9 @@
         width: 52%;
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
-        padding-right: 4px;
+        padding-right: 5px;
         padding-left: 4px;
         font-size: 10px;
     }
