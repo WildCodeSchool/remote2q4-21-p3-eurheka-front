@@ -31,7 +31,7 @@ const Footer = (props) => {
                     </ul>
                     <ul className='navigation-block'>
                         <NavLink to="/contact-avis">
-                            <li className='navigation-list' onClick={scrollToTop}>Contact / Avis</li>
+                            <li className='navigation-list' onClick={scrollToTop}>Contact</li>
                         </NavLink>
                         <NavLink to="/login">
                             <li className='navigation-list' onClick={scrollToTop}>Connexion</li>

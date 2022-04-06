@@ -22,15 +22,12 @@
     font-family: 'Poppins';
     height: 150px;
     line-height: 50px;
-    /* margin-bottom: 20px; */
     padding-top: 50px;
 }
 
 .main-title h1 {
     text-transform: uppercase;
 }
-
-
 
 @media screen and (max-width: 390px) {
     .Library-header{
@@ -39,26 +36,55 @@
     }
 
     .Library-header h2 {
-        font-size: 15px;
+        font-size: 20px;
         padding-top: 0.5vh;
         padding-left: 5vw;
     }
+
+    .main-title  {
+        height: 100px;
+        line-height: 30px;
+        padding-top: 30px;
+    }
+    
+    .main-title h1 {
+        font-size: 22px;
+    }
+
+    .main-title p {
+        font-size: smaller;
+    }
 }
 
-@media screen and (min-width: 391px) and (max-width: 767px) {
+@media screen and (min-width: 391px) and (max-width: 768px) {
     .Library-header{
         height: 25vh ;
         width: 100%;
     }
 
     .Library-header h2 {
-        font-size: 15px;
+        font-size: 20px;
         padding-top: 1vh;
         padding-left: 4vw;
     }
+
+    .main-title  {
+        height: 120px;
+        line-height: 45px;
+        padding-top: 30px;
+    }
+
+    .main-title h1 {
+        font-size: 25px;
+    }
+
+    .main-title p {
+        font-size: smaller;
+    }
+
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
     .Library-header{
         height: 35vh ;
         width: 100%;
