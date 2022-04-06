@@ -29,8 +29,6 @@
     text-transform: uppercase;
 }
 
-
-
 @media screen and (max-width: 390px) {
     .Library-header{
         height: 20vh ;
