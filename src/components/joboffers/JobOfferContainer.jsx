@@ -50,7 +50,7 @@ const JobOfferContainer = ({ jobs }) => {
             <h2>Liste des offres d'emploi</h2>
             <div className="JobSelectors">
                 <label htmlFor="jobType" className='LabelNewJobAdmin'>Type d'offre :
-                    <select id="jobType" value={jobType} onChange={(e) => setJobtype(e.target.value)}>
+                    <select id="jobType" value={jobType} onChange={(e) => setJobtype(e.target.value)} className="selector">
                         <option value="0" key="0">Tous</option>
                         {jobTypes && jobTypes.map((jobItem) => {
                             return (
@@ -61,7 +61,7 @@ const JobOfferContainer = ({ jobs }) => {
                     </select>
                 </label>
                 <label htmlFor="jobCategory" className='LabelNewJobAdmin'>Catégorie de l'offre :
-                    <select id="jobCategory" value={jobCategory} onChange={(e) => setJobCategory(e.target.value)}>
+                    <select id="jobCategory" value={jobCategory} onChange={(e) => setJobCategory(e.target.value)} className="selector">
                         <option value="0" key="0">Toutes</option>
                         {jobCategories && jobCategories.map((CategoryItem) => {
                             return (
