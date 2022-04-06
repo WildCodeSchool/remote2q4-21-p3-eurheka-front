@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import axios from 'axios';
+import conditions from '../../assets/pdf/conditions.pdf'
 import {NavLink} from 'react-router-dom';
 
 import './CreateUser.scss';
@@ -173,8 +174,8 @@ const CreateUser = () => {
                 </div>
                 <div className="btnContainer">
                 <div className="conditionsContainer">
-                <input className="checkBox"type="checkbox" name="conditions" onChange={(e)=>setCheckCG(e.target.checked)}></input><label htmlFor="conditions" className="check-text">J'accepte les <NavLink to="/conditions-generales" className="general-conditions">
-                conditions générales </NavLink></label>
+                <input className="checkBox"type="checkbox" name="conditions" onChange={(e)=>setCheckCG(e.target.checked)}></input><label htmlFor="conditions" className="check-text">J'accepte les <a target="_blank" rel="noopener noreferrer" href={conditions} className="general-conditions">
+                conditions générales </a></label>
                 </div>
                 <button disabled={!checkCG} type="submit" className='btnCreate' onClick={(e) => submitClick(e)}>S'inscrire</button>
                 </div>

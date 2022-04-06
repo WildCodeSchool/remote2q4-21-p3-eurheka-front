@@ -1,4 +1,5 @@
 .JobOffer{
+
     .JobOffer-header {
         height: 500px;
         width: 100%;
@@ -23,7 +24,6 @@
         font-family: 'Poppins';
         height: 150px;
         line-height: 50px;
-        /* margin-bottom: 20px; */
         padding-top: 50px;
     }
     
@@ -31,8 +31,19 @@
         text-transform: uppercase;
     }
     
-    
-    
+    .jobs-container{
+        background : var(--main-color-light-background);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-family: 'Poppins';
+        color: var(--main-color-dark-title);
+        padding: 15px 25px 30px 25px;
+        width: 70%;
+        margin: auto;
+        margin-top: 20px;
+    }
+
     @media screen and (max-width: 390px) {
         .JobOffer-header{
             height: 20vh ;

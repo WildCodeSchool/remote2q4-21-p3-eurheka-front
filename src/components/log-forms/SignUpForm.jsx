@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import axios from "axios";
+import conditions from '../../assets/pdf/conditions.pdf'
 import "./SignUpForm.css";
 
 const SignUpForm = () => {
@@ -184,7 +185,7 @@ const SignUpForm = () => {
             </div>
             <div className="checkbox-duo">
                 <input onChange={(e) =>setCheckCG(e.target.checked)} type="checkbox" id="conditions" name="conditions" className="checkbox-box"></input>
-                <label htmlFor="conditions" className="check-text">J'accepte les <NavLink to="/conditions-generales" className="general-conditions">conditions générales</NavLink></label>
+                <label htmlFor="conditions" className="check-text">J'accepte les <a target="_blank" rel="noopener noreferrer" href={conditions} className="general-conditions">conditions générales</a></label>
             </div>
             <button disabled={!checkCG} type="submit " value="Valider" className="signUp-btn">Valider mes informations</button>
         </form>
