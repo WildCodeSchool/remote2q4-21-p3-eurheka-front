@@ -1,19 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom';
+import { UserIdContext } from  '../../context/AppContext';
 import Logo_Icone_Jaune from '../../assets/logo/Logo_Icone_Jaune.png'
 import Logo_Icone_Bleu from '../../assets/logo/Logo_Icone_Bleu.png'
 import "./Footer.css"
 
 const Footer = (props) => {
     const {footerStyle, setFooterStyle} = props
-
-    const scrollToTop = () => {
-        let pageHeight = window.innerHeight;
-        window.scrollTo({
-            top: pageHeight,
-            behavior: 'smooth'
-        });
-    };
+    const {scrollToTop}=useContext( UserIdContext);
 
     return (
         <div className={footerStyle ? 'Footer' : 'Footer-light'}>
@@ -39,21 +33,15 @@ const Footer = (props) => {
                         <NavLink to="/contact-avis">
                             <li className='navigation-list' onClick={scrollToTop}>Contact / Avis</li>
                         </NavLink>
-                        <NavLink to="/">
+                        <NavLink to="/login">
                             <li className='navigation-list' onClick={scrollToTop}>Connexion</li>
-                        </NavLink>
-                        <NavLink to="/">
-                            <li className='navigation-list' onClick={scrollToTop}>Conditions</li>
                         </NavLink>
                     </ul>
                     <ul className='navigation-block'>
                         <NavLink to="/">
                             <li className='navigation-list' onClick={scrollToTop}>Conditions générales</li>
                         </NavLink>
-                        <NavLink to="/">
-                            <li className='navigation-list' onClick={scrollToTop}>Conditions</li>
-                        </NavLink>
-                        <NavLink to="/">
+                        <NavLink to="/a-propos">
                             <li className='navigation-list' onClick={scrollToTop}>A propos</li>
                         </NavLink>
                     </ul>

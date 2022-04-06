@@ -1,3 +1,5 @@
+//Desktop ok
+
 .AdminUserInfo{
     width: 80%;
     display: flex;
@@ -71,7 +73,24 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin: 10px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .AdminUserPassParts {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: left;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .labelAdmPassword {
+        text-align: left;
+        margin-right: 15px;
+        width:120px;
     }
 
     .btnContainer {
@@ -91,6 +110,129 @@
         width: 180px;
         height: 40px;
         font-size: 12px;
+    }
+
+    @media only screen and (min-width: 391px) and (max-width: 768px) {
+
+    }
+    
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+    
+    }
+    
+    @media screen and (min-width: 1025px) {
+        .AdminUserInfo{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin: 30px;
+            padding: 20px;
+            background-color: var(--main-color-dark-background);
+            color: var(--main-color-light-title);
+            font-family: var(--text-font);
+        
+            .AdminUserInfoTitle{
+                width: 100%;
+                text-align: left;
+                margin-bottom: 20px;
+                font-size: 16px;
+            }
+        
+            .CloseFolding {
+                position: absolute;
+                top :10px;
+                font-size: 20px;
+                font-weight: bolder;
+                color : white;
+                right: 10px;
+            }
+        
+            .AdminUserInfoBloc{
+                display: block;
+            }
+            
+            .BlocHidden{
+                display: none;
+            }
+        
+            .AdminInfoContainer{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+         
+            .AdminUserInfoParts{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: left;
+                margin:10px;
+            }
+        
+            .AdminDuo {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: left;
+            }
+        
+            .labelUserInfo{
+                width: 100px;
+            }
+        
+            .inputUserInfo {
+                width: 200px; 
+                margin-right: 60px;
+            }
+        
+            .AdminUserInfoPassword {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                margin-top: 10px;
+            }
+        
+            .AdminUserPassParts {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: left;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+        
+            .labelAdmPassword {
+                text-align: left;
+                margin-right: 15px;
+                width:120px;
+            }
+        
+            .btnContainer {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                margin: 20px;
+            }
+        
+            .ModifyInfoBtn {
+                margin: 10px;
+                background-color: var(--main-color-light-title);
+                color: var(--main-color-dark-background);
+                border: solid 1px var(--main-color-light-title);
+                border-radius: 2px;
+                padding: 5px;
+                width: 180px;
+                height: 40px;
+                font-size: 12px;
+            }
+        }
     }
 
 }

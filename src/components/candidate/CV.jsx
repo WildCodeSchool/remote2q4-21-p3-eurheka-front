@@ -41,13 +41,13 @@ const CV = ({path, idCV, cvs, setCVs, reload, setReload}) => {
                 <div className='containerCV'>
                     <img className='imgCV' src={file} alt='fileicon'></img>
                     <div className='actionsCV'>
-                        <p className='nameCV'>{newName}</p>
+                        <p className='nameMyCV'>{newName}</p>
                         
                     </div>
                 </div>
             </a>
             <button 
-            
+            className='suppressOneCV'
             onClick={deleteCVs}>X</button>                       
         </div>
     )

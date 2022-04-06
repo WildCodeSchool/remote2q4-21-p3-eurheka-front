@@ -44,7 +44,7 @@
 
 .footer-logo {
     width: 251px;
-    margin-left: 50px;
+    margin-left: 35px;
 }
 
 .footer-logo:hover {
@@ -80,6 +80,7 @@
     padding-left: 50px;
     height: 50%;
     align-items: center;
+    margin-right: 35px;
 }
 
 .icons-container {

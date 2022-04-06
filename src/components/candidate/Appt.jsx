@@ -28,9 +28,9 @@ const Appt = ({ idAppt, appts, setAppts, reload, setReload, name, date}) => {
     return (
         <div className='Appt'>  
             <div className='containerAppt'>
-                <p>{name}</p>
-                <p>{date}</p>
-                <button onClick={deleteAppt}>Supprimer</button>
+                <p className='contentAppt'>{name}</p>
+                <p className='contentAppt'>{date}</p>
+                <button className='ApptBtn' onClick={deleteAppt}>Supprimer</button>
             </div>        
         </div>
     )

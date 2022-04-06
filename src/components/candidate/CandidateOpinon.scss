@@ -1,15 +1,23 @@
+/*Desktop ok, mobile width <391 ok*/
+
 .CandidateOpinon{
-    width: 70%;
+    width: 80%;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    // justify-content: center;
+    justify-content: center;
     background-color: var(--main-color-dark-background);
     color: var(--main-color-light-title);
     font-family: var(--text-font);
-    padding: 20px;
-    margin: 30px;
+    padding: 15px;
+    margin: 20px;
+
+    .titleOpinion {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
+    }
 
     .descriptionOpinion{
         display: flex;
@@ -22,8 +30,8 @@
     }
 
     .descriptionContainer{
-        height: 200px;
-        width: 400px;
+        height: 100px;
+        width: 200px;
         text-align: center;
         padding: 10px;
         font-family: 'Poppins', sans-serif;
@@ -35,22 +43,108 @@
     }
 
     .displayButton{
-        width: 180px;
-        height: 40px;
-        background-color: var(--main-color-light-button);
-        color: var(--main-color-dark-text);
-        margin: 20px;
+        margin: 10px;
+        background-color: var(--main-color-light-title);
+        color: var(--main-color-dark-background);
+        border: solid 1px var(--main-color-light-title);
+        border-radius: 2px;
+        padding: 5px;
+        width: 120px;
+        height: 30px;
+        font-size: 12px;
     }
     .displayButtonNone{
         display: none;
     }
 
     .validateOpinion{
-        width: 180px;
+        margin: 10px;
+        background-color: var(--main-color-light-title);
+        color: var(--main-color-dark-background);
+        border: solid 1px var(--main-color-light-title);
+        border-radius: 2px;
+        padding: 5px;
+        width: 120px;
         height: 40px;
-        background-color: var(--main-color-light-button);
-        color: var(--main-color-dark-text);
-        margin: 20px;
+        font-size: 12px;
     }
 
+    @media only screen and (min-width: 391px) and (max-width: 768px) {
+
+    }
+    
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+    
+    }
+    
+    @media screen and (min-width: 1025px) {
+        
+            width: 70%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: var(--main-color-dark-background);
+            color: var(--main-color-light-title);
+            font-family: var(--text-font);
+            padding: 20px;
+            margin: 30px;
+        
+            .titleOpinion {
+                width: 100%;
+                display: flex;
+                justify-content: left;
+            }
+        
+            .descriptionOpinion{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            .descriptionOpinionNone{
+                display: none;
+            }
+        
+            .descriptionContainer{
+                height: 300px;
+                width: 500px;
+                text-align: center;
+                padding: 10px;
+                font-family: 'Poppins', sans-serif;
+            }
+        
+            .descriptionTitle{
+                margin-top: 10px;
+                margin-bottom: 15px;
+            }
+        
+            .displayButton{
+                margin: 10px;
+                background-color: var(--main-color-light-title);
+                color: var(--main-color-dark-background);
+                border: solid 1px var(--main-color-light-title);
+                border-radius: 2px;
+                padding: 5px;
+                width: 120px;
+                height: 30px;
+                font-size: 12px;
+            }
+            .displayButtonNone{
+                display: none;
+            }
+        
+            .validateOpinion{
+                margin: 10px;
+                background-color: var(--main-color-light-title);
+                color: var(--main-color-dark-background);
+                border: solid 1px var(--main-color-light-title);
+                border-radius: 2px;
+                padding: 5px;
+                width: 120px;
+                height: 40px;
+                font-size: 12px;
+            }
+        
+    }
 }

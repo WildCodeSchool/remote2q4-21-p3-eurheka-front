@@ -1,59 +1,215 @@
-.AdminJobs{
-    border-style: solid;
-    position: relative;
-    border-color: black;
-    border-width: 1px;
-    width: 80%;
-    margin: 25px auto;
-    color: var(--main-color-light-text);
-    background-color: var(--main-color-dark-background);
+//Desktop ok
 
-    h2{
-        color: var(--main-color-light-text);
-        font-family: var(--title-font);
-        padding-left: 10px;
-        padding-top: 10px;
+.AdminJobs{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 30px;
+    padding: 20px;
+    background-color: var(--main-color-dark-background);
+    color: var(--main-color-light-title);
+    font-family: var(--text-font);
+
+    .JobAdminTitle{
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
         font-size: 16px;
     }
 
-    .JobAdminTitle{
-        margin-bottom: 5px;
-    }
-
-    .CloseFolding
-    {
+    .CloseFolding {
         position: absolute;
         top :10px;
-        font-size: 30px;
+        font-size: 20px;
         font-weight: bolder;
-        color : gray;
+        color : white;
         right: 10px;
     }
 
     .JobAdminBloc{
-        display: block;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: left;
     }
     
     .BlocHidden{
         display: none;
     }
 
-    .NewJobContainer{
+    .CreateJob{
+        width: 50%;
+        height: auto;
         display: flex;
         flex-direction: column;
-        margin : 10px;
+        align-items: center;
+        justify-content: center;
+        margin-left: 50px;
     }
 
-    .LabelNewJobAdmin{
-        margin: 10px 10px;
+    .CreateJobTitle {
+        margin: 10px;
+        text-align: center;
+    }
+
+    .gIfIEN {
+        margin: 10px;
+    }
+
+    .ExistingJob {
+        width: 50%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+    }
+
+    .ExistingJobTitle {
+        margin: 10px;
+        text-align: center;
+    }
+
+    .duoCreateJob {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .LabelJob{
+        margin: 10px;
     }
 
     .DownloadFile{
-        margin-top: 10px;
+        margin: 10px;
     }
 
     .AddJobBtn{
-        width :100px;
-        margin : 10px auto;
+        margin: 10px;
+        background-color: var(--main-color-light-title);
+        color: var(--main-color-dark-background);
+        border: solid 1px var(--main-color-light-title);
+        border-radius: 2px;
+        padding: 5px;
+        width: 120px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    @media only screen and (min-width: 391px) and (max-width: 768px) {
+
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+    
+    }
+
+    @media screen and (min-width: 1025px) {
+        .AdminJobs{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin: 30px;
+            padding: 20px;
+            background-color: var(--main-color-dark-background);
+            color: var(--main-color-light-title);
+            font-family: var(--text-font);
+        
+            .JobAdminTitle{
+                width: 100%;
+                text-align: left;
+                margin-bottom: 20px;
+                font-size: 16px;
+            }
+        
+            .CloseFolding {
+                position: absolute;
+                top :10px;
+                font-size: 20px;
+                font-weight: bolder;
+                color : white;
+                right: 10px;
+            }
+        
+            .JobAdminBloc{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: left;
+            }
+            
+            .BlocHidden{
+                display: none;
+            }
+        
+            .CreateJob{
+                width: 50%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-left: 50px;
+            }
+        
+            .CreateJobTitle {
+                margin: 10px;
+                text-align: center;
+            }
+
+            .gIfIEN {
+                margin: 10px;
+            }
+        
+            .ExistingJob {
+                width: 50%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: left;
+                justify-content: center;
+            }
+        
+            .ExistingJobTitle {
+                margin: 10px;
+                text-align: center;
+            }
+        
+            .duoCreateJob {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+            }
+        
+            .LabelJob{
+                margin: 10px;
+            }
+        
+            .DownloadFile{
+                margin: 10px;
+            }
+        
+            .AddJobBtn{
+                margin: 10px;
+                background-color: var(--main-color-light-title);
+                color: var(--main-color-dark-background);
+                border: solid 1px var(--main-color-light-title);
+                border-radius: 2px;
+                padding: 5px;
+                width: 120px;
+                height: 40px;
+                font-size: 12px;
+            }
+        }
     }
 }

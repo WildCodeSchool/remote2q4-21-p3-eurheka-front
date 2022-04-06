@@ -1,17 +1,66 @@
 .UserAdminContainer{
-    max-width: 100%;
+    width: 65%;
+    height: auto;
+    
     .UserTable{
-        width: 80%;
-        margin: 0 auto;
+        width: 100%;
+        margin-left: 20px;
         text-align: center;
     }
 
-    .UserTable td{
+    .usersAdminCell {
+        width: 80px;
+        margin: 5px;
+        padding: 1px;
+        font-size: 12px;
+    }
+
+    .usersNameCel {
+        width: 200px;
+        margin: 5px;
         padding: 1px;
     }
 
     .Clickable{
+        font-size: 12px;
+        width: 100%;
         cursor: pointer;
+    }
+
+    .usersAdminSelect {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .usersAdminLevel {
+        width: 100px;
+    }
+
+    .usersAdminBtn {
+        width: 80px;
+        margin-left: 5px;
+        padding: 1px;
+        font-size: 12px;
+    }
+
+    .usersAdmModify {
+        background-color: var(--main-color-dark-background);
+        color: var(--main-color-light-title);
+        border: solid 1px var(--main-color-light-title); 
+        border-radius: 2px;
+        padding: 2px;
+        width: 75px;
+        font-size: 10px;
+    }
+
+    .usersAdmSuppress {
+        background-color: var(--main-color-light-title);
+        color: var(--main-color-dark-background);
+        border: solid 1px var(--main-color-light-title);
+        border-radius: 2px;
+        padding: 2px;
+        width: 75px;
+        font-size: 10px;
     }
 
     .popupContainer,.innerPopup{

@@ -14,7 +14,7 @@ const AdviceCard = (props) => {
                         {props.task4 ? <li>{props.task4}</li> : null }
                     </ul>
                 </div>
-                </a>
+            </a>
         </div>
     )
 }

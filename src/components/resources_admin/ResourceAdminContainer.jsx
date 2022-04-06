@@ -3,6 +3,7 @@ import { FileUploader } from "react-drag-drop-files";
 import './ResourceAdminContainer.scss';
 import ResourceAdminModal from './ResourceAdminModal';
 import axios from 'axios';
+import filePic from "../../assets/files-icons/file.png";
 
 const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme }) => {
     const [file, setFile] = useState(null);
@@ -164,14 +165,16 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme })
                                     return (
                                         <div className='divThemeDoc'key={theme.idTheme}>
                                             <input className='checkThemeNewDoc'type="checkbox" value={theme.idTheme} id={theme.themeName} checked={theme.checked} onChange={(e) => handleCheckTheme(e)} />
-                                            <label className='LabelThemeNewDoc' htmlFor={theme.themeName}>{theme.themeName}</label>
+                                            <label className='LabelThemeNewDoc' htmlFor={theme.themeName}>
+                                                <div className='nameNewDoc'>{theme.themeName}</div>
+                                            </label>
                                         </div>
                                     )
                                 })}
                             </div>
+                            <button type="submit" className='SubmitBtn'>Ajouter la ressource</button>
                         </div>
                         </div>
-                        <button type="submit" className='SubmitBtn'>Ajouter la ressource</button>
                     </div>
                 </form>
             </div>
@@ -181,9 +184,12 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme })
                     displayModal={handleModal}
                     resource={displayId}
                     reload={reload}
-                    setReload={setReload} />
+                    setReload={setReload}
+                    reloadTheme={reloadTheme} />
                 {docs.map((doc, index) => {
-                    return <div key={index} className="ResourceCard" onClick={() => handleModal(doc.id_resource, true)}>{doc.name}
+                    return <div key={index} className="ResourceCard" onClick={() => handleModal(doc.id_resource, true)}>
+                        <img src={filePic} alt="file" className="filePic" />
+                        <p className="ResourceName">{doc.name}</p>
                     </div>
                 })}
             </div>

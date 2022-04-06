@@ -1,19 +1,44 @@
+//Desktop mode below
+
 .EventAdminContainer{
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid black;
+    width: 98%;
+    height: auto;
+    position: relative;
+    margin : 10px;
+    background-color: rgba(255, 255, 255, 0.1);
 
     .EventAdminContainerList{
-        margin-left: 10px;
         list-style-type: none;
+        margin-left: 10px;
+        width: 100%;
+        height: auto;
     }
 
     .PassedEvent{
-        text-decoration:line-through;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; 
+        height: auto; 
+        width: auto;
+        font-size: 16px;
+
     }
 
     .EventAdminListItem{
         margin: 5px;
+        padding: 5px;
         display: inline-block;
+    }
+
+    .SuppressEventBtn {
+        margin-left: 15px;
+        background-color: var(--main-color-light-title);
+        color: var(--main-color-dark-background);
+        border: solid 1px var(--main-color-light-title);
+        border-radius: 2px;
+        padding: 5px;
+        width: 100px;
+        font-size: 12px;
     }
 }
