@@ -31,7 +31,7 @@ const DropCV = ({uId, reload, setReload}) => {
 
     return (
         <div className='DropCV'>
-            <FileUploader className="DownloadFile" handleChange={handleChange} name="file" types={fileTypes} label="Glisser et déposer le fichier" />
+            <FileUploader handleChange={handleChange} name="file" types={fileTypes} label="Glisser et déposer le fichier" />
             <button className='validateCV' onClick={handleSubmit}>Enregistrer ce CV</button> 
         </div>
     )
