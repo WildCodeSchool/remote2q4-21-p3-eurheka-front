@@ -67,9 +67,9 @@ function App() {
   return (
     <UserIdContext.Provider value={{uId, uLevel, setUId, setULevel, scrollToTop}} >
     <div className="App">
-      {/* {!connected&&
+      {!connected&&
         <SplashPage />
-      } */}
+      }
       <NavBar />    
       <Routes>
         <Route exact path='/' element={<Home />}/>
