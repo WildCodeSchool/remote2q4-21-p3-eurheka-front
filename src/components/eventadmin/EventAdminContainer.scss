@@ -31,6 +31,10 @@
         display: inline-block;
     }
 
+    .strikeEvent{
+        text-decoration: line-through;
+    }
+
     .SuppressEventBtn {
         margin-left: 15px;
         background-color: var(--main-color-light-title);
