@@ -97,7 +97,7 @@ const AdminUserInfo = ({ user, uId }) => {
                         </div>
                     </div>
                     <div className="AdminUserInfoPassword">
-                        <p>Indiquez ci-dessous votre nouveau mot de passe en cas de changement.</p>
+                        <p className="HowToPassword">Indiquez ci-dessous votre nouveau mot de passe en cas de changement.</p>
                         <div className="AdminUserPassParts">
                             <div className="AdminInfoPassword">
                                 <label htmlFor="password1" className='labelAdmPassword'>Mot de passe :</label>

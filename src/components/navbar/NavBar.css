@@ -141,7 +141,8 @@
     } 
     .right-container {
         border-left: solid 1px white;
-        padding-left: 3px;
+        padding-left: 2px;
+        width: 40%;
     }
     .logo-container {
         width: 0%;
@@ -166,8 +167,8 @@
     }
     .navigation-link {
         height: 90%;
-        margin-left: 2px;
-        margin-right: 6px;
+        margin-left: 5px;
+        margin-right: 5px;
         font-size: 10px;
     }
     .selected {
@@ -179,23 +180,31 @@
     .selected::after {
         height: 7px;
         width: 100%;
-        bottom: -17px;
+        bottom: -16px;
         left: 0px;
     }
+
+    .connected-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+    }
+
     .login-button {
-        padding-right: 6px;
-        padding-left: 6px;
+        padding-right: 10px;
+        padding-left: 2px;
         font-size: 10px;
+        text-align: left;
     }
     .logout-button {
         height: 100%;
-        width: 52%;
+        width: 51%;
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
-        padding-right: 4px;
-        padding-left: 4px;
+        padding-right: 3px;
+        padding-left: 1px;
         font-size: 10px;
     }
 }
@@ -208,15 +217,25 @@
     .left-container{
         display: flex;
         height: 100%;
-        width: 80%;
+        width: 65%;
         align-items: center;
+        justify-content: left;
     } 
+
+    .right-container {
+        height: 100%;
+        width: 35%;
+        display: flex;
+        flex-direction: row;
+        justify-content: right;
+        align-items: center;
+    }
     .logo-container {
-        width: 30%;
+        width: 24%;
         height: auto;
         margin-top: 5px;
-        margin-left: 5px;
-        margin-right: 6px;
+        margin-left: 4px;
+        margin-right: 4px;
     }
     .logo-link {
         width: 100%;
@@ -224,7 +243,7 @@
     }
     .Header-logo {
         height: auto;
-        width: 100%;
+        width: 95%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -255,10 +274,10 @@
     }
     .logout-button {
         height: 100%;
-        width: 52%;
+        width: 53%;
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         padding-right: 4px;
         padding-left: 4px;
@@ -323,7 +342,7 @@
         width: 51%;
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         padding-right: 1px;
         padding-left: 3px;
