@@ -11,12 +11,8 @@
     .selector{
         margin-left: 10px;
     }
-
-
-
     
     @media screen and (min-width: 391px) and (max-width: 767px) {
-
         h2{
             font-size: 20px;
             text-align: center;
@@ -42,13 +38,9 @@
         .selectorList{
             font-size: 12px;
         }
-        
-
     }
     
     @media screen and (min-width: 768px) and (max-width: 1024px) {
-        
-
         h2{
             font-size: 20px;
             text-align: center;
@@ -81,6 +73,7 @@
             font-size: 20px;
             text-align: center;
         }
+
         .JobSelectors{
             display: flex;
             flex-direction: column;
@@ -102,6 +95,5 @@
         .selectorList{
             font-size: 12px;
         }
-        
     }
 }
