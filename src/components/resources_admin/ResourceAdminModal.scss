@@ -14,6 +14,7 @@
 
     .LabelDocContainer{
         margin: 10px;
+        font-size: 12px;
     }
 
     .ThemeContainer{
@@ -36,7 +37,7 @@
 
     .LabelThemeContainer{
         margin: 5px;
-        font-size: 9px;
+        font-size: 12px;
         max-width: 180px;
         overflow: hidden;
         white-space: nowrap;
@@ -48,33 +49,44 @@
         width: 100%;
         flex-direction: row;
         justify-content: center;
+        align-items: center;
     }
 
-    .DocContainerModalSubmitBtn, .DeleteDocBtn {
-        padding: 5px;
+    .ModifyDocBtn {
+        margin-left: 15px;
         background-color: white;
-        box-shadow: 2px 2px 2px black;
+        color: var(--main-color-dark-text);
+        border: solid 1px var(--main-color-dark-background); 
+        border-radius: 2px;
+        padding: 5px;
+        width: 60px;
+        height: 24px;
+        font-size: 10px;
+        text-align: center;
     }
 
-    .DeleteDocBtn{
-        border-style: solid;
-        border-width: 1px; 
-    }
-
-    .DeleteDocBtn:active{
-        border-top-width: 3px;
-        border-left-width: 3px;
-        padding: 3px;
+    .DeleteDocBtn {
+        text-align: center;
+        margin: 5px;
+        background-color: var(--main-color-dark-background);
+        color: white;
+        border: solid 1px var(--main-color-dark-background);
+        border-radius: 2px;
+        box-shadow: none;
+        padding: 2px;
+        width: 55px;
+        height: 18px;
+        font-size: 10px;
     }
 
     .BtnModalClose{
         position: absolute;
-        top :8px;
-        right: 10px;
+        background-color: var(--main-color-light-background);
+        color: var(--main-color-dark-background);
+        top :5px;
+        right: 5px;
         padding : 5px;
         border: none;
-        background-color: none;
-        width: 12px;
         font-size: 12px;
     }
 
