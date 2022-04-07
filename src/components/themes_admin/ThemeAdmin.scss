@@ -12,7 +12,7 @@
     font-family: var(--text-font);
     padding: 15px;
     margin: 20px;
-    
+    position: relative;    
 
     .ThemeAdminTitle{
         width: 100%;
@@ -26,8 +26,8 @@
         font-size: 20px;
         font-weight: bolder;
         color : white;
-        right: 30px;
-        top: 315px;
+        right: 10px;
+        top: 10px;
     }
  
     .ThemeAdminBloc{
@@ -124,7 +124,7 @@
         font-family: var(--text-font);
         padding: 15px;
         margin: 20px;
-        
+        position: relative;        
     
         .ThemeAdminTitle{
             width: 100%;
@@ -138,8 +138,8 @@
             font-size: 20px;
             font-weight: bolder;
             color : white;
-            right: 45px;
-            top: 330px;
+            right: 10px;
+            top: 10px;
         }
      
         .ThemeAdminBloc{
@@ -236,14 +236,15 @@
         background-color: var(--main-color-dark-background);
         color: var(--main-color-light-title);
         font-family: var(--text-font);
+        position: relative;
 
             .CloseFolding {
                 position: absolute;
                 font-size: 20px;
                 font-weight: bolder;
                 color : white;
-                right: 18px;
-                top: 20px;
+                right: 10px;
+                top: 10px;
             }
 
     }
@@ -260,6 +261,7 @@
         background-color: var(--main-color-dark-background);
         color: var(--main-color-light-title);
         font-family: var(--text-font);
+        position: relative;
             
             .CloseFolding {
                 position: absolute;
@@ -268,6 +270,7 @@
                 font-weight: bolder;
                 color : white;
                 right: 10px;
+                top: 10px;
             }
 
     }
@@ -284,7 +287,7 @@
         background-color: var(--main-color-dark-background);
         color: var(--main-color-light-title);
         font-family: var(--text-font);
-        
+        position: relative;        
     
         .ThemeAdminTitle{
             width: 100%;
@@ -300,6 +303,7 @@
             font-weight: bolder;
             color : white;
             right: 10px;
+            top: 10px;
         }
      
         .ThemeAdminBloc{
