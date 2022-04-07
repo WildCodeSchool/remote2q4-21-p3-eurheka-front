@@ -1,4 +1,23 @@
 # Getting Started with Create React App
+Dépendances :
+    - @testing-library/jest-dom
+    - @testing-library/react
+    - @testing-library/user-event
+    - axios
+    - dotenv
+    - file-uploader-js
+    - js-cookie
+    - node
+    - node-sass
+    - react
+    - react-cookie
+    - react-dom
+    - react-drag-drop-files
+    - react-elastic-carousel
+    - react-paginate
+    - react-router-dom
+    - react-scripts
+    - web-vitals
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
