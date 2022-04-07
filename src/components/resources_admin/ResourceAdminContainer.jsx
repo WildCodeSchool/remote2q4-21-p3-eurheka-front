@@ -146,7 +146,10 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme })
                         <div className='NewResourceDivContainer'>
                             <div className="AddDocTitle">Ajouter une nouvelle ressource</div>
                             <div className="blocChoices">
-                                <label htmlFor="name" className='LabelAdminContainer'>Nom de la ressource : <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} /> </label>
+                                <div className="nameDuo">
+                                    <label htmlFor="name" className='LabelAdminContainer'>Nom de la ressource : </label>
+                                    <input className='InputAdminContainer' type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} /> 
+                                </div>
                                 {catDoc > 1 ? <FileUploader className="DownloadFile" handleChange={handleChange} name="file" types={fileTypes} label="Glisser et déposer le fichier" /> : <> <label forhtml="video" className='LabelAdminContainer'>Chemin de la vidéo : <input type="text" id="video" value={pathVideo} onChange={(e) => setPathVideo(e.target.value)} /> </label></>}
                                 <div className='publicDuo'>
                                     <label htmlFor='' className='LabelAdminContainer'>Destiné au public : </label>
@@ -159,7 +162,7 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme })
                             </div>                       
                         </div>
                         <div className="ThemeContainer">
-                             Choisissez un thème dans la liste suivante:
+                            <div className="AddDocTitle">Choisissez un thème dans la liste suivante:</div>
                             <div className="newDocThemeContainer">
                                 {themes && themes.map((theme) => {
                                     return (

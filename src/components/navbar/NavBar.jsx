@@ -86,7 +86,7 @@ const NavBar = () => {
                     isActive ? "selected" : "navigation-link"
                     }
                     onClick={scrollToMenu}>
-                        Contact/Avis
+                        Contact
                     </NavLink>
                 </div>
             </div>
@@ -100,7 +100,7 @@ const NavBar = () => {
                     <div className='connected-container'>
                         {admin&&
                             <NavLink to="/admin" className={({ isActive }) =>
-                            isActive ? "selected" : "navigation-link"} onClick={scrollToMenu}>Administration</NavLink>
+                            isActive ? "selected admin" : "navigation-link"} onClick={scrollToMenu}>Administration</NavLink>
                         }
                         {!admin&&independantUser&&
                             <NavLink to="/mon-profil-particulier" className={({ isActive }) =>
