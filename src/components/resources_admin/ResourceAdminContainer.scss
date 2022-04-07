@@ -1,12 +1,33 @@
 .ResourceAdminContainer{ 
     .AddDocTitle{
-        margin: 10px;
+        margin: 8px;
+        font-size: 14px;
+    }
+
+    .blocChoices {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+    }
+
+    .nameDuo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .InputAdminContainer {
+        width: 150px;
+        height: 20px;
+        margin-left: 5px;
     }
 
     .gIfIEN{
-        max-width: 380px;
+        max-width: 370px;
         min-width: 0;
         flex-direction: column;
+        margin: 10px;
     }
 
     .newDocMainContainer{
@@ -16,7 +37,7 @@
     }
 
     .ThemeContainer{
-        width: 80%;
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -27,6 +48,8 @@
         background-color: rgba(255, 255, 255, 0.1);
         margin: 5px;
         font-size: 12px;
+        display: flex;
+        flex-direction: row;
     }
 
     .checkThemeNewDoc {
@@ -39,17 +62,13 @@
     }
 
     .newDocThemeContainer{
-        margin : 5px;
         display: flex;
         flex-direction: column;
         align-items: left;
         justify-content: space-around;
         width: 100%;
-    }
-
-    .DownloadFile{
-        width: 80%;
-        margin: 0 auto;
+        margin-top: 7px;
+        margin-bottom: 20px;
     }
 
     .NewResourceDivContainer{
@@ -57,31 +76,28 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin: 10px;
-    }
-
-    .blocChoices {
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-        justify-content: center;
+        margin-left: 10px;
+        margin-left: 10px;
+        margin-top: 7px;
+        margin-bottom: 20px;
     }
 
     .SubmitBtn{
-        margin: 10px;
+        margin-bottom: 15px;
         background-color: var(--main-color-light-title);
         color: var(--main-color-dark-background);
         border: solid 1px var(--main-color-light-title);
         border-radius: 2px;
         padding: 5px;
-        width: 140px;
-        height: 40px;
+        width: 130px;
+        height: 35px;
         font-size: 12px;
     }
 
     .LabelAdminContainer{
         margin-top: 10px;
         margin-bottom: 10px;
+        font-size: 12px;
     }
 
     .ListResourceDiv{
@@ -93,19 +109,19 @@
     }
 
     .ResourceCard{
-        width: 120px;
+        width: 50px;
         height: auto;
         display: flex;
         flex-direction: column;
         border : solid 1px rgba(255, 255, 255, 0.1);
         text-align: center;
         padding: 5px;
-        margin: 10px;
+        margin: 5px;
         background-color: rgba(255, 255, 255, 0.1);
     }
 
     .ResourceName {
-        font-size: 12px;
+        font-size: 9px;
         color: white;
     }
 
@@ -157,6 +173,12 @@
             width: 400px;
             height: auto;
             padding: 10px;
+        }
+
+        .LabelAdminContainer{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
         }
 
         .newDocMainContainer{
