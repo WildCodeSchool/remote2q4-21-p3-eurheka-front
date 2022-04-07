@@ -74,8 +74,8 @@ const Themecontainer = ({ reload,setReload }) => {
             <ul className="ThemeAdminContainerlist">
             {themes.map((theme) => {
                 return (
-                    <li className='ThemeContainerItem' key={theme.id_theme}>
-                        {theme.name}
+                    <li className='ThemeAdminItem' key={theme.id_theme}>
+                        <p className='ThemeName'>{theme.name}</p>
                         <input
                             type="button"
                             value="Modifier"
