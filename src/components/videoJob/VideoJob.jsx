@@ -37,7 +37,7 @@ const VideoJob = () => {
     <div>
       <div className='mainTitle-darkTheme'>
         <h2>Job vidéos</h2>
-        <span onClick={handleChange}>{isReduce ? <i className="fa-solid fa-chevron-up"></i> : <i className="fa-solid fa-chevron-down"></i> }</span>
+        <span onClick={handleChange}>{isReduce ? <i className="fa-solid fa-chevron-up arrowOver"></i> : <i className="fa-solid fa-chevron-down arrowOver"></i> }</span>
       </div>
       { isReduce ?
         <div className='video-resources-container'>

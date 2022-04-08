@@ -41,7 +41,7 @@ const EventCategoryAdmin = ({ setReloadEvent, reloadEvent }) => {
     return (
         <div className='EventCategoryAdmin'>
             <div className='EventCategoryAdminTitle'>Gérer les Catégories d'événements</div>
-            <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding" : "fa-solid fa-chevron-down CloseFolding"} onClick={() => handleShowClick('EventCategoryAdminBloc')}></i>
+            <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding arrowOver" : "fa-solid fa-chevron-down CloseFolding arrowOver"} onClick={() => handleShowClick('EventCategoryAdminBloc')}></i>
             <div className="EventCategoryAdminBloc BlocHidden" id="EventCategoryAdminBloc">
                 <div className="EventCategoryAdminAdd">
                     <div className="ExistingCategory">

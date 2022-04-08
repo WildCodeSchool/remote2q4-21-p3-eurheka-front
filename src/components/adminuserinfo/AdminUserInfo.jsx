@@ -67,7 +67,7 @@ const AdminUserInfo = ({ user, uId }) => {
     return (
         <div className='AdminUserInfo'>
             <div className='AdminUserInfoTitle'>Mes informations</div>
-            <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding" : "fa-solid fa-chevron-down CloseFolding"} onClick={() => handleShowClick('AdminUserInfoBloc')}></i>
+            <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding arrowOver" : "fa-solid fa-chevron-down CloseFolding arrowOver"} onClick={() => handleShowClick('AdminUserInfoBloc')}></i>
             <div className="AdminUserInfoBloc BlocHidden" id="AdminUserInfoBloc">
                 <div className="AdminInfoContainer">
                     <div className="AdminUserInfoParts">

@@ -30,6 +30,7 @@
 
     .name{
         text-align:end;
+        margin-top: 3%;
         margin-right: 5%;
         font-size: 18px;
     }
@@ -49,6 +50,7 @@
         height: 40px;
         font-family: "Poppins";
         font-weight: 400;
+        cursor: pointer;
     }
 
     @media only screen and (min-width: 390px) and (max-width: 768px) {
