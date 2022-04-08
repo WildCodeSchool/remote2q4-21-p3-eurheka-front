@@ -1,23 +1,23 @@
 .UserAdminContainer{
-    width: 65%;
+    width: 100%;
     height: auto;
     
     .UserTable{
         width: 100%;
-        margin-left: 20px;
+        margin-left: 0px;
         text-align: center;
     }
 
     .usersAdminCell {
-        width: 80px;
-        margin: 5px;
+        width: 50px;
+        margin: 2px;
         padding: 1px;
         font-size: 12px;
     }
 
     .usersNameCel {
-        width: 200px;
-        margin: 5px;
+        width: 250px;
+        margin: 2px;
         padding: 1px;
     }
 
@@ -38,7 +38,7 @@
 
     .usersAdminBtn {
         width: 80px;
-        margin-left: 5px;
+        margin-left: 3px;
         padding: 1px;
         font-size: 12px;
     }
@@ -49,7 +49,7 @@
         border: solid 1px var(--main-color-light-title); 
         border-radius: 2px;
         padding: 2px;
-        width: 75px;
+        width: 50px;
         font-size: 10px;
         cursor: pointer;
     }
@@ -60,7 +60,7 @@
         border: solid 1px var(--main-color-light-title);
         border-radius: 2px;
         padding: 2px;
-        width: 75px;
+        width: 50px;
         font-size: 10px;
         cursor: pointer;
     }
@@ -111,12 +111,47 @@
             padding: 5px;
         }
 
+        .usersAdminCell {
+            width: 80px;
+            margin: 5px;
+            padding: 1px;
+            font-size: 12px;
+        }
+    
+        .usersNameCel {
+            width: 200px;
+            margin: 5px;
+            padding: 1px;
+        }
+
         .popupUserAdmin{
             width : 75%;
             height: 250px;
             top : 15px;
             left : 150px;
             overflow: hidden;
+        }
+
+        .usersAdmModify {
+            background-color: var(--main-color-dark-background);
+            color: var(--main-color-light-title);
+            border: solid 1px var(--main-color-light-title); 
+            border-radius: 2px;
+            padding: 2px;
+            width: 75px;
+            font-size: 10px;
+            cursor: pointer;
+        }
+    
+        .usersAdmSuppress {
+            background-color: var(--main-color-light-title);
+            color: var(--main-color-dark-background);
+            border: solid 1px var(--main-color-light-title);
+            border-radius: 2px;
+            padding: 2px;
+            width: 75px;
+            font-size: 10px;
+            cursor: pointer;
         }
     }
 }

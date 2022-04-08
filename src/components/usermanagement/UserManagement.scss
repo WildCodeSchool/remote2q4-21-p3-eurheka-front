@@ -1,15 +1,16 @@
 .UserAdmin{
     width: 80%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
-    margin: 30px;
-    padding: 20px;
     background-color: var(--main-color-dark-background);
     color: var(--main-color-light-title);
     font-family: var(--text-font);
+    padding: 15px;
+    margin: 20px;
+    position: relative;
     
     .UserAdminTitle{
         width: 100%;
@@ -25,14 +26,15 @@
         font-weight: bolder;
         color : white;
         right: 10px;
+        top: 10px;
     }
 
     .UserAdminBloc{
         width: 100%;
         display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: space-around;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
     }
     
     .BlocHidden{
@@ -48,7 +50,7 @@
     }
 
     .HowToBloc {
-        width: 30%; 
+        width: 97%; 
         height: auto;
         background-color: white;
         color: var(--main-color-dark-title);
@@ -59,16 +61,17 @@
     .HowToTitle {
         font-weight: bolder;
         margin: 5px;
+        font-size: 14px;
     }
 
     .HowToSubTitle {
         font-weight: bolder;
-        font-size: 14px;
+        font-size: 12px;
         margin: 5px;
     }
 
     .HowToText {
-        font-size: 14px;
+        font-size: 12px;
         margin: 5px;
     }
 
