@@ -30,3 +30,12 @@
         margin-right: auto;
     }
 }
+
+@media screen and (max-width: 390px) {
+    .ServicesList{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

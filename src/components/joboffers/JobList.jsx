@@ -25,7 +25,7 @@ const JobList = ({jobsList,jobCategory,jobType}) => {
                 return(
                     <li className='jobListContainer'>
                         <a href={`${process.env.REACT_APP_URL}${job.path}`} className='jobLink' target="_blank">
-                            <p key={job.id_job}>{job.name} - {job.category_name} - {job.name_offer}</p><i className="fa-regular fa-copy"></i>
+                            <p key={job.id_job} className='jobText'>{job.name} - {job.category_name} - {job.name_offer}</p><i className="fa-regular fa-copy picto"></i>
                         </a>
                     </li>
                 )
