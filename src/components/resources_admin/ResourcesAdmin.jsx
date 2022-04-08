@@ -49,7 +49,7 @@ const ResourcesAdmin = ({reloadTheme}) => {
     return (
         <div className='ResourceAdmin'>
                 <div className='ResourceAdminTitle'>Gérer les ressources</div>
-                <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding" : "fa-solid fa-chevron-down CloseFolding"} onClick={() => handleShowClick('ResourceAdminBloc')}></i>
+                <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding arrowOver" : "fa-solid fa-chevron-down CloseFolding arrowOver"} onClick={() => handleShowClick('ResourceAdminBloc')}></i>
                 <div className="ResourceAdminBloc BlocHidden" id="ResourceAdminBloc">
                     <ul className="navBarResourceList">
                         <li id="video" className="navBarResourceListItem ResourceUnderLine" onClick={(e) => displayModal(1, 'video')}>Vidéo</li>

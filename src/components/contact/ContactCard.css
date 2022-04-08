@@ -80,6 +80,7 @@
     margin-bottom: 55px;
     width: 117px;
     height: 47px;
+    cursor: pointer;
 }
 
 @media screen and (max-width:390px) {

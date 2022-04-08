@@ -18,7 +18,7 @@ export const ServiceCard = (props) => {
             <div className={changeSize ? props.containerClass : props.containerClassReduce}>
                 <div className='serviceTitleContainer' onClick={changeButton}>
                     <h2 className='serviceCardTitle'>{props.title}</h2>
-                    <span className='arrowStyle'>{changeSize ? <i className="fa-solid fa-chevron-up"></i> : <i className="fa-solid fa-chevron-down"></i>} </span>
+                    <span className='arrowStyle'>{changeSize ? <i className="fa-solid fa-chevron-up arrowOver"></i> : <i className="fa-solid fa-chevron-down arrowOver"></i>} </span>
                 </div>
                 <h3 className='serviceCardSubTitle'>{props.subTitle}</h3>
                 <ul className='serviceDescriptionList'>
@@ -36,7 +36,7 @@ export const ServiceCard = (props) => {
             <div className={changeSize ? props.SecondContainerClassReduce : props.secondContainerClass}>
                 <div className='serviceTitleContainer' onClick={changeButton}>
                     <h2 className='serviceCardTitle'>{props.titleb}</h2>
-                    <span className='arrowStyle'>{changeSize ? <i className="fa-solid fa-chevron-down"></i> : <i className="fa-solid fa-chevron-up"></i>} </span>
+                    <span className='arrowStyle'>{changeSize ? <i className="fa-solid fa-chevron-down arrowOver"></i> : <i className="fa-solid fa-chevron-up arrowOver"></i>} </span>
                 </div>
                 <h3 className='serviceCardSubTitle'>{props.subTitleb}</h3>
                 <ul className='serviceDescriptionList'>
