@@ -43,19 +43,6 @@
         margin: auto;
         margin-top: 20px;
     }
-
-    @media screen and (max-width: 390px) {
-        .JobOffer-header{
-            height: 20vh ;
-            width: 390px;
-        }
-    
-        .JobOffer-header h2 {
-            font-size: 15px;
-            padding-top: 0.5vh;
-            padding-left: 5vw;
-        }
-    }
     
     @media screen and (min-width: 391px) and (max-width: 767px) {
         .JobOffer-header{
@@ -81,7 +68,22 @@
             padding-top: 1.5vh;
             padding-left: 4vw;
         }
+
+        .jobs-container{
+            width: 80%;
+        }
     }
     
-
+    @media screen and (max-width: 390px) {
+        .JobOffer-header{
+            height: 20vh ;
+            width: 390px;
+        }
+    
+        .JobOffer-header h2 {
+            font-size: 15px;
+            padding-top: 0.5vh;
+            padding-left: 5vw;
+        }
+    }
 }
