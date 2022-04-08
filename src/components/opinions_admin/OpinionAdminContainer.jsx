@@ -5,7 +5,6 @@ import './OpinionAdminContainer.scss'
 const OpinionAdminContainer = () => {
     const [opinions, setOpinions] = useState([])
     const [reload, setReload] = useState(false);
-    const [valid, setValid] = useState('à valider');
 
     useEffect(() => {
         const getOpinions = async () => {
@@ -16,7 +15,6 @@ const OpinionAdminContainer = () => {
                     setOpinions(data);
                 })
                 .catch((err) => {
-                    console.log(err);
                     const HTTPError = err.response.status;
                     if (HTTPError === 401) {
                         alert('Vous avez été déconnecté.');
@@ -37,7 +35,6 @@ const OpinionAdminContainer = () => {
                     }
                 })
                 .catch((err) => {
-                    console.log(err.response);
                     const HTTPError = err.response.status;
                     if (HTTPError === 401) {
                         alert('Vous avez été déconnecté.');
@@ -60,7 +57,6 @@ const OpinionAdminContainer = () => {
                     }
                 })
                 .catch((err) => {
-                    console.log(err.response);
                     const HTTPError = err.response.status;
                     if (HTTPError === 401) {
                         alert('Vous avez été déconnecté.');

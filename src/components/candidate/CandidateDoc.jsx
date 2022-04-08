@@ -1,11 +1,9 @@
-import axios from 'axios';
-import React, { useState, useEffect } from 'react';
-import { FileUploader } from "react-drag-drop-files";
+import React, { useState } from 'react';
 import './CandidateDoc.css';
 import DropCV from "./DropCV.jsx";
 import ShowCV from "./ShowCV.jsx";
 
-const CandidateDoc = (props) => {
+const CandidateDoc = () => {
     const [reload, setReload] = useState(false);
 
     return (

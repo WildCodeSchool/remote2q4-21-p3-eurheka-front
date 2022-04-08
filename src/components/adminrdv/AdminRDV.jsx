@@ -17,7 +17,6 @@ const AdminRDV = (props) => {
                     setRdvs(data);
                 })
                 .catch((err) => {
-                    console.log(err);
                     const HTTPError = err.response.status;
                     if (HTTPError === 401) {
                         alert('Vous avez été déconnecté.');
@@ -54,7 +53,6 @@ const AdminRDV = (props) => {
                     }
                 })
                 .catch((err) => {
-                    console.log(err);
                     const HTTPError = err.response.status;
                     if (HTTPError === 401) {
                         alert('Vous avez été déconnecté.');
@@ -67,7 +65,7 @@ const AdminRDV = (props) => {
     return (
         <div className='AdminRDV'>
             <div className='RDVAdminTitle'>Gérer mes rendez-vous</div>
-            <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding" : "fa-solid fa-chevron-down CloseFolding"} onClick={() => handleShowClick('RDVAdminBloc')}></i>
+            <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding arrowOver" : "fa-solid fa-chevron-down CloseFolding arrowOver"} onClick={() => handleShowClick('RDVAdminBloc')}></i>
             <div className="RDVAdminBloc BlocHidden" id="RDVAdminBloc">
                 <div className="RDVAdminContainer">
                     <div className='titleRDV'>Mes demandes de RDV en cours</div>

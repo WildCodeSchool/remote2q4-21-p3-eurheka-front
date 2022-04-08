@@ -28,4 +28,43 @@
       padding-left: 5px;
       padding-right: 5px;
    }
+
+   .picto{
+      margin-left: 5px;
+   }
+
+   @media screen and (min-width: 391px) and (max-width: 767px) {
+      .jobListContainer{
+         width: 100%;
+         padding: 10px;
+         margin-bottom: 20px;
+         font-size: 12px;
+         text-align: left;
+      }
+   }
+   
+   @media screen and (min-width: 768px) and (max-width: 1024px) {
+      .jobListContainer{
+         width: 100%;
+         padding: 10px;
+         margin-bottom: 20px;
+         font-size: 14px;
+         text-align: left;
+      }
+   }
+
+   @media screen and (max-width: 390px) {
+      
+      .jobListContainer{
+         width: 100%;
+         padding: 10px;
+         margin-bottom: 20px;
+         font-size: 14px;
+         text-align: left;
+      }
+
+      .jobText{
+         font-size: 14px;
+      }
+   }
 }

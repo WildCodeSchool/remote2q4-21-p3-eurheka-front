@@ -1,8 +1,8 @@
-import React, {useState,useEffect} from 'react';
+import React, {useState} from 'react';
 import UserAdminContainer from './UserAdminContainer';
 import './UserManagement.scss';
 
-const UserManagement = (props) => {
+const UserManagement = () => {
     const [showComponent, setShowComponent] = useState(false);
 
     const handleShowClick = (id) => {
@@ -19,7 +19,7 @@ const UserManagement = (props) => {
     return (
         <div className='UserAdmin'>
             <div className='UserAdminTitle'>Gérer les utilisateurs</div>
-            <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding" : "fa-solid fa-chevron-down CloseFolding"} onClick={() => handleShowClick('UserAdminBloc')}></i>
+            <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding arrowOver" : "fa-solid fa-chevron-down CloseFolding arrowOver"} onClick={() => handleShowClick('UserAdminBloc')}></i>
             <div className="UserAdminBloc BlocHidden" id="UserAdminBloc">
                 <div className="HowToBloc">
                     <p className="HowToTitle">Comment utiliser la gestion d'utilisateurs ?</p>

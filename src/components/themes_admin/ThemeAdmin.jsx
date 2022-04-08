@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios';
 import './ThemeAdmin.scss';
 import Themecontainer from './Themecontainer';
@@ -33,7 +33,6 @@ const ThemeAdmin = ({reload,setReload}) => {
                 }
             })
             .catch((err) => {
-                console.log(err);
                 const HTTPError = err.response.status;
                 if (HTTPError === 401) {
                     alert('Vous avez été déconnecté.');
@@ -51,7 +50,7 @@ const ThemeAdmin = ({reload,setReload}) => {
     return (
         <div className='ThemeAdmin'>
                 <div className='ThemeAdminTitle'>Gérer les thèmes de documents</div>
-                <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding" : "fa-solid fa-chevron-down CloseFolding"} onClick={() => handleShowClick('ThemeAdminBloc')}></i>
+                <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding arrowOver" : "fa-solid fa-chevron-down CloseFolding arrowOver"} onClick={() => handleShowClick('ThemeAdminBloc')}></i>
                 <div className="ThemeAdminBloc BlocHidden" id="ThemeAdminBloc">
                     <div className='ExistingTheme'>
                         <div className='ExistingThemeTitle'>Mes thèmes créés</div>

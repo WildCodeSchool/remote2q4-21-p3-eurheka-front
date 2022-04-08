@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 import './AdminUserInfo.scss';
@@ -53,13 +53,15 @@ const AdminUserInfo = ({ user, uId }) => {
             {
                 newUser.password=password1;
             }
-            console.log(newUser);
             axios.put(url, newUser, { withCredentials: true })
                 .then((res) => {
-                    console.log(res)
                 })
                 .catch((err) => {
-                    console.log(err)
+                    const HTTPError = err.response.status;
+                    if (HTTPError === 401) {
+                        alert('Vous avez été déconnecté.');
+                        window.location = '/';
+                    }
                 })
         }
     }
@@ -67,7 +69,7 @@ const AdminUserInfo = ({ user, uId }) => {
     return (
         <div className='AdminUserInfo'>
             <div className='AdminUserInfoTitle'>Mes informations</div>
-            <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding" : "fa-solid fa-chevron-down CloseFolding"} onClick={() => handleShowClick('AdminUserInfoBloc')}></i>
+            <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding arrowOver" : "fa-solid fa-chevron-down CloseFolding arrowOver"} onClick={() => handleShowClick('AdminUserInfoBloc')}></i>
             <div className="AdminUserInfoBloc BlocHidden" id="AdminUserInfoBloc">
                 <div className="AdminInfoContainer">
                     <div className="AdminUserInfoParts">

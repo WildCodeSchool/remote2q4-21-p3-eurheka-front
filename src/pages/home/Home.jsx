@@ -1,8 +1,6 @@
 import React, { useContext } from "react";
 import AdviceCardList from '../../components/adviceCardList/AdviceCardList';
-import Partners from '../../components/partners/Partners';
 import CreateUser from "../../components/create_user/CreateUser";
-import Security from "../../components/security/Security";
 import OpinionDiv from "../../components/opiniondiv/OpinionDiv";
 import UserActionsList from "../../components/user_actions/UserActionsList";
 import { UserIdContext } from  '../../context/AppContext';
@@ -31,8 +29,6 @@ const Home = () => {
       }
       <OpinionDiv />
       <AdviceCardList />
-      <Partners />
-      <Security />
     </div>
   );
 };

@@ -22,7 +22,6 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme })
                     setThemes(data);
                 })
                 .catch((err) => {
-                    console.log(err);
                     const HTTPError = err.response.status;
                     if (HTTPError === 401) {
                         alert('Vous avez été déconnecté.');
@@ -71,15 +70,14 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme })
                 break;
             case 3 : pathAPI='job/';
                 break;
+            default : pathAPI='video/';
         }
-        let path = '';
         //checking if all informations are sets
         if (catDoc === 1) {
             if (pathVideo === '') {
                 alert('Veuillez saisir le chemin de la vidéo')
                 return -1;
             }
-            path = pathVideo;
             const newDoc={
                 visibility:visibility,
                 name:name,
@@ -95,7 +93,6 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme })
                 }
             })
             .catch((err)=>{
-                console.log(err);
                 const HTTPError = err.response.status;
                 if (HTTPError === 401) {
                     alert('Vous avez été déconnecté.');
@@ -108,7 +105,6 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme })
                 alert('Veuillez indiquer le document à envoyer');
                 return -1;
             }
-            path = file.name; //to test
             if (name === '') {
                 alert('Veuillez renseigner le nom du document');
                 return -1;
@@ -127,7 +123,6 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme })
                     }
                 })
                 .catch((err)=>{
-                    console.log(err);
                     const HTTPError = err.response.status;
                     if (HTTPError === 401) {
                         alert('Vous avez été déconnecté.');

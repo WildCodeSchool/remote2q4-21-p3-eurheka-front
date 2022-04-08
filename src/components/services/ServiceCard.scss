@@ -50,6 +50,7 @@
             margin-bottom: 20px;
             width: 100px;
             height: 40px;
+            cursor: pointer;
         }
     }
     
@@ -100,6 +101,7 @@
             margin-bottom: 20px;
             width: 100px;
             height: 40px;
+            cursor: pointer;
         }
     }
 }
@@ -120,6 +122,17 @@
         display: flex;
         flex-direction: column;
         width:60vw;
+        margin-bottom: 20px;
+        font-weight: 300;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .ServiceCard{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
         margin-bottom: 20px;
         font-weight: 300;
         font-size: 12px;

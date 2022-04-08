@@ -1,30 +1,29 @@
-import React, {useContext} from 'react'
+import React, { useContext } from 'react'
 import UserActionsButtonCard from './UserActionsButtonCard';
 import UserActionsUploadCard from './UserActionsUploadCard';
 import UserActionsEventCard from './UserActionsEventCard';
-import { UserIdContext } from  '../../context/AppContext';
+import { UserIdContext } from '../../context/AppContext';
 import './UserActionsList.css'
 import UserActionInscription from './UserActionInscription';
 
 const UserActionsList = () => {
-    const {uId, uLevel}=useContext( UserIdContext);
+    const { uId } = useContext(UserIdContext);
 
-    let connected=false;
+    let connected = false;
 
-    if(uId === 0)
-    {
-        connected=false;
+    if (uId === 0) {
+        connected = false;
     } else {
-        connected=true;
+        connected = true;
     }
 
     return (
         <div className='UserActionsList'>
             <UserActionsButtonCard />
-            {connected&&
+            {connected &&
                 <UserActionsUploadCard />
             }
-            {!connected&& 
+            {!connected &&
                 <UserActionInscription />
             }
             <UserActionsEventCard />

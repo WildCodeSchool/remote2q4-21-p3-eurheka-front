@@ -16,7 +16,7 @@ const UserActionsButtonCard = () => {
                     setNbOffer(number);
                 })
                 .catch((err)=>{
-                    console.log(err);
+                    
                 })
         }
         getCount();

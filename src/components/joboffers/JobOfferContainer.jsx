@@ -20,7 +20,11 @@ const JobOfferContainer = ({ jobs }) => {
                     }
                 })
                 .catch((err) => {
-                    console.log(err);
+                    const HTTPError = err.response.status;
+                    if (HTTPError === 401) {
+                        alert('Vous avez été déconnecté.');
+                        window.location = '/';
+                    }
                 });
         }
 
@@ -39,7 +43,11 @@ const JobOfferContainer = ({ jobs }) => {
                     }
                 })
                 .catch((err) => {
-                    console.log(err);
+                    const HTTPError = err.response.status;
+                    if (HTTPError === 401) {
+                        alert('Vous avez été déconnecté.');
+                        window.location = '/';
+                    }
                 });
         }
         getCategories();
@@ -49,27 +57,31 @@ const JobOfferContainer = ({ jobs }) => {
         <div className='JobOfferContainer'>
             <h2>Liste des offres d'emploi</h2>
             <div className="JobSelectors">
-                <label htmlFor="jobType" className='LabelNewJobAdmin'>Type d'offre :
-                    <select id="jobType" value={jobType} onChange={(e) => setJobtype(e.target.value)} className="selector">
-                        <option value="0" key="0">Tous</option>
-                        {jobTypes && jobTypes.map((jobItem) => {
-                            return (
-                                <option value={jobItem.id_offer_type} key={jobItem.id_offer_type}>{jobItem.name_offer}</option>
-                            )
-                        })
-                        }
-                    </select>
+                <label htmlFor="jobType" className='LabelNewJobAdmin'>Type de contrat :
+                    <div>
+                        <select id="jobType" value={jobType} onChange={(e) => setJobtype(e.target.value)} className="selector">
+                            <option value="0" key="0" className="selectorList">Tous</option>
+                            {jobTypes && jobTypes.map((jobItem) => {
+                                return (
+                                    <option value={jobItem.id_offer_type} key={jobItem.id_offer_type} className="selectorList">{jobItem.name_offer}</option>
+                                )
+                            })
+                            }
+                        </select>
+                    </div>
                 </label>
-                <label htmlFor="jobCategory" className='LabelNewJobAdmin'>Catégorie de l'offre :
-                    <select id="jobCategory" value={jobCategory} onChange={(e) => setJobCategory(e.target.value)} className="selector">
-                        <option value="0" key="0">Toutes</option>
-                        {jobCategories && jobCategories.map((CategoryItem) => {
-                            return (
-                                <option value={CategoryItem.id_job_category} key={CategoryItem.id_job_category}>{CategoryItem.name}</option>
-                            )
-                        })
-                        }
-                    </select>
+                <label htmlFor="jobCategory" className='LabelNewJobAdmin'>Secteur d'activité :
+                    <div>
+                        <select id="jobCategory" value={jobCategory} onChange={(e) => setJobCategory(e.target.value)} className="selector">
+                            <option value="0" key="0" className="selectorList">Tous</option>
+                            {jobCategories && jobCategories.map((CategoryItem) => {
+                                return (
+                                    <option value={CategoryItem.id_job_category} key={CategoryItem.id_job_category} className="selectorList">{CategoryItem.name}</option>
+                                )
+                            })
+                            }
+                        </select>
+                    </div>
                 </label>
             </div>
             <JobList jobsList={jobs}

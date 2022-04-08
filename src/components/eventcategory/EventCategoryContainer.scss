@@ -32,6 +32,8 @@
         color: var(--main-color-light-title);
         border: solid 1px var(--main-color-light-title); 
         border-radius: 2px;
+        font-size: 12px;
+        cursor: pointer;
     }
 
     .SuppressCategoryBtn {
@@ -44,6 +46,8 @@
         width: 55px;
         height: 20px;
         font-size: 10px;
+        font-size: 12px;
+        cursor: pointer;
     }
 
     .popUpModif{

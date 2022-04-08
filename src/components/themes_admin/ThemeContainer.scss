@@ -27,6 +27,7 @@
         color: var(--main-color-light-title);
         border: solid 1px var(--main-color-light-title); 
         border-radius: 2px;
+        cursor: pointer;
     }
 
     .SuppressThemeBtn {
@@ -39,6 +40,7 @@
         width: 55px;
         height: 20px;
         font-size: 10px;
+        cursor: pointer;
     }
 
     .ThemeAdminContainerlist{
@@ -92,6 +94,7 @@
         border-radius: 3px;
         padding: 5px;
         width: 100px;
+        cursor: pointer;
     }  
 
     .closePopup{

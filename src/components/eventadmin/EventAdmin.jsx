@@ -20,7 +20,11 @@ const EventAdmin = ({reloadEvent}) => {
                     setCategories(data);
                 })
                 .catch((err) => {
-                    console.log(err);
+                    const HTTPError = err.response.status;
+                    if (HTTPError === 401) {
+                        alert('Vous avez été déconnecté.');
+                        window.location = '/';
+                    }
                 });
         }
         getCategories();
@@ -52,7 +56,6 @@ const EventAdmin = ({reloadEvent}) => {
                     }
                 })
                 .catch((err) => {
-                    console.log(err);
                     const HTTPError = err.response.status;
                     if (HTTPError === 401) {
                         alert('Vous avez été déconnecté.');
@@ -65,7 +68,7 @@ const EventAdmin = ({reloadEvent}) => {
     return (
         <div className='EventAdmin'>
                 <div className='EventAdminTitle'>Gérer les évenements</div>
-                <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding" : "fa-solid fa-chevron-down CloseFolding"} onClick={() => handleShowClick('EventAdminBloc')}></i>
+                <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding arrowOver" : "fa-solid fa-chevron-down CloseFolding arrowOver"} onClick={() => handleShowClick('EventAdminBloc')}></i>
                 <div className="EventAdminBloc BlocHidden" id="EventAdminBloc">
                     <div className="ExistingEvent">
                     <div className='ExistingEventTitle'>Evènements existants</div>
