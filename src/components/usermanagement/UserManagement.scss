@@ -103,6 +103,16 @@
         color: var(--main-color-light-title);
         font-family: var(--text-font);
         position: relative;
+
+        .HowToBloc {
+            width: 97%; 
+            height: auto;
+            background-color: white;
+            color: var(--main-color-dark-title);
+            border-radius: 3px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
     }
 
     @media only screen and (min-width: 821px) and (max-width: 1179px) {
@@ -118,6 +128,16 @@
         color: var(--main-color-light-title);
         font-family: var(--text-font);
         position: relative;
+
+        .HowToBloc {
+            width: 97%; 
+            height: auto;
+            background-color: white;
+            color: var(--main-color-dark-title);
+            border-radius: 3px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
     }
 
     @media screen and (min-width: 1180px) {

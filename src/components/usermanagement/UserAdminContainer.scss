@@ -94,19 +94,48 @@
         cursor: pointer;
     }
 
-    @media only screen and (min-width: 391px) and (max-width: 768px) {
+    @media only screen and (min-width: 391px) and (max-width: 719px) {
 
     }
 
-    @media screen and (min-width: 769px) and (max-width: 1024px) {
+    @media screen and (min-width: 720px) and (max-width: 1023px) {
         .popupUserAdmin{
             width: 80%;
             height: 200px;
             top : -100px;
         }
+
+        .usersAdminCell {
+            width: 60px;
+            margin: 5px;
+            padding: 1px;
+            font-size: 12px;
+        }
+
+        .usersAdmModify {
+            background-color: var(--main-color-dark-background);
+            color: var(--main-color-light-title);
+            border: solid 1px var(--main-color-light-title); 
+            border-radius: 2px;
+            padding: 5px;
+            width: 60px;
+            font-size: 10px;
+            cursor: pointer;
+        }
+    
+        .usersAdmSuppress {
+            background-color: var(--main-color-light-title);
+            color: var(--main-color-dark-background);
+            border: solid 1px var(--main-color-light-title);
+            border-radius: 2px;
+            padding: 5px;
+            width: 60px;
+            font-size: 10px;
+            cursor: pointer;
+        }
     }
 
-    @media screen and (min-width: 1025px) {
+    @media screen and (min-width: 1024px) and (max-width: 1180px) {
         .UserTable{
             padding: 5px;
         }
@@ -137,7 +166,7 @@
             color: var(--main-color-light-title);
             border: solid 1px var(--main-color-light-title); 
             border-radius: 2px;
-            padding: 2px;
+            padding: 5px;
             width: 75px;
             font-size: 10px;
             cursor: pointer;
@@ -148,10 +177,14 @@
             color: var(--main-color-dark-background);
             border: solid 1px var(--main-color-light-title);
             border-radius: 2px;
-            padding: 2px;
+            padding: 5px;
             width: 75px;
             font-size: 10px;
             cursor: pointer;
         }
+    }
+
+    @media screen and (min-width: 1181px) {
+
     }
 }
