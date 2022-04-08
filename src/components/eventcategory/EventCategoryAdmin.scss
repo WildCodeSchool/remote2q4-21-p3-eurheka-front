@@ -32,7 +32,7 @@
     .EventCategoryAdminBloc{
         width: 100%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: flex-start;
         justify-content: left;
     }
@@ -47,19 +47,20 @@
 
     .EventCategoryAdminAddTitle{
         margin-left: 7px;
+        font-size: 14px;
     }
 
     .EventCategoryAdminAdd{
         width: 100%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: flex-start;
         justify-content: space-around;
     }
 
     .ExistingCategory {
-        width: 60%;
-        height: 70%;
+        width: 100%;
+        height: auto;
         display: flex;
         flex-direction: column;
         align-items: left;
@@ -67,23 +68,26 @@
     }
 
     .ExistingCategoryTitle {
-        margin: 10px;
+        margin: 8px;
         text-align: center;
+        font-size: 14px;
     }
 
     .CreateCategory {
-        width: 40%;
-        height: 70%;
+        width: 100%;
+        height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-left: 50px;
+        margin-left: 0px;
+        margin-top: 10px;
     }
 
     .CreateCategoryTitle {
-        margin: 10px;
+        margin: 0px;
         text-align: center;
+        font-size: 14px;
     }
 
     .duoCategory {
@@ -95,17 +99,22 @@
 
     .labelCategory{
         margin: 10px;
+        font-size: 12px
+    }
+
+    .inputCategory {
+        width: 150px;
     }
 
     .EventCategoryAdminAddBtn{
+        width: 100px;
+        height: 30px;
+        padding: 3px;
         margin: 10px;
         background-color: var(--main-color-light-title);
         color: var(--main-color-dark-background);
         border: solid 1px var(--main-color-light-title);
         border-radius: 2px;
-        padding: 5px;
-        width: 120px;
-        height: 40px;
         font-size: 12px;
     }
 

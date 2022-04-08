@@ -40,7 +40,7 @@ const EventCategoryAdmin = ({ setReloadEvent, reloadEvent }) => {
 
     return (
         <div className='EventCategoryAdmin'>
-            <div className='EventCategoryAdminTitle'>Gérer les Catégories d'événements</div>
+            <div className='EventCategoryAdminTitle'>Gérer les catégories d'événements</div>
             <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding" : "fa-solid fa-chevron-down CloseFolding"} onClick={() => handleShowClick('EventCategoryAdminBloc')}></i>
             <div className="EventCategoryAdminBloc BlocHidden" id="EventCategoryAdminBloc">
                 <div className="EventCategoryAdminAdd">
@@ -55,7 +55,7 @@ const EventCategoryAdmin = ({ setReloadEvent, reloadEvent }) => {
                         <div className='CreateCategoryTitle'>Ajouter une catégorie d'évènement</div>
                         <div className='duoCategory'>
                             <label className='labelCategory' htmlFor="eventName">Nom de la catégorie : </label>
-                            <input type="text" id="eventName" value={categoryName} onChange={(e) => setCategoryName(e.target.value)} />
+                            <input className='inputCategory' type="text" id="eventName" value={categoryName} onChange={(e) => setCategoryName(e.target.value)} />
                         </div>
                         <input className='EventCategoryAdminAddBtn' type="button" value="Ajouter" onClick={handleAddClick} />
                     </div>

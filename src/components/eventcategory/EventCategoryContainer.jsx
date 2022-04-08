@@ -72,13 +72,13 @@ const EventCategoryContainer = ({ reload,setReload }) => {
                         <li
                             key={category.id_category}
                             className='EventCategoryContainerItem'>
-                            {category.category_name}
-                            <input
+                                <div className='eventItemName'>{category.category_name}</div>
+                                <input
                                 type="button"
                                 value="Modifier"
                                 className='ModifCategoryBtn'
                                 onClick={() => updateCategory(category.category_name,category.id_category)} />
-                            <input
+                                <input
                                 type="button"
                                 value="Supprimer"
                                 className='SuppressCategoryBtn'
@@ -96,7 +96,6 @@ const EventCategoryContainer = ({ reload,setReload }) => {
                 </div>
             </div>
         </div>
-
     )
 }
 
