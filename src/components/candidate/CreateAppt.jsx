@@ -1,11 +1,11 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import  "./CreateAppt.css";
+import "./CreateAppt.css";
 
-const CreateAppt = ({uId, reload, setReload, appts, setAppts}) => {
-    
+const CreateAppt = ({ reload, setReload }) => {
+
     const [name, setName] = useState();
-    const [date, setDate] = useState('');  
+    const [date, setDate] = useState('');
 
     const handleSubmit = (e) => {
         const url = `${process.env.REACT_APP_API_URL}event`;
@@ -15,16 +15,20 @@ const CreateAppt = ({uId, reload, setReload, appts, setAppts}) => {
             category: 1,
         }
         axios.post(url, newAppt, { withCredentials: true })
-        .then((res) => {
-            console.log(res)
-            if (res.status === 201) {
-                setReload(!reload)
-                alert("Votre demande de rendez-vous est enregistrée")
-                            }
-        })
-        .catch((err) => {
-            console.log(err)
-        }) 
+            .then((res) => {
+                console.log(res)
+                if (res.status === 201) {
+                    setReload(!reload)
+                    alert("Votre demande de rendez-vous est enregistrée")
+                }
+            })
+            .catch((err) => {
+                const HTTPError = err.response.status;
+                if (HTTPError === 401) {
+                    alert('Vous avez été déconnecté.');
+                    window.location = '/';
+                }
+            })
     };
 
     return (

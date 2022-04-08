@@ -15,7 +15,7 @@ const UserActionsEventCard = () => {
                     setEvents(result.data);
                 })
                 .catch((err)=>{
-                    console.log(err);
+        
                 })
         };
         getEvents();

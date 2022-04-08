@@ -25,12 +25,9 @@ const AdminJobs = () => {
                     }
                 })
                 .catch((err) => {
-                    console.log(err);
                 });
         }
-
         getTypes();
-
     }, []);
 
     useEffect(() => {
@@ -44,7 +41,6 @@ const AdminJobs = () => {
                     }
                 })
                 .catch((err) => {
-                    console.log(err);
                 });
         }
         getCategories();
@@ -95,7 +91,6 @@ const AdminJobs = () => {
                 }
             })
             .catch((err) => {
-                console.log(err);
                 if (err.status === 401) {
                     alert('Vous avez été déconnecté.');
                     window.location = '/';
