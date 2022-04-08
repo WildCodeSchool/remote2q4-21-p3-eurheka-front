@@ -20,7 +20,11 @@ const JobOfferContainer = ({ jobs }) => {
                     }
                 })
                 .catch((err) => {
-                    console.log(err);
+                    const HTTPError = err.response.status;
+                    if (HTTPError === 401) {
+                        alert('Vous avez été déconnecté.');
+                        window.location = '/';
+                    }
                 });
         }
 
@@ -39,7 +43,11 @@ const JobOfferContainer = ({ jobs }) => {
                     }
                 })
                 .catch((err) => {
-                    console.log(err);
+                    const HTTPError = err.response.status;
+                    if (HTTPError === 401) {
+                        alert('Vous avez été déconnecté.');
+                        window.location = '/';
+                    }
                 });
         }
         getCategories();

@@ -25,7 +25,6 @@ const UserPage = (props) => {
                 setUser(res.data)
             })
             .catch((err) => {
-                console.log(err.data)
                 const HTTPError = err.response.status;
                     if (HTTPError === 401) {
                         alert('Vous avez été déconnecté.');

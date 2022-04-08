@@ -43,17 +43,12 @@ const ContactCard = () => {
                     const HTTPError = error.response.status;
                     if ((HTTPError === 500)||(HTTPError===422)) {
                         if(HTTPError===500){
-                            console.log('SMTP server not found');
                             alert("Un problème technique est survenu le message n'a put être envoyé")
                         }
                         else {
-                            console.log('Erreur de données');
                             alert('Veuillez remplir les champs correctement');
                         }
-                        console.log(error.response.data);
-                    }  else {
-                        console.log('Unknown error');
-                    }
+                    }  
                 })
     }
 

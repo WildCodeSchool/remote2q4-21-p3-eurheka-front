@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import React from "react";
 import logo_splash from '../../assets/logos/Logo_Eurheka_Entier_Logo_Bleu.png'
 import './Splash.scss'
 

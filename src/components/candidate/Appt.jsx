@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import  "./Appt.css";
 
-const Appt = ({ idAppt, appts, setAppts, reload, setReload, name, date,valid}) => {
+const Appt = ({ idAppt, reload, setReload, name, date,valid}) => {
 
     const deleteAppt = async() =>{
         const url = `${process.env.REACT_APP_API_URL}event/${idAppt}`;
@@ -13,14 +13,17 @@ const Appt = ({ idAppt, appts, setAppts, reload, setReload, name, date,valid}) =
             }            
         })
         .catch((err) => {
-            console.log(err);
-                const HTTPError = err.status;
-                if(HTTPError===500){
-                    alert('Une erreur est survenue.')
-                }
-                if(HTTPError===404){
-                    alert("Le rendez-vous spécifié n'existe pas")
-                }
+            const HTTPError = err.status;
+            if(HTTPError===500){
+                alert('Une erreur est survenue.')
+            }
+            if(HTTPError===404){
+                alert("Le rendez-vous spécifié n'existe pas")
+            }
+            if (HTTPError === 401) {
+                alert('Vous avez été déconnecté.');
+                window.location = '/';
+            }
         })
     }      
 

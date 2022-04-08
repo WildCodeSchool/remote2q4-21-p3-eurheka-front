@@ -1,8 +1,8 @@
-import React, {useState,useEffect} from 'react';
+import React, {useState} from 'react';
 import UserAdminContainer from './UserAdminContainer';
 import './UserManagement.scss';
 
-const UserManagement = (props) => {
+const UserManagement = () => {
     const [showComponent, setShowComponent] = useState(false);
 
     const handleShowClick = (id) => {

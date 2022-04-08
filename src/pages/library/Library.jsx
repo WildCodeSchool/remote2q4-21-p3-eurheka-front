@@ -7,7 +7,7 @@ import './Library.css';
 
 const Library = ({setUId,setULevel}) => {
  
-  useEffect(async() => {
+  useEffect(() => {
     const fetchToken = async() => {
       await axios({
         method: "get",
@@ -19,7 +19,6 @@ const Library = ({setUId,setULevel}) => {
             setULevel(res.data.userLevelString);
           })
          .catch((err) =>{
-          console.log("No token");
           setUId(0);
           setULevel('not connected');
          } );
