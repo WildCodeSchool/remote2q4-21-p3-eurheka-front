@@ -76,6 +76,7 @@ const EventAdmin = ({reloadEvent}) => {
                     </div>
                     <div className="CreateEvent">
                         <div className='CreateEventTitle'>Ajouter un évènement</div>
+                        <div className="optionsEvent">
                         <div className='duoEvent'>
                             <label className='labelEvent' htmlFor="eventNameList">Nom de l'évènement :</label>
                             <input type="text" id="eventNameList" value={eventName} onChange={(e)=>setEventName(e.target.value)}/>
@@ -93,6 +94,7 @@ const EventAdmin = ({reloadEvent}) => {
                                     )
                                 })}
                             </select>
+                        </div>
                         </div>
                         <input className='EventAdminAddBtn' type="button" value="Ajouter" onClick={handleAddClick}/>
                     </div>
