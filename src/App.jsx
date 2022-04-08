@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import { UserIdContext } from  "./context/AppContext.js";
 import axios from "axios";
 import Home from './pages/home/Home';
@@ -12,7 +12,6 @@ import Footer from './components/footer/Footer';
 import AdminPage from './pages/admin/AdminPage.jsx';
 import SplashPage from './pages/splash/SplashPage.jsx';
 import UserPage from './pages/userPage/UserPage.jsx';
-import CompanyPage from './components/profileUser/CompanyPage.jsx';
 import JobOffer from './pages/joboffer/JobOffer.jsx';
 import AboutUsPage from './pages/about_us/AboutUsPage.jsx';
 import './App.css';
@@ -23,7 +22,7 @@ function App() {
   const [uLevel,setULevel]=useState(null);
 
 
-  useEffect(async() => {
+  useEffect(() => {
     const fetchToken = async() => {
       await axios({
         method: "get",
@@ -35,7 +34,6 @@ function App() {
             setULevel(res.data.userLevelString);
           })
          .catch((err) =>{
-          console.log("No token");
           setUId(0);
           setULevel('not connected');
          } );
