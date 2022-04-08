@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios';
 import './ThemeAdmin.scss';
 import Themecontainer from './Themecontainer';
@@ -33,7 +33,6 @@ const ThemeAdmin = ({reload,setReload}) => {
                 }
             })
             .catch((err) => {
-                console.log(err);
                 const HTTPError = err.response.status;
                 if (HTTPError === 401) {
                     alert('Vous avez été déconnecté.');

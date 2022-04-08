@@ -17,7 +17,6 @@ const AdminJobContainer = ({ reload, setReload }) => {
                     }
                 })
                 .catch((err) => {
-                    console.log(err);
                     if (err.status === 401) {
                         alert('Vous avez été déconnecté.');
                         window.location = '/';

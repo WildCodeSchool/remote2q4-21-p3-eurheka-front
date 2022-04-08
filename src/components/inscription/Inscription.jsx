@@ -1,6 +1,6 @@
 import React from "react";
 import { useContext } from "react";
-import { Link, NavLink } from 'react-router-dom';
+import {  NavLink } from 'react-router-dom';
 import { UserIdContext } from  '../../context/AppContext';
 import "./Inscription.css";
 
@@ -33,8 +33,7 @@ const Inscription = () => {
                     {connected&& 
                         <button className="Inscription-button">S'inscrire</button>
                     }
-                </NavLink>
-                        
+                </NavLink>         
         </div>
     )
 }

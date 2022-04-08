@@ -16,7 +16,11 @@ const EventCategoryContainer = ({ reload,setReload }) => {
                     setCategories(data);
                 })
                 .catch((err) => {
-                    console.log(err);
+                    const HTTPError = err.response.status;
+                    if (HTTPError === 401) {
+                        alert('Vous avez été déconnecté.');
+                        window.location = '/';
+                    }
                 });
         }
         getCategory();
@@ -39,7 +43,11 @@ const EventCategoryContainer = ({ reload,setReload }) => {
                 }
             })
             .catch((err)=>{
-                console.log(err);
+                const HTTPError = err.response.status;
+                if (HTTPError === 401) {
+                    alert('Vous avez été déconnecté.');
+                    window.location = '/';
+                }
             })
         popup.classList.remove('displayPopup2');
     }
@@ -54,7 +62,11 @@ const EventCategoryContainer = ({ reload,setReload }) => {
                 }
             })
             .catch((err)=>{
-                console.log(err);
+                const HTTPError = err.response.status;
+                if (HTTPError === 401) {
+                    alert('Vous avez été déconnecté.');
+                    window.location = '/';
+                }
             })
         }
     }

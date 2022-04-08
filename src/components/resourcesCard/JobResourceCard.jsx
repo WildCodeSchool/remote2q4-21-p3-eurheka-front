@@ -1,18 +1,10 @@
-import {useState} from 'react';
 import './JobResourceCard.css';
 
 const JobResourceCard = ({ currentResources, loading, firstClassName, secondListClassName, icon } ) => {
-  const [isReduce, setIsReduce] = useState(true);
-
-    function handleChange() {
-        setIsReduce(!isReduce);
-    }
-
+  
   if(loading) {
       return <p>En cours de chargement...</p>
   }
-
-
 
   return (
     <div>

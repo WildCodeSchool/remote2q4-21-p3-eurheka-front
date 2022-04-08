@@ -22,7 +22,6 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme })
                     setThemes(data);
                 })
                 .catch((err) => {
-                    console.log(err);
                     const HTTPError = err.response.status;
                     if (HTTPError === 401) {
                         alert('Vous avez été déconnecté.');
@@ -94,7 +93,6 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme })
                 }
             })
             .catch((err)=>{
-                console.log(err);
                 const HTTPError = err.response.status;
                 if (HTTPError === 401) {
                     alert('Vous avez été déconnecté.');
@@ -125,7 +123,6 @@ const ResourceAdminContainer = ({ catDoc, docs, setReload, reload,reloadTheme })
                     }
                 })
                 .catch((err)=>{
-                    console.log(err);
                     const HTTPError = err.response.status;
                     if (HTTPError === 401) {
                         alert('Vous avez été déconnecté.');

@@ -114,8 +114,3 @@ const NavBar = () => {
     );
 };
 export default NavBar;
-
-/*{!admin&&companyUser&&
-    <NavLink to="/mon-profil-entreprise" className={({ isActive }) =>
-    isActive ? "selected" : "navigation-link" } onClick={scrollToMenu}>Mon profil entreprise</NavLink>
-}*/

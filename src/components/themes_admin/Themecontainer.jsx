@@ -16,7 +16,6 @@ const Themecontainer = ({ reload,setReload }) => {
                     setThemes(data);
                 })
                 .catch((err) => {
-                    console.log(err);
                     const HTTPError = err.response.status;
                     if (HTTPError === 401) {
                         alert('Vous avez été déconnecté.');
@@ -44,7 +43,11 @@ const Themecontainer = ({ reload,setReload }) => {
                  }
              })
              .catch((err)=>{
-                 console.log(err);
+                const HTTPError = err.response.status;
+                if (HTTPError === 401) {
+                    alert('Vous avez été déconnecté.');
+                    window.location = '/';
+                }
              })
          }
      }
@@ -59,7 +62,11 @@ const Themecontainer = ({ reload,setReload }) => {
                 }
             })
             .catch((err)=>{
-                console.log(err);
+                const HTTPError = err.response.status;
+                if (HTTPError === 401) {
+                    alert('Vous avez été déconnecté.');
+                    window.location = '/';
+                }
             })
         popup.classList.toggle('displayPopup');
     }

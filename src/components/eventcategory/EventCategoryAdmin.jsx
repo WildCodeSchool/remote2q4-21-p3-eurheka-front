@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import EventCategoryContainer from './EventCategoryContainer';
 import './EventCategoryAdmin.scss';
@@ -30,7 +30,11 @@ const EventCategoryAdmin = ({ setReloadEvent, reloadEvent }) => {
                 }
             })
             .catch((err)=>{
-                console.log(err);
+                const HTTPError = err.response.status;
+                if (HTTPError === 401) {
+                    alert('Vous avez été déconnecté.');
+                    window.location = '/';
+                }
             });
 
         }

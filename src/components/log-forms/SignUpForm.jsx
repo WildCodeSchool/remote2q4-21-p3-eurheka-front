@@ -1,6 +1,5 @@
 import React from "react";
-import { useState, useEffect } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { useState } from 'react';
 import axios from "axios";
 import conditions from '../../assets/pdf/conditions.pdf'
 import "./SignUpForm.css";
@@ -54,8 +53,6 @@ const SignUpForm = () => {
                     let message = '';
                     switch (HTTPError) {
                         case 409:
-                            console.log('User already exist');
-                            console.log(error.response.data);
                             docName = 'emailError';
                             message = "L'adresse mail existe déjà";
                             let errorDiv = document.getElementById(docName);
@@ -63,11 +60,8 @@ const SignUpForm = () => {
                             errorDiv.classList.add('ErrorDisplay');
                             break;
                         case 422:
-                            console.log('Erreur de validation');
-                            console.log(error.response.data);
                             const ErrorArray = error.response.data;
                             ErrorArray.forEach((error) => {
-                                console.log(error);
                                 if (error.includes('mail')) {
                                     docName = 'emailError';
                                     message = "L'adresse mail n'est pas valide";
@@ -89,7 +83,7 @@ const SignUpForm = () => {
                                 errorDiv.classList.add('ErrorDisplay');
                             })
                             break;
-                        default: console.log('Unknown error');
+                        default: ;
                     }
                 });
     }
