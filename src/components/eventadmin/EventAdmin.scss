@@ -160,6 +160,18 @@
         color: var(--main-color-light-title);
         font-family: var(--text-font);
         position: relative;
+
+        .EventAdminAddBtn{
+            width: 150px;
+            height: 30px;
+            padding: 3px;
+            margin: 10px;
+            background-color: var(--main-color-light-title);
+            color: var(--main-color-dark-background);
+            border: solid 1px var(--main-color-light-title);
+            border-radius: 2px;
+            font-size: 12px;
+        }
     }
 
     @media only screen and (min-width: 821px) and (max-width: 1179px) {
