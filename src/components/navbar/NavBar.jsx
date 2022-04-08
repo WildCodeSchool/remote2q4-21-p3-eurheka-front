@@ -1,6 +1,5 @@
-import React, { useContext, useEffect } from 'react';
-import { Link, NavLink, Navigate } from 'react-router-dom';
-import cookie from "js-cookie";
+import React, { useContext } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import { UserIdContext } from  '../../context/AppContext';
 import Disconnect from  '../../components/disconnect/Disconnect';
 import './NavBar.css';
