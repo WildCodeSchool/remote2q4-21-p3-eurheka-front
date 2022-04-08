@@ -113,7 +113,14 @@
     }
 
     @media only screen and (min-width: 821px) and (max-width: 1179px) {
+        position: relative;
+        margin : 10px;
+        background-color: rgba(255, 255, 255, 0.1);
 
+        .eventItemName {
+            font-size: 13px;
+            margin-top: 0px;
+        } 
     }
 
     @media screen and (min-width: 1180px) {
