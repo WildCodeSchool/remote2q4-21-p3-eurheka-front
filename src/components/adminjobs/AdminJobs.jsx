@@ -25,12 +25,9 @@ const AdminJobs = () => {
                     }
                 })
                 .catch((err) => {
-                    console.log(err);
                 });
         }
-
         getTypes();
-
     }, []);
 
     useEffect(() => {
@@ -44,7 +41,6 @@ const AdminJobs = () => {
                     }
                 })
                 .catch((err) => {
-                    console.log(err);
                 });
         }
         getCategories();
@@ -95,7 +91,6 @@ const AdminJobs = () => {
                 }
             })
             .catch((err) => {
-                console.log(err);
                 if (err.status === 401) {
                     alert('Vous avez été déconnecté.');
                     window.location = '/';
@@ -106,7 +101,7 @@ const AdminJobs = () => {
     return (
         <div className='AdminJobs'>
             <div className='JobAdminTitle'>Gérer les offres d'emploi</div>
-            <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding" : "fa-solid fa-chevron-down CloseFolding"} onClick={() => handleShowClick('JobAdminBloc')}></i>
+            <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding arrowOver" : "fa-solid fa-chevron-down CloseFolding arrowOver"} onClick={() => handleShowClick('JobAdminBloc')}></i>
             <div className="JobAdminBloc BlocHidden" id="JobAdminBloc">
                 
                 <div className="ExistingJob">

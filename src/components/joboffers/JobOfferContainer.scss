@@ -4,10 +4,96 @@
         margin-top: 20px;
         margin-bottom: 20px;
         display: flex;
+        flex-direction: row;
         justify-content: space-evenly;
     }
 
     .selector{
         margin-left: 10px;
+    }
+    
+    @media screen and (min-width: 391px) and (max-width: 767px) {
+        h2{
+            font-size: 20px;
+            text-align: center;
+        }
+        .JobSelectors{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .LabelNewJobAdmin{
+            font-size: 12px;
+        }
+        .selector{
+            margin-left: 0px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            text-align: center;
+            font-size: 12px;
+        }
+        .selectorList{
+            font-size: 12px;
+        }
+    }
+    
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+        h2{
+            font-size: 20px;
+            text-align: center;
+        }
+        .JobSelectors{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .LabelNewJobAdmin{
+            font-size: 14px;
+        }
+        .selector{
+            margin-left: 0px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .selectorList{
+            font-size: 14px;
+        }
+    }
+
+    @media screen and (max-width: 390px) {
+        h2{
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .JobSelectors{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .LabelNewJobAdmin{
+            font-size: 12px;
+        }
+        .selector{
+            margin-left: 0px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            text-align: center;
+            font-size: 12px;
+        }
+        .selectorList{
+            font-size: 12px;
+        }
     }
 }

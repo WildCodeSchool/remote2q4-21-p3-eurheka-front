@@ -41,3 +41,7 @@
 body {
     font-family: var(--text-font);
 }
+
+.arrowOver{
+    cursor: pointer;
+}

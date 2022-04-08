@@ -1,10 +1,9 @@
-import axios from 'axios';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './CandidateAppointment.css';
 import CreateAppt from "./CreateAppt.jsx";
 import ShowAppt from "./ShowAppt.jsx";
 
-const CandidateAppointment = (props) => {
+const CandidateAppointment = () => {
     const [reload, setReload] = useState(false);
 
     return (

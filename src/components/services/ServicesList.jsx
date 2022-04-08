@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ServiceCard } from './ServiceCard';
 import themeServices from '../../assets/data/themeServices';
 import './ServicesList.scss';
@@ -39,7 +39,6 @@ const ServicesList = () => {
             i = i +1
             
         }
-    
 
     return (
         <div className='ServicesList'>

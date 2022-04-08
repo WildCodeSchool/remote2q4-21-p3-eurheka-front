@@ -16,7 +16,6 @@ const AdminCvs = () => {
                     setCvs(result.data);
                 })
                 .catch((err) => {
-                    console.log(err);
                     if (err.status === 401) {
                         alert('Vous avez été déconnecté.');
                         window.location = '/';
@@ -40,7 +39,7 @@ const AdminCvs = () => {
     return (
         <div className='AdminCvs'>
             <div className='CvAdminTitle'>Consulter les CV déposés</div>
-            <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding" : "fa-solid fa-chevron-down CloseFolding"} onClick={() => handleShowClick('CvsAdminBloc')}></i>
+            <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding arrowOver" : "fa-solid fa-chevron-down CloseFolding arrowOver"} onClick={() => handleShowClick('CvsAdminBloc')}></i>
             <div className="CvsAdminBloc BlocHidden" id="CvsAdminBloc">
                 <div className="CvsAdminContainer">
                     <ul className='CvsAdminList'>

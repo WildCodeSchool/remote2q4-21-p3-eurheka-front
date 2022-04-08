@@ -23,7 +23,7 @@ const RetreivePassword = () => {
         }
       })
       .catch((err) => {
-        console.log(err);
+
       })
   }
 
@@ -65,7 +65,6 @@ const RetreivePassword = () => {
       }
     })
     .catch((err) => {
-      console.log(err);
       const HTTPError = err.response.status;
       if(  HTTPError===422){
         alert("les données saisies sont invalides")
@@ -73,8 +72,6 @@ const RetreivePassword = () => {
     })
   }
   
-  
-
   return (
       <div className='RetreivePassword'>
         <input className='put-email' placeholder="Entrer mon email" value={email} onChange={(e) => setEmail(e.target.value)}></input>
@@ -92,7 +89,6 @@ const RetreivePassword = () => {
           </div>
         </div>
       </div>
-     
   )
 }
 

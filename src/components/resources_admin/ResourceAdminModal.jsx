@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './ResourceAdminModal.scss';
 
@@ -21,7 +21,6 @@ const ResourceAdminModal = ({ resource, displayModal,setReload,reload,reloadThem
                         setThemeUsed([...data.themes]);
                     })
                     .catch((err) => {
-                        console.log(err);
                         const HTTPError = err.response.status;
                         if (HTTPError === 401) {
                             alert('Vous avez été déconnecté.');
@@ -60,7 +59,6 @@ const ResourceAdminModal = ({ resource, displayModal,setReload,reload,reloadThem
                 }
             })
             .catch((err) => {
-                console.log(err);
                 const HTTPError = err.response.status;
                 if (HTTPError === 401) {
                     alert('Vous avez été déconnecté.');
@@ -88,7 +86,6 @@ const ResourceAdminModal = ({ resource, displayModal,setReload,reload,reloadThem
                     }
                 })
                 .catch((err) => {
-                    console.log(err);
                     const HTTPError = err.response.status;
                     if (HTTPError === 401) {
                         alert('Vous avez été déconnecté.');
@@ -115,8 +112,7 @@ const ResourceAdminModal = ({ resource, displayModal,setReload,reload,reloadThem
                                <option value="3">Entreprises</option>
                             </select>
                         </div>
-                    </div>
-                    
+                    </div>   
                     {docs &&
                         <div className="DocContainer">
                             <div className='LabelDocContainer'>Choisissez une nouveau thème:</div>

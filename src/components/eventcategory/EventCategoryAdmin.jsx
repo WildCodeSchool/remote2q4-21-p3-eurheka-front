@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 import EventCategoryContainer from './EventCategoryContainer';
 import './EventCategoryAdmin.scss';
@@ -30,7 +30,11 @@ const EventCategoryAdmin = ({ setReloadEvent, reloadEvent }) => {
                 }
             })
             .catch((err)=>{
-                console.log(err);
+                const HTTPError = err.response.status;
+                if (HTTPError === 401) {
+                    alert('Vous avez été déconnecté.');
+                    window.location = '/';
+                }
             });
 
         }
@@ -40,8 +44,8 @@ const EventCategoryAdmin = ({ setReloadEvent, reloadEvent }) => {
 
     return (
         <div className='EventCategoryAdmin'>
-            <div className='EventCategoryAdminTitle'>Gérer les catégories d'événements</div>
-            <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding" : "fa-solid fa-chevron-down CloseFolding"} onClick={() => handleShowClick('EventCategoryAdminBloc')}></i>
+            <div className='EventCategoryAdminTitle'>Gérer les Catégories d'événements</div>
+            <i className={showComponent ? "fa-solid fa-chevron-up CloseFolding arrowOver" : "fa-solid fa-chevron-down CloseFolding arrowOver"} onClick={() => handleShowClick('EventCategoryAdminBloc')}></i>
             <div className="EventCategoryAdminBloc BlocHidden" id="EventCategoryAdminBloc">
                 <div className="EventCategoryAdminAdd">
                     <div className="ExistingCategory">

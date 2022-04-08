@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import './CandidateSituation.css';
 
-const CandidateSituation = ({uId, user, setUser}) => {
+const CandidateSituation = ({uId, user}) => {
 
     const [inpost, setInpost] = useState(false);
     const [freeDate, setFreeDate] = useState('');
@@ -25,7 +25,6 @@ const CandidateSituation = ({uId, user, setUser}) => {
     const submitClick = (e) => {
         e.preventDefault();
         const url = `${process.env.REACT_APP_API_URL}users/${uId}`;
-        console.log(uId);
         const newUser = {
             in_post: inpost, 
             free_date: freeDate,
@@ -36,10 +35,13 @@ const CandidateSituation = ({uId, user, setUser}) => {
         }
         axios.put(url, newUser, {withCredentials: true})
         .then((res) => {
-            console.log(res)
         })
         .catch((err) => {
-            console.log(err)
+            const HTTPError = err.response.status;
+            if (HTTPError === 401) {
+                alert('Vous avez été déconnecté.');
+                window.location = '/';
+            }
         })  
        }
 

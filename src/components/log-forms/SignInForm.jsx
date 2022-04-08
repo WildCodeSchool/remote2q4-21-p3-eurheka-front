@@ -1,6 +1,5 @@
 import React, { useState, useContext } from 'react';
 import axios from "axios";
-import { UserIdContext } from  "../../context/AppContext.js";
 import RetreivePassword from ".//retreivePassword/RetreivePassword";
 import "./SignInForm.css";
 
@@ -8,7 +7,6 @@ const SignInForm = () => {
     const [email, setEmail]= useState("");
     const [password, setPassword]= useState("");
     const [forgotPassword, setForgotPassword] = useState(false);
-    const { uId, fetchUId } = useContext(UserIdContext);
     
     const handleModals = (e) => {
         if (e.target.id === 'forgotPassword') {
@@ -39,7 +37,6 @@ const SignInForm = () => {
             };
             axios.post(url,login,{ withCredentials: true })//{ withCredentials: true }
                 .then((res) => {
-                    console.log(res)
                     if (res.data.errors) {
                         emailError.innerHTML = res.data.errors.email;
                         passwordError.innerHTML = res.data.errors.password;
@@ -48,7 +45,6 @@ const SignInForm = () => {
                     }
                 })
                 .catch((err) => {
-                    console.log(err);
                 });
             } else {
                 if (password === ""){

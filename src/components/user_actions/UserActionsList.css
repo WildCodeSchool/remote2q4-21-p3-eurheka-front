@@ -11,7 +11,7 @@
     padding-top: 20vh ;
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 391px) {
     .UserActionsList{
         height: 80%;
         width: 80%;

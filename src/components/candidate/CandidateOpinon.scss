@@ -52,6 +52,7 @@
         width: 120px;
         height: 30px;
         font-size: 12px;
+        cursor: pointer;
     }
     .displayButtonNone{
         display: none;
@@ -67,6 +68,7 @@
         width: 120px;
         height: 40px;
         font-size: 12px;
+        cursor: pointer;
     }
 
     @media only screen and (min-width: 391px) and (max-width: 768px) {

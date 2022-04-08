@@ -12,7 +12,7 @@ const JobList = ({jobsList,jobCategory,jobType}) => {
     }
     let displayJobArray=[];
     if(parseInt(jobType)!==0){
-        const TempArray2=jobArray.filter(job=>parseInt(job.id_type)==jobType);
+        const TempArray2=jobArray.filter(job=>parseInt(job.id_type)===jobType);
         displayJobArray=[...TempArray2];
     }
     else{
@@ -24,8 +24,8 @@ const JobList = ({jobsList,jobCategory,jobType}) => {
              {displayJobArray&&displayJobArray.map((job)=>{
                 return(
                     <li className='jobListContainer'>
-                        <a href={`${process.env.REACT_APP_URL}${job.path}`} className='jobLink' target="_blank">
-                            <p key={job.id_job}>{job.name} - {job.category_name} - {job.name_offer}</p><i className="fa-regular fa-copy"></i>
+                        <a href={`${process.env.REACT_APP_URL}${job.path}`} className='jobLink' target="_blank" rel='noreferrer'>
+                            <p key={job.id_job} className='jobText'>{job.name} - {job.category_name} - {job.name_offer}</p><i className="fa-regular fa-copy picto"></i>
                         </a>
                     </li>
                 )

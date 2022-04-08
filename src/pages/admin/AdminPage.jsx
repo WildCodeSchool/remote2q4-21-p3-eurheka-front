@@ -22,7 +22,6 @@ const AdminPage = (props) => {
     useEffect(()=>{
         const getUser=async()=>{
             const url = `${process.env.REACT_APP_API_URL}users/${uId}`;
-            console.log('axios get');
             await axios.get(url, {withCredentials: true})
             .then((res) => {
                 setUser(res.data)
