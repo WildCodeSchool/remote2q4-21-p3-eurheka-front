@@ -142,6 +142,16 @@
             justify-content: center;
         }
 
+        .CloseFolding {
+            position: absolute;
+            top :10px;
+            font-size: 20px;
+            font-weight: bolder;
+            color : white;
+            right: 10px;
+            top: 10px;
+        }
+
         .RDVAdminContainer {
             width: 100%;
         }
@@ -190,6 +200,16 @@
                 align-items: center;
                 justify-content: center;
             }
+
+            .CloseFolding {
+                position: absolute;
+                top :10px;
+                font-size: 20px;
+                font-weight: bolder;
+                color : white;
+                right: 10px;
+                top: 10px;
+            }
     
             .RDVDuo {
                 width: 100%;
@@ -233,6 +253,16 @@
                 flex-direction: row;
                 align-items: center;
                 justify-content: center;
+            }
+
+            .CloseFolding {
+                position: absolute;
+                top :10px;
+                font-size: 20px;
+                font-weight: bolder;
+                color : white;
+                right: 10px;
+                top: 10px;
             }
 
             .RDVAdminTitle{
