@@ -125,7 +125,7 @@
         .opinionMenu{
             width: 100%;
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             align-items: center;
             text-align: center;
             background-color: rgba(255, 255, 255, 0.1);
@@ -137,7 +137,7 @@
         }
     
         .menuDetail{
-            width: 62%;
+            width: 60%;
             font-size: 16px;
         }
     
@@ -145,6 +145,7 @@
             width: 115px;
             text-align: center;
             font-size: 16px;
+            margin-left: 15px;
         }
     
         .menuDelete{
