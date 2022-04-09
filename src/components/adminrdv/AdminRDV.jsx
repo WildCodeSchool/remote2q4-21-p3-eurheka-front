@@ -76,9 +76,9 @@ const AdminRDV = (props) => {
                                     <p className='emphasisRDV'>{rdv.firstname} {rdv.lastname}</p>
                                     <p className='validationRDV'> a demandé un RDV le {rdv.date_event} à {rdv.hour_event} pour le motif : </p>
                                     <p className='emphasisRDV'>{rdv.name}</p>
-                                    <div className='RDVcheck'>
+                                    <div className='checkDuo'>
                                        <p className='validationRDV'>- Valider : </p>
-                                       <input className='validationRDVCheck' type="checkbox" checked={rdv.is_valid} onChange={() => { handleValid(rdv.eventid, rdv.is_valid, rdv.id_users) }} />
+                                       <input className='validationRDV' type="checkbox" checked={rdv.is_valid} onChange={() => { handleValid(rdv.eventid, rdv.is_valid, rdv.id_users) }} />
                                     </div>
                                 </li>
                             )
