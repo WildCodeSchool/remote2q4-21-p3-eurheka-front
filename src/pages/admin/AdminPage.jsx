@@ -52,7 +52,7 @@ const AdminPage = (props) => {
                 {/* Page administrateur */}
                 <div className="headerAdminPage">
                 <h1 className="AdminMainTitle">Mon profil administration</h1>
-                <h2 className="AdminSecTitle">Vos options d'administration</h2>
+                <div className="AdminSecTitle">Vos options d'administration</div>
                 </div>
                 <AdminUserInfo
                     user={user}
@@ -73,7 +73,7 @@ const AdminPage = (props) => {
                 />
             </div>}
             {superAdmin && <div className="SuperAdminPage">
-                <h2 className="AdminSecTitle">Vos options de super administrateur</h2>
+                <div className="AdminSecTitle">Vos options de super administrateur</div>
                 {/* Page super administrateur */}
                 <UserManagement />
                 <AdminCvs />
