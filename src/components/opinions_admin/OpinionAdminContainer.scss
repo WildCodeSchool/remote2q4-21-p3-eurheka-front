@@ -51,6 +51,8 @@
 
     .opinionIsValid {
         color: var(--text-color-ok);
+        width: 90px;
+        margin: 5px;
     }
 
     @media only screen and (min-width: 391px) and (max-width: 719px) {
