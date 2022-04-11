@@ -120,7 +120,7 @@
     padding-bottom: 15px;
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (min-width: 280px) and (max-width: 390px) {
     .Footer {
         height: 30%;
         width: 100%;
@@ -190,6 +190,21 @@
         align-items: center;
         max-height: 40px;
         object-fit: contain;
+    }
+
+    .fa-2xl {
+        width: 20px; 
+        height: auto;
+    }
+
+    .fa-google {
+        width: 20px; 
+        height: auto;
+    }
+
+    .fa-brands {
+        width: 20px; 
+        height: auto;
     }
 }
 
