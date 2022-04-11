@@ -34,14 +34,15 @@ const BusinessSheet = () => {
   }
 
   return (
-    <div>
+    <div className='BusinessSheet'>
       <div className='mainTitle-lightTheme'>
-        <h2>Fiches métiers</h2>
+        <div className='businessSheetTitle'>Fiches métiers</div>
         <span onClick={handleChange}>{isReduce ? <i className="fa-solid fa-chevron-up arrowOver"></i> : <i className="fa-solid fa-chevron-down arrowOver"></i> }</span>
       </div>
       { isReduce ?
         <div className='doc-resources-container'>
           <JobResourceCard
+            className='JobResourceCard'
             secondListClassName='doc-list'
             icon="visibility"
             currentResources={currentResources}
