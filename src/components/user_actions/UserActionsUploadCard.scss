@@ -27,9 +27,12 @@
         font-size: 32px;
     }
 
-    .upload-link{
+    .card-description{
         margin-bottom: 20px;
-        text-decoration-line: underline;
+    }
+
+    .picto{
+        color: var(--main-color-dark-title)
     }
 }
 
@@ -63,11 +66,6 @@
         .card-description{
             font-size: 12px;
             font-weight: 500;
-        }
-
-        .upload-link{
-            font-weight: 300;  
-            font-size: 12px;
             margin-top: 15px;
         }
     }
@@ -103,11 +101,6 @@
         .card-description{
             font-size: 12px;
             font-weight: 500;
-        }
-
-        .upload-link{
-            font-weight: 300;  
-            font-size: 12px;
             margin-top: 15px;
         }
     }
@@ -146,11 +139,6 @@
         .card-description{
             font-size: 12px;
             font-weight: 500;
-        }
-
-        .upload-link{
-            font-weight: 300;  
-            font-size: 12px;
             margin-top: 15px;
         }
     }
@@ -181,11 +169,6 @@
         .card-description{
             font-size: 12px;
             font-weight: 500;
-        }
-    
-        .upload-link{
-            font-weight: 300;  
-            font-size: 12px;
             margin-top: 20px;
         }
     }
