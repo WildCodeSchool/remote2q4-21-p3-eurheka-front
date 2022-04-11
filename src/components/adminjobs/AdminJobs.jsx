@@ -131,7 +131,7 @@ const AdminJobs = () => {
                     </div>
                     <div className="duoCreateJob">
                         <label htmlFor="jobCategory" className='LabelJob'>Catégorie de l'offre : </label>
-                        <select id="jobCategory" value={jobCategory} onChange={(e) => setJobCategory(e.target.value)}>
+                        <select className="jobCategory" id="jobCategory" value={jobCategory} onChange={(e) => setJobCategory(e.target.value)}>
                             {jobCategories && jobCategories.map((CategoryItem) => {
                                 return (
                                     <option value={CategoryItem.id_job_category} key={CategoryItem.id_job_category}>{CategoryItem.name}</option>

@@ -48,7 +48,7 @@ const EventAdminContainer = ({ reload, setReload }) => {
             <ul className="EventAdminContainerList">
                 {events && events.map((event) => {
                     return (
-                        <li key={event.id_event}>
+                        <li className='eventItem' key={event.id_event}>
                             <span className={event.isPassed ? 'strikeEvent PassedEvent EventAdminListItem' : 'EventAdminListItem'}> {event.name} - {event.category_name} - {event.date_event}</span>
                             <input className='SuppressEventBtn' type="button" value="Supprimer" onClick={() => HandleDelete(event.id_event)} />
                         </li>

@@ -1,21 +1,24 @@
-//Desktop ok
-
 .AdminJobContainer{
-    width: 98%;
+    width: 100%;
     height: auto;
     position: relative;
-    margin : 10px;
     background-color: rgba(255, 255, 255, 0.1);
 
     .AdminJobList{
         list-style-type: none;
-        margin-left: 10px;
+        margin-left: 0px;
         width: 100%;
         height: auto;
     }
 
     .AdminJobItem{
         margin: 10px;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .nameJobItem {
+        font-size: 12px;
     }
 
     .AdminJobItem a {
@@ -23,27 +26,61 @@
     }
 
     .BtnDeleteJob{
+        margin-top: 6px;
         margin-left: 15px;
         background-color: var(--main-color-light-title);
         color: var(--main-color-dark-background);
         border: solid 1px var(--main-color-light-title);
         border-radius: 2px;
-        padding: 5px;
+        padding: 3px;
         width: 100px;
         font-size: 12px;
         cursor: pointer;
     }
 
-    @media only screen and (min-width: 391px) and (max-width: 768px) {
+    @media only screen and (min-width: 391px) and (max-width: 719px) {
 
     }
     
-    @media screen and (min-width: 769px) and (max-width: 1024px) {
+    @media screen and (min-width: 720px) and (max-width: 820px) {
+        
+    }
+
+    @media screen and (min-width: 821px) and (max-width: 1180px) {
+        width: 98%;
+        height: auto;
+        position: relative;
+        margin : 10px;
+        background-color: rgba(255, 255, 255, 0.1);
     
+        .AdminJobList{
+            list-style-type: none;
+            margin-left: 10px;
+            width: 100%;
+            height: auto;
+        }
+    
+        .AdminJobItem{
+            margin: 10px;
+        }
+    
+        .AdminJobItem a {
+            color :inherit;
+        }
+    
+        .BtnDeleteJob{
+            margin-left: 15px;
+            background-color: var(--main-color-light-title);
+            color: var(--main-color-dark-background);
+            border: solid 1px var(--main-color-light-title);
+            border-radius: 2px;
+            padding: 5px;
+            width: 100px;
+            font-size: 12px;
+        }
     }
     
-    @media screen and (min-width: 1025px) {
-        .AdminJobContainer{
+    @media screen and (min-width: 1181px) {
             width: 98%;
             height: auto;
             position: relative;
@@ -75,7 +112,5 @@
                 width: 100px;
                 font-size: 12px;
             }
-        }
-
     }
 }

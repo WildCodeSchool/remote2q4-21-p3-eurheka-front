@@ -9,13 +9,15 @@
     }
 
     .opinionAuthor{
-        width: 150px;
-        margin: 10px;
+        width: 100px;
+        font-size: 12px;
+        text-align: left
     }
 
     .opinionDetail{
         width: 60%;
         margin: 10px;
+        font-size: 12px;
     }
 
     .opinionIsValid{
@@ -29,9 +31,9 @@
         border: solid 1px var(--main-color-light-title);
         border-radius: 2px;
         padding: 2px;
-        width: 100px;
+        width: 90px;
         font-size: 10px;
-        margin: 10px;
+        margin: 5px;
         cursor: pointer;
     }
 
@@ -41,9 +43,79 @@
         border: solid 1px var(--main-color-light-title); 
         border-radius: 2px;
         padding: 2px;
-        width: 100px;
+        width: 90px;
         font-size: 10px;
-        margin: 10px;
+        margin: 5px;
         cursor: pointer;
+    }
+
+    .opinionIsValid {
+        color: var(--text-color-ok);
+        width: 90px;
+        margin: 5px;
+    }
+
+    @media only screen and (min-width: 391px) and (max-width: 719px) {
+
+    }
+
+    @media screen and (min-width: 720px) and (max-width: 820px) {
+    
+    }
+
+    @media screen and (min-width: 821px) and (max-width: 1179px) {
+    
+    }
+
+    @media screen and (min-width: 1180px) {
+        width: 100%;
+
+        .opinionContainer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    
+        .opinionAuthor{
+            width: 150px;
+            font-size: 12px;
+            text-align: left
+        }
+    
+        .opinionDetail{
+            width: 60%;
+            margin: 10px;
+            font-size: 12px;
+        }
+    
+        .opinionIsValid{
+            width: 95px;
+            margin: 10px;
+        }
+    
+        .opinionIsValidButton{
+            background-color: var(--main-color-light-title);
+            color: var(--main-color-dark-background);
+            border: solid 1px var(--main-color-light-title);
+            border-radius: 2px;
+            padding: 2px;
+            width: 95px;
+            font-size: 10px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    
+        .opinionDeleteButton{
+            background-color: var(--main-color-dark-background);
+            color: var(--main-color-light-title);
+            border: solid 1px var(--main-color-light-title); 
+            border-radius: 2px;
+            padding: 2px;
+            width: 95px;
+            font-size: 10px;
+            margin: 10px;
+            cursor: pointer;
+        }
     }
 }

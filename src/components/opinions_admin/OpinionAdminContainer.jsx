@@ -74,8 +74,8 @@ const OpinionAdminContainer = () => {
                         <p className='opinionAuthor'>{opinion.author}</p>
                         <p className='opinionDetail'>{opinion.opinion}</p>
                         {opinion.is_valid ? <i className="fa-solid fa-check opinionIsValid"></i> : ''}
-                        {!opinion.is_valid ? <button onClick={() => handleUpdate(opinion.id_opinion)} className='opinionIsValidButton'>Valider l'avis</button> : ''}
-                        <button onClick={() => handleRemove(opinion.id_opinion)} className='opinionDeleteButton'>Supprimer l'avis</button>
+                        {!opinion.is_valid ? <button onClick={() => handleUpdate(opinion.id_opinion)} className='opinionIsValidButton'>Valider</button> : ''}
+                        <button onClick={() => handleRemove(opinion.id_opinion)} className='opinionDeleteButton'>Supprimer</button>
                     </div>
                 )
             })}

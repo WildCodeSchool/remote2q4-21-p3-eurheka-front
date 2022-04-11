@@ -14,12 +14,12 @@
 
 .headerAdminPage {
     width: 100%;
-    height: 20%;
+    height: 15%;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
 }
 
 .AdminMainTitle {
@@ -32,6 +32,7 @@
     font-size: 20px;
     font-family: var(--text-font);
     color: var(--main-color-dark-title);
+    margin-top: 20px;
 }
 
 .AdminThirdTitle {
