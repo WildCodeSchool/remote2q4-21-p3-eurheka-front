@@ -20,6 +20,12 @@ Dépendances :
     - react-scripts
     - web-vitals
 
+Télécharger et installer le dépot back : 
+https://github.com/WildCodeSchool/remote2q4-21-p3-eurheka-back/
+
+Récupérer le dépot :
+git clone https://github.com/WildCodeSchool/remote2q4-21-p3-eurheka-front.git
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
