@@ -53,7 +53,7 @@ const AdminJobContainer = ({ reload, setReload }) => {
                     return (
                         <li key={jobItem.id_job}
                             className="AdminJobItem">
-                            <a className="nameJobItem" href={`${process.env.REACT_APP_URL}${jobItem.path}`} target="_blank">{jobItem.name}</a> - {jobItem.name_offer} - {jobItem.category_name}
+                            <a className="nameJobItem" href={`${process.env.REACT_APP_URL}${jobItem.path}`} target="_blank" rel='noreferrer'>{jobItem.name}</a> - {jobItem.name_offer} - {jobItem.category_name}
                             <input
                                 type="button"
                                 value="Supprimer"

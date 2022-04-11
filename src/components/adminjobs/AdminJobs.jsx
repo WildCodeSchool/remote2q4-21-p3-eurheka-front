@@ -73,7 +73,6 @@ const AdminJobs = () => {
             alert('Veuillez indiquer le document à envoyer');
             return -1;
         }
-        const path = file.name; //to test
         if (name === '') {
             alert('Veuillez renseigner le nom du document');
             return -1;
