@@ -59,7 +59,7 @@ const EventCategoryAdmin = ({ setReloadEvent, reloadEvent }) => {
                         <div className='CreateCategoryTitle'>Ajouter une catégorie d'évènement</div>
                         <div className='duoCategory'>
                             <label className='labelCategory' htmlFor="eventName">Nom de la catégorie : </label>
-                            <input type="text" id="eventName" value={categoryName} onChange={(e) => setCategoryName(e.target.value)} />
+                            <input className='inputCategory' type="text" id="eventName" value={categoryName} onChange={(e) => setCategoryName(e.target.value)} />
                         </div>
                         <input className='EventCategoryAdminAddBtn' type="button" value="Ajouter" onClick={handleAddClick} />
                     </div>
