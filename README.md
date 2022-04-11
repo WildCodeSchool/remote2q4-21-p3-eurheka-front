@@ -1,4 +1,30 @@
 # Getting Started with Create React App
+Projet Eurheka! Front
+Dépendances :
+    - @testing-library/jest-dom
+    - @testing-library/react
+    - @testing-library/user-event
+    - axios
+    - dotenv
+    - file-uploader-js
+    - js-cookie
+    - node
+    - node-sass
+    - react
+    - react-cookie
+    - react-dom
+    - react-drag-drop-files
+    - react-elastic-carousel
+    - react-paginate
+    - react-router-dom
+    - react-scripts
+    - web-vitals
+
+Télécharger et installer le dépot back : 
+https://github.com/WildCodeSchool/remote2q4-21-p3-eurheka-back/
+
+Récupérer le dépot :
+git clone https://github.com/WildCodeSchool/remote2q4-21-p3-eurheka-front.git
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

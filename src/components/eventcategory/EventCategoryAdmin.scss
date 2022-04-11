@@ -1,0 +1,284 @@
+.EventCategoryAdmin{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color-dark-background);
+    color: var(--main-color-light-title);
+    font-family: var(--text-font);
+    padding: 15px;
+    margin: 20px;
+    position: relative;
+
+    .EventCategoryAdminTitle{
+        width: 100%;
+        text-align: left;
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+
+    .CloseFolding {
+        position: absolute;
+        top :10px;
+        font-size: 20px;
+        font-weight: bolder;
+        color : white;
+        right: 10px;
+        top: 10px;
+    }
+ 
+    .EventCategoryAdminBloc{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: left;
+    }
+    
+    .BlocHidden{
+        display: none;
+    }
+
+    .EventCategoryAdminTitle{
+        margin-bottom: 5px;
+    }
+
+    .EventCategoryAdminAddTitle{
+        margin-left: 7px;
+        font-size: 14px;
+    }
+
+    .EventCategoryAdminAdd{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+
+    .ExistingCategory {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: center;
+    }
+
+    .ExistingCategoryTitle {
+        margin: 8px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .CreateCategory {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+
+    .CreateCategoryTitle {
+        margin-top: 8px;
+        margin-bottom: 5px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .duoCategory {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .labelCategory{
+        margin: 10px;
+        font-size: 12px
+    }
+
+    .inputCategory {
+        width: 150px;
+    }
+
+    .EventCategoryAdminAddBtn{
+        width: 100px;
+        height: 30px;
+        padding: 3px;
+        margin: 10px;
+        background-color: var(--main-color-light-title);
+        color: var(--main-color-dark-background);
+        border: solid 1px var(--main-color-light-title);
+        border-radius: 2px;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    @media only screen and (min-width: 391px) and (max-width: 719px) {
+        width: 80%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--main-color-dark-background);
+        color: var(--main-color-light-title);
+        font-family: var(--text-font);
+        padding: 15px;
+        margin: 20px;
+        position: relative;
+
+        .EventCategoryAdminTitle{
+            width: 100%;
+            text-align: left;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+    }
+
+    @media only screen and (min-width: 720px) and (max-width: 820px) {
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin: 30px;
+        padding: 20px;
+        background-color: var(--main-color-dark-background);
+        color: var(--main-color-light-title);
+        font-family: var(--text-font);
+        position: relative;
+    }
+
+    @media only screen and (min-width: 821px) and (max-width: 1179px) {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin: 30px;
+        padding: 20px;
+        background-color: var(--main-color-dark-background);
+        color: var(--main-color-light-title);
+        font-family: var(--text-font);
+        position: relative;
+    }
+
+    @media screen and (min-width: 1180px) {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin: 30px;
+        padding: 20px;
+        background-color: var(--main-color-dark-background);
+        color: var(--main-color-light-title);
+        font-family: var(--text-font);
+        position: relative;
+    
+        .EventCategoryAdminTitle{
+            width: 100%;
+            text-align: left;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+    
+        .CloseFolding {
+            position: absolute;
+            top :10px;
+            font-size: 20px;
+            font-weight: bolder;
+            color : white;
+            right: 10px;
+        }
+     
+        .EventCategoryAdminBloc{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: left;
+        }
+        
+        .BlocHidden{
+            display: none;
+        }
+    
+        .EventCategoryAdminAddTitle{
+            margin-left: 7px;
+        }
+    
+        .EventCategoryAdminAdd{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: space-around;
+        }
+    
+        .ExistingCategory {
+            width: 60%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: center;
+        }
+    
+        .ExistingCategoryTitle {
+            margin: 10px;
+            text-align: center;
+            font-size: 16px;
+        }
+    
+        .CreateCategory {
+            width: 40%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-left: 50px;
+        }
+    
+        .CreateCategoryTitle {
+            margin: 10px;
+            text-align: center;
+            font-size: 16px;
+        }
+    
+        .duoCategory {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        .labelCategory{
+            margin: 10px;
+            font-size: 14px;
+        }
+    
+        .EventCategoryAdminAddBtn{
+            margin: 10px;
+            background-color: var(--main-color-light-title);
+            color: var(--main-color-dark-background);
+            border: solid 1px var(--main-color-light-title);
+            border-radius: 2px;
+            padding: 5px;
+            width: 120px;
+            height: 40px;
+            font-size: 12px;
+        }
+    }
+}

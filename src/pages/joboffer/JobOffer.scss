@@ -1,0 +1,89 @@
+.JobOffer{
+
+    .JobOffer-header {
+        height: 500px;
+        width: 100%;
+        background-size:cover;
+        background-position:center;
+        background-image: linear-gradient(0deg, rgba(9, 48, 70, 0.6), rgba(9, 48, 70, 0.6)), url(../../assets/pictures/christin-hume-Hcfwew744z4-unsplash.jpg);
+     }
+        
+    .JobOffer-header h2 {
+            font-family: 'Poppins';
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 45px;
+            color: var(--main-color-lighter-text);
+            padding-top: 40px;
+            padding-left: 40px;
+     }
+    
+     .main-title  {
+        text-align: center;
+        color: var(--main-color-dark-title);
+        font-family: 'Poppins';
+        height: 150px;
+        line-height: 50px;
+        padding-top: 50px;
+    }
+    
+    .main-title h1 {
+        text-transform: uppercase;
+    }
+    
+    .jobs-container{
+        background : var(--main-color-light-background);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-family: 'Poppins';
+        color: var(--main-color-dark-title);
+        padding: 15px 25px 30px 25px;
+        width: 70%;
+        margin: auto;
+        margin-top: 20px;
+    }
+    
+    @media screen and (min-width: 391px) and (max-width: 767px) {
+        .JobOffer-header{
+            height: 25vh ;
+            width: 100%;
+        }
+    
+        .JobOffer-header h2 {
+            font-size: 15px;
+            padding-top: 1vh;
+            padding-left: 4vw;
+        }
+    }
+    
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+        .JobOffer-header{
+            height: 35vh ;
+            width: 100%;
+        }
+    
+        .JobOffer-header h2 {
+            font-size: 20px;
+            padding-top: 1.5vh;
+            padding-left: 4vw;
+        }
+
+        .jobs-container{
+            width: 80%;
+        }
+    }
+    
+    @media screen and (max-width: 390px) {
+        .JobOffer-header{
+            height: 20vh ;
+            width: 390px;
+        }
+    
+        .JobOffer-header h2 {
+            font-size: 15px;
+            padding-top: 0.5vh;
+            padding-left: 5vw;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.UserAdminCard{
+    .infoUserAdmin{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 15px;
+    }
+
+    .InfoUserAdminSpan{
+        font-weight: bold;
+    }
+
+    .UserAdminOptions{
+        margin-top: 10px;
+
+    }
+
+    .ListSignInOptions{
+        list-style-type: none;
+        margin-left: 15px;
+    }
+
+    .LinesInfosUserAdmin{
+        font-size: 15px;
+    }
+    @media only screen and (min-width: 391px) and (max-width: 768px) {
+
+    }
+
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+    
+    }
+
+    @media screen and (min-width: 1025px) {
+        .LinesInfosUserAdmin{
+            font-size: inherit;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.AboutUs{
+    width: 60%;
+    font-style: italic;
+    color: var(--main-color-dark-text);
+    background : linear-gradient(0deg, rgba(249, 181, 19, 0.90), rgba(249, 181, 19, 0.90)), url('../../assets/pictures/markus-spiske-CWcjRu6ANAE-unsplash.jpg');
+    background-size: cover;
+    font-family: var(--title-font);
+    margin-top: 70px;
+    padding: 50px;
+
+    .subsection{
+        margin-top: 10px;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    @media only screen and (min-width: 390px) and (max-width: 768px) {
+        width: 100%;
+        padding: 50px 0px 50px 0px;
+        font-size: 13px;
+        font-weight: 100;
+
+        .subsection{
+            margin-top: 10px;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+    }
+
+    
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+    }
+}

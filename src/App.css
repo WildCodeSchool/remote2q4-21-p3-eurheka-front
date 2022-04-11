@@ -29,10 +29,19 @@
     --third-color-medium: #219ebc;
     --third-color-lightest: #8ecae6;
 
+    --on-color-checkbox: #F64E4E;
+    --off-color-checkbox: #69E48B;
+    
+    --text-color-ok:#3cd00d;
+
     --title-font: 'Poppins', sans-serif;
     --text-font: 'Titillium Web', sans-serif;
 };
 
 body {
     font-family: var(--text-font);
+}
+
+.arrowOver{
+    cursor: pointer;
 }

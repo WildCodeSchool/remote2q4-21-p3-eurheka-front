@@ -9,6 +9,7 @@ const AdviceCardList = () => {
             <div className="AdviceCardList-container">
                 {adviceCards.map((data) => (
                     <AdviceCard className={(data.id % 2 ===0) ? 'background-even-container' : 'background-odd-container'}
+                        link={data.link}
                         key={data.id}
                         title={data.title}
                         task1={data.task1}

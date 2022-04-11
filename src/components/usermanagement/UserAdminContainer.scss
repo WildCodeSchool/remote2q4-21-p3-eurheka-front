@@ -1,0 +1,190 @@
+.UserAdminContainer{
+    width: 100%;
+    height: auto;
+    
+    .UserTable{
+        width: 100%;
+        margin-left: 0px;
+        text-align: center;
+    }
+
+    .usersAdminCell {
+        width: 50px;
+        margin: 2px;
+        padding: 1px;
+        font-size: 12px;
+    }
+
+    .usersNameCel {
+        width: 250px;
+        margin: 2px;
+        padding: 1px;
+    }
+
+    .Clickable{
+        font-size: 12px;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .usersAdminSelect {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .usersAdminLevel {
+        width: 100px;
+    }
+
+    .usersAdminBtn {
+        width: 80px;
+        margin-left: 3px;
+        padding: 1px;
+        font-size: 12px;
+    }
+
+    .usersAdmModify {
+        background-color: var(--main-color-dark-background);
+        color: var(--main-color-light-title);
+        border: solid 1px var(--main-color-light-title); 
+        border-radius: 2px;
+        padding: 2px;
+        width: 50px;
+        font-size: 10px;
+        cursor: pointer;
+    }
+
+    .usersAdmSuppress {
+        background-color: var(--main-color-light-title);
+        color: var(--main-color-dark-background);
+        border: solid 1px var(--main-color-light-title);
+        border-radius: 2px;
+        padding: 2px;
+        width: 50px;
+        font-size: 10px;
+        cursor: pointer;
+    }
+
+    .popupContainer,.innerPopup{
+        position : relative;
+    }
+
+    .popupUserAdmin{
+        position: absolute;
+        z-index: 3;
+        width : 90%;
+        height: 500px;
+        background-color: var(--main-color-light-background);
+        color: var(--main-color-dark-title);
+        top : -200px;
+        left : 10px;
+        display: none;
+        padding : 15px;
+        overflow: scroll;
+    }
+
+    .popupOpen{
+        display: block;
+    }
+
+    .closePopup{
+        position : absolute;
+        top : 5px;
+        right : 5px;
+        cursor: pointer;
+    }
+
+    @media only screen and (min-width: 391px) and (max-width: 719px) {
+
+    }
+
+    @media screen and (min-width: 720px) and (max-width: 1023px) {
+        .popupUserAdmin{
+            width: 80%;
+            height: 200px;
+            top : -100px;
+        }
+
+        .usersAdminCell {
+            width: 60px;
+            margin: 5px;
+            padding: 1px;
+            font-size: 12px;
+        }
+
+        .usersAdmModify {
+            background-color: var(--main-color-dark-background);
+            color: var(--main-color-light-title);
+            border: solid 1px var(--main-color-light-title); 
+            border-radius: 2px;
+            padding: 5px;
+            width: 60px;
+            font-size: 10px;
+            cursor: pointer;
+        }
+    
+        .usersAdmSuppress {
+            background-color: var(--main-color-light-title);
+            color: var(--main-color-dark-background);
+            border: solid 1px var(--main-color-light-title);
+            border-radius: 2px;
+            padding: 5px;
+            width: 60px;
+            font-size: 10px;
+            cursor: pointer;
+        }
+    }
+
+    @media screen and (min-width: 1024px) and (max-width: 1180px) {
+        .UserTable{
+            padding: 5px;
+        }
+
+        .usersAdminCell {
+            width: 80px;
+            margin: 5px;
+            padding: 1px;
+            font-size: 12px;
+        }
+    
+        .usersNameCel {
+            width: 200px;
+            margin: 5px;
+            padding: 1px;
+        }
+
+        .popupUserAdmin{
+            width : 75%;
+            height: 250px;
+            top : 15px;
+            left : 150px;
+            overflow: hidden;
+        }
+
+        .usersAdmModify {
+            background-color: var(--main-color-dark-background);
+            color: var(--main-color-light-title);
+            border: solid 1px var(--main-color-light-title); 
+            border-radius: 2px;
+            padding: 5px;
+            width: 75px;
+            font-size: 10px;
+            cursor: pointer;
+        }
+    
+        .usersAdmSuppress {
+            background-color: var(--main-color-light-title);
+            color: var(--main-color-dark-background);
+            border: solid 1px var(--main-color-light-title);
+            border-radius: 2px;
+            padding: 5px;
+            width: 75px;
+            font-size: 10px;
+            cursor: pointer;
+        }
+    }
+
+    @media screen and (min-width: 1181px) {
+
+    }
+}

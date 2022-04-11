@@ -1,0 +1,121 @@
+/*Desktop ok, mobile until 767 ok */
+
+.CV {
+    height: auto;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    object-fit: contain;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+}
+
+.containerCV {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgCV {
+    max-height: 80px;
+    width: auto;
+    margin: 3px;
+    margin-top: 6px;
+}
+
+.actionsCV {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 3px;
+}
+
+.nameMyCV {
+    max-width: 80px;
+    font-size: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.suppressOneCV {
+    background-color: var(--main-color-light-title);
+    color: var(--main-color-dark-background);
+    border: solid 1px var(--main-color-light-title);
+    border-radius: 2px;
+    padding: 1px;
+    width: 80%;
+    font-size: 10px;
+    margin: 3px;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 391px) and (max-width: 767px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+@media screen and (min-width: 1025px) {
+    .CV {
+        height: auto;
+        width: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 5px;
+        object-fit: contain;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 2px;
+    }
+    
+    .containerCV {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .imgCV {
+        max-height: 80px;
+        width: auto;
+        margin: 3px;
+        margin-top: 6px;
+    }
+    
+    .actionsCV {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 3px;
+    }
+    
+    .nameCV {
+        max-width: 80px;
+        font-size: 10px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+    }
+    
+    .suppressOneCV {
+        background-color: var(--main-color-light-title);
+        color: var(--main-color-dark-background);
+        border: solid 1px var(--main-color-light-title);
+        border-radius: 2px;
+        padding: 1px;
+        width: 80%;
+        font-size: 10px;
+        margin: 3px;
+    }
+}

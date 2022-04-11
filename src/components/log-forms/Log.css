@@ -1,16 +1,29 @@
+.connection-form {
+    width: 60%;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 .form-container {
     width: 100%;
-    height: 40%;
+    height: 80vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: var(--main-color-dark-background);
     font-family: var(--text-font);
 }
 
 .btn-container {
+    width: 80%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px;
 }
 
@@ -24,7 +37,10 @@
     align-items: center;
     justify-content: center;
     border-radius: 2%;
-    margin-top: 10px;
+    margin: 10px;
+    margin-left: 35px;
+    margin-right: 35px;
+    cursor: pointer;
 }
 
 .off-btn {
@@ -37,5 +53,153 @@
     align-items: center;
     justify-content: center;
     border-radius: 2%;
-    margin-top: 10px;
+    margin: 10px;
+    margin-left: 35px;
+    margin-right: 35px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 390px) {
+    .connection-form {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+    .btn-container {
+        width: 95%;
+        display: flex;
+        flex-direction: row;
+        margin: 20px;
+    }
+
+    .active-btn {
+        width: 250px;
+        height: 30px;
+        border-radius: 2%;
+        margin: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .off-btn {
+        width: 250px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 2%;
+        margin: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+@media screen and (min-width: 391px) and (max-width: 767px) {
+    .connection-form {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+    .btn-container {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        margin: 20px;
+    }
+
+    .active-btn {
+        width: 180px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .off-btn {
+        width: 180px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .connection-form {
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+    .btn-container {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        margin: 20px;
+    }
+
+    .active-btn {
+        width: 250px;
+        height: 50px;
+        margin-left: 35px;
+        margin-right: 35px;
+        font-size: 16px;
+    }
+
+    .off-btn {
+        width: 250px;
+        height: 50px;
+        margin-left: 35px;
+        margin-right: 35px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1180px) {
+    .form-container {
+        width: 100%;
+        height: 80vh;
+    }
+
+    .btn-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin: 20px;
+    }
+    .active-btn {
+        width: 350px;
+        height: 40px;
+        margin-left: 35px;
+        margin-right: 35px;
+        font-size: 16px;
+    }
+
+    .off-btn {
+        width: 350px;
+        height: 40px;
+        margin-left: 35px;
+        margin-right: 35px;
+        font-size: 16px;
+    }
 }
