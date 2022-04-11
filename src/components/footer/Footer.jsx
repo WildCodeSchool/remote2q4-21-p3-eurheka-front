@@ -14,7 +14,7 @@ const Footer = (props) => {
     return (
         <div className={footerStyle ? 'Footer' : 'Footer-light'}>
             <div className='footer-container'>
-                <div className='logo-container'>
+                <div className='logoFooterContainer'>
                     <NavLink to="/" className='logo-container-bis'>
                         <img className='footer-logo' src={footerStyle ? Logo_Icone_Jaune : Logo_Icone_Bleu} alt="Eurheka logo" onClick={scrollToTop} />
                     </ NavLink>

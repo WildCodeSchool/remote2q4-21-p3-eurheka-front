@@ -36,7 +36,7 @@ const DownloadDoc = () => {
   return (
     <div>
       <div className='mainTitle-lightTheme'>
-        <h2>Documents à télécharger</h2>
+        <div className='downloadDocTitle'>Documents à télécharger</div>
         <span onClick={handleChange}>{isReduce ? <i className="fa-solid fa-chevron-up arrowOver"></i> : <i className="fa-solid fa-chevron-down arrowOver"></i> }</span>
       </div>    
       { isReduce ?

@@ -7,7 +7,7 @@ const UserActionsUploadCard = () => {
         <div className='UserActionsUploadCard'>
                 <h2 className='card-title'>Postuler</h2>
                 <div className='uploadCard-logo-block'>
-                    <NavLink to="/mon-profil-particulier">
+                    <NavLink to="/mon-profil-particulier" className='uploadCardLink'>
                         <i className="fa-solid fa-download fa-2xl picto"></i>
                     </NavLink>
                 </div>

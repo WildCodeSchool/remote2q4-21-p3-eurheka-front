@@ -88,6 +88,16 @@
         color: var(--main-color-light-text);
     }
 
+    .checkDuo {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .validationRDVCheck {
+        margin-top: 20px;
+        margin-left: 5px;
+    }
+
     @media only screen and (min-width: 391px) and (max-width: 719px) {
         width: 80%;
         height: auto;

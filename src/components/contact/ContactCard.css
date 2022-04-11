@@ -80,6 +80,8 @@
     margin-bottom: 55px;
     width: 117px;
     height: 47px;
+    border: solid 1px var(--main-color-light-button);
+    border-radius: 2px;
     cursor: pointer;
 }
 

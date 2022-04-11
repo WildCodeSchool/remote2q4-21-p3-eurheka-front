@@ -358,7 +358,7 @@
     .left-container{
         display: flex;
         height: 100%;
-        width: 65%;
+        width: 64%;
         align-items: center;
     }
     .right-container {
@@ -371,11 +371,12 @@
     }
 
     .logo-container {
-        width: 87px;
+        width: 75px;
         height: auto;
-        margin-top: 4px;
+        margin-top: 0px;
         margin-left: 4px;
         margin-right: 4px;
+        margin-bottom: 8px;
     }
     .logo-link {
         width: 100%;
@@ -410,7 +411,7 @@
     }
 
     .connected-container {
-        width: 180px;
+        width: 200px;
     }
 
     .login-button {
@@ -420,14 +421,14 @@
     }
     .logout-button {
         height: 100%;
-        width: 45%;
+        width: 55%;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         margin-left: 13px;
         padding-right: 5px;
-        padding-left: 5px;
+        padding-left: 8px;
         font-size: 12px;
     }
 
@@ -526,7 +527,7 @@
     .navigation-link {
         height: 90%;
         margin-left: 10px;
-        margin-right: 10px;
+        margin-right: 0px;
         font-size: 14px;
     }
     .selected {
@@ -549,13 +550,13 @@
     }
     .logout-button {
         height: 100%;
-        width: 38%;
+        width: 40%;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         margin-left: 13px;
-        padding-right: 5px;
+        padding-right: 3px;
         padding-left: 5px;
         font-size: 14px;
     }
