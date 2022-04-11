@@ -37,6 +37,8 @@
     line-height: 30px;
     border: none;
     margin-top: 58px;
+    border: solid 1px var(--main-color-light-background);
+    border-radius: 2px;
     cursor: pointer;
 }
 
