@@ -10,7 +10,7 @@ const JobResourceCard = ({ currentResources, loading, firstClassName, secondList
     <div>
       <ul className={firstClassName}>
         { currentResources.map(item => (
-          <div>
+          <div key={item.id_resource}>
             {secondListClassName === 'video-list' ?
               <li className={secondListClassName}  >
               <a href={`https://www.youtube.com/watch?v=${item.path}`} target="_blank"><img src={`https://img.youtube.com/vi/${item.path}/mqdefault.jpg`}/></a>
